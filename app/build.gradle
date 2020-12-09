@@ -41,7 +41,7 @@ android {
         applicationId "com.foreverht.workplus.lite"
         minSdkVersion versions.minSdkVersion
         targetSdkVersion versions.targetSdkVersion
-        versionCode 3
+        versionCode 5
         versionName "1.0.3"
         multiDexEnabled true
 
@@ -134,7 +134,7 @@ android {
 
                         //输入名为 : app-atworkTestCrosswalk-v2.0.139-223-20151015.apk
 
-                        def fileName = "WorkPlus-Lite-${versionCode}-${versionCode}.apk"
+                        def fileName = "WorkPlus-Lite-${versionName}-${versionCode}.apk"
 
 //                        output.outputFile = new File(outputFile.parent, fileName)
                         output.outputFileName = new File("./", fileName)
@@ -168,7 +168,7 @@ android {
         //WorkPlus Lite
         lite {
             applicationId "com.foreverht.workplus.lite"
-            versionCode 1
+            versionCode 5
             versionName "1.0.3"
             dimension 'product'
         }

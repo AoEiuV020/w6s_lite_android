@@ -166,9 +166,9 @@
       "create": "2016-03-31T06:17:05.666Z"
     },
     "buildNo": 11,
-    "bundleId": "com.foreverht.workplus.v4",
-    "packageName": "com.foreverht.workplus.v4",
-    "appName": "Workplus"
+    "bundleId": "com.foreverht.workplus.lite",
+    "packageName": "com.foreverht.workplus.lite",
+    "appName": "WorkPlus Lite"
   },
   "androidPush" :{
 
