@@ -49,7 +49,7 @@ public class AtWorkDirUtils {
         boolean sdCardExist = Environment.getExternalStorageState().equals(
                 Environment.MEDIA_MOUNTED);
         if (sdCardExist) {
-            ATWORK_DIR = Environment.getExternalStorageDirectory() + ATWORK_FOLDER;
+            ATWORK_DIR = BaseApplicationLike.baseContext.getExternalFilesDir(null).getAbsolutePath();
         } else {
             String path = getInternalPath();
             if (!TextUtils.isEmpty(path)) {
@@ -346,7 +346,7 @@ public class AtWorkDirUtils {
     }
 
     private String getRootDirPrimary() {
-        return BaseApplicationLike.baseContext.getFilesDir() + ATWORK_FOLDER;
+        return BaseApplicationLike.baseContext.getExternalFilesDir(null).getAbsolutePath();
     }
 
     /**
@@ -482,8 +482,7 @@ public class AtWorkDirUtils {
     public static  String getSdCacheDir(Context context) {
         if (Environment.getExternalStorageState().equals(
                 Environment.MEDIA_MOUNTED)) {
-            java.io.File fExternalStorageDirectory = Environment
-                    .getExternalStorageDirectory();
+            java.io.File fExternalStorageDirectory = BaseApplicationLike.baseContext.getExternalCacheDir();
             java.io.File autonaviDir = new java.io.File(
                     fExternalStorageDirectory, "amapsdk");
             boolean result = false;
