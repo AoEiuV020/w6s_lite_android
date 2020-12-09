@@ -21,6 +21,12 @@ object LiteManager : ILiteManager {
         return addDefaultConfig(sets)
     }
 
+    private fun getBindConfigsWithoutDefault(): Set<LiteBindConfig>? {
+        val configs = LiteCommonShareInfo.getDataLiteBindConfigs(AtworkApplicationLike.baseContext)
+                ?:HashSet()
+        return configs.map { produceBindConfig(it) }.toSet()
+    }
+
     private fun addDefaultConfig(sets: Set<LiteBindConfig>): Set<LiteBindConfig> {
         val multiSets = sets.toMutableSet()
         multiSets.add(DEFAULT_CONFIG)
@@ -29,7 +35,7 @@ object LiteManager : ILiteManager {
 
     override fun updateBindConfig(liteBindConfig: LiteBindConfig) {
 
-        var liteBindConfigs = getBindConfigs()?.toHashSet()
+        var liteBindConfigs = getBindConfigsWithoutDefault()?.toHashSet()
         if(null == liteBindConfigs) {
             liteBindConfigs = HashSet()
         }
