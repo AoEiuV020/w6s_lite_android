@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="select_members_in_discussion">Group selection</string>
+    <string name="select_members_in_organization">Organizational structure selection</string>
+
+</resources>

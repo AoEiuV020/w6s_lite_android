@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--设置页面-->
+    <string name="push_message_setting">消息推送设置</string>
+    <string name="function_message_no_disturb">功能消息免打扰</string>
+    <string name="accept_new_message">接收新的消息通知</string>
+    <string name="biometric_authentication">生物认证</string>
+    <string name="gesture_password_manager">手势密码管理</string>
+    <string name="face_bio_setting">刷脸设置</string>
+    <string name="gesture_code_setting">手势设置</string>
+    <string name="language_setting">多语言</string>
+    <string name="clean_messages_data">清理历史消息</string>
+    <string name="clean_messages_data_tip">清理历史消息，将会为每个会话保留最近%s条历史消息</string>
+    <string name="clean_all_messages_data">清理全部数据</string>
+    <string name="clean_all_messages_data_tip">清理后，会为每个会话保留最近%s条的消息记录。</string>
+    <string name="clean_messages_data_successfully">清理成功</string>
+    <string name="clean_messages_data_unsuccessfully">清理失败</string>
+    <string name="change_password">修改密码</string>
+    <string name="init_change_pwd_tip">为了你的帐号安全，首次登录建议修改密码</string>
+    <string name="pwd_weak_level_tip">密码包含数字、大写字母、小写字母或其它特殊符号中的一种，长度在6-20位之间</string>
+    <string name="pwd_middle_level_tip">密码包含数字、大写字母、小写字母或其它特殊符号中的两种，长度在6-20位之间</string>
+    <string name="pwd_strong_level_tip">密码包含数字、大写字母、小写字母或其它特殊符号中的三种，长度在8-20位之间</string>
+    <string name="ask_sure_to_log_out">确认退出登录？</string>
+    <string name="voice">声音</string>
+    <string name="vibrate">振动</string>
+    <string name="show_details">显示详情</string>
+    <string name="copy_item">复制</string>
+    <string name="forwarding_item">转发</string>
+    <string name="favorite_item">收藏</string>
+    <string name="undo">撤回</string>
+    <string name="text_translate">翻译</string>
+    <string name="text_show_original">原文</string>
+    <string name="more_item">更多</string>
+    <string name="not_select_any_chat_item">未有选中任何聊天记录</string>
+    <string name="msg_not_forward_item_by_item_file_permission_mode">不支持转发语音、阅后即焚、名片、语音视频会议、图片、文件、小视频、失效文件、红包等消息类型。</string>
+    <string name="msg_not_forward_multipart_file_permission_mode">不支持转发阅后即焚、聊天记录、名片、语音视频会议、图片、文件、小视频、失效文件、红包等消息类型。</string>
+    <string name="msg_not_forward_item_by_item_file_common_mode">不支持转发语音、阅后即焚、名片、语音视频会议、失效文件、红包等消息类型。</string>
+    <string name="msg_not_forward_multipart_file_common_mode">不支持转发阅后即焚、聊天记录、名片、语音视频会议、失效文件、红包等消息类型。</string>
+    <string name="feedback_hint">请把您的宝贵意见告诉我们</string>
+    <string name="feedbacking">意见提交中...</string>
+    <string name="feedback_success">意见提交成功，感谢您的宝贵意见</string>
+    <string name="feedback_fail">意见提交失败</string>
+
+    <string name="new_message_notification">新消息通知</string>
+    <string name="discussion_shield_helper">群聊免打扰助手</string>
+    <string name="account_and_secure">帐号与安全</string>
+
+    <string name="storage_space">存储空间</string>
+
+    <string name="history_data">历史消息</string>
+    <string name="clearing">清理</string>
+    <string name="being_calculated">正在计算...</string>
+    <string name="tip_about_clear_history_messages">可以清理会话的聊天消息，包括消息、图片、文件等数据。清理后，每个会话保留最近%s条消息记录。</string>
+    <string name="local_file">本地文件</string>
+    <string name="tip_about_clear_local_file">可以清理本地下载的文件、轻应用离线包数据。</string>
+    <string name="cache">缓存</string>
+    <string name="tip_about_clear_browser_cache">可以清理应用自带浏览器的缓存。</string>
+    <string name="clean_up_all_data">清理全部缓存</string>
+    <string name="data_is_empty">0B</string>
+
+    <string name="other_notification_channel_name">其他通知</string>
+
+</resources>

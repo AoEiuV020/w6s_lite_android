@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 个人详情 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- 主体 -->
+    <com.foreveross.atwork.modules.contact.component.ContactObservableScrollView
+        android:id="@+id/contact_observable_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/relative_contact_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <!-- 背景图片 -->
+            <RelativeLayout
+                android:id="@+id/personal_info_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <!--去掉白色边框-->
+                    <!--android:background="@drawable/bg_avatar_shape"-->
+                    <LinearLayout
+                        android:id="@+id/personal_avatar_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="2dp">
+
+                        <ImageView
+                            android:id="@+id/personal_info_avatar"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/default_photo" />
+                    </LinearLayout>
+                    <!-- 头像 -->
+
+                    <View
+                        android:id="@+id/avatar_not_online_bg"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/transparent_70"
+                        android:visibility="gone" />
+
+
+                    <!-- 加入常用联系人图标 -->
+                    <ImageView
+                        android:id="@+id/personal_info_favor"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@id/personal_avatar_layout"
+                        android:src="@mipmap/icon_fav_off"
+                        android:visibility="gone"
+                        tools:visibility="gone"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_account_base_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/personal_avatar_layout"
+                        android:layout_marginTop="8dp"
+
+                        >
+                        <!-- account name -->
+                        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                            android:id="@+id/personal_info_account_name"
+                            style="@style/font_size_16sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="#000000"
+                            tools:text="周芳"/>
+                        <!--性别-->
+                        <ImageView
+                            android:id="@+id/person_info_gender"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@id/personal_info_account_name" />
+                    </RelativeLayout>
+                    <!--个性签名-->
+                    <RelativeLayout
+                        android:id="@+id/rl_personal_signature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_below="@id/rl_account_base_info"
+                        android:visibility="visible">
+                        <TextView
+                            android:id="@+id/tv_personal_info"
+                            style="@style/font_size_13sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/shape_read_colleague_timeline"
+                            android:paddingBottom="3dp"
+                            android:paddingRight="10dp"
+                            tools:text="休假中，有事请致电~~休假中，有事请致电休假中，有事请致电休假中，有事请致电"
+                            android:maxLength = "20"
+                            android:textColor="@color/common_text_color_999"
+                            android:visibility="visible"/>
+                    </RelativeLayout>
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_personal_signature"
+                        android:layout_centerHorizontal="true">
+                        <TextView
+                            android:id="@+id/tv_account_status"
+                            style="@style/font_size_12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@mipmap/icon_not_initialize"
+                            android:text="@string/personal_info_account_status_initialize"
+                            android:textColor="@color/common_text_color_999"
+                            android:visibility="gone"/>
+                        <!--账号是否在线-->
+                        <TextView
+                            android:id="@+id/tv_account_not_online"
+                            style="@style/font_size_12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:drawableLeft="@mipmap/icon_not_initialize"
+                            android:text="@string/personal_info_account_not_online"
+                            android:textColor="@color/common_text_color_999"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <!-- 扩展块 -->
+            <LinearLayout
+                android:id="@+id/personal_info_extension_block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/personal_info_card"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:background="@color/white">
+                <!--消息-->
+                <LinearLayout
+                    android:id="@+id/linear_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/icon_message"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitXY"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/item_chat"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        style="@style/font_size_12sp" />
+
+                </LinearLayout>
+                <!--电话-->
+                <LinearLayout
+                    android:id="@+id/linear_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    >
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/icon_tel"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitXY"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="@string/auth_phone_name"
+                        android:layout_marginTop="5dp"
+                         style="@style/font_size_12sp" />
+
+                </LinearLayout>
+                <!--视频会议-->
+                <LinearLayout
+                    android:id="@+id/linear_video_meeting"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/icon_video_meeting"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitXY"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/voip_instant_call"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                         style="@style/font_size_12sp" />
+                </LinearLayout>
+                <!--星标-->
+                <LinearLayout
+                    android:id="@+id/linear_avatar_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/image_avatar_contact"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/icon_avatar_contact_off"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="fitXY"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/contact_avatar_contact"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                         style="@style/font_size_12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--查看他的动态-->
+            <LinearLayout
+                android:id="@+id/module_dynamic_circle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/personal_info_extension_block"
+                android:orientation="vertical"
+                android:background="@color/white">
+                <View
+                    android:id="@+id/view_separate"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/common_bg_gray">
+                </View>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/person_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/module_dynamic_circle"
+                android:layout_marginTop="0dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/personal_tabLayout_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/common_page_bg" />
+
+                <LinearLayout
+                    android:id="@+id/personal_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                </LinearLayout>
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/personal_tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/white"
+                    android:tag="c4"
+                    android:visibility="gone"
+                    app:tabGravity="center"
+                    app:tabIndicatorColor="@color/common_blue_bg"
+                    app:tabSelectedTextColor="@color/common_text_color"
+                    app:tabTextColor="@color/common_text_color"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/v_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:visibility="gone" />
+
+                <com.foreveross.atwork.component.viewPager.AdjustHeightViewPager
+                    android:id="@+id/personal_viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    tools:background="@color/white"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:layout_marginBottom="30dp"/>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.foreveross.atwork.modules.contact.component.ContactObservableScrollView>
+    <include layout="@layout/title_bar_contact_personal"/>
+
+</RelativeLayout>

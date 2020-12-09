@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_avatar_shape"
+    android:orientation="vertical"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="8dp"
+    android:paddingBottom="16dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/chat_item_avatar"
+            android:layout_width="@dimen/common_contact_item_img_size"
+            android:layout_height="@dimen/common_contact_item_img_size"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_common_padding"
+            android:contentDescription="@string/chat_item_avatar"
+            android:layout_margin="16dp"
+            android:scaleType="fitXY" />
+        <TextView
+            android:id="@+id/tvTitleName"
+            android:layout_toRightOf="@id/chat_item_avatar"
+            android:layout_toLeftOf="@id/tvTitleNTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="高科之家"/>
+        <TextView
+            android:id="@+id/tvTitleNTime"
+            android:text="23:33"
+            android:textSize = "14sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+        <!-- 语音 -->
+        <TextView
+            android:id="@+id/tvVoice"
+            android:textSize="?attr/fontsize_13sp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_history_item_voice_bg"
+            android:drawableLeft="@mipmap/icon_history_item_voice_play"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:text="6"
+            android:textColor="@color/common_text_color"
+            android:visibility="visible"/>
+        <ImageView
+            android:id="@+id/chat_voice_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tvVoice"
+            android:src="@mipmap/icon_chat_dot"
+            />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/vTitleBar"
+        layout="@layout/title_bar_common" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMobileLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="30.5dp"
+                android:text="@string/certified_mobile_num"
+                android:textColor="@color/common_text_color"
+                android:textSize="?attr/fontsize_16sp"
+                tools:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/common_text_color"
+                android:textSize="?attr/fontsize_30sp"
+                android:textStyle="bold"
+                tools:text="15918723567"
+                tools:textSize="30sp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="32dp">
+
+                <EditText
+                    android:id="@+id/etInputSecureCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/tvSendSecureCode"
+                    android:background="@null"
+                    android:hint="@string/please_input_mobile_sms_code"
+                    android:inputType="phone"
+                    android:textColorHint="@color/common_text_hint_gray"
+                    android:textSize="?attr/fontsize_16sp"
+                    tools:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvSendSecureCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:alpha="0.5"
+                    android:text="@string/get_sms_code"
+                    android:textColor="@color/common_blue_bg"
+                    android:textSize="?attr/fontsize_16sp"
+                    tools:textSize="16sp" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/vBottomLineSecureCode"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:background="#dcdcdc" />
+
+
+            <TextView
+                android:id="@+id/tvLoginBindTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="13dp"
+                android:lineSpacingExtra="2dp"
+                android:text=""
+                android:textColor="@color/common_gray_bg"
+                android:textSize="?attr/fontsize_13sp"
+                tools:textSize="13sp"
+
+                />
+
+            <TextView
+                android:id="@+id/tvAuth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_login_rect_input_nothing"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="@string/common_auth"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvTip1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@color/common_gray_bg"
+                android:textSize="13sp"
+                tools:text="*系统检测到你正首次登录或在一个新设备上登录账号，为保障你的账号安全，请通过手机验证码的方式进行设备认证。" />
+
+
+            <TextView
+                android:id="@+id/tvTip2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@color/common_gray_bg"
+                android:textSize="13sp"
+                tools:text="*如若手机号码不正确或没有手机号码，需要修改手机号码，请联系所属公司的HR进行变更申请。" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

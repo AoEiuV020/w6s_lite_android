@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray"
+
+    >
+
+
+    <include
+        android:id="@+id/vTitleBarCommon"
+        layout="@layout/title_bar_common"
+        />
+
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/vTitleBarCommon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvCreateDiscussion"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintVertical_bias="0"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_bg_gray"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            >
+
+
+
+
+
+            <com.foreveross.atwork.modules.discussion.component.DiscussionTemplateItemView
+                android:id="@+id/vDiscussionTemplate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+
+
+
+            <View
+                android:id="@+id/vLineDiscussionInfoArea"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vDiscussionTemplate"
+                app:layout_constraintBottom_toBottomOf="@+id/tvMemberMore"
+                android:background="@drawable/shape_pure_white_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+
+
+
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:id="@+id/tvDiscussionNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/vLineDiscussionInfoArea"
+                app:layout_constraintLeft_toLeftOf="@+id/vLineDiscussionInfoArea"
+                android:text="@string/title_discussion_name"
+                android:textSize="14sp"
+                android:textColor="@color/common_text_color"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                />
+
+
+            <com.foreveross.atwork.component.editText.InputInfoEditText
+                android:id="@+id/etDiscussionName"
+                style="@style/font_size_16sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                app:hint="@string/please_input_template_discussion_name"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/common_text_gray_color"
+                android:textColorHint="@color/common_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_common_edittext_cursor"
+                app:layout_constraintTop_toBottomOf="@+id/tvDiscussionNameLabel"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintLeft_toLeftOf="@+id/vLineDiscussionInfoArea"
+                app:layout_constraintRight_toRightOf="@+id/vLineDiscussionInfoArea"
+                />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupMappingOrganization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="tvMappingOrganizationLabel, tvMappingOrganizationTip, vMappingOrganizationAreaLine, ivArrowMappingOrganization"
+                android:visibility="gone"
+                tools:visibility="visible"
+                />
+
+
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:id="@+id/tvMappingOrganizationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/etDiscussionName"
+                app:layout_constraintLeft_toLeftOf="@+id/vLineDiscussionInfoArea"
+                android:text="@string/mapping_organization"
+                android:textSize="14sp"
+                android:textColor="@color/common_text_color"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tvMappingOrganizationTip"
+                style="@style/font_size_16sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:text="@string/please_select_mapping_organization"
+                android:singleLine="true"
+                android:textColor="@color/common_text_hint_gray"
+                app:layout_constraintTop_toBottomOf="@+id/tvMappingOrganizationLabel"
+                app:layout_constraintLeft_toLeftOf="@+id/vLineDiscussionInfoArea"
+                app:layout_constraintRight_toLeftOf="@+id/ivArrowMappingOrganization"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                />
+
+
+            <ImageView
+                android:id="@+id/ivArrowMappingOrganization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_arrow_gray"
+                android:scaleType="center"
+                app:layout_constraintRight_toRightOf="@+id/vLineDiscussionInfoArea"
+                app:layout_constraintTop_toTopOf="@+id/tvMappingOrganizationTip"
+                app:layout_constraintBottom_toBottomOf="@+id/tvMappingOrganizationTip"
+                android:layout_marginRight="20dp"
+                />
+
+
+
+            <View
+                android:id="@+id/vMappingOrganizationAreaLine"
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_gravity="center_vertical"
+                android:background="@color/common_text_hint_gray"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentBottom="true"
+                app:layout_constraintTop_toBottomOf="@+id/tvMappingOrganizationTip"
+                app:layout_constraintLeft_toLeftOf="@+id/vLineDiscussionInfoArea"
+                app:layout_constraintRight_toRightOf="@+id/vLineDiscussionInfoArea"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+
+
+
+
+
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:id="@+id/tvDiscussionMemberLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chat_group_members"
+                android:textSize="14sp"
+                android:textColor="@color/common_text_color"
+                app:layout_constraintTop_toBottomOf="@+id/vMappingOrganizationAreaLine"
+                app:layout_constraintLeft_toLeftOf="@+id/vLineDiscussionInfoArea"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+
+                />
+
+
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="@color/red_lock"
+                android:textSize="14sp"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintTop_toTopOf="@+id/tvDiscussionMemberLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/tvDiscussionMemberLabel"
+                app:layout_constraintLeft_toRightOf="@+id/tvDiscussionMemberLabel"
+                android:gravity="center"
+                />
+
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:id="@+id/tvDiscussionMemberCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/common_text_color"
+                app:layout_constraintTop_toTopOf="@+id/tvDiscussionMemberLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/tvDiscussionMemberLabel"
+                app:layout_constraintRight_toRightOf="@+id/vLineDiscussionInfoArea"
+                tools:text="10人"
+                android:layout_marginRight="20dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMemberList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvDiscussionMemberLabel"
+                app:layout_constraintLeft_toLeftOf="@+id/vLineDiscussionInfoArea"
+                app:layout_constraintRight_toRightOf="@+id/vLineDiscussionInfoArea"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+
+            <include layout="@layout/view_common_divider"
+                android:id="@+id/vDividerMemberMore"
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                app:layout_constraintTop_toBottomOf="@+id/rvMemberList"
+                app:layout_constraintLeft_toLeftOf="@+id/vLineDiscussionInfoArea"
+                app:layout_constraintRight_toRightOf="@+id/vLineDiscussionInfoArea"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tvMemberMore"
+                style="@style/font_size_16sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="left|center_vertical"
+                android:tag="c15"
+                android:text="@string/chat_info_more"
+                android:textColor="@color/alarm_text"
+                app:layout_constraintTop_toBottomOf="@+id/vDividerMemberMore"
+                app:layout_constraintLeft_toLeftOf="@+id/vLineDiscussionInfoArea"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_marginLeft="20dp"
+
+                />
+
+            <ImageView
+                android:id="@+id/ivMemberMoreArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_arrow"
+                app:layout_constraintTop_toTopOf="@+id/tvMemberMore"
+                app:layout_constraintBottom_toBottomOf="@+id/tvMemberMore"
+                app:layout_constraintRight_toRightOf="@+id/vLineDiscussionInfoArea"
+                android:layout_marginRight="20dp"
+                />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupMemberMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:constraint_referenced_ids="tvMemberMore, ivMemberMoreArrow, vDividerMemberMore"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/tvCreateDiscussion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_discussion"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/shape_pure_white_bg"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="14sp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/white"
+        tools:textColor="@color/common_text_color"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

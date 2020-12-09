@@ -1,0 +1,3 @@
+package com.foreveross.atwork.modules.discussion.model
+
+interface IDiscussionMemberItemDisplay

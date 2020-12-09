@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- cordova版webview -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_page_bg">
+
+    <include
+        android:id="@+id/webview_title_bar"
+        layout="@layout/title_bar_webview" />
+
+    <FrameLayout
+        android:id="@+id/webview_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/webview_title_bar"
+        >
+
+    </FrameLayout>
+
+    <include
+        android:id="@+id/view_url_wrong"
+        layout="@layout/view_url_wrong"
+        android:visibility="gone"/>
+
+    <com.foreveross.atwork.modules.web.component.WebActionFloatView
+        android:id="@+id/v_workplus_float_action_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

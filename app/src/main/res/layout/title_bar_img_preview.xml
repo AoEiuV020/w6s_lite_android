@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 聊天界面TitleBar -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/white"
+    android:tag="c1">
+
+    <!-- 右边显示字，如取消，保存等 -->
+    <TextView
+        android:id="@+id/title_bar_common_right_text"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/title_common_padding"
+        android:gravity="center|center_vertical"
+        android:minWidth="30dp"
+        android:text="@string/cancel"
+        android:textColor="@color/common_item_black"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <!-- 左边的APP图标 -->
+    <ImageView
+        android:id="@+id/title_bar_common_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/app_icon"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/title_common_padding"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:src="@mipmap/icon_back" />
+
+    <TextView
+        android:id="@+id/title_bar_common_left_title"
+        style="@style/font_size_18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/title_common_title_back_padding"
+        android:layout_toRightOf="@id/title_bar_common_back"
+        android:text=""
+        android:textColor="@color/common_item_black"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <!-- 名称，当天聊天界面的名称 -->
+    <TextView
+        android:id="@+id/title_bar_common_title"
+        style="@style/font_size_18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/common_item_black" />
+
+
+</RelativeLayout>

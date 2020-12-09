@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_page_bg">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:tag="c1"
+        >
+        <!-- 左边的APP图标 -->
+        <ImageView
+            android:id="@+id/title_bar_select_user_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/title_common_padding"
+            android:src="@mipmap/icon_back" />
+
+        <!-- 名称，当天聊天界面的名称 -->
+        <TextView
+            android:id="@+id/title_bar_select_user_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/title_bar_select_user_back"
+            android:layout_marginLeft="@dimen/title_common_title_back_padding"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:textColor="@color/common_item_black"
+            style="@style/font_size_18sp" />
+
+        <Button
+            android:id="@+id/select_user_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_vertical"
+            android:background="@color/transparent"
+            android:minWidth="50dp"
+            android:padding="5dp"
+            android:text="@string/ok"
+            style="@style/font_size_14sp"
+            android:textColor="@color/common_item_black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_line_gray" />
+    </RelativeLayout>
+
+    <com.foreveross.atwork.modules.group.component.SelectContactHead
+        android:id="@+id/select_user_contact_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+    </com.foreveross.atwork.modules.group.component.SelectContactHead>
+
+    <FrameLayout
+        android:id="@+id/select_user_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/select_contact_tree_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/select_discussion_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/select_friends_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <!-- 搜索结果 -->
+    <ListView
+        android:id="@+id/select_user_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        >
+
+    </ListView>
+
+</LinearLayout>

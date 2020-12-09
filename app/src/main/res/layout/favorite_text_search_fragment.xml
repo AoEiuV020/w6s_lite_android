@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/favorite_text_search_titlebar"
+        layout="@layout/titlebar_favorite_search"/>
+
+    <ListView
+        android:id="@+id/searched_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/favorite_text_search_titlebar"
+        android:divider="@null"
+        android:background="@color/favorite_common_page_bg"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searched_list"
+        >
+
+        <include
+            android:id="@+id/my_tag_layout"
+            layout="@layout/component_favorite_all_tags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+
+            />
+
+    </ScrollView>
+    <include layout="@layout/layout_common_nothing"
+        android:id="@+id/layout_search_favorite_nothing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@id/favorite_text_search_titlebar"/>
+
+    <LinearLayout
+        android:id="@+id/batch_opt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:clickable="false"
+        android:longClickable="false"
+        android:focusable="false"
+        android:visibility="gone"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="false">
+        <ImageButton
+            android:id="@+id/share_favorites"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:focusable="true"
+            android:background="@null"
+            android:src="@mipmap/icon_send_hover"/>
+
+
+        <ImageButton
+            android:id="@+id/delete_favorites"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:focusable="true"
+            android:background="@null"
+            android:src="@mipmap/icon_del_hover"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

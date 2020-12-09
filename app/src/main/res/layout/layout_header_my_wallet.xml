@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F4F4F4"
+    android:paddingBottom="9dp"
+    >
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rl_wallet_header"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@mipmap/my_wallet_background"
+        android:gravity="center_vertical"
+        android:paddingBottom="20dp">
+
+
+        <TextView
+            android:id="@+id/tv_coin_balance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp"
+            android:text=""
+            android:textColor="@color/wallet_text_red"
+            android:textSize="?attr/fontsize_14sp"
+            tools:textSize="14sp"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_coin_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_coin_balance_label">
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:id="@+id/tv_coin_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="0"
+                android:textColor="@color/wallet_text_red"
+                android:textSize="?attr/fontsize_34sp"
+                tools:text="222222"
+                tools:textSize="34sp" />
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:id="@+id/tv_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="金币"
+                android:layout_toRightOf="@+id/tv_coin_balance"
+                tools:textSize="16sp"
+                android:textSize="?attr/fontsize_16sp"
+                android:layout_alignBottom="@+id/tv_coin_balance"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="3dp"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_exchange_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/shape_my_wallet_exchange_item_bg"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/exchange_coin"
+                android:visibility="gone"
+
+                />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_bonus_point_balance_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_coin_balance"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/my_bonus_point"
+            android:textColor="@color/wallet_text_red"
+            android:textSize="?attr/fontsize_14sp"
+            tools:textSize="14sp"
+            android:visibility="gone"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_bonus_point_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_bonus_point_balance_label"
+            android:visibility="gone"
+
+            >
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:id="@+id/tv_bonus_point_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:text="0"
+                android:textColor="@color/wallet_text_red"
+                android:textSize="?attr/fontsize_34sp"
+                tools:text="2222"
+                tools:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/tv_exchange_bonus_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/shape_my_wallet_exchange_item_bg"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/exchange_bonus_point"
+
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

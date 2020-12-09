@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tangsdk_menu_dialog_text_color"
+    android:orientation="vertical">
+
+    <SurfaceView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/video_p2p_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <!--<SurfaceView
+            android:id="@+id/big_surfaceView_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <SurfaceView
+            android:id="@+id/small_surfaceView_lay"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="21dp" />-->
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/video_group_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <!--<android.support.v4.view.ViewPager
+            android:id="@+id/groupVideo_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />-->
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/common_top_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/ActionBarHeight">
+
+            <ImageView
+                android:id="@+id/btn_minimize_window"
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/tangsdk_minimize_btn_selector"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/video_mode_camera_switch_btn"
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@id/btn_minimize_window"
+                android:src="@drawable/tangsdk_camera_switch_btn_selector"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/common_chat_status"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                style="@style/font_size_17sp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/video_group_mode_viewall_btn"
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="58dp"
+                android:src="@drawable/tangsdk_viewall_btn_selector"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/invite_btn"
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/tangsdk_invite_btn_selector"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/viewpager_dots_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/common_top_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"></LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/viewpager_video_username_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewpager_dots_container"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:alpha="0.6"
+                android:background="@drawable/tangsdk_round_corner_rect"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible"></LinearLayout>
+
+            <TextView
+                android:id="@+id/video_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="23dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                style="@style/font_size_16sp"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/buttom_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <!--<ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:background="@drawable/tangsdk_scollview_shadow"
+                />-->
+            <LinearLayout
+                android:id="@+id/ll_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="39dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/speaker_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/tangsdk_btn_handfree_selector" />
+
+                    <TextView
+                        android:id="@+id/speaker_checkbox_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/speaker_button"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/tangsdk_chat_audio_handfree_msg"
+                        android:textColor="@color/tangsdk_control_text_color_selector"
+                        style="@style/font_size_14sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btn_mute"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/tangsdk_btn_mute_selector" />
+
+                    <TextView
+                        android:id="@+id/mute_checkbox_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn_mute"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/tangsdk_chat_audio_mute_msg"
+                        android:textColor="@color/tangsdk_control_text_color_selector"
+                        style="@style/font_size_14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/video_button"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/tangsdk_btn_video_switch_selector" />
+
+                    <TextView
+                        android:id="@+id/video_checkbox_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/video_button"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/tangsdk_chat_audio_open_camera_msg"
+                        android:textColor="@color/tangsdk_control_text_color_selector"
+                        style="@style/font_size_14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/audio_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/tangsdk_btn_audio_switch_selector" />
+
+                    <TextView
+                        android:id="@+id/audio_btn_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/audio_btn"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/tangsdk_chat_audio_use_phone_msg"
+                        android:textColor="@color/tangsdk_control_text_color_selector"
+                        style="@style/font_size_14sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/area_accept_reject_operate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="35dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_hangup_call"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_hangup_call"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/tangsdk_btn_stop_call_selector" />
+
+                    <TextView
+                        android:id="@+id/tv_hangup_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_hangup_call"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/reject"
+                        android:textColor="@color/white"
+                        style="@style/font_size_14sp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_pickup_call"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_pickup_call"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/tangsdk_btn_start_call_selector" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_pickup_call"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/accept"
+                        android:textColor="@color/white"
+                        style="@style/font_size_14sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/enter_video_and_deskshare_area"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_below="@id/area_accept_reject_operate"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/video_enter_area"
+                    android:layout_width="0.0dip"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/video_enter_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/tangsdk_buttom_btn_selector">
+
+                        <TextView
+                            android:id="@+id/video_enter_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:drawableLeft="@mipmap/tangsdk_videoopen_enter_icon"
+                            android:drawablePadding="11dp"
+                            android:gravity="center"
+                            android:text="@string/tangsdk_receive_video_text"
+                            android:textColor="@android:color/white"
+                            style="@style/font_size_13sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/desk_share_enter_area"
+                    android:layout_width="0.0dip"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/desk_share_enter_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/tangsdk_buttom_btn_selector">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:drawableLeft="@mipmap/tangsdk_deskshare_enter_icon"
+                            android:drawablePadding="11dp"
+                            android:gravity="center"
+                            android:text="@string/tangsdk_view_desk_share_text"
+                            android:textColor="@android:color/white"
+                            style="@style/font_size_13sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/reply_msg_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/buttom_area"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="55.5dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/tangsdk_btn_stop_call_selector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/font_size_14sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/reply_msg_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tangsdk_reply_btn_selector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reply_msg_btn"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="回复"
+                    android:textColor="@android:color/white"
+                    style="@style/font_size_13sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- 显示正在说话的人 -->
+        <LinearLayout
+            android:id="@+id/video_group_speaking_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/buttom_area"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="13dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/tangsdk_group_speaking_state" />
+
+            <TextView
+                android:id="@+id/speaking_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:textColor="@android:color/white"
+                style="@style/font_size_14sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/audio_content_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/buttom_area"
+            android:layout_marginTop="@dimen/ActionBarHeight"
+            android:visibility="visible">
+
+            <ListView
+                android:id="@+id/audio_user_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="26dp"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:fadeScrollbars="true"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:footerDividersEnabled="true"
+                android:headerDividersEnabled="true"
+                android:listSelector="@drawable/tangsdk_audio_chat_list_selector_holo_light"
+                android:scrollbarThumbVertical="@mipmap/tangsdk_scrollbar_handle_holo_light"
+                android:splitMotionEvents="false"
+                android:visibility="gone">
+
+            </ListView>
+
+            <LinearLayout
+                android:id="@+id/audio_single_user_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dip">
+
+                        <ImageView
+                            android:id="@+id/iv_avatar"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/round_default_photo" />
+
+                        <ImageView
+                            android:id="@+id/img_waiting"
+                            android:layout_width="136dip"
+                            android:layout_height="136dip"
+                            android:layout_centerInParent="true"
+                            android:background="@mipmap/tangsdk_logo_animation"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll_name_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_user_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@android:color/white"
+                                style="@style/font_size_20sp" />
+
+                            <ImageView
+                                android:id="@+id/img_audio_state"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="6dp"
+                                android:layout_toRightOf="@id/tv_user_name"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_pre_call_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_name_area"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:text=""
+                            android:textColor="@color/baby_blue"
+                            style="@style/font_size_15sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/no_answer_prompt_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="47.5dp"
+                        android:layout_marginRight="47.5dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@mipmap/tangsdk_noanswer_notice_bg"
+                        android:padding="11dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4dp"
+                            android:paddingTop="8dp"
+                            android:text="@string/tangsdk_no_answer_long_time_prompt"
+                            android:textColor="@android:color/white"
+                            style="@style/font_size_14sp" />
+
+                    </RelativeLayout>
+                    <!--<TextView
+                        android:id="@+id/user_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minHeight="10dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />-->
+
+                </LinearLayout>
+
+                <!--<TextView
+                    android:id="@+id/notice_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@android:color/white" />-->
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_network_poor_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/buttom_area"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="35dp"
+            android:background="@mipmap/tangsdk_network_poor_promot"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/tangsdk_network_weak_advice_switch_to_phone"
+                android:textColor="@android:color/white"
+                style="@style/font_size_14sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/desktopViewRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tangsdk_menu_dialog_text_color"
+        android:orientation="vertical"
+        android:visibility="gone"></RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tangsdk_cover_mask_color"
+        android:orientation="horizontal"
+        android:visibility="gone"></LinearLayout>
+
+</FrameLayout>

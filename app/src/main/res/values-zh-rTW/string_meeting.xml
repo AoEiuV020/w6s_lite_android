@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--umeeting-->
+    <string name="video_meeting">視頻會議</string>
+    <string name="start_meeting">發起會議</string>
+    <string name="invite_meeting">會議邀請</string>
+    <string name="friend_invite_meeting">邀請他人入會</string>
+
+    <string name="meeting_action_invite">會議邀請</string>
+    <string name="meeting_action_update">會議更新</string>
+    <string name="meeting_action_cancel">會議取消</string>
+    <string name="meeting_had_canceled">會議已取消</string>
+
+
+    <string name="meeting_reservation">預約會議</string>
+    <string name="meeting_instant">即時會議</string>
+
+
+</resources>

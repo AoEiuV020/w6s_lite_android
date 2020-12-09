@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 服务号菜单INPUT -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <!-- 服务号键盘图标 -->
+    <RelativeLayout
+        android:id="@+id/service_detail_input_keyboard_service_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/chat_detail_input_keyboard_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_keyword_service" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/service_menu_line"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_toRightOf="@id/service_detail_input_keyboard_service_view">
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/common_line_color" />
+
+        <RelativeLayout
+            android:id="@+id/service_menu_one_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/service_menu_one"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center_vertical"
+                android:singleLine="true"
+                android:text="菜单1"
+                android:textColor="@color/common_text_color"
+                style="@style/font_size_16sp"/>
+
+            <FrameLayout
+                android:id="@+id/service_menu_one_icon"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="bottom"
+                    android:background="@mipmap/icon_down_arrow" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/common_line_color" />
+
+        <RelativeLayout
+            android:id="@+id/service_menu_two_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/service_menu_two"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center_vertical"
+                android:singleLine="true"
+                android:text="菜单1"
+                android:textColor="@color/common_text_color"
+                style="@style/font_size_16sp" />
+
+            <FrameLayout
+                android:id="@+id/service_menu_two_icon"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="bottom"
+                    android:background="@mipmap/icon_down_arrow" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:background="@color/common_line_color"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/service_menu_three_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/service_menu_three"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|center_vertical"
+                android:singleLine="true"
+                android:text="菜单1"
+                android:textColor="@color/common_text_color"
+                style="@style/font_size_16sp"
+                />
+
+            <FrameLayout
+                android:id="@+id/service_menu_three_icon"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="bottom"
+                    android:background="@mipmap/icon_down_arrow" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/service_line_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/service_menu_line"
+        android:background="@color/common_line_color" />
+
+</RelativeLayout>

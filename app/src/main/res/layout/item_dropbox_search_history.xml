@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    style="@style/font_size_14sp"
+    android:gravity="center_vertical"
+    android:text="history"
+    android:textColor="@color/dropbox_common_text_color"
+    android:id="@+id/search_history_data"
+    android:background="@drawable/bg_item_common_selector"
+    />

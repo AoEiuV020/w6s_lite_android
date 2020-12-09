@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_content_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        >
+
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:src="@mipmap/icon_b_nofile"
+        android:layout_marginLeft="16dp"
+        android:layout_centerVertical="true"
+
+        />
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="1"
+        android:textSize="?attr/fontsize_14sp"
+        tools:textSize="14sp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/ivCover"
+        android:ellipsize="end"
+        android:layout_centerVertical="true"
+        android:maxLines="3"
+        android:textColor="@color/common_text_color"
+        />
+
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="?attr/fontsize_12sp"
+        tools:textSize="12sp"
+        android:textColor="@color/common_gray_bg"
+        tools:text="2018年4月1日"
+        android:layout_below="@+id/rl_content_area"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/message_history_bottom_line_gray"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/tvTime"
+        />
+
+</RelativeLayout>

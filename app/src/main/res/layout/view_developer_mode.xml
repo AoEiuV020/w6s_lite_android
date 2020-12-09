@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/transparent"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/dev_title"
+                style="@style/font_size_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:padding="23dp"
+                android:text="@string/developer_tip"
+                android:textColor="@color/red_lock" />
+
+            <View
+                android:id="@+id/dev_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_below="@id/dev_title"
+                android:background="@color/line_color_edit" />
+
+            <TextView
+                android:id="@+id/dev_tip"
+                style="@style/font_size_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dev_line"
+                android:gravity="center"
+                android:padding="18dp"
+                android:text="@string/please_input_code"
+                android:textColor="@color/common_text_color" />
+
+            <com.foreveross.atwork.component.gridpasswordview.GridPasswordView
+                android:id="@+id/grid_password_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/dev_tip"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:text="app:passwordLength=4" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/close_dev_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="12dp"
+        android:background="@mipmap/icon_dev_mode_close" />
+
+</RelativeLayout>

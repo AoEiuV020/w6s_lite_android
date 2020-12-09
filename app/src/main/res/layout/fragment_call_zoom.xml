@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/voip_bg_dark_blue">
+
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llStatusCallingTipArea"
+        android:layout_marginTop="40dp">
+
+
+        <LinearLayout
+            android:id="@+id/llAvatarArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:visibility="visible"
+            >
+
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@mipmap/round_default_photo" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                style="@style/font_size_18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/tvPreCallTip"
+                style="@style/font_size_15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="@string/voip_tip_invite_join_audio_meeting"
+                android:textColor="@color/baby_blue" />
+
+            <RelativeLayout
+                android:id="@+id/rlNoAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="47.5dp"
+                android:layout_marginRight="47.5dp"
+                android:layout_marginTop="13dp"
+                android:background="@mipmap/tangsdk_noanswer_notice_bg"
+                android:padding="11dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/font_size_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/tangsdk_no_answer_long_time_prompt"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llStatusCallingTipArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/flControlArea"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCallingStatusTip"
+            style="@style/font_size_17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/tvWarnTipVoice"
+            style="@style/font_size_14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/voip_network_not_good_tip"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/flControlArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        >
+
+
+        <LinearLayout
+            android:id="@+id/rlCallInitControlArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp"
+            android:paddingTop="30dp"
+            android:visibility="visible"
+            tools:visibility="visible"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rlHangupCall"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ivHangupCall"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tangsdk_btn_stop_call_selector" />
+
+                <TextView
+                    android:id="@+id/tvHangupCall"
+                    style="@style/font_size_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivHangupCall"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/reject"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlPickupCall"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivPickupCall"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tangsdk_btn_start_call_selector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivPickupCall"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/accept"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

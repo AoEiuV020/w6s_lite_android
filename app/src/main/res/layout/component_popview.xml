@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- 同步联系人到手机POP VIEW -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/pop_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_select"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        >
+
+    </LinearLayout>
+
+</RelativeLayout>

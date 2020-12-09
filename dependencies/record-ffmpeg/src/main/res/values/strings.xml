@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="record_forbidden">麦克风被禁用</string>
+</resources>

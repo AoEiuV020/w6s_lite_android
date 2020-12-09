@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar_share_file_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar_common" />
+
+    <RelativeLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/title_bar_share_file_result"
+        android:background="@mipmap/bg_share_file_success"
+        android:paddingBottom="45dp"
+        android:paddingTop="45dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <LinearLayout
+            android:id="@+id/ll_file_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true">
+                <TextView
+                    android:id="@+id/tv_success"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/make_share_url_done"
+                    android:drawableTop="@mipmap/icon_file_share_success"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/common_text_color"
+                    style="@style/font_size_14sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="35dp"/>
+
+                <TextView
+                    android:id="@+id/tv_share_file_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/common_text_color"
+                    style="@style/font_size_14sp"
+                    android:maxLines="3"
+                    android:textSize="16sp"
+                    android:ellipsize="end"
+                    android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ll_file_name"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textColor="@color/common_text_color"
+                style="@style/font_size_14sp"
+                android:text="@string/share_file_url"/>
+
+            <TextView
+                android:id="@+id/tv_share_file_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/blue_link"
+                style="@style/font_size_14sp"
+                android:maxLines="5"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_share_password_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/item_link"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginTop="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textColor="@color/common_text_color"
+                style="@style/font_size_14sp"
+                android:text="@string/share_flie_password"/>
+
+            <TextView
+                android:id="@+id/tv_share_file_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/common_text_color"
+                style="@style/font_size_14sp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_copy"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/press_to_copy"
+        android:layout_below="@id/info_layout"
+        android:background="@drawable/shape_share_chat_copy_link_bg"
+        android:textColor="@color/white"
+        style="@style/font_size_16sp"
+        android:layout_marginTop="25dp"/>
+
+</RelativeLayout>

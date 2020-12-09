@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/title_bar_common"/>
+
+    <RelativeLayout
+        android:id="@+id/email_remind_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:background="@drawable/bg_item_common_selector">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/font_size_14sp"
+            android:text="@string/email_remind"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/common_line_color"/>
+
+    <RelativeLayout
+        android:id="@+id/email_sync_background_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:background="@drawable/bg_item_common_selector">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/font_size_14sp"
+            android:text="@string/email_sync_background"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="14sp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/common_line_color"/>
+
+    <RelativeLayout
+        android:id="@+id/calendar_sync_setting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:background="@drawable/bg_item_common_selector">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/font_size_14sp"
+            android:text="@string/cal_sync_setting"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="14sp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/common_line_color"/>
+
+</LinearLayout>

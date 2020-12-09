@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutCategory"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:tag="c4"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/common_blue_bg"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/common_blue_bg"
+            app:tabTextColor="#999999"
+            android:layout_toLeftOf="@+id/llRightArea"
+            />
+
+        <LinearLayout
+            android:id="@+id/llRightArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <com.foreveross.atwork.modules.workbench.component.WorkbenchCustomTextOrIconView
+                android:id="@+id/vWorkbenchCustomTextOrIconView00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="24dp"
+
+                />
+
+
+            <com.foreveross.atwork.modules.workbench.component.WorkbenchCustomTextOrIconView
+                android:id="@+id/vWorkbenchCustomTextOrIconView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@color/common_line_color"
+        android:tag="c18" />
+
+    <com.foreveross.atwork.component.viewPager.AdjustHeightViewPager
+        android:id="@+id/vpCategoryCards"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        />
+
+
+</LinearLayout>

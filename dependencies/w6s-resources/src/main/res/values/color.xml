@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 登录 -->
+    <color name="login_divider_color">#ffdddcda</color>
+
+    <!-- 消息提醒红色 -->
+    <color name="common_message_num_bg">#FF5858</color>
+
+    <color name="title_bar_color">#3785c6</color>
+
+    <color name="title_bar_rightest_text_gray">#bdbdbd</color>
+
+    <!-- 半透明 -->
+    <color name="transparent_70">#70000000</color>
+
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+
+    <color name="write_bg">#DCDCDC</color>
+
+    <!--整体线条颜色-->
+    <color name="common_line_color">#E0E0E0</color>
+
+    <!--整体线条颜色-->
+    <color name="line_color_edit">#D8D8D8</color>
+
+
+    <!--通用字体灰色颜色 -->
+    <color name="common_text_color_gray">#ff5a676e</color>
+
+    <!--通用listview 的item按下背景颜色-->
+    <color name="base_pressed_bg">#f5f5f5</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="black_bg">#1c1c1c</color>
+    
+    <color name="translation_333">#b0333333</color>
+
+    <color name="link">#1C7AFF</color>
+    <color name="self_link">#80E9FF</color>
+    <color name="peer_link">#02AEEF</color>
+
+    <color name="black">#000000</color>
+
+    <color name="light_black">#222222</color>
+
+    <color name="micro_video_bg_gray">#F6F6F6</color>
+
+    <!--标题正文主体颜色 -->
+    <color name="common_text_color">#333333</color>
+
+    <!-- 会话界面 消息正文主体颜色 -->
+    <color name="common_text_color_chat_list">#878A8D</color>
+
+    <color name="common_text_color_share_title">#3B3C3D</color>
+
+    <color name="common_text_color_share_summary">#878A8D</color>
+
+    <color name="common_text_color_888">#888</color>
+
+    <color name="common_text_color_666">#666666</color>
+
+    <color name="common_text_color_999">#999999</color>
+
+    <color name="common_text_gray_color_aaa">#aaa</color>
+
+    <color name="common_text_gray_color_afafaf">#afafaf</color>
+    <color name="common_page_bg">#e9ecf1</color>
+
+    <color name="common_list_item_left">@color/common_item_black</color>
+
+    <color name="common_list_item_right">#999999</color>
+
+    <color name="login_btn_press">#5ccb93</color>
+
+    <color name="login_btn_text_unable">#7efbba</color>
+
+    <color name="login_input_unfocus">#419cc8</color>
+
+    <color name="session_pressed">#f8f8f8</color>
+
+    <color name="chat_avatar_border">#ECECEC</color>
+
+    <color name="message_history_bottom_line_gray">#eaeaea</color>
+
+    <!--提醒字体颜色-->
+    <color name="alarm_text">#B6B6B6</color>
+
+    <!--网络异常提醒色条-->
+    <color name="alarm_network_bg">#FDE4E7</color>
+    <color name="alarm_network_text">#999999</color>
+
+    <!--@人提醒字条-->
+    <color name="at_text">#FF9A99</color>
+
+    <!--tab字体-->
+    <color name="tab_text">#777777</color>
+
+    <!--tab字体-->
+    <color name="chat_detail_bg">#F3F3F3</color>
+
+    <!--搜索背景色 条框背景色-->
+    <color name="search_bg">#ECECEC</color>
+
+    <!--workplus 主色调-->
+    <color name="common_blue_bg">#1A98FF</color>
+    <color name="common_bg_gray">#F4F4F4</color>
+    <color name="main_fab_blue">#1a81ff</color>
+    <color name="common_gray_bg">#bdbdbd</color>
+    <color name="letter_blue">#1A99FA</color>
+
+    <color name="tab_active_color">#1A98FF</color>
+    <color name="tab_inactive_color">#bdbdbd</color>
+
+    <color name="ad_text_gray">#B9B9B9</color>
+
+    <color name="qrcode_result_view">#b0000000</color>
+    <color name="qrcode_viewfinder_mask">#60000000</color>
+    <color name="qrcode_possible_result_points">#c0ffff00</color>
+    <color name="qrcode_text_red">#D73644</color>
+    <color name="qrcode_text_bg_yellow">#FFF9ED</color>
+
+    <color name="person_info_action_color">#007ce6</color>
+
+    <color name="qrcode_card_title_color">#00cc99</color>
+
+    <color name="blue_lock">#1A98FF</color>
+    <color name="blue_link">#02AEEF</color>
+    <color name="red_lock">#f12525</color>
+    <color name="common_item_black">@color/common_text_color</color>
+
+    <!--我的下载-->
+    <color name="tab_selected_text_color">#5FA2F7</color>
+    <color name="tab_text_color">#858585</color>
+    <color name="file_group_time_text_color">#858585</color>
+
+
+    <!--登陆页的一些颜色值动态配置 -->
+    <color name="login_bg_color">#ffffff</color>
+    <color name="common_text_hint_gray">#cbcbcb</color>
+    <color name="common_text_hint_gray2">#bcbcbc</color>
+
+    <color name="login_button_input_something">#1a98ff</color>
+    <color name="login_button_input_nothing">#501a98ff</color>
+    <color name="login_text_color">#ffffff</color>
+    <color name="white_10a">#19AEAEAE</color>
+    <color name="common_text_gray_color">#3B3C3D</color>
+    <color name="login_switch_account_text_color">#3B3C3D</color>
+    <color name="login_forget_btn_color">#888</color>
+
+    <color name="splash_bottom_text_white">#B9B9B9</color>
+
+
+    <color name="grid_line">#AEAEAE</color>
+
+    <color name="state_text">#878A8D</color>
+
+    <!--以下是视频语音会议 UI 的颜色值-->
+    <color name="voip_bg_dark_blue">#232D36</color>
+    <color name="voip_select_mode_bottom_area_dark_blue">#2b3946</color>
+    <color name="pink_blue">#a2d3ff</color>
+    <color name="baby_blue">#A4D4FD</color>
+    <color name="voip_agora_selected_blue">#1FBADE</color>
+
+
+    <color name="tangsdk_title_font_color">#ffffff</color>
+    <color name="tangsdk_transparent">#000000ff</color>
+    <color name="tangsdk_mute_text_color_normal">#BFffffff</color>
+    <color name="tangsdk_mute_text_color_disabled">#59ffffff</color>
+    <!-- 分割线的颜色 -->
+    <color name="tangsdk_divider_bg_grey">#dadada</color>
+    <color name="tangsdk_menu_dialog_text_color">#3B4F61</color>
+    <color name="tangsdk_menu_item_pressed_color">#F7F7F7</color>
+    <color name="tangsdk_cancel_text_color">#71aee2</color>
+    <color name="tangsdk_dialpad_num_text_color">#4f667b</color>
+    <color name="tangsdk_dialpad_et_hint_color">#c3c3c3</color>
+    <color name="tangsdk_activity_bg_color">#F5F5F5</color>
+    <color name="tangsdk_dialpad_num_pressed">#0d000000</color>
+    <color name="tangsdk_call_bg_color">#3b4f61</color>
+    <color name="tangsdk_bg_dark_grey">#F7F7F7</color>
+    <color name="tangsdk_text_hint_grey_color">#c3c3c3</color>
+    <!-- 灰色字体 -->
+    <color name="tangsdk_text_color_grey">#999999</color>
+    <color name="tangsdk_cover_mask_color">#5A3B4F61</color>
+
+    <!-- 中集登陆页颜色-->
+    <color name="cimc_login_bg_color">#1A98FF</color>
+    <color name="cimc_common_text_hint_gray">#b0ffffff</color>
+    <color name="cimc_login_button_input_something">#ffffff</color>
+    <color name="cimc_login_button_input_nothing">#b0ffffff</color>
+    <color name="cimc_login_text_color">#002B4E</color>
+    <color name="cimc_common_text_gray_color">#ffffff</color>
+    <color name="cimc_login_switch_account_text_color">#002B4E</color>
+
+    <!-- 网盘颜色-->
+    <color name="dropbox_sub_title_bg_color">#F0F8FF</color>
+    <color name="dropbox_common_text_color">#222222</color>
+    <color name="dropbox_hint_text_color">#999999</color>
+
+    <!--图片编辑使用颜色-->
+    <color name="orange">#F9803E</color>
+    <color name="red">#F13131</color>
+    <color name="yellow">#FEDE35</color>
+    <color name="green">#88E635</color>
+    <color name="blue">#2494F6</color>
+    <color name="violet">#8E2CF9</color>
+
+    <color name="color_e6e6e6">#e6e6e6</color>
+
+    <color name="watermark_text_color">#E1E1E1</color>
+
+    <!--阅后即焚使用颜色-->
+    <color name="burn_mode_chat_item_blue">#45AAFC</color>
+    <color name="burn_mode_chat_item_gray">#E3E3E3</color>
+    <color name="burn_mode_chat_left_text">#46484a</color>
+    <color name="burn_mode_chat_bg">#2A2A2A</color>
+    <color name="burn_mode_chat_input_bg">#333333</color>
+    <color name="burn_mode_edit_text_bg">#575757</color>
+    <color name="burn_mode_line">#656565</color>
+    <color name="burn_mode_message_detail_main">#CAE5FE</color>
+    <color name="burn_mode_message_detail_text">#1A98FF</color>
+    <color name="burn_mode_time_clock_bg">#26406e</color>
+
+    <color name="divider_line_gray">#dbdbdb</color>
+
+    <!--必应消息-->
+    <color name="bing_un_confirm_yellow">#fffaf1</color>
+    <color name="bing_new_voice_recording_green">#0abc6a</color>
+    <color name="bing_chat_text_color">#46484a</color>
+    <color name="bing_tab_select">#1A98FF</color>
+    <color name="bing_tab_un_select">#4D333333</color>
+    <color name="bing_tab_select_item">#333333</color>
+    <color name="bing_read_item_text">#999999</color>
+    <color name="bing_line_gray">#F6F7F9</color>
+
+    <!--钱包-->
+    <color name="wallet_text_red">#5b3101</color>
+    <color name="wallet_light_red">#c93d3d</color>
+    <color name="wallet_light_golden">#fffac1</color>
+
+    <color name="session_top">#fffee3</color>
+    <color name="session_no_top">#FFFFFF</color>
+    <color name="gray">#d1d1d1</color>
+
+    <color name="favorite_tag_select_bg_color">#e2f2ff</color>
+    <color name="favorite_tag_bg_line_color">#72bfff</color>
+    <color name="favorite_tag_normal_bg_color">#f4f4f4</color>
+    <color name="favorite_tag_normal_line_color">#dcdcdc</color>
+    <color name="favorite_my_tag_select_bg_color">#1a98ff</color>
+    <color name="favorite_voice_detail_bg">#fafafa</color>
+    <color name="favorite_common_page_bg">#f4f4f4</color>
+
+    <!--语音-->
+    <color name="input_voice_grey_color">#555555</color>
+    <color name="stroke_line_color">#dcdcdc</color>
+    <color name="solid_bg_normal_color">#F7F7F7</color>
+
+    <!--文件查看-->
+    <color name="file_common_text_color">#222222</color>
+    <color name="file_hint_text_color">#999999</color>
+    <color name="file_size_text_color">#888888</color>
+
+    <color name="chat_left_second_color">#666666</color>
+    <color name="chat_left_main_color">#555555</color>
+    <color name="chat_right_second_color">#CCffffff</color>
+    <color name="chat_right_main_color">#ffffff</color>
+
+    <!--机器人-->
+    <color name="robot_main_bg">#000000</color>
+
+    <!--协议弹窗-->
+    <!--对话框标题正文主体颜色 -->
+    <color name="dialog_text_color">#191919</color>
+    <!--对话框链接颜色 -->
+    <color name="common_link_color"> #1A98FF</color>
+
+    <!--对话框的提示语颜色-->
+    <color name="common_tip_color">#cbcbcb</color>
+    <!--进度条默认颜色-->
+    <color name="common_progress_color">#1a98ff</color>
+    <!--对话框下滑线默认颜色-->
+    <color name="common_underline_color">#F7F7F7</color>
+    <!--对话框的确定和取消按钮文本默认颜色-->
+    <color name="common_button_text_color">#1a98ff</color>
+    <color name="common_left_button_text_color">#888888</color>
+    <color name="common_right_button_text_color">#1A98FF</color>
+    <!--进度条的进度数字提示-->
+    <color name="common_progress_num_color">#787878</color>
+    <!--进度条的底色-->
+    <color name="common_progress_background_color">#c5c5c5</color>
+
+    <color name="search_title_bar_stroke">#f1f3f4</color>
+    <color name="search_title_bar_bg">#f6f7f9</color>
+    <color name="search_item_title_bg">#efefef</color>
+
+</resources>

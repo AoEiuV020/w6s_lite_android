@@ -1,0 +1,321 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.huawei.agconnect'
+apply plugin: "org.sonarqube"
+
+
+/**
+ * 这里为了避免与第三方SDK(如听云等)冲突导致编译错误或加速失败，请务必把apply plugin: 'maa'放在最后
+ 一位
+ **/
+if (enableWangsuSce) {
+    apply plugin: 'maa'
+}
+
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+androidExtensions {
+    experimental = true
+}
+
+android {
+
+
+    compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        jumboMode = true
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        applicationId "com.foreverht.workplus.lite"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode 3
+        versionName "1.0.3"
+        multiDexEnabled true
+
+        ndk {
+            abiFiltersInit.forEach { abi ->
+                abiFilters abi
+            }
+        }
+
+        manifestPlaceholders = [WORKPLUS_SCHEMA : schemaInBeeworks,
+                                BAIDU_KEY : '',
+                                HUAWEI_ID : huaweiId,
+                                QSY_CALENDAR: '',
+                                VIVO_ID: vivoId,
+                                VIVO_KEY: vivoKey
+        ]
+
+
+        //tinker分包规则
+        multiDexKeepProguard file("tinker_multidexkeep.pro") //keep specific classes using proguard syntax
+
+        /*jackOptions {
+            enabled  true
+        }*/
+
+        missingDimensionStrategy 'encryptionMode', 'encryption'
+        missingDimensionStrategy 'webkit', 'x5'
+        missingDimensionStrategy 'faceBio', 'facepBio'
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+            dirs project(':dependencies:zoom-mobile-rtc').file('libs')
+            dirs project(':dependencies:fengmap_lib').file('libs')
+            dirs project(':dependencies:aliyun-voice').file('libs')
+        }
+    }
+
+    signingConfigs {
+        release {
+            setSigningProperties()
+        }
+
+        previewRelease {
+            storeFile file("KeyStore/eim-android.keystore")
+            storePassword "123456789"
+            keyAlias "eim-android"
+            keyPassword "123456789"
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'assets/libwbsafeedit'
+        exclude 'META-INF/README'
+        exclude 'assets/com.tencent.open.config.json'
+        pickFirst 'cn/wps/moffice/client/OfficeServiceClient.aidl'
+    }
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions{
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+
+            minifyEnabled = true
+            debuggable false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def flavorName = variant.productFlavors[0].name
+                        def versionName = variant.productFlavors[0].versionName
+                        def versionCode = variant.productFlavors[0].versionCode
+
+                        //输入名为 : app-atworkTestCrosswalk-v2.0.139-223-20151015.apk
+
+                        def fileName = "WorkPlus-Lite-${versionCode}-${versionCode}.apk"
+
+//                        output.outputFile = new File(outputFile.parent, fileName)
+                        output.outputFileName = new File("./", fileName)
+
+                    }
+                }
+            }
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+        }
+    }
+
+    lintOptions {
+
+        abortOnError false
+
+        // if true, only report errors
+        ignoreWarnings true
+    }
+
+    flavorDimensions "product"
+
+
+    productFlavors {
+
+        //WorkPlus Lite
+        lite {
+            applicationId "com.foreverht.workplus.lite"
+            versionCode 1
+            versionName "1.0.3"
+            dimension 'product'
+        }
+    }
+
+
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.umeng.sdk:utdid:1.1.5.3'
+    implementation "androidx.legacy:legacy-support-v4:${versions.supportXLibraryVersion}"
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation "com.google.code.gson:gson:${versions.gsonVersion}"
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.github.chrisbanes.photoview:library:1.2.4'
+    implementation 'org.jsoup:jsoup:1.10.3'
+    implementation 'com.yqritc:android-scalablevideoview:1.0.4'
+    implementation 'com.huawei.hms:push:4.0.2.300'
+    implementation 'com.meizu.flyme.internet:push-internal:3.6.7@aar'
+    //    implementation 'com.meizu.flyme.internet:push-ups:4.0.0'
+    implementation 'com.sina.weibo.sdk:core:4.3.1:openDefaultRelease@aar'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation "com.github.bumptech.glide:glide:${versions.glideVersion}"
+    implementation 'com.ld:switchView:1.1.7'
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:${versions.desugarJdkLibsVersion}"
+    //        compile 'org.xwalk:xwalk_core_library:23.53.589.4'
+    //    compile 'com.networkbench.newlens.agent.android:nbs.newlens.agent:2.3.1'
+    //    atworkTestCrosswalkImplementation('com.facebook.stetho:stetho:1.5.0')
+    implementation project(':dependencies:im-sdk')
+    implementation project(':dependencies:api-sdk')
+    implementation project(':dependencies:record-ffmpeg')
+    implementation project(':dependencies:qrcode')
+    implementation project(':dependencies:theme')
+    implementation project(':dependencies:photo-edit')
+    implementation project(':dependencies:lock9view')
+    implementation project(':dependencies:xfyun')
+    implementation project(':dependencies:translate')
+    implementation project(':dependencies:emojicon')
+    implementation project(':dependencies:gif-drawable')
+    implementation project(':dependencies:watermark')
+    implementation project(':dependencies:amap-sdk')
+    implementation project(':dependencies:db-service')
+    implementation project(':dependencies:webview-core')
+    implementation project(':dependencies:thread-gear')
+    implementation project(':dependencies:cache')
+    implementation project(':dependencies:infrastructure')
+    implementation project(':dependencies:w6s-ui-component')
+    implementation project(':dependencies:fingerprintIdentify')
+    implementation project(':dependencies:aliyun-voice')
+    implementation project(':dependencies:handyfloat_lib')
+    implementation files('libs/pushsdk_v2.3.4.jar')
+    implementation('com.aliyun.ams:alicloud-android-httpdns:1.2.5@aar') {
+        exclude module: 'alicloud-android-utdid'
+        transitive true
+    }
+    implementation project(':dependencies:video-compress')
+    implementation project(':dependencies:cameraView-natario1')
+    implementation 'com.github.kizitonwose:CalendarView:0.3.2'
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    debugImplementation 'com.amitshekhar.android:debug-db-encrypt:1.0.6'
+
+    if (enableZoom) {
+        implementation project(':dependencies:zoom-mobile-rtc')
+    }
+
+    if(enableCloudwise) {
+        implementation 'com.cloudwise.mobile.android.distribute:cloudwise-mobile-distribute:1.6.0'
+        implementation project(':dependencies:cloud-wise')
+    }
+
+    if (enableAgora) {
+        implementation project(':dependencies:agora-sdk')
+    }
+
+    if (enableBaiduTrance) {
+        implementation project(':dependencies:baidulib')
+    }
+
+    if (enableFengmap) {
+        implementation project(':dependencies:fengmap_lib')
+    }
+
+}
+
+configurations.all {
+    resolutionStrategy {
+        force "androidx.legacy:legacy-support-v4:${versions.supportXLibraryVersion}"
+    }
+}
+
+
+if (project.rootProject.file('dev.properties').exists()){
+    android.variantFilter { variant ->
+        def devProps = new Properties()
+        devProps.load(project.rootProject.file('dev.properties').newDataInputStream())
+
+        def currentDevFlavor =  devProps.DEV_FLAVOR
+        def flavorName = variant.getFlavors().get(0).name
+
+        if(currentDevFlavor  && flavorName != currentDevFlavor) {
+            variant.setIgnore(true)
+        }
+    }
+}
+
+def setSigningProperties() {
+
+    def currentFlavor = getCurrentFlavor()
+    def flavorBuildPro = "app/src/${currentFlavor}/buildConfigs/build.properties"
+    def defaultBuildPro = "app/src/main/buildConfigs/build.properties"
+    def props = new Properties()
+
+    if(project.rootProject.file(flavorBuildPro).exists()) {
+        props.load(project.rootProject.file(flavorBuildPro).newDataInputStream())
+    } else {
+        props.load(project.rootProject.file(defaultBuildPro).newDataInputStream())
+    }
+
+    android.signingConfigs.release.storeFile = file(props['STORE_FILE'])
+    android.signingConfigs.release.storePassword = props['STORE_PASSWORD']
+    android.signingConfigs.release.keyAlias = props['KEY_ALIAS']
+    android.signingConfigs.release.keyPassword = props['KEY_PASSWORD']
+
+
+}
+
+
+
+
+
+
+sonarqube {
+    properties {
+
+        property "sonar.inclusions", "**/*.java,**/*.kt"
+        property "sonar.exclusions","**/DropboxModifyFragment.java"
+
+        property "sonar.projectName", "WorkPlus_Android"
+
+    }
+}
+
+afterEvaluate {
+    Set<Task> result = tasks.findAll { task -> task.name.startsWith('lintVital') }
+    result.each { Task task ->
+        task.enabled = false
+    }
+}

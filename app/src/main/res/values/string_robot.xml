@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="robot">robot</string>
+    <string name="robot_open">Turn on the Robot</string>
+    <string name="robot_close">Turn off the Robot</string>
+    <string name="robot_shake_open">Shake it up</string>
+    <string name="robot_click_open">Arouse the robot</string>
+    <string name="robot_tips">After the "robot" is turned on, you can communicate with the robot and let it replace some manual operations.</string>
+    <string name="robot_help">May I help you?</string>
+    <string name="robot_say_again">I don\'t understand what you\'re talking about, please say it again.</string>
+    <string name="robot_find">Find for you：</string>
+    <string name="robot_listening">Listening to you ...</string>
+    <string name="robot_not_open_associates">未开启“同事圈”</string>
+    <string name="robot_not_open_collect">not open "my favorites"</string>
+    <string name="robot_must_set_one">Must set one</string>
+</resources>

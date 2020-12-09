@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/view_poi_info_list"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        layout="@layout/view_poi_info_list"
+        android:layout_alignParentBottom="true" />
+
+    <include
+        android:id="@+id/view_poi_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        layout="@layout/view_poi_search_list"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view_poi_info_list"/>
+
+    <ImageView
+        android:id="@+id/iv_myLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view_poi_info_list"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@mipmap/icon_move_out_my_pos"/>
+
+    <TextView
+        android:id="@+id/view_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@mipmap/icon_close_micro_video_page"/>
+
+    <TextView
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/send_action"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_login_rect_input_something"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center"/>
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/select_local_file_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/bg_item_common_selector">
+
+        <ImageView style="@style/icon_arrow_dark" />
+
+        <ImageView
+            android:id="@+id/icon_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/icon_phone" />
+
+        <TextView
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/icon_phone"
+            android:text="@string/phone_file"
+            android:textColor="#333" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/select_dropbox_file_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/common_line_color" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/bg_item_common_selector">
+
+            <ImageView style="@style/icon_arrow_dark" />
+
+            <ImageView
+                android:id="@+id/icon_dropbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/icon_dropbox_email" />
+
+            <TextView
+                style="@style/font_size_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/icon_dropbox"
+                android:text="@string/dropbox_send_email_file"
+                android:textColor="#333" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/lineview_up"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/common_line_color" />
+
+    <TextView
+        android:id="@+id/current_file_tv"
+        style="@style/font_size_13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:text="@string/recent_file"
+        android:textColor="#989da4"></TextView>
+
+    <include layout="@layout/view_common_divider" />
+
+    <ListView
+        android:id="@+id/recent_files_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="1px"
+        android:scrollbars="none" />
+
+</LinearLayout>

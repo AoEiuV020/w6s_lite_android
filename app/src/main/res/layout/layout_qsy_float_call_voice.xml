@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voice_call_layout"
+    android:layout_width="63dp"
+    android:layout_height="63dp">
+
+    <ImageView
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:src="@mipmap/tangsdk_call_float_window_bg" />
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/tangsdk_call_float_window_dial" />
+
+    <TextView
+        android:id="@+id/call_state_prompt_text"
+        style="@style/font_size_11sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="34dp"
+        android:text="@string/tangsdk_call_state_waiting"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/call_state_text_end"
+        style="@style/font_size_11sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="34dp"
+        android:text="@string/tangsdk_call_state_end"
+        android:textColor="#ffffff"
+        android:visibility="gone" />
+
+
+</FrameLayout>

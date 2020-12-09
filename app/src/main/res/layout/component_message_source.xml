@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/message_source_bg">
+
+    <ImageView
+        android:id="@+id/iv_icon_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/icon_message_source"/>
+
+    <TextView
+        android:id="@+id/tv_source_flag_prefix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textSize="10sp"
+        android:textColor="@color/grid_line"
+        android:text="@string/this_message_source"/>
+
+    <TextView
+        android:id="@+id/source_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="5dp"
+        style="@style/font_size_10sp"
+        android:textColor="@color/blue_lock"
+        android:text="@string/wechat_emp_no"/>
+</LinearLayout>

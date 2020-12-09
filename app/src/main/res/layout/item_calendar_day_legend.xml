@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/legendLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/tv_legend1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/sunday"
+        android:textColor="@color/common_text_hint_gray2"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_legend2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/monday"
+        android:textColor="@color/common_text_hint_gray2"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_legend3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/tuesday"
+        android:textColor="@color/common_text_hint_gray2"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_legend4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/wednesday"
+        android:textColor="@color/common_text_hint_gray2"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_legend5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/thursday"
+        android:textColor="@color/common_text_hint_gray2"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_legend6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/friday"
+        android:textColor="@color/common_text_hint_gray2"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_legend7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/saturday"
+        android:textColor="@color/common_text_hint_gray2"
+        android:textSize="16sp" />
+
+</LinearLayout>

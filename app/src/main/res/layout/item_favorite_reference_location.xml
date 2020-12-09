@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_page_bg"
+    android:layout_marginTop="8dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <include
+            android:id="@+id/favorite_select_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            layout="@layout/view_favorite_selector" />
+
+
+        <com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout
+            android:id="@+id/llChatLeftContent"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chat_left_text_username_line"
+            android:layout_toRightOf="@id/chat_left_text_avatar"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/favorite_select_toggle"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/vDivider"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/common_blue_bg"
+
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/chat_left_second_color"
+                        android:textSize="12sp"
+                        tools:text="看看我是谁" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+
+
+                        <ImageView
+                            android:id="@+id/ivCover"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvTitle"
+                            android:layout_marginTop="5dp"
+                            android:src="@mipmap/icon_favorite_location"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tvDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="hellowo"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="16sp"
+                            android:textColor="@color/chat_left_main_color"
+                            android:layout_marginLeft="8dp"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <com.rockerhieu.emojicon.EmojiconTextView
+                android:id="@+id/tvReply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/common_text_color"
+                android:textSize="16sp"
+                android:maxLines="4"
+                android:ellipsize="end"
+                tools:text="dasunsy" />
+        </com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout>
+
+
+
+
+
+        <include
+            layout="@layout/view_favorite_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_below="@id/llChatLeftContent"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

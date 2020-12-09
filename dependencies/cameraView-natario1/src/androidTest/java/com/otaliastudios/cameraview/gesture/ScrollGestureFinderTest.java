@@ -1,0 +1,91 @@
+package com.otaliastudios.cameraview.gesture;
+
+
+import androidx.annotation.NonNull;
+import android.support.test.espresso.ViewAction;
+import android.support.test.ext.junit.runners.AndroidJUnit4;
+import android.support.test.filters.SmallTest;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import static android.support.test.espresso.action.ViewActions.swipeDown;
+import static android.support.test.espresso.action.ViewActions.swipeLeft;
+import static android.support.test.espresso.action.ViewActions.swipeRight;
+import static android.support.test.espresso.action.ViewActions.swipeUp;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+
+@RunWith(AndroidJUnit4.class)
+@SmallTest
+public class ScrollGestureFinderTest extends GestureFinderTest<ScrollGestureFinder> {
+
+    private final static long WAIT = 2000; // 500 was too short
+
+    @Override
+    protected ScrollGestureFinder createFinder(@NonNull GestureFinder.Controller controller) {
+        return new ScrollGestureFinder(controller);
+    }
+
+    @Test
+    public void testDefaults() {
+        assertNull(finder.mType);
+        assertEquals(finder.getPoints().length, 2);
+        assertEquals(finder.getPoints()[0].x, 0, 0);
+        assertEquals(finder.getPoints()[0].y, 0, 0);
+        assertEquals(finder.getPoints()[1].x, 0, 0);
+        assertEquals(finder.getPoints()[1].y, 0, 0);
+    }
+
+    @Test
+    public void testScrollDisabled() {
+        finder.setActive(false);
+        touchOp.listen();
+        touchOp.start();
+        onLayout().perform(swipeUp());
+        Gesture found = touchOp.await(WAIT);
+        assertNull(found);
+    }
+
+    private void testScroll(ViewAction scroll, Gesture expected, boolean increasing) {
+        touchOp.listen();
+        touchOp.start();
+        onLayout().perform(scroll);
+        Gesture found = touchOp.await(WAIT);
+        assertEquals(found, expected);
+
+        // How will this move our parameter?
+        float curr = 0.5f, min = 0f, max = 1f;
+        float newValue = finder.computeValue(curr, min, max);
+        if (increasing) {
+            assertTrue(newValue >= curr);
+            assertTrue(newValue <= max);
+        } else {
+            assertTrue(newValue <= curr);
+            assertTrue(newValue >= min);
+        }
+    }
+
+    @Test
+    public void testScrollLeft() {
+        testScroll(swipeLeft(), Gesture.SCROLL_HORIZONTAL, false);
+    }
+
+    @Test
+    public void testScrollRight() {
+        testScroll(swipeRight(), Gesture.SCROLL_HORIZONTAL, true);
+    }
+
+    @Test
+    public void testScrollUp() {
+        testScroll(swipeUp(), Gesture.SCROLL_VERTICAL, true);
+    }
+
+    @Test
+    public void testScrollDown() {
+        testScroll(swipeDown(), Gesture.SCROLL_VERTICAL, false);
+    }
+
+
+}

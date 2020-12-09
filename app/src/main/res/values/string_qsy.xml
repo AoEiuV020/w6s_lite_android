@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--全时云 string-->
+    <string name="tangsdk_chat_audio_handfree_msg">Speaker</string>
+    <string name="tangsdk_chat_audio_mute_msg">Mute</string>
+    <string name="tangsdk_chat_audio_use_phone_msg">Switch to voice call</string>
+    <string name="tangsdk_chat_audio_open_camera_msg">Video</string>
+    <string name="tangsdk_chat_audio_use_voip_msg">Using the network voice</string>
+    <string name="tangsdk_chat_audio_click_into_call_msg">Click Join</string>
+    <string name="tangsdk_chat_audio_switch_phone_msg">Switching to the phone, please wait</string>
+    <string name="tangsdk_chat_audio_receive_btn_title">End and answer</string>
+    <string name="tangsdk_chat_audio_reconnect_msg">Network outages are reconnection...</string>
+    <string name="tangsdk_common_back_btn_title">Back</string>
+    <string name="tangsdk_audio_reject_call_msg">Hang Up</string>
+    <string name="tangsdk_audio_left_msg">Exited</string>
+    <string name="tangsdk_audio_not_join_msg">Waiting\n to join</string>
+    <string name="tangsdk_cancel_btn_title">Cancel</string>
+    <string name="tangsdk_p2p_call_request">Call request...</string>
+    <string name="tangsdk_group_call_request">Invite you to join...</string>
+    <string name="tangsdk_waitting_peer_answer">Awaiting response...</string>
+    <string name="tangsdk_connecting_msg">Establishing Connection...</string>
+    <string name="tangsdk_call_will_soon_end">The call is coming to an end</string>
+    <string name="tangsdk_start_call_btn_text">OK</string>
+    <string name="tangsdk_dialpad_edittext_hint">Enter phone number</string>
+    <string name="tangsdk_voice_voip_type">Network Voice</string>
+    <string name="tangsdk_wait_phone_call">Awaiting response</string>
+    <string name="tangsdk_wait_switch_to_voip">Switching to the network voice...</string>
+    <string name="tangsdk_switch_to_phone_call_success">Has been switched to phone call</string>
+    <string name="tangsdk_switch_to_phone_call_failed">Switch to phone call failed</string>
+    <string name="tangsdk_current_same_as_select_phone">Currently using the phone call %s</string>
+    <string name="tangsdk_current_same_as_select_voip">Currently using the network voice</string>
+    <string name="tangsdk_receive_video_text">Receive video screen</string>
+    <string name="tangsdk_view_video_text">View the video screen</string>
+    <string name="tangsdk_view_desk_share_text">View screen sharing</string>
+    <string name="tangsdk_call_state_waiting">Waiting</string>
+    <string name="tangsdk_call_state_connecting">Connecting</string>
+    <string name="tangsdk_call_state_end">Call ended</string>
+    <string name="tangsdk_continue_btn_text">Continue</string>
+    <string name="tangsdk_prompt_text">Tips</string>
+    <string name="tangsdk_network_invalid_prompt">Network connection is not available, please try again later</string>
+    <string name="tangsdk_not_wifi_prompt">In the mobile network environment will affect the call quality, and generate mobile phone traffic, OK to continue？</string>
+    <string name="tangsdk_network_weak_advice_switch_to_phone">Network connection is unstable, it is recommended to switch to the phone call</string>
+    <string name="tangsdk_reconnect_failed">Connection failed</string>
+    <string name="tangsdk_no_answer_long_time_prompt">Other user may be busy.Try again later.</string>
+    <string name="tangsdk_no_camera_permission_prompt">Unable to get camera data. Please try again later.</string>
+    <string name="tangsdk_china">China</string>
+    <string name="tangsdk_country_code">Country Code</string>
+    <string name="tangsdk_i_know_it">Ok</string>
+    <string name="tangsdk_slide_gesture_screen">Swipe left or right to switch the video screen</string>
+    <string name="tangsdk_desktopshare_title_format">%s‘s share</string>
+    <string name="tangsdk_desktopshare_title_default">Desktop Sharing</string>
+</resources>

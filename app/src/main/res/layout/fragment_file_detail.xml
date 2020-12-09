@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/file_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/title_bar"
+            layout="@layout/title_bar_chatdetail" />
+
+        <RelativeLayout
+            android:id="@+id/file_detail_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_bar">
+
+            <ImageView
+                android:id="@+id/file_type_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp" />
+
+            <TextView
+                android:id="@+id/file_name"
+                style="@style/font_size_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/file_type_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:textColor="@color/dropbox_common_text_color" />
+
+            <TextView
+                android:id="@+id/is_support_preview_online"
+                style="@style/font_size_12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/file_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="13dp"
+                android:gravity="center"
+                tools:text="test name"
+                android:textColor="@color/dropbox_hint_text_color" />
+
+            <TextView
+                android:id="@+id/preview_online"
+                style="@style/font_size_12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/is_support_preview_online"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal|top"
+                android:paddingBottom="30dp"
+                android:text="@string/preview_online"
+                android:layout_marginTop="10dp"
+                tools:visibility="gone"
+                android:textColor="@color/blue_lock" />
+
+
+            <TextView
+                android:id="@+id/file_transfer_open_local"
+                style="@style/font_size_16sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/preview_online"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/shape_common_blue"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/preview"
+                android:textColor="#FFFFFF"
+                android:visibility="gone"
+                tools:visibility="visible"
+                />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/file_detail_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/file_detail_bottom_function"
+                layout="@layout/component_file_detail_bottom_function"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+
+            <include
+                android:id="@+id/file_detail_download_layout"
+                layout="@layout/component_file_download_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <com.foreveross.atwork.component.viewPager.ViewPagerFixed
+            android:id="@+id/preview_image_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/file_detail_bottom_layout"
+            android:layout_below="@id/title_bar"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/image_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_black"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <uk.co.senab.photoview.PhotoView
+            android:id="@+id/image_photo_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/watermark_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="60dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="robot">智能机器人</string>
+    <string name="robot_open">开启智能机器人</string>
+    <string name="robot_close">关闭智能机器人</string>
+    <string name="robot_shake_open">摇一摇唤起</string>
+    <string name="robot_click_open">点击智能机器人唤起</string>
+    <string name="robot_tips">“智能机器人”开启后，你可以与智能机器人进行语音交互，让智能机器人代替部分手动的操作。</string>
+    <string name="robot_help">请问有什么帮到你？</string>
+    <string name="robot_say_again">我听不懂你在说什么，请再说一次。</string>
+    <string name="robot_find">为你找到：</string>
+    <string name="robot_listening">正在听你说话...</string>
+    <string name="robot_not_open_associates">未开启“同事圈”</string>
+    <string name="robot_not_open_collect">未开启“我的收藏”</string>
+    <string name="robot_must_set_one">必须设置一项</string>
+</resources>

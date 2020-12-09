@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Ikea做梦也没想到自己在时尚圈能那么火，现在又要转战美食圈…"
+        android:textSize="?attr/fontsize_14sp"
+        tools:textSize="14sp"
+        android:layout_margin="16dp"
+        android:textColor="@color/common_text_color"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="?attr/fontsize_12sp"
+        android:textColor="@color/common_gray_bg"
+        tools:text="2018年4月1日"
+        android:layout_below="@+id/tvContent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+
+
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/message_history_bottom_line_gray"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/tvTime"
+        />
+
+</RelativeLayout>

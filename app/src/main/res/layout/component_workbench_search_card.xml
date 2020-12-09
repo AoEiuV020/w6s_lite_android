@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/adaptive_height_50dp"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    >
+
+
+    <com.foreveross.atwork.modules.workbench.component.WorkbenchCustomTextOrIconView
+        android:id="@+id/vWorkbenchCustomTextOrIconViewLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="18dp" />
+
+    <TextView
+        android:id="@+id/tvSearch"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_toLeftOf="@+id/vWorkbenchCustomTextOrIconViewRight1"
+        android:layout_toRightOf="@+id/vWorkbenchCustomTextOrIconViewLeft"
+        android:background="@drawable/bg_workbench_search_card_textview"
+        android:drawableLeft="@mipmap/icon_search"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="13dp"
+        android:text="@string/action_search"
+        android:textColor="@color/common_gray_bg"
+        android:textSize="?attr/fontsize_14sp"
+        tools:textSize="14sp"
+        />
+
+    <com.foreveross.atwork.modules.workbench.component.WorkbenchCustomTextOrIconView
+        android:id="@+id/vWorkbenchCustomTextOrIconViewRight0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="18dp"
+        android:layout_toLeftOf="@+id/vWorkbenchCustomTextOrIconViewRight1"
+        android:visibility="gone"
+
+        />
+
+    <com.foreveross.atwork.modules.workbench.component.WorkbenchCustomTextOrIconView
+        android:id="@+id/vWorkbenchCustomTextOrIconViewRight1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="18dp"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

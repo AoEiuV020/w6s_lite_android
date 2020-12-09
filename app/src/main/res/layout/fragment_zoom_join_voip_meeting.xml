@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_bg_gray"
+    >
+
+    <include
+        android:id="@+id/v_title_bar_common"
+        layout="@layout/title_bar_common" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        >
+
+        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+            android:id="@+id/tvInputMeetingNumberLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="会议号"
+            android:textColor="@color/common_text_color"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlMeetingNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <com.foreveross.atwork.component.editText.InputInfoEditText
+                android:id="@+id/etMeetingNumber"
+                style="@style/font_size_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                app:hint="请输入会议号"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/common_text_gray_color"
+                android:textColorHint="@color/common_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_common_edittext_cursor"
+                android:layout_toLeftOf="@+id/ivArrow"
+                android:paddingLeft="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/icon_arrow_down_dark"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="invisible"
+                />
+
+        </RelativeLayout>
+
+
+        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+            android:id="@+id/tvInputDisplayNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您的名字"
+            android:textColor="@color/common_text_color"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            />
+
+        <com.foreveross.atwork.component.editText.InputInfoEditText
+            android:id="@+id/etDisplayName"
+            style="@style/font_size_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            app:hint="请输入名字"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@color/common_text_gray_color"
+            android:textColorHint="@color/common_text_hint_gray"
+            android:textCursorDrawable="@drawable/shape_common_edittext_cursor"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btJoinMeeting"
+        style="@style/font_size_16sp"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="39dp"
+        android:background="@drawable/shape_login_rect_input_nothing"
+        android:text="加入会议"
+        android:textColor="@color/login_text_color"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tvJoinMeetingConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="入会选项"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="20dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:id="@+id/tvAutoConnectAudioLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自动连接音频"
+                android:textColor="@color/common_text_color"
+                android:textSize="14sp"
+                />
+
+
+            <com.foreveross.atwork.component.WorkplusSwitchCompat
+                android:id="@+id/swAutoConnectAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:theme="@style/workplus_switch"
+                android:checked="true"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_marginTop="25dp"
+            >
+
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:id="@+id/tvOpenCameraLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="入会开启摄像头"
+                android:textColor="@color/common_text_color"
+                android:textSize="14sp"
+                />
+
+
+            <com.foreveross.atwork.component.WorkplusSwitchCompat
+                android:id="@+id/swOpenCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:theme="@style/workplus_switch"
+                android:checked="true"
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

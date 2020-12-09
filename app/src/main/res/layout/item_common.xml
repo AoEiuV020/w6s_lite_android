@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/adaptive_height_50dp"
+    android:background="@drawable/bg_item_common_selector"
+    android:paddingLeft="@dimen/dp_11"
+    android:paddingRight="@dimen/dp_11"
+    tools:layout_height="50dp">
+
+
+    <LinearLayout
+        android:id="@+id/ll_right_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:layout_toRightOf="@+id/rl_left_area"
+        >
+
+        <com.foreveross.atwork.component.WorkplusSwitchCompat
+            android:id="@+id/switch_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:theme="@style/workplus_switch"
+            android:visibility="gone"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tv_rightest"
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            tools:text="xxxxxxxxxxxxxxxxxxxxx"
+            android:textColor="@color/common_list_item_right"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+
+
+        <ImageView
+            android:id="@+id/common_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="2dp"
+            android:background="@mipmap/icon_chat_dot"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+
+        <ImageView
+            android:id="@+id/arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_arrow_gray"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/version_update_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="right"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/version_code_tv"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="3dp"
+            android:ellipsize="end"
+            android:maxEms="6"
+            android:singleLine="true"
+            android:text="版本号" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_update" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_left_area"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        >
+
+        <ImageView
+            android:id="@+id/common_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/common_name"
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@id/common_icon"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:tag="c15"
+            tools:text="name"
+            android:textColor="@color/common_list_item_left" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_line_item_common"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/common_line_color" />
+</RelativeLayout>

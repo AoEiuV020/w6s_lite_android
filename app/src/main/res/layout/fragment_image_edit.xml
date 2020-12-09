@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.foreveross.atwork.modules.image.component.ItemEnlargeImageView
+        android:id="@+id/image_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/hs_subset_function"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_image_edit_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/hs_subset_function"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <cn.jarlen.photoedit.scrawl.GraffitiView
+            android:id="@+id/v_draw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+
+        <cn.jarlen.photoedit.operate.MultiInputTextView
+            android:id="@+id/v_add_text"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hs_subset_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_function_bottom"
+        android:background="#212121"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/iv_rollback"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/icon_rollback" />
+
+            <FrameLayout
+                android:id="@+id/fl_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@mipmap/icon_color_picked"
+                android:padding="3dp">
+
+                <View
+                    android:id="@+id/v_white"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/round_color_picked_white_unselected" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="3dp">
+
+                <View
+                    android:id="@+id/v_red"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/round_color_picked_red_unselected"
+
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="3dp">
+
+                <View
+                    android:id="@+id/v_orange"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/round_color_picked_orange_unselected" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_yellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="3dp">
+
+                <View
+                    android:id="@+id/v_yellow"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/round_color_picked_yellow_unselected" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="3dp">
+
+                <View
+                    android:id="@+id/v_green"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/round_color_picked_green_unselected" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fl_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="3dp">
+
+                <View
+                    android:id="@+id/v_blue"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/round_color_picked_blue_unselected" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_violet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="3dp">
+
+                <View
+                    android:id="@+id/v_violet"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/round_color_picked_violet_unselected" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:id="@+id/ll_function_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#2F2F2F">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/cancel"
+            android:textColor="#279EFC" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_send"
+            android:layout_toRightOf="@+id/tv_cancel"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_graffiti"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:src="@mipmap/icon_graffiti_open" />
+
+            <ImageView
+                android:id="@+id/iv_text_input"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:src="@mipmap/icon_text_input_close" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_send"
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/button_send"
+            android:textColor="#279EFC" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="common">The network is not stable, please try again later</string>
+
+    <string name="do_not_operate_frequently">Do not operate frequently</string>
+
+    <!-- 登录的异常情况 -->
+    <string name="Login_common">Login exception</string>
+    <string name="Login_NETWORK">The server request timed out. Please try again later</string>
+    <string name="Login_201004">Wrong username or password，please re-enter</string>
+    <string name="Login_201002">Account does not exist</string>
+    <string name="Login_201007">Please activate the user first</string>
+    <string name="Login_20251">Captcha code input errors, please re-enter</string>
+    <string name="Login_202511">Captcha code input errors, please re-enter</string>
+    <string name="Login_202512">Captcha code has expired, please re-enter</string>
+    <string name="Login_202513">Captcha code input errors, please re-enter</string>
+    <string name="Login_202514">Captcha code input errors, please re-enter</string>
+
+    <!-- 关于我异常 -->
+    <string name="AboutMe_common">The network is not stable, please try again later</string>
+
+    <string name="AboutMe_202312">There is no corresponding version</string>
+
+    <!--星标联系人-->
+    <string name="FavorContact_common">Starred contact operation failed</string>
+    <string name="FavorContact_23103">There is no corresponding user</string>
+
+    <!--群功能 -->
+    <string name="Group_common">The network is not stable, please try again later</string>
+    <string name="Group_202110">Do not operate frequently(202110)</string>
+
+    <!-- 联系人异常 -->
+    <string name="Contact_common">Contacts operation failed</string>
+
+    <!-- 离线消息 -->
+    <string name="Offline_common">Offline message pull failed</string>
+
+
+
+    <string name="ChangePwd_common">Change password failed</string>
+
+    <string name="ChangePwd_201004">The old password is incorrect. Please re-enter it</string>
+
+    <string name="click_error_msg">The account is already logged in on other devices. If you do not operate, your password may have been disclosed, please contact the administrator!</string>
+
+    <string name="reset_credentials_error_msg">Account information changes, need to re-login! If you can not log in, please contact the administrator！</string>
+
+    <string name="account_is_locked">Account is locked, please contact the administrator！</string>
+
+    <string name="license_overdue">Applications are maintenance, please contact the administrator!</string>
+
+    <string name="device_forbidden">Device is disabled</string>
+
+    <string name="device_binding">The account has been bound to other devices</string>
+
+    <string name="network_not_avaluable">The network is not stable, please try again later</string>
+
+    <string name="Qrcode_common">Get QR code failed</string>
+
+    <string name="Qrcode_23607">QR code picture has expired</string>
+
+    <string name="Qrcode_23605">QR code picture has expired</string>
+
+    <string name="Qrcode_202531">QR code picture has expired</string>
+
+    <string name="Qrcode_202532">QR code picture has expired</string>
+
+    <string name="Qrcode_202533">QR code picture has expired</string>
+
+    <string name="ModifyEmployee_common">Modified %1$s failed</string>
+
+    <string name="Voip_common">The network is not stable, please try again later</string>
+
+    <string name="Voip_202211">Insufficient meeting resources, please contact the administrator</string>
+
+    <string name="Voip_206611">Do not operate frequently (206611)</string>
+
+
+    <string name="Translate_common">翻译失败，请稍后重试</string>
+
+    <string name="WalletModifyPwd_common">The network is not stable, please try again later</string>
+
+    <string name="WalletModifyPwd_207006">The old password is incorrect. Please re-enter it</string>
+
+    <string name="WalletModifyPwd_202521">Verification code is invalid or has expired, please re-enter</string>
+
+
+    <string name="WalletSetInfo_common">The network is not stable, please try again later</string>
+
+    <string name="WalletSetInfo_207006">Enter the wrong password, please re-enter</string>
+
+    <string name="WalletSetInfo_202521">Verification code is invalid or has expired, please re-enter</string>
+
+    <string name="WalletSetInfo_202501">设置失败</string>
+
+    <string name="WalletPay_common">The network is not stable, please try again later</string>
+
+    <string name="WalletPay_207006">Payment Password Error</string>
+
+    <string name="WalletPay_207005">帐号余额不足</string>
+
+    <string name="QsyCalendar_201511">Did not find the corresponding account information, please contact the administrator!</string>
+
+    <!--微信同步相关-->
+    <!--<string name="WechatSync_205007">网络好像不太稳定，请稍后重试</string>-->
+
+
+
+
+    <!--cordova 错误-->
+    <string name="user_not_find">Can not find user</string>
+
+    <string name="error_happened">发生异常错误</string>
+
+    <string name="Dropbox_400">The file (folder) name can not contain emoticons, spaces, and the following special characters in English：\\ / : * ? \" &#060; &#062; |</string>
+    <string name="Dropbox_10001">Unknown error, please try again later</string>
+    <string name="Dropbox_204000">You do not have permission to do this！</string>
+    <string name="Dropbox_204004">There is already a file (folder) with the same name</string>
+
+    <!--必应消息频繁创建错误码-->
+    <string name="BingPost_201127">Please do not frequent operation</string>
+
+
+</resources>

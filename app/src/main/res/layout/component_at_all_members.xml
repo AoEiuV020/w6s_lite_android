@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/at_all_members_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_contact_item_height"
+        android:background="@drawable/bg_item_common_selector"
+        android:orientation="horizontal">
+
+        <!--一聊天头像 -->
+        <ImageView
+            android:layout_width="@dimen/common_contact_item_img_size"
+            android:layout_height="@dimen/common_contact_item_img_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/default_discussion_chat" />
+
+        <TextView
+            android:id="@+id/at_all_discussion_members_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="#333"
+            style="@style/font_size_17sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/discussion_members"
+        android:paddingLeft="10dp"
+        style="@style/font_size_14sp"
+        android:gravity="center_vertical"/>
+</LinearLayout>

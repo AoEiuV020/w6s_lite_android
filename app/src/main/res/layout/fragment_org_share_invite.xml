@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/org_share_invite_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar_common" />
+
+    <RelativeLayout
+        android:id="@+id/rl_switch_org"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/title_bar"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_org_name"
+            style="@style/font_size_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/tv_switch"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:tag="c15"
+            android:text=""
+            android:textColor="@color/common_text_color" />
+
+        <TextView
+            android:id="@+id/tv_switch"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/shape_common_blue"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="@string/org_switcher"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/line_item_common"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:layout_marginRight="@dimen/dp_11"
+            android:layout_marginTop="10dp"
+            android:background="@color/common_line_color"
+
+            />
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/lw_org_invite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_switch_org"
+        android:layout_marginTop="30dp"
+        android:background="#ffffff" />
+
+    <TextView
+        android:id="@+id/tv_about_copyright_common"
+        style="@style/font_size_10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/copyright"
+        android:textColor="@color/alarm_text"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

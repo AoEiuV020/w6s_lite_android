@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_common_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/v_fake_statusbar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/transparent"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/v_fake_statusbar"
+            android:background="@color/transparent"
+
+            >
+
+
+            <!-- 右边显示字，如取消，保存等 -->
+            <TextView
+                android:id="@+id/title_bar_common_right_text"
+                style="@style/font_size_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/title_common_padding"
+                android:gravity="center|center_vertical"
+                android:minWidth="30dp"
+                android:text="@string/cancel"
+                android:textColor="@color/common_item_black"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/title_bar_common_right2_text"
+                style="@style/font_size_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/title_common_padding"
+                android:layout_toLeftOf="@+id/title_bar_common_right_text"
+                android:gravity="center|center_vertical"
+                android:minWidth="30dp"
+                android:text="@string/cancel"
+                android:textColor="@color/common_item_black"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+
+            <FrameLayout
+                android:id="@+id/fl_leftest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/title_bar_common_left_title"
+                    style="@style/font_size_16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/title_common_title_back_padding"
+                    android:text=""
+                    android:textColor="@color/common_item_black"
+                    android:visibility="gone"
+                    tools:visibility="gone" />
+
+
+                <!-- 左边的APP图标 -->
+                <ImageView
+                    android:id="@+id/title_bar_common_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_icon"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="@dimen/title_common_padding"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:src="@mipmap/icon_back"
+                    tools:visibility="visible" />
+            </FrameLayout>
+
+
+            <!-- 名称，当天聊天界面的名称 -->
+            <TextView
+                android:id="@+id/title_bar_common_title"
+                style="@style/font_size_18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/title_common_title_back_padding"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/title_bar_common_right_text"
+                android:layout_toRightOf="@+id/fl_leftest"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/common_item_black" />
+
+            <View
+                android:id="@+id/v_line_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/divider_line_gray" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_common_title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_label_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="修改配置名称可以另存为新的配置"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_label_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/tv_label_hint"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="配置名称"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_api_address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@+id/et_label_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_api_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="api 地址"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_socket_address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@+id/et_api_address_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_socket_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="im 地址"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_admin_url_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@id/et_socket_address_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_admin_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="admin url"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_domain_id_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@id/et_admin_url_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_domain_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="beeworks配置里的domainId"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_current_domain_id_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@id/et_domain_id_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_current_domain_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="当前使用的domainId"
+                    android:editable="false"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_device_id_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@id/et_current_domain_id_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_device_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="device id(谨慎修改, 只能清数据后第一次使用app进行修改)"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@id/et_device_id_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="profile"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_zoom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@id/et_profile_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_zoom_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="zoom url"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_zoom_appKey_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@id/et_zoom_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_zoom_appKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="zoom appKey"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_zoom_appSecret_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@id/et_zoom_appKey_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_zoom_appSecret"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="zoom appSecret"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_zoom_webDomain_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@id/et_zoom_appSecret_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_zoom_webDomain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="zoom webDomain"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_login_encrypt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_zoom_webDomain_layout"
+                android:layout_margin="20dp"
+                android:text="登录加密" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_http_dns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cb_login_encrypt"
+                android:layout_margin="20dp"
+                android:text="使用HttpDns解析域名" />
+
+
+            <Button
+                android:id="@+id/switch_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cb_http_dns"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/common_blue_bg"
+                android:text="切换视图"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/switch_view"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/common_blue_bg"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+            <Button
+                android:id="@+id/scan_qrcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/save"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/common_blue_bg"
+                android:text="扫一扫"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

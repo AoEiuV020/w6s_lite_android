@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/appstore_loading_icon_size" />
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="45dp"
+            android:layout_toLeftOf="@+id/tvSubTitle"
+            android:layout_toRightOf="@+id/ivIcon"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/common_text_color"
+            android:textSize="?attr/fontsize_14sp"
+            tools:text="自1955年全球第一家麦当劳餐厅在美国伊利诺伊州芝加哥创立。截至2017年底，"
+            tools:textSize="14sp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toLeftOf="@+id/ivArrow"
+            android:ellipsize="end"
+            android:maxWidth="75dp"
+            android:singleLine="true"
+            android:textColor="@color/common_text_color_999"
+            android:textSize="?attr/fontsize_14sp"
+            tools:text="查看更多"
+            tools:textSize="14sp"
+
+            />
+
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:src="@mipmap/icon_arrow_gray"
+
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

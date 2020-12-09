@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/v_title_bar_common"
+        layout="@layout/title_bar_common" />
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_title_bar_common">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_bg_gray"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_bg_gray"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_select_red_envelope_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/title_common_padding"
+                    android:layout_marginRight="@dimen/title_common_padding"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_lucky_red_envelope_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_lucky_red_envelope_bg_red"
+                        android:gravity="center"
+                        android:paddingBottom="7dp"
+                        android:paddingTop="7dp"
+                        android:text="@string/lucky_red_envelope"
+                        android:textColor="@color/white"
+                        android:textSize="?attr/fontsize_16sp"
+                        tools:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_normal_red_envelope_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_normal_red_envelope_bg_white"
+                        android:gravity="center"
+                        android:paddingBottom="7dp"
+                        android:paddingTop="7dp"
+                        android:text="@string/normal_red_envelope"
+                        android:textColor="@color/wallet_light_red"
+                        android:textSize="?attr/fontsize_16sp"
+                        tools:textSize="16sp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_red_envelope_rule_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/title_common_padding"
+                    android:layout_marginRight="@dimen/title_common_padding"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/give_lucky_red_envelope_tip"
+                    android:textColor="@color/common_text_color_999"
+                    android:textSize="?attr/fontsize_12sp"
+                    tools:textSize="12sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_input_give_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_label_give_red_envelope_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/title_common_padding"
+                        android:text="@string/give_red_envelope_count"
+                        android:textColor="@color/common_text_color"
+                        android:textSize="?attr/fontsize_16sp"
+                        tools:textSize="16sp"
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_input_envelope_count_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/tv_label_give_unit_ge"
+                        android:layout_toRightOf="@+id/tv_label_give_red_envelope_count"
+                        android:textSize="?attr/fontsize_16sp"
+                        android:paddingRight="7dp"
+                        tools:textSize="16sp"
+                        android:text="@string/give_red_envelope_count_hint"
+                        android:gravity="right"
+                        android:textColor="@color/common_text_hint_gray"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_input_envelope_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="3dp"
+                        android:layout_toLeftOf="@+id/tv_label_give_unit_ge"
+                        android:layout_toRightOf="@+id/tv_label_give_red_envelope_count"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:inputType="number"
+                        android:textColor="@color/common_text_color"
+                        android:textSize="?attr/fontsize_16sp"
+                        tools:textSize="16sp"
+                        android:paddingRight="5dp"
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_label_give_unit_ge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/title_common_padding"
+                        android:text="@string/unit_ge"
+                        android:textColor="@color/common_text_color"
+                        android:textSize="?attr/fontsize_16sp"
+                        tools:textSize="16sp"
+                        android:gravity="left"
+                        />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_discussion_member_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/title_common_padding"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/common_text_color_999"
+                    android:textSize="?attr/fontsize_12sp"
+                    tools:textSize="12sp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_input_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_label_give_red_envelope_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/title_common_padding"
+                        android:text="@string/give_red_envelope_money_sum"
+                        android:textColor="@color/common_text_color"
+                        android:textSize="?attr/fontsize_16sp"
+                        tools:textSize="16sp"
+
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_input_envelope_money_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/tv_label_give_unit_money"
+                        android:layout_toRightOf="@+id/tv_label_give_red_envelope_money"
+                        android:textSize="?attr/fontsize_16sp"
+                        android:paddingRight="7dp"
+                        tools:textSize="16sp"
+                        android:text="@string/give_red_envelope_money_sum_hint"
+                        android:gravity="right"
+                        android:textColor="@color/common_text_hint_gray"
+                        />
+
+
+
+                    <EditText
+                        android:id="@+id/et_input_envelope_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_toLeftOf="@+id/tv_label_give_unit_money"
+                        android:layout_toRightOf="@+id/tv_label_give_red_envelope_money"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/common_text_color"
+                        android:textSize="?attr/fontsize_16sp"
+                        android:paddingRight="5dp"
+                        tools:textSize="16sp"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tv_label_give_unit_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/title_common_padding"
+                        android:text="金币"
+                        android:textColor="@color/common_text_color"
+                        android:textSize="?attr/fontsize_16sp"
+                        tools:textSize="16sp"
+                        android:gravity="left"
+                        />
+
+
+                </RelativeLayout>
+
+
+                <EditText
+                    android:id="@+id/et_input_congratulations"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:hint="@string/give_red_envelope_congratulations_hint"
+                    android:paddingLeft="@dimen/title_common_padding"
+                    android:paddingRight="@dimen/title_common_padding"
+                    android:textColor="@color/common_text_color"
+                    android:textColorHint="@color/common_text_hint_gray"
+                    android:textSize="?attr/fontsize_16sp"
+                    tools:textSize="16sp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_give_money_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥ "
+                        android:textColor="@color/common_gray_bg"
+                        android:textSize="?attr/fontsize_24sp"
+                        tools:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_give_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="@color/common_gray_bg"
+                        android:textSize="?attr/fontsize_38sp"
+                        tools:textSize="38sp"
+
+                        />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_give"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/shape_give_red_envelope"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/give_red_envelope"
+                    android:textColor="@color/white"
+                    android:textSize="?attr/fontsize_18sp"
+                    tools:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_balance_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/common_text_color"
+                    android:textSize="?attr/fontsize_14sp"
+                    tools:text="@string/use_balance_give"
+                    tools:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_rollback_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="@dimen/title_common_padding"
+                android:layout_marginRight="@dimen/title_common_padding"
+                android:layout_marginTop="50dp"
+                android:text="@string/red_envelope_rollback_tip"
+                android:textColor="@color/common_text_color_999"
+                android:textSize="?attr/fontsize_12sp"
+                android:visibility="invisible"
+                tools:textSize="12sp"
+                tools:visibility="visible" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

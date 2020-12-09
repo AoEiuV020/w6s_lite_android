@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_70">
+
+    <com.foreverht.workplus.ui.component.scrollView.MaxHeightScrollView
+        android:id="@+id/swMainAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="40dp"
+                android:paddingBottom="30dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                >
+                <TextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/close"
+                    android:textSize="16sp"
+                    android:textColor="@color/common_blue_bg"
+                    />
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvCancel"
+                    android:layout_toLeftOf="@+id/tvSure"
+                    android:text="@string/admin_view_banner"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/common_text_color"
+                    />
+
+                <TextView
+                    android:id="@+id/tvSure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ok"
+                    android:textSize="16sp"
+                    android:textColor="@color/common_blue_bg"
+                    android:layout_alignParentRight="true"
+                    android:visibility="invisible"
+                    />
+
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                >
+
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/tvBannerNameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_title"
+                    android:textColor="@color/common_gray_bg"
+                    android:textSize="14sp" />
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/tvBannerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="你看什么?"
+                    android:textColor="@color/common_text_color"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_bg_gray"
+                    android:layout_marginTop="15dp"
+                    />
+
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/tvBannerBannerLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/banner_image"
+                    android:textColor="@color/common_gray_bg"
+                    android:textSize="14sp"
+                    android:layout_marginTop="15dp"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/ivBannerImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:src="@mipmap/loading_app_top_advert_bg"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    tools:visibility="visible"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_bg_gray"
+                    android:layout_marginTop="15dp"
+                    />
+
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/tvBannerSortLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/common_sort_number"
+                    android:textColor="@color/common_gray_bg"
+                    android:textSize="14sp"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/tvBannerSort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="123"
+                    android:textColor="@color/common_text_color"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_bg_gray"
+                    android:layout_marginTop="15dp"
+                    />
+
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/tvBannerValidDurationLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/common_valid_duration"
+                    android:textColor="@color/common_gray_bg"
+                    android:textSize="14sp"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/tvBannerValidDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="20200303 ~ 20200606"
+                    android:textColor="@color/common_text_color"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_bg_gray"
+                    android:layout_marginTop="15dp"
+                    />
+
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/tvBannerLinkLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/link_jump"
+                    android:textColor="@color/common_gray_bg"
+                    android:textSize="14sp"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/tvBannerLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="http://www.dasunsy.com"
+                    android:textColor="@color/common_text_color"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_bg_gray"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/tvBannerPutawayLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/putaway_or_not"
+                    android:textColor="@color/common_gray_bg"
+                    android:textSize="14sp"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <com.foreveross.atwork.component.WorkplusSwitchCompat
+                    android:id="@+id/swPutaway"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/workplus_switch"
+                    android:layout_marginTop="10dp"
+
+                    />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/common_bg_gray"
+                    android:layout_marginTop="15dp"
+                    />
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.foreverht.workplus.ui.component.scrollView.MaxHeightScrollView>
+</RelativeLayout>

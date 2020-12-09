@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--设置页面-->
+    <string name="push_message_setting">Notifications</string>
+    <string name="function_message_no_disturb">Message do not disturb</string>
+    <string name="accept_new_message">Notifications</string>
+    <string name="biometric_authentication">Biometric Identification</string>
+    <string name="gesture_password_manager">Gesture Password</string>
+    <string name="face_bio_setting">Face Recognition</string>
+    <string name="gesture_code_setting">Gesture Password</string>
+    <string name="language_setting">Language</string>
+    <string name="clean_messages_data">Clean up history messages</string>
+    <string name="clean_messages_data_tip">After cleaning up the history message, the last %s message records will be kept for each session.</string>
+    <string name="clean_all_messages_data">Clean up all messages</string>
+    <string name="clean_all_messages_data_tip">After cleanup, the last %s message records are kept for each session.</string>
+    <string name="clean_messages_data_successfully">clean up successfully</string>
+    <string name="clean_messages_data_unsuccessfully">clean up unsuccessfully</string>
+    <string name="change_password">Change Password</string>
+    <string name="init_change_pwd_tip">For your account security, the first login suggested that change the password</string>
+    <string name="pwd_weak_level_tip">The password contains one of the numbers, capital letters, lowercase letters, or other special symbols, between 6 and 20</string>
+    <string name="pwd_middle_level_tip">The password contains two of the numbers, capital letters, lowercase letters, or other special symbols, between 6 and 20</string>
+    <string name="pwd_strong_level_tip">The password contains three of the numbers, capital letters, lowercase letters, or other special symbols, between 8 and 20 bits</string>
+    <string name="ask_sure_to_log_out">Confirm to log out?</string>
+    <string name="voice">In-App Alert Sound</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="show_details">ShowDetails</string>
+    <string name="copy_item">Copy</string>
+    <string name="forwarding_item">Forwarding</string>
+    <string name="favorite_item">Favorite</string>
+    <string name="undo">Recall</string>
+    <string name="text_translate">Translate</string>
+    <string name="text_show_original">Untranslate</string>
+    <string name="more_item">More</string>
+    <string name="not_select_any_chat_item">No chats are selected</string>
+    <string name="msg_not_forward_item_by_item_file_permission_mode">Do not support forwarding voice, read after burning, business cards, voice chat, pictures, files, sight, invalid files, red envelopes to each other.</string>
+    <string name="msg_not_forward_multipart_file_permission_mode">Do not support forwarding read after burning, chat, business cards, voice chat, pictures, files, sight, invalid files, red envelopes to each other.</string>
+    <string name="msg_not_forward_item_by_item_file_common_mode">Do not support forwarding voice, business cards, voice chat, read after burning, invalid file, red envelopes to each other.</string>
+    <string name="msg_not_forward_multipart_file_common_mode">Do not support forwarding business cards, voice chat, read after burning, chat, invalid file, red envelopes to each other.</string>
+    <string name="feedback_hint">Write something</string>
+    <string name="feedbacking">Comments submitted...</string>
+    <string name="feedback_success">Comments submitted successfully, thanks for your valuable comments</string>
+    <string name="feedback_fail">Comments submitted failed</string>
+    <string name="new_message_notification">Message Notifications</string>
+    <string name="discussion_shield_helper">Group Undisturbed Assistant</string>
+    <string name="account_and_secure">Account Security</string>
+    <string name="storage_space">Storage</string>
+
+    <string name="history_data">History messages</string>
+    <string name="clearing">Clear</string>
+    <string name="being_calculated">Calculating ...</string>
+    <string name="tip_about_clear_history_messages">You can clean up chat messages for the session, including messages, pictures, files, and more. After cleaning up, each session retains the last 20 message records.</string>
+    <string name="local_file">Local file</string>
+    <string name="tip_about_clear_local_file">You can clean up locally downloaded files and lightly apply offline package data.</string>
+    <string name="cache">Cache</string>
+    <string name="tip_about_clear_browser_cache">You can clean up the cache of your app\'s own browser.</string>
+    <string name="clean_up_all_data">Clean up all caches</string>
+    <string name="data_is_empty">0B</string>
+
+
+
+    <string name="other_notification_channel_name">Other Notification</string>
+</resources>

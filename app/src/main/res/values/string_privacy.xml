@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_agreement_and_privacy_policy_title">用户使用协议及隐私权政策</string>
+    <string name="user_agreement_and_privacy_policy_children_content">如不同意，将无法登录Workplus Lite</string>
+    <string name="user_agreement_and_privacy_policy_content">恒拓高科非常重视用户的隐私权</string>
+    <string name="left_btn_content">不同意</string>
+    <string name="right_btn_content">同意</string>
+    <string name="policy_service">《workplus服务协议》</string>
+    <string name="policy_protocol">《workplus隐私协议》</string>
+</resources>

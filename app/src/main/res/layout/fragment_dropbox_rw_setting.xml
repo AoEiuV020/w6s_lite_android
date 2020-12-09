@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/read_only_mode"
+            android:textColor="@color/dropbox_hint_text_color"
+            style="@style/font_size_14sp" />
+
+        <com.foreveross.atwork.component.WorkplusSwitchCompat
+            android:id="@+id/read_only_switcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:theme="@style/workplus_switch"
+
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_read_only_setting_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/read_only_org_setting_tip"
+        android:textColor="@color/dropbox_hint_text_color"
+        style="@style/font_size_12sp" />
+
+    <LinearLayout
+        android:id="@+id/watermark_settings_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/show_watermark"
+                android:textColor="@color/dropbox_hint_text_color"
+                style="@style/font_size_14sp" />
+
+            <com.foreveross.atwork.component.WorkplusSwitchCompat
+                android:id="@+id/watermark_switcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:theme="@style/workplus_switch"
+
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/watermark_setting_tip"
+            android:textColor="@color/dropbox_hint_text_color"
+            style="@style/font_size_12sp" />
+    </LinearLayout>
+
+</LinearLayout>

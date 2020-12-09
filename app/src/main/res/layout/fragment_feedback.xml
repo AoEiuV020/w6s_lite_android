@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg">
+
+    <include layout="@layout/title_bar_common" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="60dp"
+        android:background="#fff"
+        android:minHeight="200dp">
+
+        <com.rockerhieu.emojicon.EmojiconEditText
+            android:id="@+id/feedback_edit"
+            style="@style/font_size_15sp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#fff"
+            android:gravity="top|left"
+            android:hint="@string/feedback_hint"
+            android:padding="11dp"
+            android:textColor="@color/common_text_color" />
+
+        <TextView
+            android:id="@+id/feedback_number_tv"
+            style="@style/font_size_15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/feedback_edit"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="30dp"
+            android:text="0/1000"
+            android:textColor="@color/common_text_color" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/common_bg_gray"
+    >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="已添加的功能卡片"
+        android:textSize="?attr/fontsize_13sp"
+        tools:textSize="13sp"
+        android:textColor="@color/title_bar_rightest_text_gray"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        />
+
+</FrameLayout>

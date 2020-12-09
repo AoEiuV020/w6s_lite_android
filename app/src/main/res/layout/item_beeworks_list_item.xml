@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_item_common_selector"
+        android:minHeight="48dp">
+
+        <ImageView
+            android:id="@+id/arrow_right"
+            style="@style/icon_arrow_dark" />
+
+
+        <ImageView
+            android:id="@+id/about_me_function_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/me_function_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/about_me_function_icon"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="消息漫游"
+            android:textColor="@color/common_text_color"
+            android:textSize="17dp" />
+
+
+        <com.foreveross.atwork.modules.common.component.LightNoticeItemView
+            android:id="@+id/me_notice_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="30dp" />
+
+        <com.foreveross.atwork.component.WorkplusSwitchCompat
+            android:id="@+id/me_switcher_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:theme="@style/workplus_switch"
+
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

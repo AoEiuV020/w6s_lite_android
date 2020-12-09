@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cards_not_added">未添加的功能卡片</string>
+    <string name="cards_added">已添加的功能卡片</string>
+    <string name="card_loaded_fail">數據加載失敗</string>
+    <string name="card_click_to_refresh">點擊刷新</string>
+    <string name="cards_empty">暫無數據</string>
+
+
+    <string name="org_admin">組織管理</string>
+    <string name="add_workbench">添加工作台</string>
+    <string name="switch_workbench">切換工作台</string>
+    <string name="admin_workbench">管理工作台</string>
+    <string name="admin_control">管理控制</string>
+    <string name="admin_control_tip">（僅超級管理員可見）</string>
+    <string name="admin_switch_workbench">切換工作台</string>
+    <string name="admin_add_workbench">添加工作台</string>
+    <string name="admin_modify_workbench">編輯工作台</string>
+    <string name="workbench_name">工作台名稱</string>
+    <string name="workbench_name_input_hint">工作台名稱將顯示在tab下方</string>
+    <string name="workbench_en_name_input_hint">英文名稱（非必填）</string>
+    <string name="workbench_tw_name_input_hint">繁體名稱（非必填）</string>
+    <string name="workbench_remark_input_hint">請輸入備註信息（非必填）</string>
+    <string name="range_of_application_input_hint">Tips：使用範圍內的用戶將在移動端顯示工作台，如果用戶同時存在兩個上架的工作台，會優先顯示最後編輯的</string>
+    <string name="admin_add_card">添加卡片</string>
+    <string name="admin_set_scope">可見範圍</string>
+    <string name="admin_set_scope_title">設置工作台可見範圍</string>
+    <string name="admin_add_card_guide">我們還為您提供了更多豐富的卡片模板，可以查看使用示例或開發者文檔，詳情請訪問：\n</string>
+    <string name="workbench_add_bundles_more_solutions">更多應用解決方案，點擊查看</string>
+
+    <string name="admin_add_card_name_search">搜索</string>
+    <string name="admin_add_card_name_banner">封面圖</string>
+    <string name="admin_add_card_name_summery">訂閱消息</string>
+    <string name="admin_add_card_name_app_container_0">九宮格</string>
+    <string name="admin_add_card_name_app_container_1">列表卡片</string>
+    <string name="admin_add_card_name_app_common">常用應用程式</string>
+    <string name="admin_click_to_set">點擊進行設置</string>
+    <string name="admin_add_app">添加應用</string>
+    <string name="admin_set_app_scope">設置應用可見範圍</string>
+    <string name="admin_set_scope_part_tip">請選擇可見範圍，可以選擇部門或人員</string>
+    <string name="admin_workbench_sort">工作台排序</string>
+    <string name="admin_modify_card">編輯卡片</string>
+    <string name="workbench_card_name">卡片名稱</string>
+    <string name="entry_type">入口方式</string>
+    <string name="entry_type_gird_name">%s宫格</string>
+    <string name="entry_type_list_name">列表列數</string>
+    <string name="admin_add_banner_count_max">最多可以添加%s個封面圖</string>
+    <string name="admin_add_banner">添加封面圖</string>
+    <string name="please_input_banner_name_hint">請輸入封面圖名稱</string>
+    <string name="banner_image">封面圖圖片</string>
+    <string name="admin_add_banner_tip">Tips:圖片支持JPEG、PNG格式，尺寸建議為(寬1125*高540)，大小不超過2M</string>
+    <string name="admin_view_banner">查看封面圖</string>
+    <string name="admin_set_banner">設置封面圖</string>
+    <string name="admin_set_valid_duration_tip">Tips: 不填寫有效期默認永久有效</string>
+</resources>

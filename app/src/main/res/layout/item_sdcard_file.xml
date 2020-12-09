@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/bg_item_common_selector">
+
+    <TextView
+        android:id="@+id/item_file_size"
+        style="@style/font_size_12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dip"
+        android:singleLine="true"
+        android:text="0k"
+        android:textColor="#808080" />
+
+    <CheckBox
+        android:id="@+id/item_file_select_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dip"
+        android:button="@drawable/bg_checkbox_file_selector"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:soundEffectsEnabled="true"></CheckBox>
+
+    <ImageView
+        android:id="@+id/item_dir_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dip"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_file_dir"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/item_dir_name"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@id/item_file_size"
+        android:layout_toRightOf="@id/item_dir_icon"
+        android:maxLines="1"
+        android:text="文件夹"
+        android:textColor="#000000"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/item_file_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="50dp"
+        android:scaleType="fitXY" />
+    <!--
+        android:src="@mipmap/icon_unknow" -->
+
+    <TextView
+        android:id="@+id/item_file_name"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@id/item_file_size"
+        android:layout_toRightOf="@id/item_file_icon"
+        android:maxLines="1"
+        android:text="文件"
+        android:textColor="#000000" />
+
+
+</RelativeLayout>

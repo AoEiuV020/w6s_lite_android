@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/bio_check_photo_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/v_fake_statusbar"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp"
+            android:src="@mipmap/icon_close_black"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            style="@style/font_size_20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/back_btn"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLength="20"
+            android:maxWidth="200dp"
+            android:text="@string/bio_face_title"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/photo_frame_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/bio_check_photo_titlebar"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/photo_image"
+            android:layout_width="215dp"
+            android:layout_height="290dp"
+            android:rotation="357"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_photo_frame"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/photo_frame_layout"
+        android:layout_marginTop="27dp"
+        android:weightSum="2"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp">
+
+        <TextView
+            android:id="@+id/tv_use_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/icon_use_photo"
+            android:drawablePadding="15dp"
+            android:layout_weight="1"
+            style="@style/font_size_14sp"
+            android:textColor="@color/common_text_color"
+            android:text="@string/use_photo"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/tv_retake_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/icon_retake_photo"
+            android:drawablePadding="15dp"
+            android:layout_weight="1"
+            style="@style/font_size_14sp"
+            android:textColor="@color/common_text_color"
+            android:text="@string/re_take_photo"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

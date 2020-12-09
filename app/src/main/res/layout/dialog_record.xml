@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_record_pop_recoder_container"
+    android:layout_width="170dp"
+    android:layout_height="170dp"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_record"
+    android:gravity="center"
+    android:visibility="visible"
+
+    >
+
+    <!--android:background="@drawable/bg_record"-->
+
+
+    <RelativeLayout
+        android:id="@+id/item_record_pop_recoding_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        tools:visibility="gone"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_mic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/item_record_pop_phone_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@mipmap/record_dialog_mic" />
+
+            <ImageView
+                android:id="@+id/item_record_pop_volume_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/amp9" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_recording_label"
+            style="@style/font_size_15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_mic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:maxWidth="200dp"
+            android:text="@string/recording_slide_up_tip"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_record_pop_cancel_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="gone"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/rcd_cancel_icon" />
+
+        <TextView
+            style="@style/font_size_15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_cancel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/rcd_cancel_bg"
+            android:maxWidth="200dp"
+            android:padding="5dp"
+            android:text="@string/recording_cancel_tip"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_record_pop_too_short_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_icon_too_short_record"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/record_dialog_voice_too_short" />
+
+        <TextView
+            style="@style/font_size_15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_icon_too_short_record"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/recording_voice_too_short"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

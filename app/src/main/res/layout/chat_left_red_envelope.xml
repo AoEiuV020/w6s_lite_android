@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/common_message_content_divider"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/left_red_envelope_select"
+        style="@style/chat_item_select_view"
+        tools:visibility="visible"
+        />
+
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/chat_left_red_envelope_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo"
+        tools:ignore="ContentDescription" />
+
+
+    <LinearLayout
+        android:id="@+id/chat_left_red_envelope_username_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/chat_left_red_envelope_avatar"
+        >
+
+        <!--用户姓名 -->
+        <TextView
+            android:id="@+id/chat_left_red_envelope_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:text=""
+            android:textColor="@color/common_text_color"
+            style="@style/font_size_13sp"
+            android:visibility="gone"
+            tools:text="ffffda"
+            tools:visibility="gone"
+            android:layout_marginBottom="5dp"
+
+            />
+
+
+        <!--副标题 -->
+        <TextView
+            android:id="@+id/chat_left_red_envelope_sub_title"
+            style="@style/font_size_13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textColor="@color/common_text_color_888"
+            android:visibility="gone"
+            tools:text="ffffda"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            tools:visibility="visible"
+            android:layout_marginBottom="5dp"
+
+            />
+
+
+        <LinearLayout
+            android:id="@+id/ll_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.foreveross.atwork.modules.wallet.component.RedEnvelopeInChatView
+        android:id="@+id/view_red_envelope_in_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_left_red_envelope_username_line"
+        android:layout_toRightOf="@id/chat_left_red_envelope_avatar"
+        android:layout_marginRight="36dp"
+        />
+
+
+</RelativeLayout>
+</RelativeLayout>

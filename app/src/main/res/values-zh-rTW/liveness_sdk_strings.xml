@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="livenessHomePromptFrontalFaceText">請讓我看到您的正臉</string>
+    <string name="livenessHomePromptFaceEreaText">人臉有效面積太細</string>
+    <string name="livenessHomePromptBrighterText">請讓光線再亮點</string>
+    <string name="livenessHomePromptDarkerText">請讓光線再暗點</string>
+    <string name="livenessHomePromptCloserText">請再靠近一些</string>
+    <string name="livenessHomePromptFurtherText">請離屏幕遠一些</string>
+    <string name="livenessHomePromptNoBacklightingText">請避免側光或背光</string>
+    <string name="livenessHomePromptFrontalFaceInBoundingBoxText">請將正臉至於取景框內</string>
+    <string name="livenessHomePromptNoEyesOcclusionText">請勿遮擋眼睛</string>
+    <string name="livenessHomePromptNoMouthOcclusionText">請勿遮擋嘴巴</string>
+    <string name="livenessHomePromptStayStillText">很好，請保持不動</string>
+    <string name="livenessHomePromptWaitText">驗證中，請稍後</string>
+    <string name="livenessHomePromptShakeHeadText">請向左或向右緩慢轉頭</string>
+    <string name="livenessHomePromptNodText"> 請緩慢點頭 </string>
+    <string name="livenessHomePromptOpenMouthText"> 請張嘴 </string>
+    <string name="livenessHomePromptBlinkText"> 請眨眼 </string>
+    <string name="livenessExitTitlePromptText">確認退出嗎</string>
+    <string name="livenessExitLeftPromptText">取消</string>
+    <string name="livenessExitRightPromptText">確認</string>
+    <string name="livenessHomePromptVerticalText">請您拿起手機，保持手機垂直</string>
+</resources>

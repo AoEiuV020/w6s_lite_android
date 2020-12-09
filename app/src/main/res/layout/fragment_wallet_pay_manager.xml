@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/v_title_bar_common"
+        layout="@layout/title_bar_common" />
+
+    <RelativeLayout
+        android:id="@+id/rl_modify_pay_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_item_common_selector"
+        android:layout_marginTop="21dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/modify_pay_password"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="?attr/fontsize_16sp"
+            tools:textSize="16sp"
+            android:textColor="@color/common_text_color"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_arrow_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_find_pay_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_item_common_selector"
+        android:layout_marginTop="21dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/find_pay_password"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="?attr/fontsize_16sp"
+            tools:textSize="16sp"
+            android:textColor="@color/common_text_color"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_arrow_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_modify_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_item_common_selector"
+        android:layout_marginTop="21dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/change_mobile"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="?attr/fontsize_16sp"
+            tools:textSize="16sp"
+            android:textColor="@color/common_text_color"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_arrow_modify_mobile"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:layout_marginRight="6dp"
+            android:textSize="?attr/fontsize_16sp"
+            tools:textSize="16sp"
+            android:textColor="@color/common_text_color_999"
+            />
+
+        <ImageView
+            android:id="@+id/iv_arrow_modify_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_arrow_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

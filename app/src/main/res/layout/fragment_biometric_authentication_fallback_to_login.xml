@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleBarCommon"
+        layout="@layout/title_bar_common" />
+
+
+    <com.foreveross.atwork.component.editText.InputInfoEditText
+        android:id="@+id/etLoginInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBarCommon"
+        app:hint="@string/please_input_new_pay_password_tip"
+        android:inputType="numberPassword"
+        android:textColorHint="@color/common_text_hint_gray"
+        android:textSize="?attr/fontsize_16sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        tools:textSize="16sp" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlSecureCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etLoginInput"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+
+        <ImageView
+            android:id="@+id/ivLoginSecureCodeRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ivLoginSecureCode"
+            android:background="@mipmap/icon_login_code_refresh"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/ivLoginSecureCode"
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+
+            />
+        <!--android:background="@drawable/round_rect_bg_login_secure_code"-->
+
+        <EditText
+            android:id="@+id/etSecureCode"
+            style="@style/font_size_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toLeftOf="@id/ivLoginSecureCodeRefresh"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/please_input_secure_code"
+            android:inputType="text"
+            android:paddingRight="2dp"
+            android:singleLine="true"
+            android:textColor="@color/common_text_gray_color"
+            android:textColorHint="@color/common_text_hint_gray"
+            android:textCursorDrawable="@drawable/shape_common_edittext_cursor" />
+
+        <ImageView
+            android:id="@+id/vLineSecureCodeInput"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/etSecureCode"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/common_text_hint_gray" />
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlSecureCode"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/red_lock"
+        android:textSize="13sp"
+        tools:text="hello" />
+
+
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/font_size_16sp"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:layout_below="@+id/tvTip"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/shape_login_rect_input_nothing"
+        android:text="@string/login_text"
+        android:textColor="@color/login_text_color"
+        android:textStyle="bold" />
+
+
+
+    <TextView
+        android:id="@+id/tvLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="25dp"
+        android:text="@string/logout"
+        android:textColor="@color/common_text_color"
+        android:textSize="14sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+</RelativeLayout>

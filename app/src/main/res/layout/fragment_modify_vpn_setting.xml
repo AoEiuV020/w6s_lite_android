@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/modify_tel_title"
+        layout="@layout/title_bar_common" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_vpn_type"
+            style="@style/font_size_15sp"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="right"
+            android:text="@string/vpn_type_label"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/et_vpn_route_type"
+            style="@style/font_size_15sp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_vpn_type"
+            android:background="@color/white"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:inputType="none"
+            android:singleLine="true"
+            android:textColor="@color/common_text_color" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color_edit" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_vpn_route_name"
+            style="@style/font_size_15sp"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="right"
+            android:text="@string/vpn_route_name_label"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/et_vpn_route_name"
+            style="@style/font_size_15sp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_vpn_route_name"
+            android:background="@color/white"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:inputType="none"
+            android:singleLine="true"
+            android:textColor="@color/common_text_color" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color_edit" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_vpn_addr"
+            style="@style/font_size_15sp"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="right"
+            android:text="@string/vpn_server_address_label"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/modify_vpn_host_edit"
+            style="@style/font_size_15sp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_vpn_addr"
+            android:background="@color/white"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:inputType="none"
+            android:singleLine="true"
+            android:textColor="@color/common_text_color" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color_edit" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_vpn_port"
+            style="@style/font_size_15sp"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="right"
+            android:text="@string/vpn_port_label"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/modify_vpn_port_edit"
+            style="@style/font_size_15sp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_vpn_port"
+            android:background="@color/white"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:inputType="none"
+            android:singleLine="true"
+            android:textColor="@color/common_text_color" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color_edit" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_vpn_account"
+            style="@style/font_size_15sp"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="right"
+            android:text="@string/vpn_username_label"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/modify_vpn_username_cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/cancel_input_selector" />
+
+        <EditText
+            android:id="@+id/modify_vpn_username_edit"
+            style="@style/font_size_15sp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/modify_vpn_username_cancelBtn"
+            android:layout_toRightOf="@id/tv_vpn_account"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:hint="@string/vpn_account_empty"
+            android:singleLine="true"
+            android:fontFamily="sans-serif-normal"
+            android:textColor="@color/common_text_color" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color_edit" />
+
+    <RelativeLayout
+        android:id="@+id/rl_modify_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_vpn_password"
+            style="@style/font_size_15sp"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="right"
+            android:text="@string/vpn_password_label"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/modify_vpn_password_cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/cancel_input_selector" />
+
+        <EditText
+            android:id="@+id/modify_vpn_password_edit"
+            style="@style/font_size_15sp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/modify_vpn_password_cancelBtn"
+            android:layout_toRightOf="@id/tv_vpn_password"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:hint="@string/vpn_pwd_empty"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:fontFamily="sans-serif-normal"
+            android:textColor="@color/common_text_color" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color_edit" />
+
+
+</LinearLayout>

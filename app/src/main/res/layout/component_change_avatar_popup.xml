@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/chose_avatar"-->
+            <!--android:textColor="@color/common_text_color_gray"-->
+            <!--android:textSize="14sp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:padding="@dimen/dp_10"-->
+            <!--android:gravity="center"/>-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/common_line_color"/>
+
+
+        <!--之前的字体颜色-->
+        <!--android:textColor="@android:color/holo_blue_light"-->
+        <TextView
+            android:id="@+id/select_from_photo_libs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_item_common_selector"
+            android:text="@string/chose_avatar_from_phone"
+            android:textColor="@android:color/black"
+            style="@style/font_size_16sp"
+            android:tag="c15"
+            android:layout_gravity="center"
+            android:padding="@dimen/dp_15"
+            android:gravity="left"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/common_line_color"/>
+
+
+        <TextView
+            android:id="@+id/select_from_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_item_common_selector"
+            android:text="@string/photograph"
+            android:textColor="@android:color/black"
+            style="@style/font_size_16sp"
+            android:tag="c15"
+            android:layout_gravity="center"
+            android:padding="@dimen/dp_15"
+            android:gravity="left"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/common_line_color"/>
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_item_common_selector"
+            android:text="@string/cancel"
+            android:textColor="@android:color/black"
+            style="@style/font_size_16sp"
+            android:layout_gravity="center"
+            android:tag="c15"
+            android:padding="@dimen/dp_15"
+            android:gravity="left"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

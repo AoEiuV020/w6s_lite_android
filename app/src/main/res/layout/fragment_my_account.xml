@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_account_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_my_account" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/public_my_account_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--第一部分-->
+                <!-- 背景图片 -->
+                <RelativeLayout
+                    android:id="@+id/personal_info_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <!--去掉白色边框-->
+                        <!--android:background="@drawable/bg_avatar_shape"-->
+                        <LinearLayout
+                            android:id="@+id/personal_avatar_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:padding="0dp">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/image_personal_avatar"
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/default_photo" />
+
+                                <ImageView
+                                    android:id="@+id/image_update_personal_avatar"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_gravity="bottom|right"
+                                    android:src="@mipmap/icon_update_personal_avatar" />
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_account_base_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/personal_avatar_layout">
+                            <!-- account name -->
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/personal_info_account_name"
+                                style="@style/font_size_16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="12dp"
+                                android:textColor="@color/common_text_color"
+                                tools:text="周芳" />
+
+                            <ImageView
+                                android:id="@+id/image_account_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="3dp"
+                                android:layout_toRightOf="@id/personal_info_account_name"
+                                android:src="@mipmap/icon_name_account"
+                                android:visibility="gone"
+                                tools:visibility="visible" />
+                        </RelativeLayout>
+                        <!--个性签名-->
+                        <RelativeLayout
+                            android:id="@+id/rl_personal_signature"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_below="@id/rl_account_base_info"
+                            android:visibility="gone"
+                            tools:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/tv_personal_info"
+                                style="@style/font_size_13sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="3dp"
+                                android:background="@drawable/shape_read_colleague_timeline"
+                                android:layout_marginBottom="@dimen/dp_3"
+                                android:paddingRight="10dp"
+                                tools:text="@string/enter_personal_signature"
+                                android:textColor="@color/common_text_color_999"/>
+
+                            <ImageView
+                                android:id="@+id/iv_personal_title_arrow"
+                                android:background="@mipmap/icon_arrow_small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/tv_personal_info" />
+                        </RelativeLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_personal_signature"
+                            android:layout_centerHorizontal="true">
+
+                            <TextView
+                                android:id="@+id/tv_read_colleague"
+                                style="@style/font_size_13sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/shape_read_colleague_timeline"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="3dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="3dp"
+                                android:text="@string/personal_info_read_colleague_timeline"
+                                android:textColor="@color/common_text_color_999"
+                                android:visibility="gone"
+                                tools:visibility="visible" />
+
+                        </FrameLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_user_info_left_place"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        tools:background="@color/yellow"
+                        tools:layout_height="50dp">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_user_info_right_place"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        tools:background="@color/green"
+                        tools:layout_height="50dp">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_user_info_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    tools:background="@color/pink_blue"
+                    tools:layout_height="50dp">
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_10"
+                    android:background="@color/white" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_8"
+                    android:background="@color/common_bg_gray" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/my_account_tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/white"
+                    android:tag="c4"
+                    app:tabGravity="center"
+                    app:tabIndicatorColor="@color/common_blue_bg"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/common_text_color"
+                    app:tabTextColor="@color/common_text_color" />
+
+
+                <com.foreveross.atwork.component.viewPager.AdjustHeightViewPager
+                    android:id="@+id/my_account_viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="30dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

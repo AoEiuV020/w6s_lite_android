@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="file_transfer">文件傳輸助手</string>
+    <string name="downloading_state">正在下载中...</string>
+    <string name="start_downloading_file">正在下载文件</string>
+
+</resources>

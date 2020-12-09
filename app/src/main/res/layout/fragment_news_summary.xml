@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <!-- 左边的APP图标 -->
+        <ImageView
+            android:id="@+id/title_bar_news_summary_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/title_common_padding"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:src="@mipmap/icon_back" />
+        <TextView
+            android:id="@+id/tv_select_title"
+            style="@style/font_size_18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/news_summary_title"
+            android:textColor="@color/common_item_black"
+            tools:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_common_title_back_padding"
+            android:layout_toRightOf="@+id/title_bar_news_summary_back"
+            android:visibility="visible"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/chat_detail_bg">
+        <!-- 左边的APP图标 -->
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="14dp"
+            android:paddingLeft="@dimen/title_common_padding"
+            android:paddingRight="10dp"
+            android:paddingTop="14dp"
+            android:src="@mipmap/icon_search" />
+        <TextView
+            android:id="@+id/tv_search_tip"
+            style="@style/font_size_18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:hint="@string/news_summary_search"
+            android:textColor="@color/common_item_black"
+            tools:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_common_title_back_padding"
+            android:layout_toRightOf="@+id/iv_search"
+            android:visibility="visible"
+            />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNewsSummary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="afterDescendants"
+        android:background="@color/chat_detail_bg"
+        android:overScrollMode="never"/>
+</LinearLayout>

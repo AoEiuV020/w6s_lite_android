@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg"
+    android:orientation="vertical">
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_filter_area"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_bing_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/layout_no_data"
+                layout="@layout/layout_common_nothing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <View
+        android:id="@+id/v_mask_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_filter_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title_bar"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/ll_select_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/select_all"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_select_all"
+                        style="@style/font_size_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="@string/all"
+                        android:textColor="@color/bing_tab_select" />
+
+                    <ImageView
+                        android:id="@+id/iv_select_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_select_all"
+                        android:src="@mipmap/icon_app_entry_node_arror_down" />
+
+                    <View
+                        android:id="@+id/line_select_all"
+                        android:layout_width="40dp"
+                        android:layout_height="4dp"
+                        android:layout_below="@+id/tv_select_all"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/bing_tab_select"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/select_new_bing"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_select_new_bing"
+                        style="@style/font_size_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="@string/bing_new_message"
+                        android:textColor="@color/bing_tab_un_select" />
+
+                    <View
+                        android:id="@+id/line_select_new_bing"
+                        android:layout_width="40dp"
+                        android:layout_height="4dp"
+                        android:layout_below="@+id/tv_select_new_bing"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/bing_tab_select"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/select_star"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_select_star"
+                        style="@style/font_size_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="@string/star"
+                        android:textColor="@color/bing_tab_un_select" />
+
+                    <View
+                        android:id="@+id/line_select_star"
+                        android:layout_width="40dp"
+                        android:layout_height="4dp"
+                        android:layout_below="@+id/tv_select_star"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/bing_tab_select"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider_line_gray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider_line_gray" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/v_fake_statusbar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/v_fake_statusbar"
+            android:background="@color/white"
+            android:tag="c1">
+
+            <!-- 左边的APP图标 -->
+            <ImageView
+                android:id="@+id/title_bar_common_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_icon"
+                android:paddingLeft="@dimen/title_common_padding"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:src="@mipmap/icon_back" />
+
+            <ImageView
+                android:id="@+id/iv_bing_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_bing_start"
+                android:padding="10dp"
+                android:src="@mipmap/icon_bing_main_search"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_bing_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@mipmap/icon_bing_start" />
+
+
+            <!-- 名称，当天聊天界面的名称 -->
+            <TextView
+                android:id="@+id/title_bar_common_title"
+                style="@style/font_size_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/title_common_title_back_padding"
+                android:layout_toRightOf="@+id/title_bar_common_back"
+                android:singleLine="true"
+                android:text="hello"
+                android:textColor="@color/common_item_black" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <LinearLayout
+        android:id="@+id/right_share_select_line_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_alignTop="@+id/chat_right_share_avatar_card">
+
+        <ImageView
+            android:id="@+id/right_share_select_card"
+            style="@style/chat_item_select_view"
+            tools:visibility="visible"
+            />
+    </LinearLayout>
+
+    <!-- 聊天头像 -->
+    <ImageView
+        android:id="@+id/chat_right_share_avatar_card"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/chat_right_share_content_card"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/right_share_select_line_card"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo" />
+
+    <LinearLayout
+        android:id="@+id/chat_right_share_content_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/chat_right_share_avatar_card"
+        android:background="@mipmap/chat_bg_white_sender"
+        android:minHeight="60dp"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/personal_card"
+            android:textColor="@color/alarm_text"
+            style="@style/font_size_13sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@mipmap/imageinar_line" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:gravity="fill_vertical"
+            android:orientation="horizontal">
+            <!-- 封面 -->
+            <ImageView
+                android:id="@+id/chat_right_share_cover_card"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/default_photo" />
+
+            <TextView
+                android:id="@+id/chat_right_share_name_card"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lineSpacingExtra="10dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/common_text_color_share_title"
+                style="@style/font_size_18sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="-45dp"
+        android:layout_toLeftOf="@+id/chat_right_share_content_card">
+
+        <com.foreveross.atwork.modules.chat.component.ChatSendStatusView
+            android:id="@+id/chat_right_share_send_status_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.foreveross.atwork.modules.chat.component.ChatSendStatusView>
+
+    </FrameLayout>
+
+    <com.foreveross.atwork.modules.chat.component.chat.MessageSourceView
+        android:id="@+id/message_srouce_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/chat_right_share_avatar_card"
+        android:layout_below="@id/chat_right_share_content_card"/>
+
+
+</RelativeLayout>

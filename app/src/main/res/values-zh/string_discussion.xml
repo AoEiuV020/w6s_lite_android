@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--群-->
+    <string name="create_discussion_fail">创建群组失败</string>
+    <string name="title_group_name_modify">群名称修改</string>
+    <string name="hint_title_group_name_modify">请输入修改的群名称</string>
+    <string name="title_group_detail_modify">群简介修改</string>
+    <string name="hint_title_group_detail_modify">请输入修改的群简介</string>
+    <string name="modify_group_info_fail">修改群组信息数据库操作失败</string>
+    <string name="modify_group_info_success">修改群组信息成功</string>
+    <string name="add_group_member_network_fail">添加群组网络行为失败</string>
+    <string name="add_group_member_fail">添加群组数据库操作失败</string>
+    <string name="remove_group_member_network_fail">删除群组人员网络操作失败</string>
+    <string name="remove_group_member_db_fail">删除群组成员数据库操作失败</string>
+    <string name="remove_group_member_db_success">删除人员成功</string>
+    <string name="not_allowed_delete_owner">不允许删除群主</string>
+    <string name="location_fail">获取定位失败，请确认定位，手机网络或WIFI三者有任意其一打开</string>
+    <string name="title_group_avatar">群头像</string>
+    <string name="title_discussion_name">群名称</string>
+    <string name="title_group_detail">群简介</string>
+    <string name="hint_no_content">暂时没有内容介绍~</string>
+    <string name="discussion_members">群组人员</string>
+    <string name="transfer_group_owner">转让群主</string>
+    <string name="only_group_owner_can_handle_members">仅群主可添加新成员</string>
+    <string name="group_owner_transfer_successfully">已转让</string>
+    <string name="you_become_owner">你已被%1$s设置为该群群主</string>
+    <string name="internal_discussion_empty_owner_set_tip">该内部群群主空缺，如果你是群管理员，你可以点击确定将自己设定为群主</string>
+    <string name="internal_discussion_empty_owner_set_tip_again">你正在设定自己为群组“%1$s”的管理员，点击确定后生效，点击取消返回群组信息</string>
+    <string name="internal_discussion">内部群</string>
+    <string name="internal_discussion_someone_become_owner">%1$s成为了该群群主</string>
+
+
+    <string name="create_discussion_three_people_at_least">至少3人才能建群</string>
+
+    <string name="discussion_helper">群聊助手</string>
+    <string name="open_discussion_shiled_helper">开启群聊免打扰助手</string>
+    <string name="close_discussion_shiled_helper">关闭群聊免打扰助手</string>
+    <string name="open_discussion_shiled_helper_tip">“群聊免打扰助手”开启后，开启了消息免打扰的所有群聊会话将合并成一条新会话【群聊助手】展现。</string>
+    <string name="discussion_helper_new_messages">%s个群聊有新消息</string>
+    <string name="discussion_helper_no_new_messages">你暂时未有新消息</string>
+    <string name="discussion_helper_tip">以下是“群聊免打扰”的消息：</string>
+
+    <string name="news_summary_helper">服务号消息汇总</string>
+
+    <string name="common_template_discussion">普通群</string>
+    <string name="common_discussion_create_notice">你可以邀请同事、好友、项目成员加入群聊，最多支持%s人</string>
+
+
+    <string name="please_input_template_discussion_name">请输入%s名称</string>
+    <string name="discussion_manager">群管理</string>
+    <string name="discussion_member_tag_manager">成员标签管理</string>
+    <string name="discussion_app_manager">群应用管理</string>
+    <string name="discussion_app">群应用</string>
+    <string name="add_qucik_entry">添加快捷入口</string>
+    <string name="write_qucik_entry">填写快捷入口信息</string>
+    <string name="session_quick_entry_bar_display">会话快捷栏显示</string>
+    <string name="discussion_detail_display">群详情显示</string>
+    <string name="entry_upload_icon_tip">Tips：支持bmp、png、jpg 格式图片，建议上传 尺寸：88*88px ，大小不超过2M。`</string>
+    <string name="add_discussion_entry">添加群应用</string>
+    <string name="select_discussion_app">选择群应用</string>
+    <string name="edit_discussion_app">编辑群应用</string>
+    <string name="add_member_tag">添加成员标签</string>
+    <string name="modify_member_tag">修改成员标签</string>
+    <string name="please_input_tag_name">请输入标签的名称</string>
+    <string name="cannot_remove_tag_mapping_member">不允许删除有人挂靠的成员标签</string>
+    <string name="mapping_organization">关联组织</string>
+    <string name="please_select_mapping_organization">请选择关联的组织</string>
+    <string name="discussion_identity">群标识</string>
+    <string name="show_more_discussion_apps">显示更多群应用</string>
+
+</resources>

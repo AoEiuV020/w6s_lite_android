@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cards_not_added">Not Added</string>
+    <string name="cards_added">Added</string>
+    <string name="card_loaded_fail">Loading Failed</string>
+    <string name="card_click_to_refresh">Click Refresh</string>
+    <string name="cards_empty">No Added</string>
+
+    <string name="org_admin">Org settings</string>
+    <string name="add_workbench">Add</string>
+    <string name="switch_workbench">Switch</string>
+    <string name="admin_workbench">Management</string>
+    <string name="admin_control">Workbench control</string>
+    <string name="admin_control_tip">(only visible to super administrators)</string>
+    <string name="admin_switch_workbench">Switch</string>
+    <string name="admin_add_workbench">Add workbench</string>
+    <string name="admin_modify_workbench">Edit workbench</string>
+    <string name="workbench_name">Workbench name</string>
+    <string name="workbench_name_input_hint">Workbench name is displayed below the tab</string>
+    <string name="workbench_en_name_input_hint">English name (optional)</string>
+    <string name="workbench_tw_name_input_hint">Traditional name (optional)</string>
+    <string name="workbench_remark_input_hint">Please enter remarks (optional)</string>
+    <string name="range_of_application_input_hint">Tips: Users within the scope of use will display the workbench on the mobile terminal. If the user has two workbenches on the shelf at the same time, the last edited will be displayed first</string>
+    <string name="admin_add_card">Add card</string>
+    <string name="admin_set_scope">Visible range</string>
+    <string name="admin_set_scope_title">Set the visible range</string>
+    <string name="admin_add_card_guide">We also provide more rich card templates, you can view usage examples or developer documentation, please visit:\n</string>
+    <string name="workbench_add_bundles_more_solutions">For more application solutions, click to view</string>
+
+
+    <string name="admin_add_card_name_search">Search</string>
+    <string name="admin_add_card_name_banner">Picture</string>
+    <string name="admin_add_card_name_summery">Subscribe to news</string>
+    <string name="admin_add_card_name_app_container_0">Nine grids</string>
+    <string name="admin_add_card_name_app_container_1">List card</string>
+    <string name="admin_add_card_name_app_common">Commonly used</string>
+    <string name="admin_click_to_set">Click Settings</string>
+    <string name="admin_add_app">Add application</string>
+    <string name="admin_set_app_scope">Set app visibility</string>
+    <string name="admin_set_scope_part_tip">Please select the visible range, you can choose the department or personnel</string>
+    <string name="admin_workbench_sort">Workbench sorting</string>
+    <string name="admin_modify_card">Edit card</string>
+    <string name="workbench_card_name">Card name</string>
+    <string name="entry_type">Entrance way</string>
+    <string name="entry_type_gird_name">%s Grids</string>
+    <string name="entry_type_list_name">List the number of columns</string>
+    <string name="admin_add_banner_count_max">You can add up to %s pictures</string>
+    <string name="admin_add_banner">add pictures</string>
+    <string name="please_input_banner_name_hint">Please enter a picture name</string>
+    <string name="banner_image">Picture</string>
+    <string name="admin_add_banner_tip">Tips: The picture supports JPEG, PNG format, the size is recommended (width 1125 * height 540), the size does not exceed 2M</string>
+    <string name="admin_view_banner">View pictures</string>
+    <string name="admin_set_banner">Set pictures</string>
+    <string name="admin_set_valid_duration_tip">Tips: If you do not fill in the validity period, the default is long-term validity</string>
+</resources>

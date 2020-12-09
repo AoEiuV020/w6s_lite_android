@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 群信息修改界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:tag="c1">
+
+
+        <!-- 返回图标 -->
+        <ImageView
+            android:id="@+id/title_bar_group_info_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/title_common_padding"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:src="@mipmap/icon_back" />
+
+        <!-- 群修改 -->
+        <TextView
+            android:id="@+id/title_bar_group_info_name"
+            style="@style/font_size_18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_common_title_back_padding"
+            android:layout_toRightOf="@+id/title_bar_group_info_back"
+            android:singleLine="true"
+            android:text="修改群名称"
+            android:textColor="@color/common_item_black" />
+
+        <!-- 聊天详情按扭 -->
+        <Button
+            android:id="@+id/title_bar_group_info_ok"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:gravity="center|center_vertical"
+            android:minWidth="50dp"
+            android:padding="5dp"
+            android:text="@string/ok"
+            android:textColor="@color/common_item_black" />
+
+    </RelativeLayout>
+
+    <!-- 内容 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/empty_edit_group_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cancel_input_selector"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/group_info_modify_text"
+            style="@style/font_size_17sp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/empty_edit_group_text"
+            android:background="@color/white"
+            android:gravity="left"
+            android:singleLine="false"
+            android:textColor="@color/common_text_color" />
+
+        <TextView
+            android:id="@+id/group_info_number_tv"
+            style="@style/font_size_15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="175dp"
+            android:text="0/100"
+            android:textColor="@color/common_text_color" />
+
+
+    </RelativeLayout>
+</LinearLayout>

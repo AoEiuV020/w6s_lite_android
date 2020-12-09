@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="applocal://www/cordova.min.js"></script>
+<title>Acceleration 例子</title>
+<!-- <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script> -->
+<script type="text/javascript" charset="utf-8">
+
+    var watchID = null;
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    var oldValue = {
+    x: null,
+    y: null,
+    z: null
+    }
+
+    function onDeviceReady() {
+        startWatch();
+    }
+
+
+    function startWatch() {
+        var options = { frequency: 300 };
+
+        watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    }
+
+    function stopWatch() {
+        if (watchID) {
+            navigator.accelerometer.clearWatch(watchID);
+            watchID = null;
+        }
+    }
+
+    // 获取加速度信息成功后的回调函数
+    function onSuccess(newValue) {
+        var changes = {},
+        bound = 3;
+        if (oldValue.x !== null) {
+        changes.x = Math.abs(oldValue.x, newValue.x);
+        changes.y = Math.abs(oldValue.y, newValue.y);
+        changes.z = Math.abs(oldValue.z, newValue.z);
+        }
+        if (changes.x > bound && changes.y > bound && changes.z >
+        bound) {
+        alert('检测到手机晃动');
+        }
+        oldValue = {
+        x: newValue.x,
+        y: newValue.y,
+        z: newValue.z
+        }
+        var element = document.getElementById('accelerometer');
+        element.innerHTML = 'Acceleration X: ' + newValue.x + '<br />' +
+                            'Acceleration Y: ' + newValue.y + '<br />' +
+                            'Acceleration Z: ' + newValue.z + '<br />' +
+                            'Timestamp: '      + newValue.timestamp + '<br />';
+    }
+
+    // 获取加速度信息失败后的回调函数
+    function onError() {
+        alert('onError!');
+    }
+
+    </script>
+  </head>
+  <body>
+    <div id="accelerometer">监测加速度信息中...</div>
+    <button onclick="stopWatch();">停止监测加速度信息</button>
+  </body>
+</html>

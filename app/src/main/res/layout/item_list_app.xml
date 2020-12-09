@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 通讯录LIST ITEM-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_contact_item_height"
+    android:background="@drawable/bg_item_common_selector">
+
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/iv_header_avatar"
+        android:layout_width="@dimen/common_contact_item_img_size"
+        android:layout_height="@dimen/common_contact_item_img_size"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitXY"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/arrow_image"
+        style="@style/icon_arrow_dark" />
+
+    <!-- 文字 -->
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/font_size_17sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_header_avatar"
+        android:drawablePadding="5dp"
+        android:singleLine="true"
+        android:text="123"
+        android:textColor="#333" />
+    <!--android:drawableRight="@mipmap/icon_internal_discussion_label"-->
+
+
+    <ImageView
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_11"
+        android:layout_marginRight="@dimen/dp_11"
+        android:layout_marginTop="10dp"
+        android:background="@color/common_line_color" />
+
+
+</RelativeLayout>

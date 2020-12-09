@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="16dp">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toLeftOf="@+id/llRightArea"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/admin_control"
+            android:textColor="@color/common_text_color"
+            android:textSize="?attr/fontsize_14sp"
+            tools:textSize="14sp" />
+
+
+        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+            android:id="@+id/tvTitleTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/tvTitle"
+            android:alpha="30"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/admin_control_tip"
+            android:textColor="#C4C1C4"
+            android:textSize="?attr/fontsize_14sp"
+            tools:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llMainArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTitle"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/llAdminOrg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/ivAdminOrg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_admin_org"
+
+                />
+
+            <TextView
+                android:id="@+id/tvAdminOrg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/org_admin"
+                android:textSize="12sp"
+                android:textColor="@color/common_text_color"
+                android:layout_marginTop="4dp"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llAdminAddWorkbench"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/ivAdminAddWorkbench"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_admin_add_workbench"
+
+                />
+
+            <TextView
+                android:id="@+id/tvAdminAddWorkbench"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_workbench"
+                android:textSize="12sp"
+                android:textColor="@color/common_text_color"
+                android:layout_marginTop="4dp"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llAdminSwitchWorkbench"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/ivAdminSwitchWorkbench"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_admin_switch_workbench"
+
+                />
+
+            <TextView
+                android:id="@+id/tvAdminSwitchWorkbench"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/switch_workbench"
+                android:textSize="12sp"
+                android:textColor="@color/common_text_color"
+                android:layout_marginTop="4dp"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llAdminAdminWorkbench"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/ivAdminAdminWorkbench"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_admin_workbench"
+
+                />
+
+            <TextView
+                android:id="@+id/tvAdminAdminWorkbench"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/admin_workbench"
+                android:textSize="12sp"
+                android:textColor="@color/common_text_color"
+                android:layout_marginTop="4dp"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

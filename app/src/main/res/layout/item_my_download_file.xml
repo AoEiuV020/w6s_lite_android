@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/file_group_time"
+        style="@style/font_size_12sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="15dp"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        tools:text="2019年09月"
+        android:textColor="@color/file_group_time_text_color"
+        android:background="@color/white"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bg_item_common_selector"
+        android:orientation="horizontal">
+        <!--文件图标-->
+        <ImageView
+            android:id="@+id/file_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="20dp"
+            tools:src="@mipmap/icon_dropbox_item_pdf"
+            android:layout_toRightOf="@+id/file_select" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!--文件名称-->
+            <TextView
+                android:id="@+id/file_name"
+                style="@style/font_size_15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="filename"
+                android:textColor="@color/dropbox_common_text_color" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--文件的下载时间-->
+                <TextView
+                    android:id="@+id/file_modify_time"
+                    style="@style/font_size_11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    tools:text="2017年7月6日"
+                    android:textColor="@color/dropbox_hint_text_color" />
+                <!--文件大小-->
+                <TextView
+                    android:id="@+id/file_size"
+                    style="@style/font_size_11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="2.2MB"
+                    android:textColor="@color/dropbox_hint_text_color" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/file_expand_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:background="@mipmap/icon_dropbox_file_expand"
+            android:button="@null" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:background="#F7F7F7">
+
+    <LinearLayout
+        android:id="@+id/download_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/iv_file_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/file_download"/>
+
+        <TextView
+            android:id="@+id/download_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/download"
+            android:tag="c4"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/blue_lock"
+            style="@style/font_size_10sp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_open_by_other_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_file_open_with_others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/file_open_with_others"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open_via_other"
+            android:tag="c4"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/blue_lock"
+            style="@style/font_size_10sp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/common_line_color"/>
+
+    <LinearLayout
+        android:id="@+id/send_to_contact_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/iv_send_to_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/file_send_to_contact"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_to_contact"
+            android:tag="c4"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/blue_lock"
+            style="@style/font_size_10sp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/common_line_color"/>
+
+    <LinearLayout
+        android:id="@+id/save_to_dropbox_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/iv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/file_save_to_disk"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_to_dropbox"
+            android:tag="c4"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/blue_lock"
+            style="@style/font_size_10sp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_line_save_to_dropbox_function"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/common_line_color"/>
+
+    <LinearLayout
+        android:id="@+id/more_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/file_more"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/more"
+            android:tag="c4"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/blue_lock"
+            style="@style/font_size_10sp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</LinearLayout>

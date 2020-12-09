@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlItem"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="4dp"
+        android:layout_height="4dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_chat_dot"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_toRightOf="@+id/ivCover"
+        android:layout_toLeftOf="@+id/tvTime"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/common_text_color"
+        android:textSize="?attr/fontsize_14sp"
+        tools:textSize="14sp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        tools:text="标题标题标题标题标题标题标题标222222222题标题标题标题标题" />
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/common_text_color_999"
+        android:textSize="?attr/fontsize_14sp"
+        android:layout_centerVertical="true"
+        tools:textSize="14sp"
+        android:layout_alignParentRight="true"
+        tools:text="1小时前"
+        android:visibility="gone"
+        />
+</RelativeLayout>

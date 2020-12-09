@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_common" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/modify_tel_title"
+        android:layout_marginTop="30dp"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/new_folder_edit"
+            style="@style/font_size_14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="35dp"
+            android:background="@color/white"
+            android:hint="@string/input_folder_name"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10sp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColorHint="@color/common_text_hint_gray" />
+
+        <ImageView
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/cancel_input_selector"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

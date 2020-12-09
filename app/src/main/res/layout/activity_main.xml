@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cl_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_page_bg">
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.foreveross.atwork.component.viewPager.CustomViewPager
+                android:id="@+id/main_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/home_tab_layout"
+                android:layout_gravity="center" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_above="@+id/home_tab_layout"
+                android:background="@color/common_line_color" />
+
+            <LinearLayout
+                android:id="@+id/home_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:background="#f9f9f9"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="3dp">
+
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/v_fab_main_bottom_pop"
+                layout="@layout/layout_fab_bottom_pop"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="72dp"
+            android:layout_marginRight="@dimen/title_common_padding"
+            android:src="@mipmap/icon_fab_default"
+            app:backgroundTint="@color/common_blue_bg"
+            app:borderWidth="0dp"
+            app:fabSize="normal"
+            app:layout_anchor="@+id/rl_content"
+            app:layout_anchorGravity="bottom|right" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_update_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="66dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_update_float_tip_shape"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv_update_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="12dp"
+            android:src="@mipmap/icon_logo" />
+
+        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+            android:id="@+id/tv_update_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_update_cancel"
+            android:layout_toRightOf="@+id/iv_update_logo"
+            android:text="@string/tip_new_version"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:lineSpacingExtra="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_update_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="14dp"
+            android:src="@mipmap/icon_float_update_tip_cancel" />
+
+    </RelativeLayout>
+</RelativeLayout>

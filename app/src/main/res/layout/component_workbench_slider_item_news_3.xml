@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/loading_workbench_news_slider_item_cover"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        tools:text="自1955年全球第一家麦当劳餐厅在美国伊利诺伊州芝"
+        android:textSize="?attr/fontsize_12sp"
+        tools:textSize="12sp"
+        android:textColor="@color/common_text_color"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        />
+
+</LinearLayout>

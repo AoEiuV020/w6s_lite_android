@@ -1,0 +1,1273 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.foreveross.atwork"
+    android:installLocation="internalOnly">
+
+    <application
+        android:name=".AtworkApplicationLike"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:label,android:icon,android:allowBackup">
+
+<!--        <meta-data-->
+<!--            android:name="com.huawei.hms.client.appid"-->
+<!--            android:value="appid=${HUAWEI_ID}" />-->
+
+        <meta-data
+            android:name="push_kit_auto_init_enabled"
+            android:value="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service android:name="com.w6s.handyfloat.HandyFloatService"/>
+
+        <activity
+            android:name=".services.support.KeepAliveActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnTaskLaunch="false"
+            android:launchMode="singleInstance"
+            android:process=":push"
+            android:theme="@style/LiveActivityStyle">
+
+        </activity>
+
+        <service
+        android:name="com.vivo.push.sdk.service.CommandClientService"
+        android:exported="true"/>
+
+
+        <meta-data
+         android:name="com.vivo.push.api_key"
+         android:value="${VIVO_KEY}"/>
+
+        <meta-data
+        android:name="com.vivo.push.app_id"
+         android:value="${VIVO_ID}"/>
+
+        <!-- IM SOCKET连接 不能设置remote process -->
+        <service
+            android:name=".services.ImSocketService"
+            android:exported="false" />
+
+        <service
+            android:name=".services.ImSocketService$InnerService"
+            android:exported="false" />
+
+        <!--<service android:name="com.huawei.AudioDeviceAndroidService"/>-->
+
+        <service
+            android:name=".modules.voip.service.CallService"
+            android:enabled="true"
+            android:label="CallService">
+
+        </service>
+
+        <service
+        android:name="com.vivo.push.sdk.service.CommandClientService"
+        android:exported="true"/>
+
+
+        <service
+            android:name="com.foreveross.atwork.component.floatView.service.WorkplusFloatService"
+            android:enabled="true"
+            android:label="WebUrlFloatService">
+
+        </service>
+
+
+        <!--监听电话的服务-->
+        <receiver android:name=".broadcast.WorkPlusPhoneCallStateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- 闹钟接收器定时启动服务 -->
+        <receiver
+            android:name=".services.receivers.AlarmReceiver"
+            android:process=":push" />
+
+        <receiver android:name=".services.receivers.OutFieldPunchReceiver" />
+
+        <!-- 监听蓝牙、网络、开机等事件启动服务 -->
+        <receiver android:name=".services.receivers.NotifyReceiver">
+            <intent-filter>
+                <action android:name="android.media.SCO_AUDIO_STATE_CHANGED" />
+                <action android:name="android.media.ACTION_SCO_AUDIO_STATE_UPDATED" />
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <!--以下两个广播在API24后无法接收-->
+                <action android:name="android.hardware.action.NEW_PICTURE" />
+                <action android:name="android.hardware.action.NEW_VIDEO" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver
+            android:name=".broadcast.WXRegister"
+            android:permission="com.tencent.mm.plugin.permission.SEND">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 启动页 -->
+        <activity
+            android:name=".modules.main.activity.SplashActivity"
+            android:theme="@style/AppThemeStart">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".modules.lite.activity.LiteBindScanActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".modules.lite.activity.LiteBindEntryActivity"
+            android:screenOrientation="portrait"
+            />
+
+
+        <!-- Tencent config -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105486764" />
+            </intent-filter>
+        </activity>
+
+        <!--vivo config -->
+        <activity
+        android:name="com.vivo.push.sdk.LinkProxyClientActivity"
+        android:exported="false"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 登录Activity -->
+        <activity
+            android:name=".modules.login.activity.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".modules.login.activity.AccountLoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity android:name=".modules.device.activity.LoginDeviceAuthActivity"
+            android:screenOrientation="portrait"
+            />
+
+
+        <activity android:name=".modules.device.activity.LoginDeviceManagerActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".modules.device.activity.LoginDeviceDetailActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".modules.device.activity.LoginDeviceModifyInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible"
+            />
+
+        <activity android:name=".modules.device.activity.LoginDeviceAuthNoMobileWarnActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.foreverht.webview.x5.tbs.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <!--第二次登录界面-->
+        <activity
+            android:name=".modules.login.activity.LoginWithAccountActivity"
+            android:fitsSystemWindows="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+
+        <!-- 发送验证码界面 -->
+        <activity
+            android:name=".modules.login.activity.LoginRequestPhoneSecureCodeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!--初次登录签署协议-->
+        <activity
+            android:name=".modules.login.activity.LoginSignAgreementActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 用户主界面 -->
+        <activity
+            android:name=".modules.main.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <activity android:name=".modules.common.activity.JoinUCCalendarConfActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.workplus.uccalendar"
+                    android:pathPattern="/calendar/.*"
+                    android:scheme="${QSY_CALENDAR}" />
+
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".modules.common.activity.TransparentHandleCommonFileActivity"
+            android:exported="true"
+            android:theme="@style/AppThemeTransparent"
+            >
+
+        </activity>
+
+
+        <activity
+            android:name=".modules.meeting.activity.JoinUmeetingActivity"
+            android:exported="true"
+            android:theme="@style/AppThemeTransparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="meeting"
+                    android:scheme="${WORKPLUS_SCHEMA}" />
+
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".modules.route.activity.SchemaRouteActivity"
+            android:exported="true"
+            android:theme="@style/AppThemeTransparent">
+            <intent-filter >
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="route_scheme"
+                    android:host="${applicationId}"
+                    android:path="/route_params"/>
+            </intent-filter>
+        </activity>
+
+
+        <!-- 聊天详情页面 -->
+        <activity
+            android:name=".modules.chat.activity.ChatDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter >
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="workplus_scheme"
+                    android:host="${applicationId}"
+                    android:path="/notify_params"/>
+            </intent-filter>
+
+        </activity>
+
+        <!--session 文件夹类页面-->
+        <activity android:name=".modules.chat.activity.SessionsCollectActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!-- 阅后即焚消息详细页面 -->
+        <activity
+            android:name=".modules.chat.activity.BurnMessageDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!--合并转发消息详细页面-->
+        <activity
+            android:name=".modules.chat.activity.MultiPartDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!--分享地理位置-->
+        <activity android:name="com.foreverht.workplus.module.chat.activity.ShareLocationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity android:name="com.foreverht.workplus.module.chat.activity.ShowLocationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+
+
+        <!-- 语音翻译页面 -->
+        <activity
+            android:name=".modules.chat.activity.MsgContentDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <!--我的帐号详情页-->
+        <activity
+            android:name=".modules.aboutme.activity.MyAccountActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <!-- 组织架构页面 -->
+        <activity
+            android:name=".modules.contact.activity.EmployeeTreeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 同步失败记录页面 -->
+        <activity
+            android:name=".modules.contact.activity.SyncContactFailedActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 群或个人详情页面 -->
+        <activity
+            android:name=".modules.chat.activity.ChatInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!--查找聊天内容-->
+        <activity android:name=".modules.chat.activity.SearchChatContentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize"/>
+
+        <activity android:name=".modules.chat.activity.SearchChatByCalendarActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+        <activity android:name=".modules.chat.activity.SearchChatMediaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+        <!-- 智能翻译页面 -->
+        <activity
+            android:name=".modules.chat.activity.IntelligentTranslationActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!--历史消息-->
+        <activity android:name="com.foreverht.workplus.module.chat.activity.MessageHistoryActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name="com.foreverht.workplus.module.chat.activity.MessageByTypeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.foreverht.workplus.module.chat.activity.MessageByTagActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible"/>
+
+        <!--消息同步设置-->
+        <activity android:name=".modules.chat.activity.SyncMessagesSettingActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <!-- 文件选择页面 -->
+        <activity
+            android:name=".modules.file.activity.FileSelectActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.file.activity.OfficeViewActivity"
+            android:screenOrientation="portrait" />
+
+        <!--图片选择页面-->
+        <activity
+            android:name=".modules.image.activity.MediaSelectActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!--图片预览-->
+        <activity
+            android:name=".modules.image.activity.MediaPreviewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!--图片修改-->
+        <activity
+            android:name=".modules.image.activity.ImageEditActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            />
+
+        <!-- 个人详情页面 -->
+        <activity
+            android:name=".modules.contact.activity.PersonalInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 选择人员界面 -->
+        <activity
+            android:name=".modules.group.activity.UserSelectActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 转发消息界面 -->
+        <activity
+            android:name=".modules.group.activity.TransferMessageActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeTransparent"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:label="@string/send_to_app"
+            >
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.SEND"/>
+
+                <data android:mimeType="*/*"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+
+                <data android:mimeType="*/*"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="sharelink"
+                    android:scheme="${WORKPLUS_SCHEMA}" />
+
+            </intent-filter>
+
+        </activity>
+
+        <!-- 创建群聊 -->
+        <activity android:name=".modules.discussion.activity.DiscussionCreateWithTemplateActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            />
+
+        <!--群组成员Activity -->
+        <activity
+            android:name=".modules.discussion.activity.DiscussionListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!--群组选择Activity -->
+        <activity
+            android:name=".modules.discussion.activity.SelectDiscussionListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!--群组搜索Activity -->
+        <activity
+            android:name=".modules.discussion.activity.DiscussionSearchListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 图片轮播ACTIVITY -->
+        <activity
+            android:name=".modules.image.activity.ImageSwitchInChatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.foreverht.workplus.module.sticker.activity.StickerViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 群信息修改 -->
+        <activity
+            android:name=".modules.discussion.activity.DiscussionModifyActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.app.activity.WebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified|stateAlwaysHidden" />
+
+
+        <activity
+            android:name=".modules.app.activity.LandscapeWebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="userLandscape"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified|stateAlwaysHidden" />
+
+        <!-- 关于atwork-->
+        <activity
+            android:name=".modules.aboutatwork.activity.AboutAtWorkActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <!-- 修改电话号码页面 -->
+        <activity
+            android:name=".modules.aboutme.activity.ModifyMyInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/holoCompat" />
+        <activity
+            android:name=".modules.aboutme.activity.ModifyPersonalSignatureActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/holoCompat" />
+
+        <activity
+            android:name=".modules.setting.activity.TextSizeSettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.setting.activity.WebviewFloatActionSettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!-- 个人二维码页面 -->
+        <activity
+            android:name=".modules.aboutme.activity.PersonalQrcodeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <!--设置页面-->
+        <activity
+            android:name=".modules.setting.activity.SettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+
+        <!--顶级设置页面-->
+        <activity
+            android:name=".modules.setting.activity.W6sTopSettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!--通用设置页面-->
+        <activity
+            android:name=".modules.setting.activity.W6sGeneralSettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+
+        <!--账号&安全设置页面-->
+        <activity
+            android:name=".modules.setting.activity.W6sAccountAndSecureSettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+
+        <!--群聊助手设置页面-->
+        <activity
+            android:name=".modules.setting.activity.DiscussionShieldHelperSettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.setting.activity.LanguageSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <!--存储空间-->
+        <activity
+            android:name=".modules.setting.activity.StorageSpaceSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 企业来电助手设置页面-->
+        <activity android:name=".modules.setting.activity.EmpIncomingCallSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <!--消息推送设置页面-->
+        <activity
+            android:name=".modules.setting.activity.MessagePushSettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!--修改密码页面-->
+        <activity
+            android:name=".modules.setting.activity.ChangePasswordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustNothing" />
+
+        <!-- groupAt Activity -->
+        <activity
+            android:name=".modules.discussion.activity.DiscussionMemberSelectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!--意见反馈-->
+        <activity
+            android:name=".modules.aboutatwork.activity.FeedbackActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+
+        <!-- 已读未读-->
+        <activity
+            android:name=".modules.discussion.activity.DiscussionReadUnreadActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.aboutatwork.activity.AppUpgradeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.contact.activity.UserAvatarPreviewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.common.activity.AtworkCamera"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.common.activity.WorkPlusCameraActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.biometricAuthentication.activity.BiometricCameraActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".modules.biometricAuthentication.activity.BiometricCheckPhotoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".modules.biometricAuthentication.activity.FaceBioValidPasswordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.common.activity.PhotoPreviewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.qrcode.activity.QrcodeScanActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.qrcode.activity.ScanResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.qrcode.activity.QrInvoiceActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.qrcode.activity.QrLoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.aboutatwork.activity.IntroFriendsActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".modules.gesturecode.activity.GestureCodeManagerActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.gesturecode.activity.GestureCodeInputActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.gesturecode.activity.GestureCodeLockActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!--新广告页-->
+        <activity
+            android:name=".modules.advertisement.activity.AdvertisementActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <activity android:name=".modules.ad.activity.AppIntroduceActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name=".modules.chat.activity.ConferenceManagerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".modules.chat.activity.DiscussionQrcodeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.chat.activity.DiscussionScanAddActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.friend.activity.MyFriendsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.app.activity.AppListActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".modules.app.activity.AppListCustomSortActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.contact.activity.ContactActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="${applicationId}.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeStart" />
+
+        <activity
+            android:name="${applicationId}.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeStart" />
+
+        <activity
+            android:name=".modules.organization.activity.OrgApplyingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.aboutatwork.activity.OrgInviteShareActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.main.activity.AppActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!--    voip   start -->
+        <activity
+            android:name=".modules.voip.activity.VoipSelectModeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.voip.activity.VoipHistoryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".modules.voip.activity.qsy.QsyCallActivity"
+            android:label="voip"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name=".modules.voip.activity.agora.AgoraCallActivity"
+            android:label="voip"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+
+        <activity
+            android:name=".modules.voip.activity.zoom.ZoomCallActivity"
+            android:label="voip"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name=".modules.voip.activity.qsy.SwitchVoiceActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.voip.activity.qsy.CallDialpadActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.voip.activity.qsy.CountryCodeActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!--    voip   end -->
+
+        <!--必应消息-->
+        <activity
+            android:name=".modules.bing.activity.NewBingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".modules.bing.activity.BingListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.bing.activity.BingDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".modules.bing.activity.ContactCommonListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".modules.bing.activity.BingReadUnreadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".modules.search.activity.NewSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            />
+
+        <activity android:name=".modules.search.activity.SessionSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+        <activity android:name=".modules.setting.activity.EmailSettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.setting.activity.EmailRemindActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.setting.activity.EmailSyncSettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.setting.activity.CalendarSettingsActivity"
+            android:screenOrientation="portrait"/>
+        <!--我的下载-->
+        <activity
+            android:name=".modules.downLoad.activity.MyDownLoadActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".modules.downLoad.activity.MyDownLoadSearchActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".modules.downLoad.activity.ImageSwitchInDownloadActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
+
+
+        <!--工作台-->
+        <activity android:name=".modules.workbench.activity.WorkbenchCustomSortCardActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".modules.workbench.activity.admin.WorkbenchAdminSwitchActivity"
+            android:theme="@style/AppThemeTransparent"
+            />
+
+        <activity
+            android:name=".modules.workbench.activity.admin.WorkbenchAdminAddOrModifyActivity"
+            android:theme="@style/AppThemeTransparent"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            />
+
+        <activity
+            android:name=".modules.workbench.activity.admin.WorkbenchAdminSetScopeActivity"
+            android:theme="@style/AppThemeTransparent"
+            />
+
+        <activity
+            android:name=".modules.workbench.activity.admin.WorkbenchAdminModifyCardActivity"
+            android:theme="@style/AppThemeTransparent"
+            />
+
+        <activity
+            android:name=".modules.workbench.activity.admin.WorkbenchAdminSortCardActivity"
+            android:theme="@style/AppThemeTransparent"
+            />
+
+        <activity android:name=".modules.workbench.activity.admin.WorkbenchAdminAdminActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".modules.workbench.activity.admin.WorkbenchAdminBannerCardBannerListActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".modules.workbench.activity.admin.WorkbenchAdminBannerCardBannerAddActivity"
+            android:theme="@style/AppThemeTransparent"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            />
+
+        <activity android:name=".modules.workbench.activity.admin.WorkbenchAdminBannerCardBannerDetailActivity"
+            android:theme="@style/AppThemeTransparent"
+            />
+
+        <activity android:name=".modules.workbench.activity.admin.WorkbenchAdminAddCardActivity"
+            android:theme="@style/AppThemeTransparent"
+            />
+
+        <activity android:name=".modules.workbench.activity.admin.WorkbenchAdminModifyAppEntryActivity"
+            android:theme="@style/AppThemeTransparent"
+            />
+
+        <activity android:name="com.foreverht.workplus.module.contact.activity.ShowDepartmentActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"/>
+
+
+        <activity
+            android:name=".modules.ocr.activity.OcrCameraActivity"
+            />
+
+        <activity
+            android:name=".modules.video.activity.VideoRecordActivity"
+            />
+
+        <!--umeeting-->
+        <activity
+            android:name="${applicationId}.modules.umeeting.activity.UmeetingInviteActivity"
+            android:label="@string/invite_meeting"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeTransparent"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+
+                <action android:name="${applicationId}.intent.action.MeetingInvite" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".modules.meeting.activity.ZoomJoinVoipMeetingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+
+        <activity
+            android:name=".modules.meeting.activity.ZoomInstantMeetingInviteActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <!--服务号消息汇总-->
+        <activity android:name=".modules.newsSummary.activity.NewsSummaryActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.newsSummary.activity.NewsSummarySearchActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+
+
+        <provider
+            android:authorities="${packageName}.webCacheProvider"
+            android:name="com.foreverht.workplus.provider.WebCacheContentProvider"/>
+
+
+
+        <!-- ===============================推送服务========================== -->
+        <receiver android:name="com.foreverht.workplus.receiver.HuaweiPushReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver" >
+            <intent-filter>
+                <!-- 接收通道发来的通知栏消息 -->
+                <action android:name="com.huawei.intent.action.PUSH" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.huawei.android.hms.agent.common.HMSAgentActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent" >
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
+
+        <service android:enabled="true" android:process=":pushservice" android:name="com.xiaomi.push.service.XMPushService"/>
+        <service android:name="com.xiaomi.push.service.XMJobService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":pushservice" />
+        <!--注：此service必须在3.0.1版本以后（包括3.0.1版本）加入-->
+        <service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler" />
+        <service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService" />
+        <!--注：此service必须在2.2.5版本以后（包括2.2.5版本）加入-->
+        <receiver android:exported="true" android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:process=":pushservice" android:name="com.xiaomi.push.service.receivers.PingReceiver" >
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.foreverht.workplus.receiver.XMPushReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.foreverht.workplus.receiver.MzPushReceiver">
+            <intent-filter>
+                <!-- 接收push消息 -->
+                <action android:name="com.meizu.flyme.push.intent.MESSAGE" />
+                <!-- 接收register消息 -->
+                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />
+                <!-- 接收unregister消息-->
+                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK"/>
+                <!-- 兼容低版本Flyme3推送服务配置 -->
+                <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
+                <action android:name="com.meizu.c2dm.intent.RECEIVE" />
+                <category android:name="${applicationId}"></category>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.foreverht.workplus.receiver.PushMessageReceiverImpl">
+            <intent-filter>
+                <action android:name="com.vivo.pushclient.action.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.heytap.mcssdk.PushService"
+            android:permission="com.coloros.mcs.permission.SEND_MCS_MESSAGE">
+            <intent-filter>
+                <action android:name="com.coloros.mcs.action.RECEIVE_MCS_MESSAGE"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.heytap.mcssdk.AppPushService"
+            android:permission="com.heytap.mcs.permission.SEND_MCS_MESSAGE">
+            <intent-filter>
+                <action android:name="com.heytap.mcs.action.RECEIVE_MCS_MESSAGE"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+    <!-- 获取对摄像头的权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 获取对外部存储卡的读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 对互联网的请求 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 读取手机设备 -->
+    <uses-permission android:name="ANDROID.PERMISSION.READ_PHONE_STATE" />
+
+    <!-- 获取对设备的录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取WIFI状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--发短信权限-->
+<!--    <uses-permission android:name="android.permission.SEND_SMS" />-->
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+
+
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!--允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 读取联系人信息 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 写入联系人信息 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <protected-broadcast android:name="android.intent.action.PROXY_CHANGE" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <!--添加蓝牙权限-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- 添加系统对话框 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 跨进程交互数据 -->
+    <!--<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />-->
+    <!-- 获取当前进程权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 添加task权限 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <!-- 打开免提关闭免提权限 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 读取设置权限 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+
+    <!-- k9mail permissions-->
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="org.thialfihar.android.apg.permission.READ_KEY_DETAILS" />
+
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <!--<uses-permission android:name="com.huawei.permission.sec.MDM"/>-->
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.huawei.launcher3.permission.READ_SETTlGS" />
+
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_APP_BADGE" />
+
+    <!--8.0开始, 未声明此权限的应用将无法安装其他应用-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- 用于加快GPS首次定位-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <!-- 用于Android M及以上系统，申请加入忽略电池优化白名单-->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+
+    <permission
+        android:name="android.permission.INTERACT_ACROSS_USERS_FULL"
+        android:protectionLevel="signature" />
+
+    <permission android:name="${applicationId}.permission.MIPUSH_RECEIVE" android:protectionLevel="signature" />
+    <uses-permission android:name="${applicationId}.permission.MIPUSH_RECEIVE" />
+
+    <!-- 兼容flyme5.0以下版本，魅族内部集成pushSDK必填，不然无法收到消息-->
+    <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE"></uses-permission>
+    <permission android:name="${applicationId}.push.permission.MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="${applicationId}.push.permission.MESSAGE"></uses-permission>
+
+    <!--  兼容flyme3.0配置权限-->
+    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
+    <permission android:name="${applicationId}.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"></permission>
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE"/>
+
+    <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE"/>
+    <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE"/>
+
+    <!--    适配9.0-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+</manifest>

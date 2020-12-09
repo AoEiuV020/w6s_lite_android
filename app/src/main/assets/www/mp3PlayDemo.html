@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="_navigation_color" content="#FAEBD7" />
+    <title>cordova 调试</title>
+    <script src="applocal://www/cordova.min.js"></script>
+
+    <script>
+
+
+
+
+
+
+        function playMusic() {
+            var audio = document.getElementById("bgMusic");
+            //播放(继续播放)
+            audio.play();
+        }
+
+        function stopMusic() {
+            var audio = document.getElementById("bgMusic");
+            //播放(继续播放)
+            audio.pause();
+        }
+
+    </script>
+</head>
+
+<body>
+
+<audio id="bgMusic" src="https://api4.workplus.io/v1/medias/d9cbcba880374e508607a439689a97b7/voice?access_token=285d86343a89b00d8b5f2ca63701b1b11317b700435573400170ef2a5e457b73">
+</audio>
+
+
+<br/><br/>
+
+<a onclick="playMusic()">播放mp3</a>
+<br/>
+<br/>
+<br/>
+<a onclick="stopMusic()">暂停mp3</a>
+<br/>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/vTitleBar"
+        layout="@layout/title_bar_common" />
+
+    <RelativeLayout
+        android:id="@+id/rlDeviceName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvDeviceNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="@string/login_device_name"
+            android:textColor="@color/common_list_item_left"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tvDeviceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@+id/tvDeviceNameLabel"
+            android:ellipsize="middle"
+            android:gravity="right"
+            android:singleLine="true"
+            android:textColor="@color/common_list_item_right"
+            android:textSize="14sp"
+            tools:text="hello worldhello worldhello worldhello worldhello world" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvDeviceStatusLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="@string/login_device_status"
+            android:textColor="@color/common_list_item_left"
+            android:textSize="14sp" />
+
+
+        <com.foreveross.atwork.component.WorkplusSwitchCompat
+            android:id="@+id/switchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:theme="@style/workplus_switch" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvDeviceTypeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="@string/login_device_type"
+            android:textColor="@color/common_list_item_left"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tvDeviceType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/common_list_item_right"
+            android:textSize="14sp"
+            tools:text="android" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvDeviceLastLoginTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="@string/last_login_time"
+            android:textColor="@color/common_list_item_left"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tvDeviceLastLoginTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/common_list_item_right"
+            android:textSize="14sp"
+            tools:text="06:46PM" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvDeleteDevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="@string/delete_login_device"
+        android:textColor="#f12525"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

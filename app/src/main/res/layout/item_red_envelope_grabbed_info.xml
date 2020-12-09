@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/adaptive_height_67dp"
+    tools:layout_height="67dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/default_photo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_avatar"
+        android:layout_toLeftOf="@+id/ll_money_area"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试名字"
+            android:textColor="@color/common_text_color"
+            android:textSize="?attr/fontsize_16sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/common_text_color_999"
+            android:text="2017-12-20 12:02:23"
+            tools:textSize="12sp"
+            android:textSize="?attr/fontsize_12sp"
+            android:layout_marginTop="8dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_money_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:gravity="right"
+        >
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/common_text_color"
+            android:textSize="?attr/fontsize_16sp"
+            tools:textSize="16sp"
+            android:text="1金币"
+            />
+
+        <TextView
+            android:id="@+id/tv_the_crown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffb81a"
+            tools:textSize="12sp"
+            android:textSize="?attr/fontsize_12sp"
+            android:text="@string/red_envelope_the_luckiest"
+            android:layout_marginTop="3dp"
+            android:drawableLeft="@mipmap/icon_luckiest_crown"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/write_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        />
+</RelativeLayout>

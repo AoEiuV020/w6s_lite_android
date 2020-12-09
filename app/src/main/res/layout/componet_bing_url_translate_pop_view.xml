@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_new_bing_switch_mode"
+        android:layout_gravity="center"
+
+        >
+
+        <EditText
+            android:id="@+id/et_input_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:hint="@string/please_input_legal_url"
+            android:textColorHint="@color/common_text_color_999"
+            style="@style/font_size_13sp"
+            android:gravity="top"
+            android:text=""
+            android:maxHeight="150dp"
+            android:minHeight="50dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_send_blue"
+            android:paddingBottom="3dp"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:paddingTop="3dp"
+            android:text="@string/send_ok"
+            android:textColor="@color/white"
+            android:layout_below="@+id/et_input_url"
+            style="@style/font_size_14sp" />
+
+    </RelativeLayout>
+
+</FrameLayout>

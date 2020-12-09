@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <ImageView
+        android:id="@+id/iv_spectrum"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="9dp"
+        android:src="@mipmap/tangsdk_group_speaking_state" />
+
+
+    <FrameLayout
+        android:id="@+id/avatar_area"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="9dp"
+        android:layout_toRightOf="@id/iv_spectrum">
+
+        <ImageView
+            android:id="@+id/avatar_cover_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="#77fffff0"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/tangsdk_default_single_chat_setting_avtar" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toLeftOf="@+id/fl_status"
+        android:layout_toRightOf="@+id/avatar_area"
+        android:gravity="center_vertical|left"
+        android:singleLine="true"
+        android:textColor="@android:color/white" />
+
+    <FrameLayout
+        android:id="@+id/fl_status"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dp">
+
+        <RelativeLayout
+            android:id="@+id/image_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="right"
+            android:visibility="gone">
+
+            <!-- 是否开启桌面共享 -->
+            <ImageView
+                android:id="@+id/desk_share_img"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@mipmap/tangsdk_open_desk_share_icon"
+                android:visibility="gone" />
+            <!-- 是否开启视频 -->
+            <ImageView
+                android:id="@+id/video_img"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/desk_share_img"
+                android:src="@mipmap/tangsdk_open_video_icon"
+                android:visibility="gone" />
+            <!-- 音频类型、是否静音：分四种图标 -->
+            <ImageView
+                android:id="@+id/voice_type_img"
+                android:layout_width="21dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/video_img"
+                android:src="@mipmap/tangsdk_tel_normal_icon"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- 待加入、已拒绝、已退出-->
+        <TextView
+            android:id="@+id/text_msg"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+    </FrameLayout>
+</RelativeLayout>

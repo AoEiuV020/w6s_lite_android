@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 通讯录LIST ITEM-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/item_topview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_list_divider_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/common_page_bg"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_contact_item_height"
+        android:layout_below="@id/item_topview"
+        android:background="@drawable/bg_item_common_selector">
+
+
+        <ImageView
+            android:id="@+id/contact_list_select"
+            style="@style/common_select_item"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_seclect_no_circular"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+
+        <!-- 头像 -->
+        <ImageView
+            android:id="@+id/contact_list_head_avatar"
+            android:layout_width="@dimen/common_contact_item_img_size"
+            android:layout_height="@dimen/common_contact_item_img_size"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="@dimen/title_common_padding"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/default_photo"
+            android:layout_toRightOf="@+id/contact_list_select"
+            tools:ignore="ContentDescription" />
+
+        <!-- 文字 -->
+        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+            android:id="@+id/contact_list_head_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/fl_rightest"
+            android:layout_toRightOf="@id/contact_list_head_avatar"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/common_item_black"
+            style="@style/font_size_14sp" />
+
+        <LinearLayout
+            android:id="@+id/fl_rightest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <com.foreveross.atwork.component.NewMessageView
+                android:id="@+id/v_unread_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+
+            <ImageView
+                android:id="@+id/contact_list_head_more"
+                style="@style/icon_arrow_dark" />
+
+            <TextView
+                android:id="@+id/btn_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/title_common_padding"
+                android:background="@drawable/shape_common_blue"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:gravity="center"
+                android:text="@string/label_invite"
+                android:textColor="@color/white"
+                android:textSize="@dimen/list_common_text_size"
+                tools:visibility="gone"
+                android:minWidth="56dp"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_line_chat_contact"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:layout_marginRight="@dimen/dp_11"
+            android:layout_marginTop="10dp"
+            android:background="@color/common_line_color"
+            android:tag="c18"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

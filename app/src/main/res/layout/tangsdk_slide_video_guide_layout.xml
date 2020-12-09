@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+
+    <TextView
+        android:id="@+id/tangsdk_gesture_screen_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="@string/tangsdk_slide_gesture_screen"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
+    <ImageView
+        android:id="@+id/tangsdk_gesture_screen_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tangsdk_gesture_screen_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:src="@mipmap/tangsdk_guide_gesture" />
+
+    <Button
+        android:id="@+id/tangsdk_confirm_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tangsdk_gesture_screen_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85dp"
+        android:background="@mipmap/tangsdk_i_know_it"
+        android:gravity="center"
+        android:text="@string/tangsdk_i_know_it"
+        android:textColor="@color/tangsdk_text_selector"
+        android:textSize="17sp" />
+
+
+</RelativeLayout>

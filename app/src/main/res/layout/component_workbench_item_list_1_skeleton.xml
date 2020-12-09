@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    >
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/appstore_loading_icon_size" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlContentArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:layout_marginLeft="10dp"
+        >
+
+        <View
+            android:id="@+id/v_shadow0"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@color/common_bg_gray" />
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

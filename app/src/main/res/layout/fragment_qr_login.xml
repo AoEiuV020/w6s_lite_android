@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar_common"
+        layout="@layout/title_bar_common" />
+
+
+    <ImageView
+        android:id="@+id/iv_login_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar_common"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="93dp"
+        android:background="@mipmap/icon_qr_login" />
+
+    <TextView
+        android:id="@+id/qr_login_text"
+        style="@style/font_size_18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_login_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/qr_login_to_common" />
+
+    <TextView
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qr_login_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/qr_login_security_tip"
+        android:textColor="@android:color/secondary_text_light_nodisable" />
+
+    <Button
+        android:id="@+id/qr_login_pc"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_above="@+id/tv_cancel_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/shape_qr_login_btn"
+        android:text="@string/qr_login_confirm"
+        android:textColor="@color/login_text_color"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_cancel_login"
+        style="@style/font_size_16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="@string/cancel_login"
+        android:textColor="@android:color/secondary_text_light_nodisable" />
+
+
+</RelativeLayout>

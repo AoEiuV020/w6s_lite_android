@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <LinearLayout
+        android:id="@+id/right_share_select_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_alignTop="@+id/chat_right_share_avatar">
+
+        <ImageView
+            android:id="@+id/right_share_select"
+            style="@style/chat_item_select_view"
+            tools:visibility="visible"
+            />
+    </LinearLayout>
+
+    <!-- 聊天头像 -->
+    <ImageView
+        android:id="@+id/chat_right_share_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/chat_right_share_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/right_share_select_line"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo" />
+
+    <LinearLayout
+        android:id="@+id/chat_right_share_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/chat_right_share_avatar"
+        android:background="@mipmap/chat_bg_white_sender"
+        android:minHeight="60dp"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text=""
+            android:textColor="@color/common_text_color_share_title"
+            style="@style/font_size_18sp"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/chat_right_share_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:gravity="fill_vertical"
+            android:orientation="horizontal">
+            <!-- 封面 -->
+            <ImageView
+                android:id="@+id/chat_right_share_cover"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/default_photo" />
+
+            <!-- 标题 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/chat_right_share_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="baidu"
+                    android:textColor="@color/common_text_color_share_title"
+                    style="@style/font_size_16sp"/>
+
+                <TextView
+                    android:id="@+id/link_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="2"
+                    android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                    android:textColor="@color/dropbox_hint_text_color"
+                    style="@style/font_size_12sp"
+                    tools:visibility="gone"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="-45dp"
+        android:layout_toLeftOf="@+id/chat_right_share_content">
+
+        <com.foreveross.atwork.modules.chat.component.ChatSendStatusView
+            android:id="@+id/chat_right_share_send_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.foreveross.atwork.modules.chat.component.ChatSendStatusView>
+
+    </FrameLayout>
+
+    <com.foreveross.atwork.modules.chat.component.chat.MessageSourceView
+        android:id="@+id/message_source_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_right_share_content"
+        android:layout_toLeftOf="@id/chat_right_share_avatar" />
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_contact_item_height"
+    android:background="@drawable/bg_item_common_selector">
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/common_contact_item_img_size"
+        android:layout_height="@dimen/common_contact_item_img_size"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@mipmap/default_photo"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_avatar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/font_size_17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text="Foss"
+            android:textColor="#333" />
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            style="@style/font_size_13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text=""
+            android:textColor="#aaa" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_20"
+        android:src="@mipmap/icon_fail" />
+
+</RelativeLayout>

@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_70"
+    android:fitsSystemWindows="true"
+    >
+
+    <RelativeLayout
+        android:id="@+id/llRootContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/rlTitleArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:paddingBottom="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/white"
+            >
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textSize="16sp"
+                android:textColor="@color/common_blue_bg"
+                />
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvCancel"
+                android:layout_toLeftOf="@+id/tvSure"
+                android:text="@string/admin_add_banner"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/common_text_color"
+
+                />
+
+            <TextView
+                android:id="@+id/tvSure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ok"
+                android:textSize="16sp"
+                android:textColor="@color/common_blue_bg"
+                android:layout_alignParentRight="true"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+        <com.foreverht.workplus.ui.component.scrollView.MaxHeightScrollView
+            android:id="@+id/swMainAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/rlTitleArea"
+            android:background="@color/white"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_bg_gray"
+                    android:orientation="vertical"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/flNameContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp"
+                        android:background="@color/white"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/llBannerNameLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            >
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvInputBannerNameLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/name_title"
+                                android:textColor="@color/common_text_color"
+                                android:textSize="14sp" />
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="@color/red_lock"
+                                android:textSize="14sp"
+                                android:layout_marginLeft="4dp"
+                                />
+
+
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlBannerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llBannerNameLabel"
+                            android:layout_marginTop="20dp"
+
+                            >
+
+                            <com.foreveross.atwork.component.editText.InputInfoEditText
+                                android:id="@+id/etBannerName"
+                                style="@style/font_size_16sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                app:hint="@string/please_input_banner_name_hint"
+                                android:inputType="text"
+                                android:singleLine="true"
+                                android:textColor="@color/common_text_gray_color"
+                                android:textColorHint="@color/common_text_hint_gray"
+                                android:textCursorDrawable="@drawable/shape_common_edittext_cursor"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                />
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvMustInputNameRedStarTip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="*"
+                                android:textColor="@color/red_lock"
+                                android:textSize="14sp"
+                                android:layout_toRightOf="@+id/etBannerName"
+                                android:layout_marginLeft="-15dp"
+
+                                />
+
+                        </RelativeLayout>
+
+
+
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/flImgContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp"
+                        android:background="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="15dp"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/llBannerImgLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            >
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvInputBannerImgLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/banner_image"
+                                android:textColor="@color/common_text_color"
+                                android:textSize="14sp" />
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="@color/red_lock"
+                                android:textSize="14sp"
+                                android:layout_marginLeft="4dp"
+                                />
+
+
+                        </LinearLayout>
+
+
+                        <FrameLayout
+                            android:id="@+id/flBannerImgAdd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llBannerImgLabel"
+
+                            >
+
+                            <FrameLayout
+                                android:id="@+id/flBannerActionAddArea"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/shape_workbench_banner_card_banner_item_add_bg"
+                                android:orientation="vertical"
+                                android:layout_marginTop="10dp"
+
+                                >
+
+
+                                <ImageView
+                                    android:id="@+id/ivBannerImgAdd"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center_vertical"
+                                    android:src="@mipmap/icon_workbench_add_banner_img"
+
+                                    />
+
+
+
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="20dp"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/ivBannerImg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="210dp"
+                                    android:src="@mipmap/loading_app_top_advert_bg"
+                                    android:scaleType="centerCrop"
+                                    android:visibility="gone"
+                                    tools:visibility="visible" />
+
+
+                                <FrameLayout
+                                    android:id="@+id/flBannerImgUploading"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="210dp"
+                                    android:background="@color/transparent_70"
+                                    android:visibility="gone"
+                                    tools:visibility="visible"
+                                    >
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:orientation="horizontal"
+
+                                        >
+
+                                        <ProgressBar
+                                            android:id="@+id/pbBannerImgUploading"
+                                            style="@android:style/Widget.Material.Light.ProgressBar"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:indeterminateTint="@color/white"
+                                            tools:visibility="visible" />
+
+                                        <TextView
+                                            android:id="@+id/tvBannerImgUploadingProgress"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="10dp"
+                                            android:text="0%"
+                                            android:textColor="@color/white"
+                                            android:textSize="16sp" />
+                                    </LinearLayout>
+
+
+                                </FrameLayout>
+                            </FrameLayout>
+
+
+                            <ImageView
+                                android:id="@+id/ivCancelBannerImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:src="@mipmap/icon_cancel"
+                                android:visibility="gone"
+                                tools:visibility="visible"
+                                />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/tvBannerImgAddTip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/admin_add_banner_tip"
+                            android:layout_below="@+id/flBannerImgAdd"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@color/common_text_hint_gray"
+                            android:textSize="12sp"
+                            android:layout_marginTop="10dp"
+                            />
+
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/flSortNumberContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp"
+                        android:background="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="15dp"
+
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/llBannerSortNumberLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            >
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvInputSortNumberLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/common_sort_number"
+                                android:textColor="@color/common_text_color"
+                                android:textSize="14sp" />
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="@color/red_lock"
+                                android:textSize="14sp"
+                                android:layout_marginLeft="4dp"
+                                />
+
+
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlBannerSortNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llBannerSortNumberLabel"
+                            android:layout_marginTop="20dp"
+
+                            >
+
+                            <com.foreveross.atwork.component.editText.InputInfoEditText
+                                android:id="@+id/etBannerSortNumber"
+                                style="@style/font_size_16sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                app:hint="@string/common_please_sort_number_hint"
+                                android:singleLine="true"
+                                android:textColor="@color/common_text_gray_color"
+                                android:textColorHint="@color/common_text_hint_gray"
+                                android:textCursorDrawable="@drawable/shape_common_edittext_cursor"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+
+                                />
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvMustInputSortNumberRedStarTip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="*"
+                                android:textColor="@color/red_lock"
+                                android:textSize="14sp"
+                                android:layout_toRightOf="@+id/etBannerSortNumber"
+                                android:layout_marginLeft="-15dp"
+
+                                />
+
+                        </RelativeLayout>
+
+
+
+
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/flValidDurationContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp"
+                        android:background="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="15dp"
+
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/llBannerValidDurationLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            >
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvInputValidDurationLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/common_valid_duration"
+                                android:textColor="@color/common_text_color"
+                                android:textSize="14sp" />
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="@color/red_lock"
+                                android:textSize="14sp"
+                                android:layout_marginLeft="4dp"
+                                android:visibility="gone"
+                                />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/llInputValidDuration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llBannerValidDurationLabel"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:layout_marginTop="25dp"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvValidDurationStart"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="- - - -/- -/- -"
+                                android:textSize="14sp"
+                                android:textColor="@color/common_text_hint_gray"
+                                android:background="@drawable/shape_common_white"
+                                android:drawableRight="@mipmap/icon_banner_valid_duration_calendar"
+                                android:drawablePadding="13dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                />
+
+
+                            <TextView
+                                android:id="@+id/tvValidDurationEnd"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="- - - -/- -/- -"
+                                android:textSize="14sp"
+                                android:textColor="@color/common_text_hint_gray"
+                                android:background="@drawable/shape_common_white"
+                                android:drawableRight="@mipmap/icon_banner_valid_duration_calendar"
+                                android:drawablePadding="13dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                />
+
+
+                            <ImageView
+                                android:id="@+id/ivValidDurationRefresh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/icon_refresh_blue"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                />
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/tvInputValidDurationTip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/admin_set_valid_duration_tip"
+                            android:layout_below="@+id/llInputValidDuration"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:textColor="@color/common_text_hint_gray"
+                            android:textSize="12sp"
+                            android:layout_marginTop="10dp"
+                            />
+
+
+
+
+                    </RelativeLayout>
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/flLinkContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp"
+                        android:background="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="15dp"
+
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/llBannerLinkLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            >
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvInputLinkLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/link_jump"
+                                android:textColor="@color/common_text_color"
+                                android:textSize="14sp" />
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="@color/red_lock"
+                                android:textSize="14sp"
+                                android:layout_marginLeft="4dp"
+                                android:visibility="gone"
+                                />
+
+
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlBannerLink"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llBannerLinkLabel"
+                            android:layout_marginTop="20dp"
+
+                            >
+
+                            <com.foreveross.atwork.component.editText.InputInfoEditText
+                                android:id="@+id/etBannerLink"
+                                style="@style/font_size_16sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                app:hint="@string/please_input_link_jump_hint"
+                                android:inputType="text"
+                                android:singleLine="true"
+                                android:textColor="@color/common_text_gray_color"
+                                android:textColorHint="@color/common_text_hint_gray"
+                                android:textCursorDrawable="@drawable/shape_common_edittext_cursor"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                />
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvMustInputLinkRedStarTip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="*"
+                                android:textColor="@color/red_lock"
+                                android:textSize="14sp"
+                                android:layout_toRightOf="@+id/etBannerLink"
+                                android:layout_marginLeft="-15dp"
+                                android:visibility="gone"
+                                />
+
+                        </RelativeLayout>
+
+
+
+
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:layout_marginBottom="50dp"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/rlWorkbenchPutawayLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvPutawayLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/putaway_or_not"
+                                android:textColor="@color/common_text_color"
+                                android:textSize="14sp" />
+
+
+                            <com.foreveross.atwork.component.WorkplusSwitchCompat
+                                android:id="@+id/swPutaway"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:theme="@style/workplus_switch"
+                                />
+
+
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.foreverht.workplus.ui.component.scrollView.MaxHeightScrollView>
+
+    </RelativeLayout>
+    </RelativeLayout>

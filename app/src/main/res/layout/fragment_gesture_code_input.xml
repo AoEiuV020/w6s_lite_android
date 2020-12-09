@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar_common"
+        layout="@layout/title_bar_common" />
+
+
+    <TextView
+        android:id="@+id/tv_tip_input_sth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_result_tip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/please_input_new_gesture_code"
+        android:textColor="@color/common_text_color"
+        style="@style/font_size_18sp"/>
+
+    <TextView
+        android:id="@+id/tv_result_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lock_9_view"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/red_lock"
+        style="@style/font_size_14sp"/>
+
+    <com.takwolf.android.lock9.Lock9View
+        android:id="@+id/lock_9_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="24dp"
+        app:lock9_autoLink="true"
+        app:lock9_enableVibrate="true"
+        app:lock9_lineRightColor="@color/blue_lock"
+        app:lock9_lineWidth="1dp"
+        app:lock9_lineWrongColor="@color/red_lock"
+        app:lock9_nodeErrorSrc="@mipmap/node_small_wrong"
+        app:lock9_nodeOnSrc="@mipmap/node_small_active"
+        app:lock9_nodeSize="60dp"
+        app:lock9_nodeSrc="@mipmap/node_small_normal"
+        app:lock9_vibrateTime="20" />
+
+
+    <TextView
+        android:id="@+id/tv_watch_demo"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="@string/watch_low_strength_demo"
+        android:textColor="@color/common_text_color"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

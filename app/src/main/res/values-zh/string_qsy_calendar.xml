@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="upload_qsy_log">上传云会议日志</string>
+
+    <string name="upload_qsy_log_ask">日志文件上传需要耗费一定流量，是否确定上传？</string>
+
+    <string name="qsy_cannot_into_meeting_by_phone">当前登记手机号异常，无法通过外呼接入云会议！</string>
+
+</resources>

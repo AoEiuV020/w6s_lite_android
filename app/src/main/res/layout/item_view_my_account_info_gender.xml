@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_account_info_sex_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_common_selector"
+    android:minHeight="50dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@color/common_line_color"
+        android:tag="c18" />
+
+    <ImageView
+        android:id="@+id/my_account_info_sex_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@mipmap/icon_arrow_gray" />
+
+
+    <TextView
+        android:id="@+id/my_account_info_icon_sex"
+        style="@style/font_size_17sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:tag="c15"
+        android:text="@string/sex"
+        android:textColor="@color/common_list_item_left" />
+
+    <TextView
+        android:id="@+id/my_account_info_sex"
+        style="@style/font_size_16sp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/my_account_info_sex_arrow"
+        android:layout_toRightOf="@id/my_account_info_icon_sex"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:tag="c16"
+        android:text=""
+        android:textColor="@color/common_list_item_right"
+        tools:text="" />
+
+
+</RelativeLayout>
+

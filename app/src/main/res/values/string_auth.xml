@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--权限相关-->
+    <string name="tip_record_fail_no_auth">>Permissions>Microphone>set to allow. Different phones may have different paths and names>Application manager>%1$s>Permissions>Microphone>set to allow. Different phones may have different paths and names.</string>
+    <string name="tip_camera_fail_no_auth">set to allow. Different phones may have different paths and names.</string>
+    <string name="require_auth_title">Access Request</string>
+    <string name="require_auth_content">Settings-Settings-%1$s-Permissions %2$s Permissions %3$s and other functions</string>
+    <string name="require_auth_content_access_fine_location"></string>
+    <string name="require_auth_basic_content">Settings-Application manager-%1$s-Permissions %2$s set to allow, To normal use the functions</string>
+    <string name="require_auth_content_need_reload">Settings-Application manager-%1$s-Permissions %2$s set to allow，To normal use of %3$s and other functions ,Re-login to take effect</string>
+    <string name="auth_camera_name">Camera</string>
+    <string name="auth_camera_function">Take pictures、Sight、Scan QR code %1$s</string>
+    <string name="auth_record_name">Recording</string>
+    <string name="auth_record_function">Record、Sight%1$s</string>
+    <string name="auth_phone_name">Phone</string>
+    <string name="auth_phone_function">Call</string>
+    <string name="auth_contact_name">Contacts</string>
+    <string name="auth_contact_function">Synchronize Contacts</string>
+    <string name="auth_location_name">Location</string>
+    <string name="auth_location_function">Check in</string>
+    <string name="auth_storage_name">Storage</string>
+    <string name="auth_storage_function">Basic function</string>
+    <string name="auth_phone_state_name">Phone</string>
+    <string name="float_windows_no_permission_alert_title">Suspended window permissions are not available</string>
+    <string name="float_windows_no_permission_voip_alert_content">Suspended window permissions are not available for %1$s，voice call can not be minimized. Please open Settings>Application manager>%2$s>Permissions>Suspended window >set to allow. Different phones may have different paths and names.</string>
+    <string name="float_windows_no_permission_common_alert_content">Suspended window permissions are not available for %1$s，bing and voice call . Please open Settings>Application manager>%2$s>Permissions>Suspended window >set to allow. Different phones may have different paths and names.</string>
+    <string name="auth_function_vpn">VPN</string>
+    <string name="record_forbidden">The microphone is disabled</string>
+
+
+
+
+</resources>

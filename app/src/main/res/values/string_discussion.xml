@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--群-->
+    <string name="create_discussion_fail">Create group failed</string>
+    <string name="title_group_name_modify">Group name edit</string>
+    <string name="hint_title_group_name_modify">Enter the modified group name</string>
+    <string name="title_group_detail_modify">Group profile edit</string>
+    <string name="hint_title_group_detail_modify">Enter the edited group profile</string>
+    <string name="modify_group_info_fail">Operation database failed when editing group info</string>
+    <string name="modify_group_info_success">Edit group info is successful</string>
+    <string name="add_group_member_network_fail">Connection network failed when adding group</string>
+    <string name="add_group_member_fail">Operation database failed when adding group</string>
+    <string name="remove_group_member_network_fail">Connection network failed when deleting group members</string>
+    <string name="remove_group_member_db_fail">Operation database failed when deleting group members</string>
+    <string name="remove_group_member_db_success">Remove the person successfully</string>
+    <string name="not_allowed_delete_owner">Do not allow the owner to be deleted</string>
+    <string name="location_fail">Get positioning failure, please confirm the positioning, mobile phone network or WIFI any one of them open</string>
+    <string name="title_group_avatar">Group Icon</string>
+    <string name="title_discussion_name">Group name</string>
+    <string name="title_group_detail">Group profile</string>
+    <string name="hint_no_content">No content yet</string>
+    <string name="discussion_members">Group Members</string>
+    <string name="transfer_group_owner">Transfer group owner</string>
+    <string name="only_group_owner_can_handle_members">Only group owner can add members</string>
+    <string name="group_owner_transfer_successfully">Has been transferred</string>
+    <string name="you_become_owner">You have been set as group owner by %1$s</string>
+    <string name="internal_discussion_empty_owner_set_tip">The internal group of the main vacancy, if you are the group administrator,you can click "OK" to set your own as the owner of the group</string>
+    <string name="internal_discussion_empty_owner_set_tip_again">You are setting yourself as the administrator of the group "%1$s", click "OK" to take effect, click "Cancel" to return group info</string>
+    <string name="internal_discussion">Internal group</string>
+    <string name="internal_discussion_someone_become_owner">%1$s became the group owner</string>
+
+    <string name="create_discussion_three_people_at_least">At least 3 people can build a group</string>
+
+    <string name="discussion_helper">Group Chat Assistant</string>
+    <string name="open_discussion_shiled_helper">Open the Group Undisturbed Assistant</string>
+    <string name="close_discussion_shiled_helper">Close the Group Undisturbed Assistant</string>
+    <string name="open_discussion_shiled_helper_tip">"Group Undisturbed Assistant" after the open, all group chat sessions with message do not disturb will be merged into a new session [Group Chat Assistant].</string>
+    <string name="discussion_helper_new_messages">%s group chats have new messages</string>
+    <string name="discussion_helper_no_new_messages">No new messages yet</string>
+    <string name="discussion_helper_tip">The "Group Chat DND" message: </string>
+
+    <string name="news_summary_helper">news summary</string>
+
+    <string name="common_template_discussion">Ordinary Group</string>
+    <string name="common_discussion_create_notice">You can invite colleagues, friends, project members to join the Group, support up to %s people</string>
+
+    <string name="please_input_template_discussion_name">Please enter %s name</string>
+    <string name="discussion_manager">Group Management</string>
+    <string name="discussion_member_tag_manager">Member Tag</string>
+    <string name="discussion_app_manager">Group  App Management</string>
+    <string name="discussion_app">Group  Apps</string>
+    <string name="add_qucik_entry">Add shortcut</string>
+    <string name="write_qucik_entry">Enter shortcut information</string>
+    <string name="session_quick_entry_bar_display">Session shortcut bar display</string>
+    <string name="discussion_detail_display">Group details display</string>
+    <string name="entry_upload_icon_tip">Tips: Support bmp, png, jpg format pictures, the recommended upload size: 88*88px, the size does not exceed 2M.</string>
+    <string name="add_discussion_entry">Add group app</string>
+    <string name="select_discussion_app">Select group app</string>
+    <string name="edit_discussion_app">Edit group app</string>
+    <string name="add_member_tag">Add member tags</string>
+    <string name="modify_member_tag">Edit member tag</string>
+    <string name="please_input_tag_name">Please enter the tag name</string>
+    <string name="cannot_remove_tag_mapping_member">It is not allowed to delete the tag affiliating members</string>
+    <string name="mapping_organization">Bound Org</string>
+    <string name="please_select_mapping_organization">Please select Org</string>
+    <string name="discussion_identity">Group Logo</string>
+    <string name="show_more_discussion_apps">More</string>
+
+</resources>

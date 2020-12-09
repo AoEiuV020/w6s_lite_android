@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_70">
+
+
+    <LinearLayout
+        android:id="@+id/llContentRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_bg_gray"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="40dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="30dp">
+
+                <TextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textColor="@color/common_blue_bg"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvSure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/ok"
+                    android:textColor="@color/common_blue_bg"
+                    android:textSize="16sp" />
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tvSure"
+                    android:layout_toRightOf="@+id/tvCancel"
+                    android:gravity="center"
+                    android:text="@string/admin_modify_card"
+                    android:textColor="@color/common_text_color"
+                    android:textSize="16sp" />
+
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llCardNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                >
+
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/tvInputWorkbenchNameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/workbench_card_name"
+                    android:textColor="@color/common_text_color"
+                    android:textSize="14sp" />
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/red_lock"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="4dp"
+                    />
+
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlCardName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+
+                >
+
+                <com.foreveross.atwork.component.editText.InputInfoEditText
+                    android:id="@+id/etCardName"
+                    style="@style/font_size_16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    app:hint="@string/workbench_card_name"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/common_text_gray_color"
+                    android:textColorHint="@color/common_text_hint_gray"
+                    android:textCursorDrawable="@drawable/shape_common_edittext_cursor"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    />
+
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/tvMustInputNameRedStarTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="*"
+                    android:textColor="@color/red_lock"
+                    android:textSize="14sp"
+                    android:layout_toRightOf="@+id/etCardName"
+                    android:layout_marginLeft="-15dp"
+
+                    />
+
+            </RelativeLayout>
+
+
+            <com.foreveross.atwork.component.editText.InputInfoEditText
+                android:id="@+id/etCardEnName"
+                style="@style/font_size_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                app:hint="@string/workbench_en_name_input_hint"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:singleLine="true"
+                android:textColor="@color/common_text_gray_color"
+                android:textColorHint="@color/common_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_common_edittext_cursor"
+                android:layout_marginTop="20dp"
+                />
+
+
+            <com.foreveross.atwork.component.editText.InputInfoEditText
+                android:id="@+id/etCardTwName"
+                style="@style/font_size_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                app:hint="@string/workbench_tw_name_input_hint"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:singleLine="true"
+                android:textColor="@color/common_text_gray_color"
+                android:textColorHint="@color/common_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_common_edittext_cursor"
+                android:layout_marginTop="20dp"
+                />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/llDefinitionHandleRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:paddingTop="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            >
+
+            <LinearLayout
+                android:id="@+id/llDefinitionEntryGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible"
+                >
+
+                <LinearLayout
+                    android:id="@+id/llCardEntryLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                        android:id="@+id/tvInputWorkbenchGridLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/entry_type"
+                        android:textColor="@color/common_text_color"
+                        android:textSize="14sp" />
+
+                    <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="@color/red_lock"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="4dp"
+                        />
+
+
+
+                </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rlSelectGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_pure_white_bg"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvGridName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="1*4 宫格"
+                        android:textColor="@color/common_text_color"
+                        android:textSize="14sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivSelectEntryGridType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/icon_switch_black_style"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llDefinitionList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_marginTop="12dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/llCardListLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                        android:id="@+id/tvInputWorkbenchListLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/entry_type_list_name"
+                        android:textColor="@color/common_text_color"
+                        android:textSize="14sp" />
+
+                    <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="*"
+                        android:textColor="@color/red_lock"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="4dp"
+
+                        />
+
+
+
+                </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rlSelectList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_pure_white_bg"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tvListName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="3"
+                        android:textColor="@color/common_text_color"
+                        android:textSize="14sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivSelectEntryListType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/icon_switch_black_style"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlPutaway"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:paddingTop="16dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="16dp"
+            >
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:id="@+id/tvPutawayLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/putaway_or_not"
+                android:textColor="@color/common_text_color"
+                android:textSize="14sp" />
+
+
+            <com.foreveross.atwork.component.WorkplusSwitchCompat
+                android:id="@+id/swPutaway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:theme="@style/workplus_switch"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

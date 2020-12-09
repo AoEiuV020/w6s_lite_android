@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llChatLeftContent"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/chat_left_text_username_line"
+    android:layout_toRightOf="@id/chat_left_text_avatar"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/vDivider"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:background="@color/common_blue_bg"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/chat_left_second_color"
+                android:textSize="12sp"
+                tools:text="看看我是谁" />
+
+
+            <LinearLayout
+                android:id="@+id/chatLeftShareContentCard"
+                android:layout_width="232dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chat_left_share_username_line_card"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@id/chat_left_share_avatar_card"
+                android:background="@color/white"
+                android:gravity="left|center"
+                android:orientation="vertical"
+
+                android:textColor="@color/common_text_color">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_vertical"
+                    android:background="@color/white"
+                    android:gravity="fill_vertical"
+                    android:padding="10dp">
+                    <!-- 封面 -->
+
+
+                    <ImageView
+                        android:id="@+id/ivCover"
+                        android:layout_width="83dp"
+                        android:layout_height="83dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/loading_icon_square" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/ivCover"
+                        android:layout_alignBottom="@+id/ivCover"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/ivCover"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:id="@+id/llNameArea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvName"
+                                style="@style/font_size_16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:lineSpacingExtra="10dp"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/common_text_color"
+                                tools:text="sunzhiwei"
+                                tools:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/ivGender"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_toRightOf="@+id/tvName"
+                                tools:src="@mipmap/icon_gender_female" />
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/tvJobTitle"
+                            style="@style/font_size_12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llNameArea"
+                            android:layout_marginTop="3dp"
+                            android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+                            android:text="this is job title"
+                            android:textColor="@color/common_text_color_666"
+                            android:visibility="gone"
+                            tools:textSize="12sp"
+                            tools:visibility="visible" />
+
+
+                        <TextView
+                            android:id="@+id/tvSignature"
+                            style="@style/font_size_12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvJobTitle"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="10dp"
+                            android:gravity="bottom"
+                            android:lines="2"
+                            android:ellipsize="end"
+                            android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+                            android:text="dasunsy@foxmail.comdasunsy@foxmail.comdasunsy@foxmail.com"
+                            android:textColor="@color/common_text_color"
+                            android:visibility="gone"
+                            tools:textSize="12sp"
+                            tools:visibility="visible" />
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <com.rockerhieu.emojicon.EmojiconTextView
+        android:id="@+id/tvReply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/common_text_color"
+        android:textSize="16sp"
+        tools:text="dasunsy" />
+</com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout>
+
+
+
+
+
+
+
+
+

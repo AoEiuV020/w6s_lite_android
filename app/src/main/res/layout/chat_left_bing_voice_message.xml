@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--聊天对话框 文本 -左边 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <ImageView
+        android:id="@+id/left_text_select"
+        style="@style/chat_item_select_view"
+        tools:visibility="visible"
+        />
+
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/chat_left_text_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo"
+        tools:ignore="ContentDescription" />
+
+
+    <LinearLayout
+        android:id="@+id/chat_left_text_username_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/chat_left_text_avatar"
+        android:paddingTop="5dp">
+
+        <!--用户姓名 -->
+        <TextView
+            android:id="@+id/chat_left_text_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:paddingTop="0dp"
+            android:text=""
+            android:textColor="@color/common_text_color"
+            style="@style/font_size_13sp"
+            android:visibility="gone"
+            tools:text="ffffda"
+            tools:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_chat_left_content"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_left_text_username_line"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/chat_left_text_avatar"
+        android:background="@mipmap/bg_chat_left"
+        android:minHeight="40dp"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/icon_normal_bing" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="来自雪诺的必应消息"
+                    android:textColor="@color/bing_chat_text_color"
+                    android:singleLine="true"
+                    style="@style/font_size_14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/shape_message_bing_bg"
+                    android:drawableLeft="@mipmap/icon_bing_voice_play"
+                    android:drawablePadding="15dp"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="50dp"
+                    android:paddingTop="5dp"
+                    android:text="6"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/bing_chat_text_color"
+                    style="@style/font_size_14sp"
+                    />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_click_jump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_voice"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="@string/click_read_detail"
+            android:textColor="@color/common_blue_bg"
+            style="@style/font_size_14sp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_chat_dot"
+        android:layout_toRightOf="@+id/ll_chat_left_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:visibility="gone"
+        />
+
+
+
+</RelativeLayout>

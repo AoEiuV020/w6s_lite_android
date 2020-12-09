@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cimc_common_text_hint_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_search" />
+
+    <LinearLayout
+        android:id="@+id/search_history_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/search_history_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/empty_history_view"
+            style="@style/font_size_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:text="@string/empty_record"
+            android:textColor="@color/blue_lock" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/search_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+    </ListView>
+
+    <ImageView
+        android:id="@+id/img_no_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:src="@mipmap/search_no_result"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_no_result"
+        style="@style/font_size_16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="@string/no_result"
+        android:textColor="@color/alarm_text"
+        android:visibility="gone" />
+</LinearLayout>

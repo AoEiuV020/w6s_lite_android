@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/vTitleBar"
+        layout="@layout/title_bar_common" />
+
+    <LinearLayout
+        android:id="@+id/llOpenDiscussionShieldHelper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="13dp">
+
+        <ImageView
+            android:id="@+id/ivOpenDiscussionShieldHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_sync_msgs_setting_unselect" />
+
+        <TextView
+            android:id="@+id/tvOpenDiscussionShieldHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/open_discussion_shiled_helper"
+            android:textColor="@color/common_text_color"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llCloseDiscussionShieldHelper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="13dp">
+
+        <ImageView
+            android:id="@+id/ivCloseDiscussionShieldHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_sync_msgs_setting_unselect" />
+
+        <TextView
+            android:id="@+id/tvCloseDiscussionShieldHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/close_discussion_shiled_helper"
+            android:textColor="@color/common_text_color"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/open_discussion_shiled_helper_tip"
+        android:textSize="12sp"
+        android:lineSpacingExtra="2dp"
+        android:textColor="#A6A6A6"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        />
+
+
+</LinearLayout>

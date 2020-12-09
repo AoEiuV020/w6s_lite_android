@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--手势密码相关-->
+    <string name="gesture_code">圖形密碼</string>
+    <string name="valid_password">密碼驗證</string>
+    <string name="open_gesture_code">開啟圖形解鎖</string>
+    <string name="close_gesture_code">關閉圖形密碼</string>
+    <string name="edit_gesture_code">設定圖案</string>
+    <string name="please_input_gesture_code">请設定圖案</string>
+    <string name="please_input_new_gesture_code">繪製你的解鎖圖案</string>
+    <string name="please_input_old_gesture_code">繪製目前的圖案</string>
+    <string name="please_input_id_and_pw">請輸入帳號密碼</string>
+    <string name="please_input_gesture_code_again">請再次繪製</string>
+    <string name="please_input_gesture_code_right">兩次輸入不一致，請重新輸入</string>
+    <string name="input_gesture_code_success">設定解鎖圖形成功</string>
+    <string name="login_with_id_and_pw">使用帳號密碼登錄</string>
+    <string name="login_with_gesture_lock">使用圖形密碼登錄</string>
+    <string name="input_gesture_coed_wrong">解鎖圖案輸入有誤</string>
+    <string name="input_login_pw_wrong">密碼不正確，請重新輸入</string>
+    <string name="at_least_4_points_wrong">你需要連接至少4個點，請重試</string>
+</resources>

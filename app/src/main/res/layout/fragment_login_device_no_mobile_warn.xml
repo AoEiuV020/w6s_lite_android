@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/vTitleBar"
+        layout="@layout/title_bar_common" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="33.3dp"
+        android:src="@mipmap/icon_warn_red" />
+
+    <TextView
+        android:id="@+id/tvWarnTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_no_mobile_warn"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/common_text_color"
+        />
+
+
+    <TextView
+        android:id="@+id/tvTip1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="20dp"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/common_gray_bg"
+        android:textSize="13sp"
+        tools:text="*系统检测到你正首次登录或在一个新设备上登录账号，为保障你的账号安全，请通过手机验证码的方式进行设备认证。" />
+
+
+    <TextView
+        android:id="@+id/tvTip2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/common_gray_bg"
+        android:textSize="13sp"
+        tools:text="*如若手机号码不正确或没有手机号码，需要修改手机号码，请联系所属公司的HR进行变更申请。" />
+
+</LinearLayout>
+
+</ScrollView>

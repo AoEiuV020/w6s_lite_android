@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="16dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/llRightArea"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/common_text_color"
+            android:textSize="?attr/fontsize_14sp"
+            tools:text="这是个标题"
+            tools:textSize="14sp" />
+
+
+        <LinearLayout
+            android:id="@+id/llRightArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <com.foreveross.atwork.modules.workbench.component.WorkbenchCustomTextOrIconView
+                android:id="@+id/vWorkbenchCustomTextOrIconView00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="24dp"
+
+                />
+
+
+            <com.foreveross.atwork.modules.workbench.component.WorkbenchCustomTextOrIconView
+                android:id="@+id/vWorkbenchCustomTextOrIconView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

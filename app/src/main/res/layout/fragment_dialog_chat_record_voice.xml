@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+
+
+
+    <!--  聊天界面 -->
+    <LinearLayout
+        android:id="@+id/chat_detail_input_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        >
+
+
+
+
+        <View
+            android:id="@+id/v_top_line_chat_input"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#D8D8D8"
+            android:visibility="gone"/>
+
+
+        <com.foreveross.atwork.modules.chat.component.ChatDetailInputView
+            android:id="@+id/vChatDetailInputInclude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <View
+            android:id="@+id/v_bottom_line_chat_input"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/common_line_color"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:id="@+id/flFunctionArea"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+
+
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlContentTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:visibility="visible"
+        >
+
+        <FrameLayout
+            android:id="@+id/flTrash"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_above="@+id/rlHandleLooseSendArea"
+            android:layout_marginBottom="70dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_chat_voice_record_trash_loose_cancel"
+            >
+
+        <ImageView
+            android:id="@+id/ivTrash"
+            android:src="@mipmap/icon_chat_voice_trash_loose_to_cancel"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+
+            />
+
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlHandleLooseSendArea"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ivRecord"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/round_chat_voice_record_loose_send_slide_bg"
+            android:padding="6dp"
+            >
+
+            <ImageView
+                android:id="@+id/ivLooseSendCoverBg"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:background="@drawable/round_chat_voice_record_loose_send_cover_bg"
+                android:padding="10dp"
+                android:src="@mipmap/icon_chat_voice_loose_to_send" />
+
+
+
+
+            <com.foreveross.atwork.modules.chat.component.voice.VoiceWaveView
+                android:id="@+id/vInputVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_toRightOf="@+id/ivLooseSendCoverBg"
+                android:layout_marginRight="6dp"
+                android:layout_marginLeft="6dp"
+                tools:background="@color/black"
+                android:layout_toLeftOf="@+id/tvDuration"
+                />
+
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/tvTip"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginRight="12dp"
+                tools:text="0''" />
+
+            <TextView
+                android:id="@+id/tvTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDuration"
+                android:layout_marginRight="6dp"
+                android:layout_toRightOf="@+id/ivLooseSendCoverBg"
+                android:text="@string/recording_slide_up_tip"
+                android:textColor="@color/white"
+                android:layout_alignBottom="@+id/ivLooseSendCoverBg"
+                android:gravity="bottom"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                />
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/ivRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_chat_voice_record_slide_bg"
+            android:padding="50dp"
+            android:src="@mipmap/icon_chat_voice_still_gray"
+
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

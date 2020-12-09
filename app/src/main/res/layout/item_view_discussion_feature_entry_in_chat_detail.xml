@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/shape_common_pure_white_180radius_rectangle_item_bg"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:layout_height="28dp"
+    tools:parentTag="android.widget.LinearLayout"
+    >
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY"
+        android:src="@mipmap/fail_cover_square_size" />
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        tools:text="cxxcxsdfjskdfjskdfjskdjfskdjfskdjfsdkf"
+        android:textColor="@color/common_text_color"
+        android:textSize="14sp"
+        android:maxWidth="120dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        />
+
+
+</LinearLayout>

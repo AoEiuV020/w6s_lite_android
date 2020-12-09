@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--通讯录相关页面-->
+    <string name="ask_to_sync_contact_to_mobile">确定要同步至手机通讯录？</string>
+    <string name="syncing_contact">正在同步通讯录...</string>
+    <string name="sync_check_fail_record">查看失败记录</string>
+    <string name="sync_finish">同步完成(成功%1$s条,失败%2$s条)</string>
+    <string name="sync_success">同步成功</string>
+    <string name="sync_fail">同步失败</string>
+    <string name="sync_fail_record">同步失败记录(%1$s)</string>
+    <string name="contact_search_show_title">联系人</string>
+    <string name="sync_max_alert">同步联系人人数已达上限，无法添加</string>
+
+    <string name="switch_contact_view_show_mode">切换通讯录的显示样式</string>
+    <string name="classic_version">经典版</string>
+    <string name="simple_version">简洁版</string>
+</resources>

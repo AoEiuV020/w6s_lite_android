@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/function_view"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/adaptive_height_40dp"
+        tools:layout_height="40dp"
+        android:background="@color/dropbox_sub_title_bg_color"
+        android:orientation="horizontal"
+        android:tag="c21"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/sort_order_ops"
+                style="@style/font_size_13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:drawableRight="@mipmap/icon_sort_expanded"
+                android:gravity="center"
+                android:paddingRight="5dp"
+                android:text="@string/sorted_by_time" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/multi_selected_ops"
+            style="@style/font_size_13sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/multi_select" />
+
+        <TextView
+            android:id="@+id/new_folder_ops"
+            style="@style/font_size_13sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/new_folder" />
+
+    </LinearLayout>
+
+    <!--<TextView-->
+    <!--android:id="@+id/used_space_tip"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"/>-->
+
+    <ListView
+        android:id="@+id/my_dropbox_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_page_bg"
+        android:listSelector="@null"
+        android:divider="@null"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/not_dropbox_file_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_no_dropbox_file" />
+
+        <TextView
+            android:id="@+id/not_file_tip"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/not_file_so_far"
+            android:textColor="@color/dropbox_hint_text_color" />
+    </LinearLayout>
+</LinearLayout>

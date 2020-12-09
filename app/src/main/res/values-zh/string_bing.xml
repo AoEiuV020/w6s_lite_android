@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--必应消息-->
+    <string name="text">文字</string>
+    <string name="new_bing_text_input_tip">请输入文字或切换为语音输入...</string>
+    <string name="new_bing">新建必应</string>
+    <string name="start_bing">发起必应</string>
+    <string name="message_bing">必应消息</string>
+    <string name="bing_message">必应消息</string>
+    <string name="receiver">接收人</string>
+    <string name="bing_select_contact_suffix">&#160;等%s人</string>
+    <string name="all">全部</string>
+    <string name="star">星标</string>
+    <string name="bing_new_message">新消息</string>
+    <string name="from_receiving">我收到的</string>
+    <string name="from_sending">我发出的</string>
+    <string name="bing_reply_sum">共有%s条回复</string>
+    <string name="bing_new_reply">有%s条新回复</string>
+    <string name="click_read_detail">点击查看详情</string>
+    <string name="please_input_legal_url">请输入有效的链接地址</string>
+    <string name="post_warn_uploading">附件上传中，请稍后</string>
+    <string name="bing_link_max_tip">链接限制5个</string>
+    <string name="bing_attachment_max_tip">附件限制5个</string>
+    <string name="bing_click_to_reply">点击到详情页回复</string>
+    <string name="bing_all_confirm">全部确认</string>
+    <string name="bing_not_confirm_sum">%s人未确认</string>
+    <string name="bing_msg_receive_title">来自%s的必应消息</string>
+    <string name="bing_reply_receive_title">来自%s的必应回复</string>
+    <string name="bing_msg_send_title">%s发出去的必应消息</string>
+    <string name="bing_attach_uploading_warning">附件上传中，请稍后</string>
+    <string name="detail">详情</string>
+    <string name="no_reply_yet">还没有回复</string>
+    <string name="bing_detail_unread_tip">%s人未读</string>
+    <string name="confirm_received">确认收到</string>
+    <string name="delete_my_reply">删除我的回复</string>
+    <string name="had_confirmed">已确认</string>
+    <string name="had_confirmed_title">已确认(%s)</string>
+    <string name="not_had_confirmed">未确认</string>
+    <string name="not_had_confirmed_title">未确认(%s)</string>
+    <string name="re_upload">重新上传</string>
+    <string name="fail_upload">上传失败</string>
+    <string name="sender">发送人</string>
+    <string name="search_bing_with_contact_tip">共%s条必应消息</string>
+    <string name="query_bing_and_reply_tip">共%1$s条"%2$s"发送的 必应消息</string>
+    <string name="bing_pop_label_attachment">[附件]</string>
+    <string name="bing_pop_label_img">[图片]</string>
+    <string name="bing_pop_label_voice">[语音]</string>
+    <string name="bing_response_label">回应 : </string>
+
+</resources>

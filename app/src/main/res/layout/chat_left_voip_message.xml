@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/common_message_content_divider"
+
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/iv_left_voip_select"
+        style="@style/chat_item_select_view"
+        tools:visibility="visible"
+        />
+
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/iv_chat_left_voip_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo"
+        tools:ignore="ContentDescription" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_chat_left_voip_username_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/iv_chat_left_voip_avatar"
+        tools:visibility="gone"
+        >
+
+        <!--用户姓名 -->
+        <TextView
+            android:id="@+id/tv_chat_left_voip_username"
+            style="@style/font_size_13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:paddingTop="0dp"
+            android:text=""
+            android:textColor="@color/common_text_color"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp"
+
+            />
+
+    </LinearLayout>
+
+    <com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout
+        android:id="@+id/ll_chat_left_voip_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/ll_chat_left_voip_username_line"
+        android:layout_marginRight="50dp"
+        android:layout_toRightOf="@id/iv_chat_left_voip_avatar"
+        android:background="@drawable/shape_voice_translate_white"
+
+        >
+
+        <com.foreverht.workplus.ui.component.foregroundview.ForegroundTextView
+            android:id="@+id/tv_chat_left_voip_content"
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:drawablePadding="3dp"
+            android:drawableRight="@mipmap/icon_voip_audio_blue"
+            android:gravity="left|center"
+            android:minHeight="40dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/tip_voip_cancel_peer"
+            android:textColor="@color/common_text_color"
+            />
+
+        <include
+            layout="@layout/layout_chat_message_item_time_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/chat_left_share_cover_card"
+            android:layout_alignParentRight="true"
+            android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+            />
+
+
+    </com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout>
+
+</RelativeLayout>
+</RelativeLayout>

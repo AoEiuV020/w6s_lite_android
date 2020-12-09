@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/fail_cover_square_size" />
+
+    <RelativeLayout
+        android:id="@+id/rlContentArea"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/ivCover"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/v_shadow0"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/common_bg_gray" />
+
+
+        <View
+            android:id="@+id/v_shadow1"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:layout_below="@+id/v_shadow0"
+            android:layout_marginTop="13.5dp"
+            android:background="@color/common_bg_gray" />
+
+
+        <View
+            android:id="@+id/v_shadow2"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:layout_below="@+id/v_shadow1"
+            android:layout_marginTop="10dp"
+            android:background="@color/common_bg_gray" />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="7dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/common_bg_gray" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

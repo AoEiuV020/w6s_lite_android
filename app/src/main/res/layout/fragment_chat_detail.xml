@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- 详细聊天界面 -->
+<com.foreveross.atwork.layout.KeyboardRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/v_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_detail_bg">
+
+
+    <RelativeLayout
+        android:id="@+id/chat_detail_input_area_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <!-- 转发及删除菜单 -->
+        <LinearLayout
+            android:id="@+id/chat_detail_select_mode"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/chat_detail_forward_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@mipmap/icon_transfer_in_chat_view"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/chat_detail_fav_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@mipmap/icon_aboutme_favorite"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/chat_detail_delete_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@mipmap/icon_del_hover"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chat_detail_input_service_menu_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/common_line_color" />
+
+            <com.foreveross.atwork.modules.chat.component.ServiceMenuView
+                android:id="@+id/chat_detail_input_service_menu"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+
+        </LinearLayout>
+
+
+        <!--  聊天界面 -->
+        <LinearLayout
+            android:id="@+id/chat_detail_input_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.foreveross.atwork.modules.chat.component.PopChatDetailDataHoldingView
+                android:id="@+id/v_pop_chat_detail_text_message_quote_reference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible"
+
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_discussion_entries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp"
+                android:background="@null"
+                android:layout_marginRight="10dp"
+                />
+
+
+            <View
+                android:id="@+id/v_top_line_chat_input"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#D8D8D8"
+                android:visibility="gone"/>
+
+            <com.foreveross.atwork.modules.chat.component.ChatDetailInputView
+                android:id="@+id/chat_detail_input_include"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical" />
+
+            <View
+                android:id="@+id/v_bottom_line_chat_input"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/common_line_color"
+                android:visibility="gone"/>
+
+            <FrameLayout
+                android:id="@+id/fl_function_area"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:background="@color/white"
+                >
+
+                <com.foreveross.atwork.modules.chat.component.ChatMoreView
+                    android:id="@+id/chat_detail_chat_more_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/chat_detail_chat_emojicon"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:layout_marginTop="1dp"
+                    android:orientation="vertical" />
+
+
+
+                <com.foreveross.atwork.modules.chat.component.ChatVoiceView
+                    android:id="@+id/chat_detail_chat_voice_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:visibility="gone"
+                    tools:visibility="gone" />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+    <!-- 下拉刷新 -->
+    <FrameLayout
+        android:id="@+id/chat_detail_pull_down_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_detail_include_title_bar"
+        android:background="#e9ecf1"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmallTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center|center_vertical"
+            android:layout_toLeftOf="@+id/linearLayout"
+            android:layout_toStartOf="@+id/linearLayout" />
+
+    </FrameLayout>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/chat_detail_list_Line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/chat_detail_input_area_line"
+        android:layout_below="@id/chat_detail_pull_down_refresh"
+        android:background="@color/chat_detail_bg"
+        android:orientation="vertical"
+        >
+
+        <com.foreveross.atwork.modules.chat.component.chat.ChatDetailUpFetchCustomHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/chat_detail_bg"
+            />
+
+        <com.foreveross.atwork.modules.chat.component.InterceptRecyclerView
+            android:id="@+id/chat_detail_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/chat_detail_bg"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:transcriptMode="normal"
+            android:overScrollMode="never"
+            />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_time_print_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="今天"
+        android:layout_below="@+id/chat_detail_include_title_bar"
+        android:layout_centerHorizontal="true"
+        style="@style/font_size_13sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_time_info_white_180radius_rectangle_item_bg"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:visibility="gone"
+        android:minWidth="38dp"
+        android:gravity="center"
+        tools:visibility="visible"
+        />
+
+
+
+    <com.foreveross.atwork.modules.chat.component.PopChatDetailFunctionAreaView
+        android:id="@+id/v_chat_detail_pop_function_area"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/chat_detail_include_title_bar"
+        android:visibility="gone"
+        tools:visibility="gone"
+        />
+
+
+
+
+    <include
+        android:id="@+id/chat_detail_include_title_bar"
+        layout="@layout/title_bar_chatdetail" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/chat_detail_include_title_bar"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        >
+
+        <!--android:drawableRight="@mipmap/icon_upscroll"-->
+        <TextView
+            android:id="@+id/new_message_tip"
+            style="@style/font_size_13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/round_rect_unread_msg_alarm"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingBottom="4.13dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="3dp"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            tools:text="6条未读消息"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_new_at_all_tip"
+            style="@style/font_size_13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_rect_unread_at_all_alarm"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingBottom="4.13dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            tools:text="6条群通知"
+            tools:visibility="visible" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/chat_detail_input_area_line"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_rece_new_message_tip"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/tip_new_message"
+            android:gravity="center"
+            android:text="@string/new_message"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            tools:visibility="visible"
+
+            />
+
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_jump_anchor"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/float_jump_anchor_in_chat_detail"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_marginBottom="18dp"
+        android:layout_above="@+id/chat_detail_input_area_line"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        />
+
+
+    <FrameLayout
+        android:id="@+id/voip_meeting_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_detail_include_title_bar"
+        android:background="@color/blue_lock"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/font_size_15sp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center|center_vertical"
+            android:padding="5dp"
+            android:text="@string/audio_meeting_click_to_join"
+            android:textColor="@color/common_text_color" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/chat_detail_input_area_line">
+
+        <com.foreveross.atwork.modules.chat.component.PopLinkTranslatingView
+            android:id="@+id/view_pop_translating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="80dp"
+            android:gravity="right"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+    <View
+        android:id="@+id/v_mask_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone" />
+
+
+</com.foreveross.atwork.layout.KeyboardRelativeLayout>

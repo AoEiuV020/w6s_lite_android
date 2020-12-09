@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="theme_level_small">
+        <item name="fontsize_8sp">6sp</item>
+        <item name="fontsize_9sp">7sp</item>
+        <item name="fontsize_10sp">8sp</item>
+        <item name="fontsize_11sp">9sp</item>
+        <item name="fontsize_tiny_12sp">11sp</item>
+        <item name="fontsize_12sp">10sp</item>
+        <item name="fontsize_13sp">11sp</item>
+        <item name="fontsize_14sp">12sp</item>
+        <item name="fontsize_15sp">13sp</item>
+        <item name="fontsize_16sp">14sp</item>
+        <item name="fontsize_17sp">15sp</item>
+        <item name="fontsize_18sp">16sp</item>
+        <item name="fontsize_19sp">17sp</item>
+        <item name="fontsize_20sp">18sp</item>
+        <item name="fontsize_21sp">19sp</item>
+        <item name="fontsize_22sp">20sp</item>
+        <item name="fontsize_23sp">21sp</item>
+        <item name="fontsize_24sp">22sp</item>
+        <item name="fontsize_30sp">28sp</item>
+        <item name="fontsize_34sp">32sp</item>
+        <item name="fontsize_38sp">36sp</item>
+        <item name="fontsize_50sp">48sp</item>
+        <item name="adaptive_height_40dp">40dp</item>
+        <item name="adaptive_height_48dp">48dp</item>
+        <item name="adaptive_height_50dp">50dp</item>
+        <item name="adaptive_height_52dp">52dp</item>
+        <item name="adaptive_height_60dp">60dp</item>
+        <item name="adaptive_height_67dp">67dp</item>
+        <item name="adaptive_height_70dp">70dp</item>
+        <item name="adaptive_height_90dp">90dp</item>
+
+
+    </style>
+
+    <style name="theme_level_standard">
+        <item name="fontsize_8sp">8sp</item>
+        <item name="fontsize_9sp">9sp</item>
+        <item name="fontsize_10sp">10sp</item>
+        <item name="fontsize_11sp">11sp</item>
+        <item name="fontsize_tiny_12sp">12sp</item>
+        <item name="fontsize_12sp">12sp</item>
+        <item name="fontsize_13sp">13sp</item>
+        <item name="fontsize_14sp">14sp</item>
+        <item name="fontsize_15sp">15sp</item>
+        <item name="fontsize_16sp">16sp</item>
+        <item name="fontsize_17sp">17sp</item>
+        <item name="fontsize_18sp">18sp</item>
+        <item name="fontsize_19sp">19sp</item>
+        <item name="fontsize_20sp">20sp</item>
+        <item name="fontsize_21sp">21sp</item>
+        <item name="fontsize_22sp">22sp</item>
+        <item name="fontsize_23sp">23sp</item>
+        <item name="fontsize_24sp">24sp</item>
+        <item name="fontsize_30sp">30sp</item>
+        <item name="fontsize_34sp">34sp</item>
+        <item name="fontsize_38sp">38sp</item>
+        <item name="fontsize_50sp">50sp</item>
+        <item name="adaptive_height_40dp">40dp</item>
+        <item name="adaptive_height_48dp">48dp</item>
+        <item name="adaptive_height_50dp">50dp</item>
+        <item name="adaptive_height_52dp">52dp</item>
+        <item name="adaptive_height_60dp">60dp</item>
+        <item name="adaptive_height_67dp">67dp</item>
+        <item name="adaptive_height_70dp">70dp</item>
+        <item name="adaptive_height_90dp">90dp</item>
+
+    </style>
+
+    <style name="theme_level_Large">
+        <item name="fontsize_8sp">10sp</item>
+        <item name="fontsize_9sp">11sp</item>
+        <item name="fontsize_10sp">12sp</item>
+        <item name="fontsize_11sp">13sp</item>
+        <item name="fontsize_tiny_12sp">13sp</item>
+        <item name="fontsize_12sp">14sp</item>
+        <item name="fontsize_13sp">15sp</item>
+        <item name="fontsize_14sp">16sp</item>
+        <item name="fontsize_15sp">17sp</item>
+        <item name="fontsize_16sp">18sp</item>
+        <item name="fontsize_17sp">18sp</item>
+        <item name="fontsize_18sp">20sp</item>
+        <item name="fontsize_19sp">21sp</item>
+        <item name="fontsize_20sp">22sp</item>
+        <item name="fontsize_21sp">23sp</item>
+        <item name="fontsize_22sp">24sp</item>
+        <item name="fontsize_23sp">25sp</item>
+        <item name="fontsize_24sp">26sp</item>
+        <item name="fontsize_30sp">34sp</item>
+        <item name="fontsize_34sp">36sp</item>
+        <item name="fontsize_38sp">40sp</item>
+        <item name="fontsize_50sp">52sp</item>
+
+        <item name="adaptive_height_40dp">40dp</item>
+        <item name="adaptive_height_48dp">48dp</item>
+        <item name="adaptive_height_50dp">50dp</item>
+        <item name="adaptive_height_52dp">52dp</item>
+        <item name="adaptive_height_60dp">60dp</item>
+        <item name="adaptive_height_67dp">67dp</item>
+        <item name="adaptive_height_70dp">70dp</item>
+        <item name="adaptive_height_90dp">90dp</item>
+
+    </style>
+
+    <style name="theme_level_Large2">
+        <item name="fontsize_8sp">12sp</item>
+        <item name="fontsize_9sp">13sp</item>
+        <item name="fontsize_10sp">14sp</item>
+        <item name="fontsize_11sp">15sp</item>
+        <item name="fontsize_tiny_12sp">14sp</item>
+        <item name="fontsize_12sp">16sp</item>
+        <item name="fontsize_13sp">17sp</item>
+        <item name="fontsize_14sp">18sp</item>
+        <item name="fontsize_15sp">19sp</item>
+        <item name="fontsize_16sp">20sp</item>
+        <item name="fontsize_17sp">21sp</item>
+        <item name="fontsize_18sp">22sp</item>
+        <item name="fontsize_19sp">23sp</item>
+        <item name="fontsize_20sp">24sp</item>
+        <item name="fontsize_21sp">25sp</item>
+        <item name="fontsize_22sp">26sp</item>
+        <item name="fontsize_23sp">27sp</item>
+        <item name="fontsize_24sp">28sp</item>
+        <item name="fontsize_30sp">32sp</item>
+        <item name="fontsize_34sp">38sp</item>
+        <item name="fontsize_38sp">42sp</item>
+        <item name="fontsize_50sp">54sp</item>
+
+        <item name="adaptive_height_40dp">48dp</item>
+        <item name="adaptive_height_48dp">57dp</item>
+        <item name="adaptive_height_50dp">60dp</item>
+        <item name="adaptive_height_52dp">62dp</item>
+        <item name="adaptive_height_67dp">80.4dp</item>
+        <item name="adaptive_height_60dp">72dp</item>
+        <item name="adaptive_height_70dp">84dp</item>
+        <item name="adaptive_height_90dp">108dp</item>
+
+    </style>
+
+    <style name="theme_level_Large3">
+        <item name="fontsize_8sp">14sp</item>
+        <item name="fontsize_9sp">15sp</item>
+        <item name="fontsize_10sp">16sp</item>
+        <item name="fontsize_11sp">17sp</item>
+        <item name="fontsize_tiny_12sp">15sp</item>
+        <item name="fontsize_12sp">18sp</item>
+        <item name="fontsize_13sp">19sp</item>
+        <item name="fontsize_14sp">20sp</item>
+        <item name="fontsize_15sp">21sp</item>
+        <item name="fontsize_16sp">22sp</item>
+        <item name="fontsize_17sp">23sp</item>
+        <item name="fontsize_18sp">24sp</item>
+        <item name="fontsize_19sp">25sp</item>
+        <item name="fontsize_20sp">26sp</item>
+        <item name="fontsize_21sp">27sp</item>
+        <item name="fontsize_22sp">28sp</item>
+        <item name="fontsize_23sp">29sp</item>
+        <item name="fontsize_24sp">30sp</item>
+        <item name="fontsize_30sp">34sp</item>
+        <item name="fontsize_34sp">40sp</item>
+        <item name="fontsize_38sp">44sp</item>
+        <item name="fontsize_50sp">56sp</item>
+
+        <item name="adaptive_height_40dp">48dp</item>
+        <item name="adaptive_height_48dp">57dp</item>
+        <item name="adaptive_height_50dp">60dp</item>
+        <item name="adaptive_height_52dp">62dp</item>
+        <item name="adaptive_height_60dp">72dp</item>
+        <item name="adaptive_height_67dp">80.4dp</item>
+        <item name="adaptive_height_70dp">84dp</item>
+        <item name="adaptive_height_90dp">108dp</item>
+
+    </style>
+
+    <style name="theme_level_Large4">
+        <item name="fontsize_8sp">16sp</item>
+        <item name="fontsize_9sp">17sp</item>
+        <item name="fontsize_10sp">18sp</item>
+        <item name="fontsize_11sp">19sp</item>
+        <item name="fontsize_tiny_12sp">16sp</item>
+        <item name="fontsize_12sp">20sp</item>
+        <item name="fontsize_13sp">21sp</item>
+        <item name="fontsize_14sp">22sp</item>
+        <item name="fontsize_15sp">23sp</item>
+        <item name="fontsize_16sp">24sp</item>
+        <item name="fontsize_17sp">25sp</item>
+        <item name="fontsize_18sp">26sp</item>
+        <item name="fontsize_19sp">27sp</item>
+        <item name="fontsize_20sp">28sp</item>
+        <item name="fontsize_21sp">29sp</item>
+        <item name="fontsize_22sp">30sp</item>
+        <item name="fontsize_23sp">31sp</item>
+        <item name="fontsize_24sp">32sp</item>
+        <item name="fontsize_30sp">36sp</item>
+        <item name="fontsize_34sp">42sp</item>
+        <item name="fontsize_38sp">46sp</item>
+        <item name="fontsize_50sp">58sp</item>
+
+        <item name="adaptive_height_40dp">48dp</item>
+        <item name="adaptive_height_48dp">57dp</item>
+        <item name="adaptive_height_50dp">60dp</item>
+        <item name="adaptive_height_52dp">62dp</item>
+        <item name="adaptive_height_60dp">72dp</item>
+        <item name="adaptive_height_67dp">80.4dp</item>
+        <item name="adaptive_height_70dp">84dp</item>
+        <item name="adaptive_height_90dp">108dp</item>
+
+    </style>
+
+</resources>

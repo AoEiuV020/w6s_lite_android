@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.foreveross.atwork.component.AtWorkGridView
+        android:id="@+id/sorted_image_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="4"
+        android:verticalSpacing="10dp" />
+
+    <ImageView
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/common_line_color"
+        android:tag="c18"
+        android:visibility="gone" />
+
+
+    <!--<include-->
+    <!--android:id="@+id/item_dropbox_file"-->
+    <!--layout="@layout/item_dropbox_file"-->
+    <!--android:visibility="gone"/>-->
+</LinearLayout>

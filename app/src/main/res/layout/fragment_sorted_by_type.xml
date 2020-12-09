@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/chat_detail_include_title_bar"
+        layout="@layout/title_bar_chatdetail" />
+
+    <TextView
+        android:id="@+id/sorted_title"
+        style="@style/font_size_14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dropbox_sub_title_bg_color"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:textColor="@color/dropbox_common_text_color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/common_line_color" />
+
+    <ExpandableListView
+        android:id="@+id/sorted_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false" />
+
+    <LinearLayout
+        android:id="@+id/not_dropbox_file_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_no_dropbox_file" />
+
+        <TextView
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/not_file_so_far"
+            android:textColor="@color/dropbox_hint_text_color" />
+    </LinearLayout>
+</LinearLayout>

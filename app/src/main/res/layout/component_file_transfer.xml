@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.foreverht.workplus.ui.component.foregroundview.ForegroundRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_content_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+
+    <!-- 文件传输的缩略图 -->
+    <ImageView
+        android:id="@+id/chat_file_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@mipmap/icon_b_nofile" />
+
+
+    <RelativeLayout
+        android:id="@+id/ll_file_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_file_img"
+
+        >
+        <!--文件大小-->
+        <TextView
+            android:id="@+id/chat_file_size"
+            style="@style/font_size_12sp"
+            tools:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="123kb"
+            android:textColor="@color/common_text_color_999" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_some_status_info_wrapper_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignBottom="@id/chat_file_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+
+            >
+
+            <!-- 文件传输状态 -->
+            <TextView
+                android:id="@+id/chat_file_status"
+                style="@style/font_size_12sp"
+                tools:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:ellipsize="end"
+                android:maxWidth="90dp"
+                android:maxLines="1"
+                android:text="未下载"
+                android:textColor="@color/common_text_color_999"
+                android:layout_gravity="center_vertical"
+                />
+
+
+            <include
+                layout="@layout/layout_chat_message_item_time_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+
+                />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_file_progress_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_file_info"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="gone"
+        >
+
+        <ProgressBar
+            android:id="@+id/chat_file_progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/chat_file_progress_num"
+            android:progressDrawable="@drawable/sync_progress_bar_color_in_chat_detail"
+            tools:visibility="visible"
+
+            />
+
+        <TextView
+            android:id="@+id/chat_file_progress_num"
+            style="@style/font_size_12sp"
+            tools:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="30%"
+            android:textColor="@color/common_text_color_999" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/chat_file_filename"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/chat_file_img"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="2"
+        android:text="文件名.doc"
+        android:textColor="#000000"
+        tools:textSize="14sp"
+        android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+
+        />
+
+
+</com.foreverht.workplus.ui.component.foregroundview.ForegroundRelativeLayout>

@@ -1,0 +1,20 @@
+{
+  "modules": {
+
+    "zoom" : {
+      "enabled": true,
+      "build": "source",
+      "version": "default"
+    },
+
+    "doraemonkit": {
+      "enabled": false,
+      "build": "source",
+      "version": "default"
+    },
+
+    "employeeIncomingCall": {
+      "enabled": false
+    }
+  }
+}

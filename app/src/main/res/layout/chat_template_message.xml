@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/round_rect_bg_template_message"
+    android:layout_marginBottom="20dp"
+    android:id="@+id/root_view">
+
+    <RelativeLayout
+        android:id="@+id/template_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/color_view"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@drawable/round_rect_bg_template_message_top"/>
+
+        <LinearLayout
+            android:id="@+id/app_info_view"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@id/color_view"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/app_avatar"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:background="@mipmap/default_app"
+                    android:layout_marginLeft="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/app_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/app_avatar"
+                    android:ellipsize="end"
+                    android:text="appName"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="10dp"
+                    android:lines="1"
+                    android:singleLine="true"
+                    style="@style/font_size_14sp"
+                    android:textColor="@color/light_black"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/diver"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_line_gray"
+        android:layout_below="@id/template_top_layout"/>
+
+    <LinearLayout
+        android:id="@+id/template_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/template_top_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/template_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            style="@style/font_size_16sp"
+            android:textColor="@color/light_black"/>
+
+        <TextView
+            android:id="@+id/template_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="3dp"
+            style="@style/font_size_12sp"
+            android:textColor="@color/dropbox_hint_text_color"/>
+
+        <LinearLayout
+            android:id="@+id/template_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="13dp">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/template_action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/template_content_layout"
+        android:orientation="vertical"
+        android:layout_marginTop="14dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_line_gray" />
+
+        <LinearLayout
+            android:id="@+id/action_buttons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

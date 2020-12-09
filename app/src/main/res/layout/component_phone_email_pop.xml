@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_70">
+
+    <LinearLayout
+        android:id="@+id/llPop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/dp_16"
+            android:text="内容"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvJump"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:background="@drawable/bg_phone_email_pop"
+            android:gravity="center"
+            android:padding="@dimen/dp_16"
+            android:text="跳转" />
+
+        <TextView
+            android:id="@+id/tvCopy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:background="@drawable/bg_phone_email_pop"
+            android:gravity="center"
+            android:padding="@dimen/dp_16"
+            android:text="复制" />
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_16"
+            android:background="@drawable/bg_phone_email_pop"
+            android:gravity="center"
+            android:padding="@dimen/dp_16"
+            android:text="取消" />
+    </LinearLayout>
+</RelativeLayout>

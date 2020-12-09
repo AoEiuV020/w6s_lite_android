@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Stickers Order = "1">
+    <Catalog Title="WorkPlus">
+        <Emoticon ID="1" Tag="皱眉" File="01" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="2" Tag="侧目" File="02" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="3" Tag="哭"  File="03" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="4" Tag="生气" File="04" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="5" Tag="失望" File="05" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="6" Tag="微笑" File="06" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="7" Tag="大笑" File="07" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="8" Tag="疑问" File="08" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="9" Tag="嘚瑟" File="09" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="10" Tag="晕" File="10" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="11" Tag="困" File="11" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="12" Tag="惊讶" File="12" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="13" Tag="害羞" File="13" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="14" Tag="吃瓜" File="14" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="15" Tag="亲亲" File="15" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="16" Tag="坏笑" File="16" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="17" Tag="见钱眼开" File="17" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="18" Tag="晕倒" File="18" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="19" Tag="奸笑" File="19" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="20" Tag="黑眼圈" File="20" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="21" Tag="龇牙" File="21" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="22" Tag="尴尬" File="22" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="23" Tag="鼻血" File="23" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="24" Tag="衰" File="24" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="25" Tag="脸红" File="25" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="26" Tag="大汗" File="26" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="27" Tag="流泪" File="27" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="28" Tag="调皮" File="28" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="29" Tag="囧" File="29" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="30" Tag="哼哼" File="30" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="31" Tag="老王头" File="31" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="32" Tag="石化" File="32" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="33" Tag="大怒" File="33" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="34" Tag="色" File="34" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="35" Tag="媚眼" File="35" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="36" Tag="骷髅" File="36" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="37" Tag="大白" File="37" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="38" Tag="挨揍" File="38" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="39" Tag="好吃" File="39" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="40" Tag="大哭" File="40" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="41" Tag="愤怒" File="41" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="42" Tag="小样" File="42" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="43" Tag="你懂的" File="43" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="44" Tag="如花" File="44" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="45" Tag="XD" File="45" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="46" Tag="美队" File="46" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="47" Tag="小丑" File="47" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="48" Tag="钢铁侠" File="48" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="49" Tag="蝙蝠侠" File="49" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="50" Tag="精灵" File="50" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="51" Tag="舞狮" File="51" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="52" Tag="鸡腿" File="52" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="53" Tag="炸了" File="53" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="54" Tag="谢谢老板" File="54" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="55" Tag="恭喜发财" File="55" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="56" Tag="篮球" File="56" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="57" Tag="足球" File="57" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="58" Tag="子鼠" File="58" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="59" Tag="丑牛" File="59" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="60" Tag="寅虎" File="60" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="61" Tag="卯兔" File="61" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="62" Tag="辰龙" File="62" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="63" Tag="巳蛇" File="63" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="64" Tag="午马" File="64" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="65" Tag="未羊" File="65" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="66" Tag="申猴" File="66" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="67" Tag="酉鸡" File="67" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="68" Tag="戌狗" File="68" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="69" Tag="亥猪" File="69" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="70" Tag="咖啡" File="70" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="71" Tag="礼物" File="71" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="72" Tag="红包" File="72" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="73" Tag="祝福" File="73" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="74" Tag="年吉" File="74" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="75" Tag="胜利" File="75" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="76" Tag="ROCK" File="76" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="77" Tag="强" File="77" Width="80" Height="80" EndFixed=".png"/>
+        <Emoticon ID="78" Tag="OK" File="78" Width="80" Height="80" EndFixed=".png"/>
+    </Catalog>
+</Stickers>
+
+

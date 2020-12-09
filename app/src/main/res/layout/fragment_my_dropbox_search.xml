@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/common_page_bg">
+
+    <include
+        android:id="@+id/title_dropbox_search_title"
+        layout="@layout/title_bar_search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_my_share_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_below="@id/title_dropbox_search_title"/>
+
+    <LinearLayout
+        android:id="@+id/ll_no_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/img_no_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:src="@mipmap/search_no_result" />
+
+        <TextView
+            android:id="@+id/tv_no_result"
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="@string/no_result"
+            android:textColor="@color/alarm_text" />
+    </LinearLayout>
+
+</RelativeLayout>

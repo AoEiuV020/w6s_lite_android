@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/common_message_content_divider"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/right_red_envelope_select_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        >
+
+        <ImageView
+            android:id="@+id/right_red_envelope_select"
+            style="@style/chat_item_select_view"
+            tools:visibility="visible"
+            />
+    </LinearLayout>
+
+    <!-- 聊天头像 -->
+    <ImageView
+        android:id="@+id/chat_right_red_envelope_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@id/right_red_envelope_select_line"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_red_envelope_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_toLeftOf="@id/chat_right_red_envelope_avatar">
+
+        <com.foreveross.atwork.modules.wallet.component.RedEnvelopeInChatView
+            android:id="@+id/view_red_envelope_in_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+
+        <TextView
+            android:id="@+id/tv_check_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_red_envelope_in_chat"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/check_red_envelope_detail"
+            android:textColor="@color/common_blue_bg"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+
+
+    </RelativeLayout>
+
+    <com.foreveross.atwork.modules.chat.component.ChatSendStatusView
+        android:id="@+id/chat_right_red_envelope_send_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/rl_red_envelope_main"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        >
+
+    </com.foreveross.atwork.modules.chat.component.ChatSendStatusView>
+
+
+
+</RelativeLayout>
+</RelativeLayout>

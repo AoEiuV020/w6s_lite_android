@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 聊天界面TitleBar -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        style="@style/font_size_16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:text="@string/cancel"
+        android:textColor="@color/common_text_color_gray" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_search_back"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:paddingStart="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/tv_cancel"
+        android:layout_toEndOf="@id/iv_back"
+        android:background="@drawable/rect_title_bar_search_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/iv_icon_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@mipmap/icon_search"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/iv_icon_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/icon_remove"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_search_hint"
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_lock"
+            android:layout_toEndOf="@id/iv_icon_search"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"/>
+
+        <EditText
+            android:id="@+id/et_search_content"
+            style="@style/font_size_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/Search"
+            android:lines="1"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:layout_toEndOf="@id/tv_search_hint"
+            android:layout_toStartOf="@id/iv_icon_clear"
+            android:textColor="@color/common_text_color"
+            android:textColorHint="@color/common_gray_bg"
+            android:imeOptions="actionSearch" />
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

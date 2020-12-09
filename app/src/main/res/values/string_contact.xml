@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--通讯录相关页面-->
+    <string name="ask_to_sync_contact_to_mobile">Are you sure to sync to your phone contacts？</string>
+    <string name="syncing_contact">Synchronizing...</string>
+    <string name="sync_check_fail_record">View</string>
+    <string name="sync_finish">Sync completed(%1$s successful,%2$s failed)</string>
+    <string name="sync_success">Synchronization is successful</string>
+    <string name="sync_fail">Synchronization failed</string>
+    <string name="sync_fail_record">Sync failed record(%1$s)</string>
+    <string name="contact_search_show_title">Contacts</string>
+    <string name="sync_max_alert">The number of syncing contacts has reached the limit and can not be added</string>
+    <string name="this_message_source">From:</string>
+    <string name="wechat_emp_no">WeChat enterprise account</string>
+    <string name="my_service_app">Service app</string>
+    <string name="switch_contact_view_show_mode">Switch the display style of your contacts</string>
+    <string name="classic_version">Classic</string>
+    <string name="simple_version">Simple</string>
+
+
+</resources>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 主界面TitleBar -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/v_fake_statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="6dp"
+        android:background="@color/white"
+        android:layout_below="@+id/v_fake_statusbar"
+        >
+
+        <ProgressBar
+            android:id="@+id/message_receiving"
+            style="@android:style/Widget.Holo.Light.ProgressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+            android:id="@+id/title_bar_main_title"
+            style="@style/font_size_20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/message_receiving"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLength="20"
+            android:maxWidth="200dp"
+            android:text="消息"
+            android:textColor="@color/common_item_black" />
+
+        <!-- 更多按钮 -->
+        <ImageView
+            android:id="@+id/titlebar_main_more_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/more"
+            android:paddingRight="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_add_chat"
+            android:visibility="visible" />
+
+
+        <!-- 两个箭头 -->
+        <ImageView
+            android:id="@+id/org_switcher"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/titlebar_main_more_btn"
+            android:contentDescription="@string/more"
+            android:paddingRight="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_switch_common"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <!--PC端登录-->
+        <ImageView
+            android:id="@+id/image_pc_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/unread_imageview"
+            android:layout_marginRight="@dimen/dp_10"
+            android:src="@mipmap/tab_icon_pc_online"
+            android:layout_centerVertical="true"
+            tools:visibility="visible"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/robot_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/unread_imageview"
+            android:src="@mipmap/icon_robot_blue"
+            android:visibility="gone" />
+
+        <com.foreveross.atwork.component.UnreadImageView
+            android:id="@+id/unread_imageview"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_search"
+            android:visibility="gone"
+            tools:visibility="visible" />
+        <!--搜索-->
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/title_common_padding"
+            android:src="@mipmap/icon_search_dark" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_network_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_main"
+        android:background="#FDE4E7"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_network_error"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26dp"
+            />
+
+        <TextView
+            android:id="@+id/main_network_error"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/iv_error"
+            android:layout_marginLeft="11dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="@string/network_error"
+            android:textColor="@color/alarm_network_text" />
+    </RelativeLayout>
+
+</RelativeLayout>

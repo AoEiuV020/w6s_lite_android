@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_bar_contact_tree_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:tag="c1">
+        <!-- 左边的APP图标 -->
+        <ImageView
+            android:id="@+id/title_bar_contact_tree_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/title_common_padding"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:src="@mipmap/icon_back" />
+
+        <Button
+            android:id="@+id/async_contact_to_mobile_ok"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:gravity="center|center_vertical"
+            android:minWidth="50dp"
+            android:padding="5dp"
+            android:text="确定"
+            android:textColor="@color/common_item_black"
+            android:visibility="gone" />
+        <!--android:background="@mipmap/btn_submit_hover"-->
+
+        <TextView
+            android:id="@+id/title_bar_contact_tree_search_more"
+            style="@style/font_size_14sp"
+            android:layout_width="@dimen/activity_base_right_icon_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="@string/more"
+            android:textColor="@color/common_item_black" />
+
+
+        <!-- 名称，当天聊天界面的名称 -->
+        <TextView
+            android:id="@+id/title_bar_contact_tree_title"
+            style="@style/font_size_18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_common_title_back_padding"
+            android:layout_toRightOf="@+id/title_bar_contact_tree_back"
+            android:maxWidth="200dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/common_item_black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_line_gray" />
+
+    </RelativeLayout>
+
+    <com.foreveross.atwork.modules.group.component.SelectContactHead
+        android:id="@+id/select_user_contact_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone">
+
+    </com.foreveross.atwork.modules.group.component.SelectContactHead>
+
+    <TextView
+        android:id="@+id/tv_contact_title"
+        style="@style/font_size_15sp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#E9EDF1"
+        android:gravity="left|center"
+        android:paddingLeft="15dp"
+        android:text="@string/contact_search_show_title"
+        android:textColor="#333"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/contact_tree_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+    <!-- 搜索结果 -->
+    <ListView
+        android:id="@+id/lw_contact_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"></ListView>
+
+
+</LinearLayout>

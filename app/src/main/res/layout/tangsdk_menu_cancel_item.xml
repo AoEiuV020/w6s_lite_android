@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tangsdk_menu_item_bg">
+
+    <RelativeLayout
+        android:id="@+id/menu_item_ly"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <RadioButton
+            android:id="@+id/menu_item_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@null"
+            android:text="@string/tangsdk_cancel_btn_title"
+            android:textColor="@color/tangsdk_cancel_text_color"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

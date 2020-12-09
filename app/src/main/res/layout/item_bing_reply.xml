@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f7f7f7"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_reply_from"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:text="茶树菇的逆袭："
+        android:textColor="@color/common_blue_bg" />
+
+    <TextView
+        android:id="@+id/tv_reply_content"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="第八季什么时候开播"
+        android:textColor="@color/light_black" />
+
+</LinearLayout>

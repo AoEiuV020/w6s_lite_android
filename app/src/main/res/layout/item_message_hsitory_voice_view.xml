@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvVoice"
+        android:textSize="?attr/fontsize_13sp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/shape_history_item_voice_bg"
+        android:drawableLeft="@mipmap/icon_history_item_voice_play"
+        android:drawablePadding="15dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="6"
+        android:textColor="@color/common_text_color"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvVoice"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/common_gray_bg"
+        style="@style/font_size_12sp"
+        tools:text="2018年4月1日"
+
+
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tvTime"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/message_history_bottom_line_gray" />
+
+</RelativeLayout>

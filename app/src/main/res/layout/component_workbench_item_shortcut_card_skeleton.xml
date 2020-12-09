@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+
+
+    <FrameLayout
+        android:id="@+id/flContent"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/unreadImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/appstore_loading_icon_size"
+            />
+        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            tools:text="这是个内容"
+            tools:visibility="visible"
+            android:textColor="@color/common_text_color"
+            android:textSize="14sp"
+            />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvCardItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flContent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        tools:text="这是个标题这是个标题"
+        android:textColor="@color/common_text_color_999"
+        android:textSize="12sp"
+        android:maxWidth="80dp"
+        android:maxLines="2"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

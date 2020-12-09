@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_70"
+    >
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_content_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:padding="9dp"
+            android:textColor="@color/common_text_color"
+            />
+
+        <TextView
+            android:id="@+id/tv_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/publish_text"
+            android:padding="9dp"
+            android:textColor="@color/common_blue_bg"
+            android:layout_alignParentRight="true"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/fl_voice_area"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_centerHorizontal="true"
+                >
+
+                <com.foreveross.atwork.component.WaveView
+                    android:id="@+id/waveview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/iv_voice_state"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/icon_pop_record_voice_record_state"
+                    android:layout_centerInParent="true"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_voice_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/common_text_color"
+                tools:text="1s"
+                android:layout_marginTop="-20dp"
+                android:textSize="12sp"
+                android:layout_below="@+id/fl_voice_area"
+                android:layout_centerHorizontal="true"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_voice_state_guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="点击完成"
+                android:layout_marginTop="8dp"
+                android:textSize="12sp"
+                android:textColor="@color/common_text_color_999"
+                android:layout_below="@+id/tv_voice_progress"
+                android:layout_centerHorizontal="true"
+
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

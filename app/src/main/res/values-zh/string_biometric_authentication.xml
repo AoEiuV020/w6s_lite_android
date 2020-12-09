@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fingerprint">指纹</string>
+    <string name="fingerprint_auth">指纹认证</string>
+    <string name="client_second_authentication_setting">客户端功能二次认证设置</string>
+    <string name="need_second_authentication_tip">需要进行二次认证：</string>
+    <string name="authentication_valid_duration_setting">认证时效设置</string>
+    <string name="please_select_protect_area">请选择认证页面</string>
+    <string name="do_not_need_protect">无需保护</string>
+    <string name="when_opening_client">启动客户端时</string>
+    <string name="please_verify_fingerprint">请验证指纹</string>
+    <string name="please_verify_fingerprint_again">指纹验证失败，请再试一次</string>
+    <string name="verify_fingerprint_too_frequently">尝试次数太多, 请稍后重试</string>
+    <string name="force_to_set_biometric_authentication">需要开启生物认证后才能使用客户端功能</string>
+    <string name="notice_to_set_biometric_authentication">开启生物认证功能才能够使用</string>
+    <string name="notice_to_set_system_biometric_authentication">系统开启指纹才能够使用</string>
+    <string name="notice_cannot_close_all_biometric_authentication">开启了强制使用生物认证，无法关闭全部</string>
+    <string name="gesture_lock_pwd_low_strength">密码过于简单，请重新设置</string>
+    <string name="watch_low_strength_demo">查看简单的手势密码示例</string>
+    <string name="low_strength_demo_prefix">请勿设置简单的手势密码&#160;</string>
+    <string name="low_strength_demo_suffix">示例</string>
+    <string name="go_to_setting">去设置</string>
+    <string name="fingerprint_and_gesture_code_bio_setting">指纹/手势设置</string>
+</resources>

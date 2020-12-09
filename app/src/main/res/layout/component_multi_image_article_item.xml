@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 多图文中的图文消息 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/common_line_color" />
+
+    <ImageView
+        android:id="@+id/article_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/bg_avatar"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/article_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
+        android:layout_toLeftOf="@id/article_image"
+        android:text="关于劳动节停止装修的通知"
+        style="@style/font_size_16sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/common_text_color"
+        android:layout_marginLeft="10dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray"
+    >
+
+    <include
+        android:id="@+id/vTitleBarCommon"
+        layout="@layout/title_bar_common"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/vTitleBarCommon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+
+        >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSelectApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/tvLabelSelectApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_discussion_app"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/vLineSelectApp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/common_text_color_999"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:id="@+id/tvRedDotSelectApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/red_lock"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelSelectApp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLabelSelectApp"
+            app:layout_constraintLeft_toRightOf="@+id/tvLabelSelectApp"
+            android:gravity="center"
+            android:layout_marginLeft="4dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/ivSelectApp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintRight_toLeftOf="@+id/tvAppName"
+            app:layout_constraintTop_toTopOf="@+id/tvRedDotSelectApp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRedDotSelectApp"
+            app:layout_constraintLeft_toRightOf="@+id/tvRedDotSelectApp"
+            android:background="@null"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/fail_cover_square_size"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:visibility="gone"
+            />
+
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="钢铁侠"
+            android:textSize="16sp"
+            android:textColor="@color/common_text_color"
+            app:layout_constraintTop_toTopOf="@+id/ivSelectApp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivSelectApp"
+            app:layout_constraintRight_toLeftOf="@+id/ivArrowSelectApp"
+            app:layout_constraintLeft_toRightOf="@+id/ivSelectApp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            app:layout_constrainedWidth="true"
+
+            />
+
+
+        <ImageView
+            android:id="@+id/ivArrowSelectApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_arrow_gray"
+            android:scaleType="center"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivSelectApp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivSelectApp"
+            android:layout_marginRight="20dp"
+            />
+
+
+
+
+        <View
+            android:id="@+id/vLineSelectApp"
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelSelectApp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@color/common_bg_gray"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvLabelSessionQuickEntryBarDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/session_quick_entry_bar_display"
+            app:layout_constraintTop_toBottomOf="@+id/clSelectApp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/vLineSessionQuickEntryBarDisplay"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/common_text_color_999"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:id="@+id/tvRedDotSessionQuickEntryBarDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/red_lock"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelSessionQuickEntryBarDisplay"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLabelSessionQuickEntryBarDisplay"
+            app:layout_constraintLeft_toRightOf="@+id/tvLabelSessionQuickEntryBarDisplay"
+            android:gravity="center"
+            android:layout_marginLeft="4dp"
+            android:visibility="gone"
+            />
+
+
+
+
+
+        <com.foreveross.atwork.component.WorkplusSwitchCompat
+            android:id="@+id/swSessionQuickEntryBarDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/workplus_switch"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvRedDotSessionQuickEntryBarDisplay"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRedDotSessionQuickEntryBarDisplay"
+            android:layout_marginRight="20dp"
+            />
+
+
+
+        <View
+            android:id="@+id/vLineSessionQuickEntryBarDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelSessionQuickEntryBarDisplay"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@color/common_bg_gray"
+            />
+
+
+
+        <TextView
+            android:id="@+id/tvLabelDiscussionDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/discussion_detail_display"
+            app:layout_constraintTop_toBottomOf="@+id/vLineSessionQuickEntryBarDisplay"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/vLineDiscussionDisplay"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/common_text_color_999"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:id="@+id/tvRedDotDiscussionDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/red_lock"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelDiscussionDisplay"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLabelDiscussionDisplay"
+            app:layout_constraintLeft_toRightOf="@+id/tvLabelDiscussionDisplay"
+            android:gravity="center"
+            android:layout_marginLeft="4dp"
+            android:visibility="gone"
+            />
+
+
+
+
+
+        <com.foreveross.atwork.component.WorkplusSwitchCompat
+            android:id="@+id/swSessionDiscussionDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/workplus_switch"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvRedDotDiscussionDisplay"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRedDotDiscussionDisplay"
+            android:layout_marginRight="20dp"
+            />
+
+
+
+        <View
+            android:id="@+id/vLineDiscussionDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelDiscussionDisplay"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@color/common_bg_gray"
+            />
+
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupDiscussionDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="vLineDiscussionDisplay, swSessionDiscussionDisplay, tvRedDotDiscussionDisplay, tvLabelDiscussionDisplay"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

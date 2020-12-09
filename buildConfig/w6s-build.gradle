@@ -1,0 +1,227 @@
+import groovy.json.JsonSlurper
+
+import java.nio.channels.FileChannel
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
+project.ext {
+
+    println("--- 开始解析 assemble 构建信息 -----")
+
+
+    getCurrentFlavor = this.&getCurrentFlavor
+    getCurrentFlavorName = this.&getCurrentFlavorName
+    isExist = this.&isExist
+    copyFile = this.&copyFile
+    readBeeworksConfig = this.&readBeeworksConfig
+    readBeeworksAssembleConfig = this.&readBeeworksAssembleConfig
+    assembleHuaweiAgconnectServices = this.&assembleHuaweiAgconnectServices
+
+
+    def beeworksJson = readBeeworksConfig()
+    def beeworksAssembleJson = readBeeworksAssembleConfig()
+
+    schemaInBeeworks = beeworksJson?.config?.scheme ?: "workplus"
+    huaweiId = beeworksJson?.androidPush?.huaweiInfo?.appId ?: ""
+    vivoId = beeworksJson?.androidPush?.vivoInfo?.appId ?: ""
+    vivoKey = beeworksJson?.androidPush?.vivoInfo?.appKey ?: ""
+
+    def zoomModule = beeworksAssembleJson?.modules?.zoom
+    def doraemonkitModule = beeworksAssembleJson?.modules?.doraemonkit
+    def cloudwiseModule = beeworksAssembleJson?.modules?.cloudwise
+    def tingyunModule = beeworksAssembleJson?.modules?.tingyun
+    def employeeIncomingCallModule = beeworksAssembleJson?.modules?.employeeIncomingCall
+    def agoraModule = beeworksAssembleJson?.modules?.agora
+    def baiduTraceModule = beeworksAssembleJson?.modules?.baiduTrace
+    def zebraModule = beeworksAssembleJson?.modules?.zebra
+    def googleMapModule = beeworksAssembleJson?.modules?.googleMap
+    def delingModule = beeworksAssembleJson?.modules?.deling
+    def fengmapModule = beeworksAssembleJson?.modules?.fengmap
+    def ebeninkModule = beeworksAssembleJson?.modules?.ebenink
+    def wangsuSceModule = beeworksAssembleJson?.modules?.wangsuSce
+
+    enableZoom = zoomModule?.enabled ?: false
+    enableDoraemonkit = doraemonkitModule?.enabled ?: false
+    enableCloudwise = cloudwiseModule?.enabled ?: false
+    enableTingyun = tingyunModule?.enabled ?: false
+    enableEmployeeIncomingCall = employeeIncomingCallModule?.enabled
+    //groovy 里 bool的?: 语法, false 也会fallback为右边的值
+    if(null == enableEmployeeIncomingCall) {
+        enableEmployeeIncomingCall = true
+    }
+    enableAgora = agoraModule?.enable
+    if(null == enableAgora) {
+        enableAgora = true
+    }
+
+    enableBaiduTrance = baiduTraceModule?.enabled?: false
+    enableZebra = zebraModule?.enabled?: false
+    enableGoogleMap = googleMapModule?.enabled?: false
+    enableDeling = delingModule?.enabled?: false
+    enableFengmap = fengmapModule?.enabled?: false
+    enableEbenink = ebeninkModule?.enabled?: false
+    enableWangsuSce = wangsuSceModule?.enabled?: false
+
+
+    abiFiltersInit = ["armeabi"]
+    def needArmeabiV7a = enableZoom
+    if (needArmeabiV7a) {
+        abiFiltersInit.add("armeabi-v7a")
+    }
+
+    println("schemaInBeeworks : ${schemaInBeeworks}  huaweiId : ${huaweiId}  vivoId : ${vivoId}   vivoKey : ${vivoKey} \n"  )
+    println("abiFiltersInit : ${abiFiltersInit} \n")
+    println("modules assembling  zoom : ${enableZoom}     doraemonkit : ${enableDoraemonkit}     cloudwise : ${enableCloudwise} " +
+            " tingyun: ${enableTingyun}   employeeIncomingCall: ${enableEmployeeIncomingCall}   agora : ${enableAgora}" +
+            " baiduTrance : ${enableBaiduTrance}   zebra : ${enableZebra}   googleMap: ${enableGoogleMap} " +
+            " deling : ${enableDeling}  enableFengmap: ${enableFengmap}  enableEbenink : ${enableEbenink}" +
+            " wangsuSce : ${enableWangsuSce} \n")
+
+    println("--- 结束解析 assemble 构建信息 -----")
+
+}
+
+
+def getCurrentFlavor() {
+    return getCurrentFlavorName().toLowerCase()
+}
+
+
+def getCurrentFlavorName() {
+    Gradle gradle = getGradle()
+    String tskReqStr = gradle.getStartParameter().getTaskRequests().toString()
+
+    Pattern pattern
+
+
+    println("getCurrentFlavorName tskReqStr -> " + tskReqStr)
+
+    if (tskReqStr.contains("assemble"))
+        pattern = Pattern.compile("assemble(\\w+)(Release|Debug)")
+    else
+        pattern = Pattern.compile("generate(\\w+)(Release|Debug)")
+
+    Matcher matcher = pattern.matcher(tskReqStr)
+
+    if (matcher.find()) {
+        def flavorName = matcher.group(1)
+        def firstLetter = flavorName.substring(0, 1).toLowerCase()
+        flavorName = firstLetter + flavorName.substring(1)
+        println("getCurrentFlavor() in project-> " + flavorName)
+        return flavorName
+    } else {
+        println "getCurrentFlavor() in project->  NO MATCH FOUND"
+        return ""
+    }
+}
+
+Map readBeeworksConfig() {
+
+
+    def currentFlavorName = getCurrentFlavorName()
+    def beeworksConfigPath = "app/src/${currentFlavorName}/assets/BeeWorks.json"
+
+    println("\n\nbeeworksConfigPath: ${beeworksConfigPath} exist  : " + new File(beeworksConfigPath).exists())
+
+    if (new File(beeworksConfigPath).exists()) {
+        def beeworksJsonFile = new File(beeworksConfigPath)
+        def parsedJson = new JsonSlurper().parseText(beeworksJsonFile.text)
+        println(parsedJson)
+
+        return parsedJson
+
+    }
+
+
+
+    return null
+
+}
+
+
+Map readBeeworksAssembleConfig() {
+
+
+    def currentFlavorName = getCurrentFlavorName()
+    def beeworksConfigPath = "app/src/${currentFlavorName}/BeeWorks-assemble.json"
+
+    println("\n\nreadBeeworksAssembleConfigPath: ${beeworksConfigPath} exist  : " + new File(beeworksConfigPath).exists())
+
+    if (new File(beeworksConfigPath).exists()) {
+        def beeworksJsonFile = new File(beeworksConfigPath)
+        def parsedJson = new JsonSlurper().parseText(beeworksJsonFile.text)
+        println(parsedJson)
+
+        return parsedJson
+
+    }
+
+
+
+    return null
+
+}
+
+
+def isExist(String path) {
+    if (null == path || "" == path) {
+        return false
+    }
+
+    return new File(path).exists();
+}
+
+def copyFile(String sourceFilePath, String destFilePath) throws IOException {
+    File sourceFile = new File(sourceFilePath);
+    File destFile = new File(destFilePath);
+    copyFile(sourceFile, destFile);
+}
+
+
+def copyFile(File sourceFile, File destFile) throws IOException {
+    if (!destFile.exists()) {
+        destFile.createNewFile();
+    }
+
+    FileChannel source = null;
+    FileChannel destination = null;
+
+    try {
+        source = new FileInputStream(sourceFile).getChannel();
+        destination = new FileOutputStream(destFile).getChannel();
+        destination.transferFrom(source, 0, source.size());
+    } finally {
+        if (source != null) {
+            source.close();
+        }
+        if (destination != null) {
+            destination.close();
+        }
+    }
+}
+
+def assembleHuaweiAgconnectServices() {
+    def currentFlavor = getCurrentFlavorName()
+    if ("" == currentFlavor) {
+        return
+    }
+
+    def fromHuaweiAgconnectServicesConfigPath = "app/src/${currentFlavor}/agconnect-services.json"
+    def targetHuaweiAgconnectServicesConfigPath = "agconnect-services.json"
+    def devProPath = "dev.properties"
+
+    def devConfigFile = new File(devProPath)
+    if (!devConfigFile.exists()) {
+        devConfigFile.createNewFile()
+    }
+    devConfigFile.text = "DEV_FLAVOR=${currentFlavor}"
+
+    if (isExist(fromHuaweiAgconnectServicesConfigPath)) {
+        copyFile(fromHuaweiAgconnectServicesConfigPath, targetHuaweiAgconnectServicesConfigPath)
+    }
+
+    println "#### Evaluate afterEvaluate of flavor:  " + currentFlavor
+    println "#### Evaluate afterEvaluate of devProPath isExist:  " + isExist(devProPath)
+    println "#### Evaluate afterEvaluate of fromHuaweiAgconnectServicesConfigPath isExist:  " + isExist(fromHuaweiAgconnectServicesConfigPath)
+    println "#### Evaluate afterEvaluate of targetHuaweiAgconnectServicesConfigPath isExist:  " + isExist(targetHuaweiAgconnectServicesConfigPath)
+}

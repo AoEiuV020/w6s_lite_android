@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--  选择SDCard fragement -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/common_page_bg"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/directory_path"
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="42dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="/sdcard/"
+            android:textColor="#000000" />
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#DEDEDE" />
+
+    <ListView
+        android:id="@+id/sdcard_file_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/empty"
+        style="@style/font_size_20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center|center_vertical"
+        android:gravity="center_vertical"
+        android:text="@string/empty_current_folder"
+        android:textColor="@android:color/darker_gray"
+        android:visibility="gone" />
+</LinearLayout>

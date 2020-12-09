@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/iv_content"
+        android:layout_width="79.3dp"
+        android:layout_height="79.3dp"
+        android:layout_toLeftOf="@id/chat_right_image_avatar"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/loading_chat_size" />
+
+    <TextView
+        android:id="@+id/tv_progress"
+        style="@style/font_size_18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_vertical"
+        android:text="100%" />
+
+
+</FrameLayout>

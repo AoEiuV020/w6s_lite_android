@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/common_bg_gray"
+    >
+
+    <ImageView
+        android:id="@+id/ivRemoveTag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/icon_cancel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ivRemoveTag"
+        app:layout_constraintRight_toLeftOf="@+id/tvSum"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/common_text_color_999"
+        app:layout_constraintHorizontal_bias="0"
+        tools:text="项目经理项目经理项目经理项目经理项目经理项目经理项目经理项目经理项目经理项目经理项目经理项目经理项目经理"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/tvSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tvName"
+        app:layout_constraintRight_toLeftOf="@+id/ivEdit"
+        android:layout_marginLeft="4dp"
+        android:textSize="14sp"
+        android:textColor="@color/common_text_color_999"
+        app:layout_constraintHorizontal_bias="0"
+        tools:text="(4)"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:layout_constrainedWidth="true"
+        android:layout_marginRight="10dp"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/ivEdit"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/icon_setting_dark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

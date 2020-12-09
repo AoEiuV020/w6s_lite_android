@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="face_login">刷脸登录</string>
+    <string name="change_face_negative">更新刷脸底片</string>
+    <string name="experience_face">体验刷脸</string>
+    <string name="first_time_open_face_login_warn">你正在开启刷脸登录功能，系统将开启相机进行刷脸底片获取，获取底片并验证通过后，你下次登录时将可以使用刷脸登录功能。</string>
+    <string name="change_face_negative_failed">底片验证失败，请确保拍摄时是本人真人操作并且没有其他人物干扰，使用照片、非人脸都会导致验证失败，确认后你可以再次尝试。</string>
+    <string name="set_face_negative_successful">底片更新成功</string>
+    <string name="update_face_negative_successful">底片更新成功</string>
+    <string name="open_camera">打开相机</string>
+    <string name="face_login_failed">刷脸验证失败，请重试</string>
+    <string name="experience_face_failed">检测失败，请确保是你本人在操作。</string>
+    <string name="experience_face_successful">检测通过</string>
+    <string name="guide_to_open_face_bio_setting">你还未开启刷脸功能，你可以点击【前往设置】去开启，也可以点击取消然后在【我】-【设置】-【生物认证】-【刷脸设置】中开启。</string>
+    <string name="guide_to_other_login_way_when_face_login_failed">刷脸认证失败，请确保是%s本人操作，若多次失败建议使用其它登录方式登录，然后在【我】-【设置】-【生物认证】-【刷脸设置】中更新刷脸底片。</string>
+    <string name="other_login_way">其它登录方式</string>
+    <string name="face_live_meg_auth_error">刷脸认证失败,请确保是%s本人操作，若多次失败会导致认证服务无法使用。若有疑问请联系HR确认用户信息是否正确</string>
+    <string name="face_live_meg_exit_app">刷脸认证失败,已超过最大允许认证次数,请隔天再进行尝试。若有疑问请联系HR确认用户信息是否正确</string>
+    <string name="one_more_try">再试一次</string>
+    <string name="biz_protocol_agreement">人脸识别授权协议</string>
+    <string name="face_valided">底片验证通过</string>
+    <string name="bio_face_title">刷脸认证</string>
+    <string name="use_photo">使用照片</string>
+    <string name="re_take_photo">重新拍照</string>
+    <string name="cloud_auth_fail">云认证失败(%s)</string>
+    <string name="face_bio_password_valid_success">验证通过</string>
+    <string name="face_bio_password_valid_failure">验证失败</string>
+    <string name="valid_login_password">验证登录密码</string>
+    <string name="valid_login_password_hint">请输入登录密码</string>
+    <string name="valid">验证</string>
+    <string name="face_bio_login">刷脸登录</string>
+</resources>

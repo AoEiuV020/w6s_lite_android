@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><!--  未实现的布局，TODO -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/about_me_title_bar"
+        layout="@layout/title_bar_main_about_me" />
+
+    <ListView
+        android:id="@+id/me_function_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_me_title_bar"
+        android:background="@color/white"
+        android:paddingBottom="30dp"
+        android:overScrollMode="never"
+        android:clipToPadding="false"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/tv_h3_ip_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/me_function_items"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/open_ip_tip"
+        android:textColor="@android:color/darker_gray"
+        style="@style/font_size_12sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+    <ImageView
+        android:id="@+id/iv_me_tab_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/me_tab_guide"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

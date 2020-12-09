@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 小红点消息数提醒布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/item_message_item_background"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@drawable/shape_message_num_bg"
+        android:gravity="center"
+        android:minWidth="20dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:id="@+id/item_message_item_unread_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="9"
+            android:textColor="#FFFFFF"
+            style="@style/font_size_tiny_12sp" />
+
+        <TextView
+            android:id="@+id/item_message_item_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-3dp"
+            android:includeFontPadding="false"
+            android:text="+"
+            android:textColor="#ffFFFFFF"
+            style="@style/font_size_tiny_12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

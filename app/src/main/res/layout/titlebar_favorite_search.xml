@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/white"
+    android:tag="c1">
+
+
+    <FrameLayout
+        android:id="@+id/fl_leftest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/title_bar_common_left_title"
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/title_common_title_back_padding"
+            android:text=""
+            android:textColor="@color/common_item_black"
+            android:visibility="gone"
+            tools:visibility="gone" />
+
+
+        <!-- 左边的APP图标 -->
+        <ImageView
+            android:id="@+id/title_bar_chat_search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_icon"
+            android:paddingLeft="@dimen/title_common_padding"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@mipmap/icon_back"
+            tools:visibility="visible" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/title_bar_chat_search_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/title_common_padding"
+        android:scaleType="center"
+        android:src="@mipmap/icon_remove"
+        tools:visibility="visible" />
+
+    <HorizontalScrollView
+        android:id="@+id/scroll_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/title_bar_chat_search_cancel"
+        android:layout_toRightOf="@id/fl_leftest"
+        android:layout_marginRight="5dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/favorite_search_tag_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/blue_lock"
+                android:gravity="center_vertical"
+                android:paddingLeft="9dp"
+                android:textSize="15sp" />
+
+            <!-- 搜索输入框 -->
+            <AutoCompleteTextView
+                android:id="@+id/title_bar_chat_search_key"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/favorite_search_tag_tv"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:hint="@string/action_search"
+                android:imeOptions="actionSearch"
+                android:paddingRight="35dp"
+                android:layout_marginLeft="9dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider_line_gray" />
+
+
+</RelativeLayout>

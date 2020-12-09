@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_item_common_selector">
+
+    <TextView
+        android:id="@+id/dialog_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/font_size_16sp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/common_text_color"
+        tools:text="忠党爱国"/>
+</LinearLayout>

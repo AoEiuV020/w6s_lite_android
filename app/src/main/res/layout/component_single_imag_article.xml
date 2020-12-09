@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 单图文的布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/single_article_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/white_round_rect_whit_5_radius"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/single_article_title"
+        style="@style/font_size_17sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_vertical"
+        android:layout_margin="10dp"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:text="感谢伟大的母亲"
+        android:textColor="@color/common_text_color" />
+
+    <!-- 时间 -->
+    <TextView
+        android:id="@+id/single_article_time"
+        style="@style/font_size_14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_vertical"
+        android:layout_marginLeft="7dp"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="05月09日 19:30"
+        android:textColor="@color/common_text_color_888"
+        android:visibility="gone" />
+
+    <!-- 封面 -->
+    <com.foreveross.atwork.utils.img.round.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/single_article_cover"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="8px" />
+
+    <!--  摘要 -->
+    <TextView
+        android:id="@+id/single_article_summary"
+        style="@style/font_size_14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/common_text_color_888" />
+
+
+    <TextView
+        android:id="@+id/single_read_article"
+        style="@style/font_size_13sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="13dp"
+        android:gravity="left|center_vertical"
+        android:text="@string/read_detailed"
+        android:textColor="@color/common_text_color" />
+
+</LinearLayout>

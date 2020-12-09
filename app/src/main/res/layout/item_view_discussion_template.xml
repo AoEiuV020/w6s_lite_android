@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="30dp"
+    android:padding="26dp"
+    android:background="@drawable/shape_pure_white_bg"
+    >
+
+    <TextView
+        android:id="@+id/tvTemplateName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="普通群"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@+id/ivTemplateCover"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/ivTemplateCover"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTemplateCover"
+        android:singleLine="true"
+        android:ellipsize="end"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tvTemplateDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text=""
+        app:layout_constraintTop_toBottomOf="@+id/ivTemplateCover"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/file_size_text_color"
+        android:maxLines="3"
+        android:ellipsize="end"
+        app:layout_constrainedWidth="true"
+        />
+
+
+
+
+    <ImageView
+        android:id="@+id/ivTemplateCover"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/fail_cover_square_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constrainedWidth="true"
+        android:scaleType="centerCrop"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

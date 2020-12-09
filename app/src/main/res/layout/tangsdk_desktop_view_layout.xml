@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tangsdk_menu_dialog_text_color"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/dtContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:id="@+id/desktopView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ActionBarHeight"
+        android:background="@color/tangsdk_menu_dialog_text_color"
+        android:alpha="0.9">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/ActionBarHeight"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/title_desktop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="5.0dip"
+                android:textColor="@color/tangsdk_title_font_color"
+                android:textSize="17sp"
+                android:text="@string/tangsdk_desktopshare_title_default"/>
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/desktop_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/tangsdk_desktop_back_btn"
+            android:layout_gravity="center_vertical"/>
+        />
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/desktop_landscape_screen_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/desktopGuideImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:src="@mipmap/tangsdk_desktopshare_guide_landscape_screen"   />
+    </RelativeLayout>
+
+</FrameLayout>

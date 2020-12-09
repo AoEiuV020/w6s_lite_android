@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/adaptive_height_52dp"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/bg_item_common_selector"
+    android:visibility="gone"
+    tools:layout_height="52dp"
+    tools:visibility="visible"
+    tools:parentTag="android.widget.RelativeLayout"
+    >
+
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/font_size_17sp"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:gravity="left|center_vertical"
+        android:minHeight="48dp"
+        android:tag="c15"
+        android:text="@string/title_group_avatar"
+        android:textColor="@color/common_list_item_left"
+        android:layout_toLeftOf="@+id/ivIcon"
+        android:singleLine="true"
+        android:ellipsize="end"
+        />
+
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/iv_discussion_info_avatar_arrow"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/iv_discussion_info_avatar_arrow"
+        style="@style/icon_arrow_chat_info"
+        android:layout_gravity="center_vertical"
+        android:tag="group_info_modify_image" />
+
+    <View
+        android:id="@+id/v_avatar_common_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="#DCDCDC" />
+
+</merge>

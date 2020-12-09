@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--网页分享弹出框-->
+    <string name="share_to_circle">Share on\n Moments</string>
+    <string name="open_by_system_explorer">Open with\n Browser</string>
+    <string name="share_to_wx">Share on\n WeChat</string>
+    <string name="share_to_wx_circle">Share on\n WeChat Mom...</string>
+    <string name="share_to_qq">Share on\n QQ</string>
+    <string name="share_to_qq_zone">Share on\n Qzone</string>
+    <string name="share_to_wb">Share on\n Weibo</string>
+
+
+    <string name="web_float">浮窗</string>
+    <string name="web_un_float">取消浮窗</string>
+    <string name="web_un_float_successfully">已取消浮窗</string>
+
+    <string name="cordova_auth_title">Request Auth"</string>
+    <string name="cordova_auth_request">The current webpage applies for access to your personal information and requires interaction with the device, please authorize</string>
+    <string name="cordova_auth_allow">Agree with that</string>
+    <string name="cordova_auth_disallow">I don\'t agree</string>
+    <string name="cordova_auth_iknow">OK,I konw that</string>
+    <string name="cordova_auth_changemind">I changed,Agree with that</string>
+    <string name="cordova_auth_disagree_tip">You are not agree this webpage access to your personal information and interaction with the device</string>
+    <string name="cordova_auth_not_allow_tip">Disabling related capabilities may cause some of the web pages to function abnormally</string>
+
+</resources>

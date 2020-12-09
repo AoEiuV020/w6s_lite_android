@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--聊天相关-->
+    <string name="unknown_message">無法顯示此訊息，你當前使用的版本暫時不支持此類型的訊息</string>
+    <string name="unknown_message_session_text">未知訊息</string>
+    <string name="file_expires">（%1$s到期）</string>
+    <string name="re_download_file">重新下載原檔案</string>
+    <string name="search_contact_group_message_app_bing">搜尋 聯絡人 聊天室 訊息 應用程式 必應消息</string>
+    <string name="search_contact_group_message_app">搜尋 聯絡人 聊天室 訊息 應用程式</string>
+    <string name="search_contact_group">搜尋 聯絡人 聊天室</string>
+    <string name="search_contact">搜索人</string>
+    <string name="search_app">搜索應用程式</string>
+    <string name="create_group_ing">正在創建聊天室</string>
+    <string name="save_to_mobile">保存到手機</string>
+    <string name="save_image_to_mobile_fail">原圖片在下載中或下載失敗，無法保存圖片</string>
+    <string name="save_image_to_mobile_success">保存圖片成功，路徑為 %1$s 目錄</string>
+    <string name="save_micro_video_to_mobile_fail">小視頻在下載中或下載失敗，無法保存圖片</string>
+    <string name="save_micro_video_to_mobile_success">保存小視頻成功，路徑為 %1$s 目錄</string>
+    <string name="network_timeout">伺服器請求超時，請稍後重試</string>
+    <string name="you">你</string>
+    <string name="romaing_messages_success">漫遊訊息成功</string>
+    <string name="chat_info_title">對話詳情</string>
+    <string name="chat_info_title_group_info">聊天資訊(%1$s人)</string>
+    <string name="chat_info_title_group_members">聊天室成員(%1$s人)</string>
+    <string name="chat_info_title_app">應用程式詳情</string>
+    <string name="send_ok">提交</string>
+    <string name="no_sim_card">確認sim卡是否插入或者sim卡暫時不可用</string>
+    <string name="call_phone">呼叫 %1$s</string>
+    <string name="group_name_not_allow_null">聊天室名稱不能為空</string>
+    <string name="confirm_resend_to_session">確定轉發到會話</string>
+    <string name="draft">[草稿]</string>
+    <string name="person">%1$s人</string>
+    <string name="confirm_delete_messages">是否刪除訊息</string>
+    <string name="voice_phone">聽筒</string>
+    <string name="voice_speak">揚聲器</string>
+    <string name="voice_translate">轉文本</string>
+    <string name="voice_show_original">收起文字</string>
+    <string name="at">[有人@我]</string>
+    <string name="emergency">[紧急呼]</string>
+    <string name="not_valid_url">不是有效的URL</string>
+    <string name="not_valid_intent">本機沒有其他應用程式可以打開該檔案</string>
+    <string name="chat_info_more">顯示更多成員</string>
+    <string name="confirm_resend_to_discussion">轉發訊息到聊天室</string>
+    <string name="feedback_num_limit">不能超過1000個字符</string>
+    <string name="network_error">網絡連接異常，請檢查網路設定</string>
+    <string name="im_connection_error">正在與伺服器連接，請稍後...</string>
+    <string name="refresh">重新整理</string>
+    <string name="send_app_to_contact">傳送給同事</string>
+    <string name="app_info">應用程式信息</string>
+    <string name="no_more_messages">沒有更多訊息</string>
+    <string name="exit_app_tip">再按一次返回桌面</string>
+    <string name="close">關閉</string>
+    <string name="file_transfer_re_send_cancel_file">重新傳送</string>
+    <string name="file_transfer_re_download_file">恢復下載</string>
+    <string name="file_transfer_status_send_cancel">已取消</string>
+    <string name="file_transfer_status_download_cancel">已取消</string>
+    <string name="latest_sessions">最近聊天</string>
+    <string name="contact_read_info">閱讀時間:%1$s</string>
+    <string name="toast_read_info">閱讀時間 (%1$s)</string>
+    <string name="search_user_too_much">結果較多，請輸入更準確的關鍵字</string>
+    <string name="contact_title">通訊錄</string>
+    <string name="contact_org_title">公司組織</string>
+    <string name="article_url_not_config">圖文訊息未配置詳細鏈接</string>
+    <string name="ok_with_num">確定(%1$s)</string>
+    <string name="new_message">新訊息</string>
+    <string name="chat_detail_tip_account_is_not_initialized">%1$s還未激活應用程式，你傳送的訊息在他登錄激活后將會收到</string>
+    <string name="first_use_undo_message">你可以回收%1$s內傳送的訊息（部分舊版本不支持這個功能）</string>
+    <string name="undo_message_expire_time">你只能撤回%1$s內傳送的訊息</string>
+    <string name="add_new_friend">新增好友</string>
+    <string name="using_send_msg">我正在使用%1$s,你只能撤回2分鐘內傳送的訊息！%2$s</string>
+    <string name="confirm_send_to_session">確定傳送到會話</string>
+    <string name="confirm_send_to_discussion">傳送訊息到聊天室</string>
+    <string name="switch_earphone_mode">已切換為聽筒播放模式</string>
+    <string name="switch_speaker_mode">已切換為揚聲器播放模式</string>
+    <string name="now_earphone_mode">當前為聽筒播放模式</string>
+    <string name="recording_slide_up_tip">手指上滑取消傳送</string>
+    <string name="recording_cancel_tip">鬆開手指取消傳送</string>
+    <string name="recording_voice_too_short">鬆開手指取消傳送</string>
+    <string name="chat_divider_tip">以上是歷史記錄</string>
+    <string name="read_detailed">檢視全文</string>
+    <string name="someone_notifies_me">[有人@你]</string>
+    <string name="file_overdue_opt_fail">原文件已失效，無法操作。</string>
+    <string name="file_overdue_preview_fail">原文件已失效，無法查看。</string>
+    <string name="until_day">%s到期</string>
+    <string name="overdued">已失效</string>
+    <string name="no_message">暫無訊息</string>
+    <string name="no_discussion">暫無聊天室</string>
+    <string name="chat_input_hint">點擊鍵入…</string>
+
+
+
+    <string name="send_to">傳送給</string>
+    <string name="send_from">來自</string>
+    <string name="system_message">系統訊息</string>
+    <string name="file_expires_tips">當前檔案已過期</string>
+    <string name="file_download_successfully_notify">%1$s 對方已成功接收文件“%2$s”</string>
+    <string name="file_download_successfully_notify_in_where">%1$s 對方已成功在%2$s接收檔案“%3$s”</string>
+
+    <string name="transfer_msg_select_one_chat">選擇一個聊天</string>
+    <string name="transfer_msg_select_multi_chat">選擇多個聊天</string>
+    <string name="select_discussions">選擇聊天室</string>
+    <string name="select_contacts">選擇通訊錄</string>
+    <string name="transfer_msg_and_create_discussion">建立新聊天</string>
+    <string name="recent_contacts">最近聯絡人</string>
+    <string name="search_select_contact_prefix">發送給%s</string>
+    <string name="search_select_contact_suffix">等%s個聯絡人</string>
+    <string name="select_contact_max_tip">最多選擇%s個聯絡人</string>
+    <string name="select_discussion_max_tip">最多選擇%s個聊天室</string>
+
+    <string name="micro_video_play_check_tip">當前非WiFi環境，播放視頻將消耗 %s 手機流量，是否繼續播放</string>
+    <string name="continue_to_play">繼續播放</string>
+
+    <string name="re_edit">重新編輯</string>
+    <string name="shield_session_unread_prefix_tag">[%s條]</string>
+    <string name="copied">已複製</string>
+
+    <string name="send_now">立即發送</string>
+    <string name="image_comment">圖文發送</string>
+
+    <string name="send_file_limit_tip">無法發送大於%s的文件</string>
+
+    <string name="more_contacts">更多聯繫人</string>
+    <string name="more_discussion">更多群組</string>
+    <string name="more_app">更多應用</string>
+    <string name="more_chat">更多聊天記錄</string>
+    <string name="more_orgs">更多組織</string>
+    <string name="more_binging_msg">更多必應消息</string>
+    <string name="more_devices">更多設備</string>
+    <string name="more_department">更多部門</string>
+    <string name="image_and_video">圖片和視頻</string>
+    <string name="contain">包含:</string>
+    <string name="relate_message_history">%s條相關聊天記錄</string>
+    <string name="messages_of_session">\"%s\"的聊天記錄</string>
+    <string name="search_chat_content">查找聊天內容</string>
+    <string name="please_search">搜索\"%s\"</string>
+    <string name="please_input_search_keyword">請輸入搜索關鍵字</string>
+    <string name="file_has_been_save">文件已保存</string>
+    <string name="please_select_media_data">請先選擇數據</string>
+    <string name="search_by_calendar">按日期查找</string>
+    <string name="media_download_tip">下載成功%s個，失敗%s個</string>
+
+    <string name="sunday">日</string>
+    <string name="monday">一</string>
+    <string name="tuesday">二</string>
+    <string name="wednesday">三</string>
+    <string name="thursday">四</string>
+    <string name="friday">五</string>
+    <string name="saturday">六</string>
+
+    <string name="discussion_member_roles_setting">成员角色设置</string>
+    <string name="project_relation">关联项目</string>
+
+    <string name="pop_phone_content">可能是一個電話號碼,你可以</string>
+    <string name="pop_call_phone">呼叫</string>
+    <string name="pop_copy_phone">複製号码</string>
+    <string name="pop_email_content">可能是一個郵箱地址，你可以</string>
+    <string name="pop_write_email">寫郵件</string>
+    <string name="pop_copy_email">複製</string>
+    <string name="pop_cancel">取消</string>
+</resources>

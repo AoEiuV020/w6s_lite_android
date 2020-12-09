@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="file_name_array">
+        <item>@string/local_file_view_item_img</item>
+        <item>@string/local_file_view_item_music</item>
+        <item>@string/local_file_view_item_video</item>
+        <item>@string/local_file_view_item_memory</item>
+    </string-array>
+
+    <integer-array name="file_icon_array">
+        <item>@mipmap/icon_abllum_android</item>
+        <item>@mipmap/icon_music_android</item>
+        <item>@mipmap/icon_vidoe_android</item>
+        <item>@mipmap/icon_rom_android</item>
+    </integer-array>
+
+    <string-array name="about_atwork_array">
+        <item>@string/check_upgrade</item>
+        <!--<item>@string/feature_introduce</item>-->
+        <item>@string/org_invite_to_share</item>
+        <item>@string/intro_friends</item>
+        <item>@string/feedback</item>
+
+    </string-array>
+
+    <string-array name="dev_mode_array">
+        <item>@string/developer_mode</item>
+        <item>@string/update_design</item>
+
+    </string-array>
+
+
+    <string-array name="org_share_invite_array">
+        <item>@string/org_share_invite_member</item>
+        <item>@string/org_qrcode_invite_member</item>
+    </string-array>
+
+    <integer-array name="org_share_invite_img_array">
+        <item>@mipmap/icon_share_org_invite</item>
+        <item>@mipmap/icon_qrcode_org_invite</item>
+    </integer-array>
+
+    <string-array name="my_dropbox_array">
+        <item>@string/my_file</item>
+        <item>@string/my_share</item>
+    </string-array>
+
+    <integer-array name="my_dropbox_img_array">
+        <item>@mipmap/icon_file_blue</item>
+        <item>@mipmap/icon_share_blue</item>
+    </integer-array>
+
+
+    <string-array name="setting_array">
+        <item>@string/push_message_setting</item>
+        <item>@string/discussion_helper</item>
+        <item>@string/change_password</item>
+        <item>@string/biometric_authentication</item>
+        <item>@string/language_setting</item>
+        <item>@string/text_size</item>
+        <item>@string/webview_float_action_helper</item>
+        <!--<item>@string/clean_messages_data</item>-->
+        <item>@string/storage_space</item>
+    </string-array>
+
+    <string-array name="gesture_code_manager_array">
+        <item>@string/open_gesture_code</item>
+        <item>@string/edit_gesture_code</item>
+    </string-array>
+
+    <integer-array name="setting_icon_array">
+        <item>@mipmap/icon_set_1</item>
+        <item>@mipmap/icon_set_3</item>
+    </integer-array>
+
+    <string-array name="dropbox_sorted_file_type">
+        <item>@string/file_doc</item>
+        <item>@string/archive</item>
+        <item>@string/image</item>
+        <item>@string/video2</item>
+        <item>@string/audio2</item>
+        <item>@string/application</item>
+        <item>@string/others</item>
+    </string-array>
+
+    <string-array name="dropbox_image_detail_more">
+        <item>@string/send_to_contact</item>
+        <item>@string/send_email</item>
+        <item>@string/rename</item>
+        <item>@string/move</item>
+        <item>@string/save_to_phone</item>
+        <item>@string/delete</item>
+    </string-array>
+
+    <string-array name="dropbox_image_detail_more_without_email">
+        <item>@string/send_to_contact</item>
+        <item>@string/rename</item>
+        <item>@string/move</item>
+        <item>@string/save_to_phone</item>
+        <item>@string/delete</item>
+    </string-array>
+
+    <string-array name="dropbox_file_detail_more">
+        <item>@string/send_email</item>
+        <item>@string/rename</item>
+        <item>@string/move</item>
+        <item>@string/file_attr</item>
+        <item>@string/delete</item>
+    </string-array>
+
+    <string-array name="dropbox_file_detail_more_without_email">
+        <item>@string/rename</item>
+        <item>@string/move</item>
+        <item>@string/file_attr</item>
+        <item>@string/delete</item>
+    </string-array>
+
+    <string-array name="dropbox_item_long_click">
+        <item>@string/send_to_contact</item>
+        <item>@string/title_share_file</item>
+        <item>@string/save_to_dropbox</item>
+        <item>@string/send_email</item>
+        <item>@string/rename</item>
+        <item>@string/move</item>
+        <item>@string/file_attr</item>
+        <item>@string/delete</item>
+    </string-array>
+
+    <string-array name="favorite_item_long_click">
+        <item>@string/tag</item>
+        <item>@string/delete_item</item>
+        <item>@string/multi_select</item>
+    </string-array>
+
+    <string-array name="dropbox_item_long_click_without_email">
+        <item>@string/send_to_contact</item>
+        <item>@string/title_share_file</item>
+        <item>@string/save_to_dropbox</item>
+        <item>@string/rename</item>
+        <item>@string/move</item>
+        <item>@string/file_attr</item>
+        <item>@string/delete</item>
+    </string-array>
+
+    <string-array name="dropbox_item_dir_long_click">
+        <item>@string/rename</item>
+        <item>@string/move</item>
+        <item>@string/delete</item>
+    </string-array>
+</resources>

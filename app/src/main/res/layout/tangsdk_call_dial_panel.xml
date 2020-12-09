@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tangsdk_bg_dark_grey"
+    android:fadingEdge="none"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ActionBarHeight"
+        android:background="@color/tangsdk_bg_dark_grey">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20.5dp"
+            android:src="@drawable/tangsdk_back_btn_selector" />
+        />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="5.0dip"
+            android:textColor="@color/tangsdk_menu_dialog_text_color"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginTop="20.0dip">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/edit_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/tangsdk_dialpad_edittext_hint"
+                android:textColor="@color/tangsdk_text_hint_grey_color"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingRight="55.0dip">
+
+                <TextView
+                    android:id="@+id/uc_phone_call_countrycode_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="44.0dip"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:textColor="@color/tangsdk_text_hint_grey_color"
+                    android:textSize="25.0sp"
+                    tools:text="+86" />
+
+                <EditText
+                    android:id="@+id/uc_phone_call_number_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:ems="10"
+                    android:focusable="true"
+                    android:gravity="left|center"
+                    android:singleLine="true"
+                    android:textColorHint="@color/tangsdk_text_hint_grey_color"
+                    android:textSize="25.0sp" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/common_button_backspace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@mipmap/tangsdk_call_dialpad_backspace_btn"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/dialpad_number_btn_area"
+        android:layout_width="300.0dip"
+        android:layout_height="300.0dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15.0dip">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/common_button_number_1"
+                    style="@style/dialpad_number_style"
+                    android:text="1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/common_button_number_2"
+                    style="@style/dialpad_number_style"
+                    android:text="2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/common_button_number_3"
+                    style="@style/dialpad_number_style"
+                    android:text="3" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/common_button_number_4"
+                    style="@style/dialpad_number_style"
+                    android:text="4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/common_button_number_5"
+                    style="@style/dialpad_number_style"
+                    android:text="5" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/common_button_number_6"
+                    style="@style/dialpad_number_style"
+                    android:text="6" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/common_button_number_7"
+                    style="@style/dialpad_number_style"
+                    android:text="7" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/common_button_number_8"
+                    style="@style/dialpad_number_style"
+                    android:text="8" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/common_button_number_9"
+                    style="@style/dialpad_number_style"
+                    android:text="9" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/common_button_star"
+                    style="@style/dialpad_number_style"
+                    android:text="*" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/common_button_number_0"
+                    style="@style/dialpad_number_style"
+                    android:text="0" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/common_button_sharp"
+                    style="@style/dialpad_number_style"
+                    android:text="#" />
+            </RelativeLayout>
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/phone_call_dial_btn"
+        android:layout_width="120.0dip"
+        android:layout_height="55.0dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20.0dp"
+        android:background="@drawable/tangsdk_callout_btn_bg"
+        android:enabled="false"
+        android:gravity="center"
+        android:padding="10.0dip"
+        android:text="@string/tangsdk_start_call_btn_text"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

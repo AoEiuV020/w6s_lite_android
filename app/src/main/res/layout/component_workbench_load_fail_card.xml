@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="50dp"
+    android:paddingTop="50dp">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/workbench_loaded_fail"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+    <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_loaded_fail"
+        android:textColor="@color/common_text_color"
+        android:textSize="?attr/fontsize_14sp"
+        tools:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+        android:id="@+id/tvCardRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_blue_workbench_custom_sort_btn_bg"
+        android:drawableLeft="@mipmap/icon_card_refresh"
+        android:drawablePadding="10dp"
+        android:paddingBottom="7dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="7dp"
+        android:text="@string/card_click_to_refresh"
+        android:textColor="@color/white"
+        android:textSize="?attr/fontsize_14sp"
+        tools:textSize="14sp"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/adaptive_height_50dp"
+    tools:layout_height="50dp"
+    android:background="@drawable/bg_item_common_selector">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/font_size_16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="7dp"
+        android:layout_toRightOf="@id/common_icon"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:tag="c15"
+        android:text="Name"
+        android:textColor="@color/common_text_color" />
+
+
+    <ImageView
+        android:id="@+id/arrow_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:background="@mipmap/icon_selected_tick"
+        tools:visibility="visible" />
+
+
+    <ImageView
+        android:id="@+id/iv_line_item_common"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_11"
+        android:layout_marginRight="@dimen/dp_11"
+        android:layout_marginTop="10dp"
+        android:background="@color/common_line_color"
+
+        />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_linear_chat_select_dialog"
+    android:layout_width="60dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_weight="1"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/bg_chat_select_dialog">
+    <ImageView
+        android:id="@+id/iv_dialog_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_call_attention"
+        android:scaleType="center"/>
+
+    <TextView
+        android:id="@+id/dialog_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/font_size_13sp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#f4f4f4"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="忠党爱国"
+        android:paddingTop="@dimen/dp_5"/>
+</LinearLayout>

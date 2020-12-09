@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LOGIN -->
+    <string name="login_user_name">Please enter account</string>
+    <string name="login_password">Please enter at least 6-digit password</string>
+    <string name="login_text">Log in</string>
+    <string name="login_register">Sign Up</string>
+    <string name="login_with_sms_code">Forgot Password</string>
+    <string name="copyright_name">WorkPlus</string>
+    <string name="copyright_name_web_site">www.workplus.io</string>
+    <string name="please_input_password">Enter Password</string>
+    <string name="please_input_secure_code">Secure Code</string>
+    <string name="account_password_invalid">Wrong username or password，please re-enter</string>
+    <string name="switch_account">Switch Account</string>
+    <string name="login_copyright_text"></string>
+    <string name="cannot_login">cannot login?</string>
+    <string name="forget_pwd">Forget password</string>
+    <string name="forget_username">forget username</string>
+
+    <string name="msg_sync_setting">Pull message settings</string>
+    <string name="fetch_all_msgs_since_log_out">Pull messages according to the system default policy</string>
+    <string name="only_fetch_recent_msgs">Pull messages from the last %s days</string>
+    <string name="set_only_fetch_recent_msgs_alert">Changing the message synchronization settings will affect the continuity and completeness of the session messages. You can solve the corresponding session problems through message roaming in the session details page.</string>
+    <string name="msg_sync_setting_friendly_tip">The default policy: \nThe new device will sync messages for 7 days. Old devices will synchronize all unfetched messages. \n\nPrecautions:\nChanging the message synchronization settings may result in incomplete message logging！</string>
+
+    <string name="select_login_method_content">The system detects that the account can be logged in using the brush. Please manually select the login method.</string>
+    <string name="login_use_password">Password Login</string>
+    <string name="login_user_face_bio">Go to brush face</string>
+
+    <string name="please_select_domain">Select Domain</string>
+</resources>

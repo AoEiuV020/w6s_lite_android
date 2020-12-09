@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--网页分享弹出框-->
+    <string name="share_to_circle">分享到\n我的圈子</string>
+    <string name="open_by_system_explorer">在瀏覽器中\n開啟</string>
+    <string name="share_to_wx">分享到WeChat</string>
+    <string name="share_to_wx_circle">分享到WeChat\n朋友圈</string>
+    <string name="share_to_qq">分享到QQ</string>
+    <string name="share_to_qq_zone">分享到Qzone</string>
+    <string name="share_to_wb">分享到微博</string>
+
+
+    <string name="web_float">浮窗</string>
+    <string name="web_un_float">取消浮窗</string>
+    <string name="web_un_float_successfully">已取消浮窗</string>
+
+    <string name="cordova_auth_title">授權請求</string>
+    <string name="cordova_auth_request">當前網頁申請訪問您的個人信息及要求與設備交互,請授權​​</string>
+    <string name="cordova_auth_allow">同意授權</string>
+    <string name="cordova_auth_disallow">拒絕授權</string>
+    <string name="cordova_auth_iknow">我知道了</string>
+    <string name="cordova_auth_changemind">授權给此網頁</string>
+    <string name="cordova_auth_disagree_tip">您已禁止當前網頁訪問您的個人信息及與手機交互的能力</string>
+    <string name="cordova_auth_not_allow_tip">禁用相關能力可能導致網頁部分功能不正常</string>
+
+
+</resources>

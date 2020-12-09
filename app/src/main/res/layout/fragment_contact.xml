@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 通讯录界面 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fl_title_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/contact_main_title_bar"
+                layout="@layout/title_bar_main_new" />
+
+            <include
+                android:id="@+id/contact_common_title_bar"
+                layout="@layout/title_bar_common"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <ListView
+            android:id="@+id/contact_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/fl_title_area"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:listSelector="@android:color/transparent"
+            android:paddingBottom="30dp" />
+
+        <com.foreveross.atwork.modules.contact.component.SimpleModeSideBar
+            android:id="@+id/sidebar"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/fl_title_area"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="80dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+
+        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+            android:id="@+id/tv_slide_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/sidebar"
+            android:background="@mipmap/bg_side_slide"
+            android:text="A"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="28sp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_below="@+id/fl_title_area"
+            />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

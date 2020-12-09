@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="vertical"
+    android:background="#f7f7f7">
+
+    <TextView
+        android:id="@+id/download_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pause"
+        style="@style/font_size_12sp"
+        android:drawableTop="@mipmap/file_pause_download"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:gravity="center"
+        android:tag="c4"
+        android:textColor="@color/blue_lock"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
+
+    <TextView
+        android:id="@+id/download_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下载中"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        style="@style/font_size_14sp"
+        android:textColor="@color/dropbox_hint_text_color"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_toLeftOf="@id/download_pause"
+        android:layout_height="match_parent"
+        android:background="@color/common_line_color"/>
+</RelativeLayout>

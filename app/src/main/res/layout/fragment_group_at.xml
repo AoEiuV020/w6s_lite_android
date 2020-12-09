@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- 群组@功能  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/group_at_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:tag="c1">
+        <!-- 左边的APP图标 -->
+        <ImageView
+            android:id="@+id/discussion_at_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/title_common_padding"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:src="@mipmap/icon_back" />
+
+        <!-- 名称，当天聊天界面的名称 -->
+        <TextView
+            android:id="@+id/discussion_at_title"
+            style="@style/font_size_18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/discussion_at_back"
+            android:singleLine="true"
+            android:text="@string/group_at_title"
+            android:textColor="@color/common_item_black" />
+
+        <TextView
+            android:id="@+id/discussion_at_select_all"
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center|center_vertical"
+            android:minWidth="50dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="@dimen/title_common_padding"
+            android:paddingTop="5dp"
+            android:text="@string/select_all"
+            android:textColor="@color/common_item_black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/group_at_select_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray" />
+
+        <Button
+            android:id="@+id/discussion_at_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg_submit_green_selector"
+            android:gravity="center|center_vertical"
+            android:minWidth="50dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="8dp"
+            android:text="@string/ok"
+            android:textColor="@color/white" />
+        <!--android:background="@mipmap/btn_submit_hover"-->
+
+        <!-- 选择的人员头像-->
+        <com.foreveross.atwork.modules.group.component.HorizontalListView
+            android:id="@+id/discussion_at_select_head"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/discussion_at_ok">
+
+        </com.foreveross.atwork.modules.group.component.HorizontalListView>
+
+
+    </RelativeLayout>
+
+    <!-- 人员列表 -->
+    <ListView
+        android:id="@+id/discussion_at_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/group_at_select_head_layout"
+        android:layout_below="@id/group_at_title_bar"
+        android:background="#E9ECF1"
+        android:divider="@null">
+
+    </ListView>
+
+
+</RelativeLayout>

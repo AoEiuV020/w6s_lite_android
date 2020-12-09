@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--通讯录相关页面-->
+    <string name="ask_to_sync_contact_to_mobile">確定要同步至手機通訊錄？</string>
+    <string name="syncing_contact">正在同步通訊錄...</string>
+    <string name="sync_check_fail_record">檢視失敗記錄</string>
+    <string name="sync_finish">同步完成(成功%1$s條,失敗%2$s條)</string>
+    <string name="sync_success">同步成功</string>
+    <string name="sync_fail">同步失敗</string>
+    <string name="sync_fail_record">同步失敗記錄(%1$s)</string>
+    <string name="contact_search_show_title">聯絡人</string>
+    <string name="sync_max_alert">同步聯絡人人數已達上限，無法添加</string>
+    <string name="this_message_source">該訊息來自:</string>
+    <string name="wechat_emp_no">來自WeChat企業號</string>
+    <string name="my_service_app">服務號</string>
+
+    <string name="switch_contact_view_show_mode">切換通訊錄的顯示樣式</string>
+    <string name="classic_version">經典版</string>
+    <string name="simple_version">簡潔版</string>
+
+</resources>

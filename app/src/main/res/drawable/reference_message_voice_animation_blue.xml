@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@mipmap/reference_voice_play_animation0_blue"
+        android:duration="200" />
+    <item
+        android:drawable="@mipmap/reference_voice_play_animation1_blue"
+        android:duration="200" />
+    <item
+        android:drawable="@mipmap/reference_voice_play_animation2_blue"
+        android:duration="200" />
+
+
+</animation-list>

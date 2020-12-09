@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/v_title_bar"
+        layout="@layout/title_bar_search" />
+
+    <com.foreveross.atwork.layout.KeyboardRelativeLayout
+        android:id="@+id/rl_search_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/v_title_bar"
+        android:layout_marginLeft="@dimen/title_common_padding"
+        android:layout_marginRight="@dimen/title_common_padding"
+        android:visibility="visible"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_search_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/search_tip"
+            android:textColor="@color/common_text_color_999"
+            android:textSize="?attr/fontsize_12sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_welcome_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_search_tip">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <com.foreveross.atwork.modules.search.component.searchVoice.SearchVoiceFloatView
+            android:id="@+id/v_search_voice_float_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+
+    </com.foreveross.atwork.layout.KeyboardRelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/v_title_bar"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/v_tabLayout_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#dcdcdc" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vp_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/chat_detail_bg" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_no_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_title_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_no_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/search_no_result_new" />
+
+        <TextView
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/search_no_result"
+            android:textColor="@color/common_gray_bg" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

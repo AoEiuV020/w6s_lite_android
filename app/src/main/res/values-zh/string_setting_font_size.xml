@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--修改字体大小-->
+    <string name="text_size">字体大小</string>
+    <string name="set_text_size">设置字体大小</string>
+    <string name="preview_text_size">预览字体大小</string>
+    <string name="preview_text_size2">拖动下面的滑块，可以设置字体大小</string>
+    <string name="preview_text_size3">设置后，会改变聊天，菜单的字体大小。如果在使用过程中存在问题或意见，可反馈给管理员。</string>
+    <string name="standar">标准</string>
+    <string name="Aa">Aa</string>
+
+    <string name="font_size_sync_webview">同步设置网页字体大小</string>
+    <string name="open_font_size_sync_webview_successfully">开启同步设置成功</string>
+    <string name="close_font_size_sync_webview_successfully">关闭同步设置成功</string>
+    <string name="webview_text_size_modify_warn_tip">网页字体大小已同步读取系统字体大小，不允许单独修改。你可以在[我]-[设置]-[通用]-[字体大小]中调整系统字体大小或者关闭同步设置。</string>
+</resources>

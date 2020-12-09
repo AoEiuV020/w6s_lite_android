@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/fl_action_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        >
+
+        <View
+            android:id="@+id/v_circle_bg"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_webview_float_action_back_bg" />
+
+
+        <com.foreveross.atwork.modules.web.view.DonutProgress
+            android:id="@+id/v_circle_progress"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center"
+            custom:donut_background_color="@color/transparent"
+            custom:donut_circle_starting_degree="270"
+            custom:donut_finished_color="#e52f2f"
+            custom:donut_finished_stroke_width="3dp"
+            custom:donut_unfinished_stroke_width="0dp"
+            custom:donut_progress="0"
+            custom:donut_show_text="false"
+            custom:donut_unfinished_color="@color/transparent" />
+
+
+        <ImageView
+            android:id="@+id/iv_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/webview_float_back" />
+
+    </FrameLayout>
+
+
+</FrameLayout>

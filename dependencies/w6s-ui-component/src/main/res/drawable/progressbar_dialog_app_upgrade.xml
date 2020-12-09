@@ -1,0 +1,28 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 背景图片 -->
+    <item android:id="@android:id/background">
+        <clip>
+            <shape>
+                <corners android:radius="0dip" />
+
+                <gradient
+                    android:endColor="@color/common_progress_background_color"
+                    android:startColor="@color/common_progress_background_color" />
+            </shape>
+        </clip>
+    </item>
+    <!-- 进度图片 -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="0dip" />
+
+                <gradient
+                    android:endColor="@color/common_progress_color"
+                    android:startColor="@color/common_progress_color" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

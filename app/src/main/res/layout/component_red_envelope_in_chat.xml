@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.foreverht.workplus.ui.component.foregroundview.ForegroundRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_content_root"
+    android:layout_width="100dp"
+    android:layout_height="125dp"
+    >
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="125dp"
+        android:src="@mipmap/red_envelope_chat_bg"
+        />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/icon_logo_grab_red_envelope"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_congratulations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_handle_red_envelope"
+        android:layout_below="@+id/iv_icon"
+        android:layout_centerHorizontal="true"
+        android:textSize="14sp"
+        android:textColor="@color/wallet_light_golden"
+        android:ellipsize="end"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:maxLines="2"
+        android:gravity="center_vertical"
+        android:text=""
+        />
+
+    <TextView
+        android:id="@+id/tv_handle_red_envelope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/click_to_gain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.6"
+        />
+
+</com.foreverht.workplus.ui.component.foregroundview.ForegroundRelativeLayout>

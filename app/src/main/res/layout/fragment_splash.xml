@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 启动页 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_root_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/login_bg_color"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+
+        <ImageView
+            android:id="@+id/splash_app_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="168dp"
+            android:background="@mipmap/splash_body" />
+
+
+        <ImageView
+            android:id="@+id/iv_splash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/splash_image_bg"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+
+        <!-- 版本信息 -->
+        <TextView
+            android:id="@+id/company_copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="@string/copyright_name"
+            android:textColor="@color/splash_bottom_text_white"
+            android:textSize="11sp"
+            android:lineSpacingExtra="3dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/copyright_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="18dp"
+            android:gravity="center"
+            android:src="@mipmap/icon_copyright"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

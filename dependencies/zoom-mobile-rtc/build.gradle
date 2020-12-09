@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode 30
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+
+        abortOnError false
+
+        // if true, only report errors
+        ignoreWarnings true
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+
+}
+
+repositories {
+    flatDir {
+        dirs'libs'
+    }
+    mavenCentral()
+}
+
+
+
+dependencies {
+    implementation(name: 'zoomcommonlib', ext: 'aar')
+    implementation(name: 'zoommobilertc', ext: 'aar')
+    implementation project(':dependencies:infrastructure')
+}

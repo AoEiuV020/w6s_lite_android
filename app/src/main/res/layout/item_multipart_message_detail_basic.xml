@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/ivChatLeftAvatar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_toRightOf="@+id/ivChatLeftAvatar">
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/font_size_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/tvTime"
+            android:text="Curry"
+            android:textColor="@color/common_text_color_999" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            style="@style/font_size_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="6-3 11:1"
+            android:textColor="@color/common_text_color_999" />
+
+
+
+        <FrameLayout
+            android:id="@+id/flCarrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            >
+
+
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/vBottomLine"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/flCarrier"
+            android:layout_marginTop="20dp"
+            android:background="#dbdbdb" />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

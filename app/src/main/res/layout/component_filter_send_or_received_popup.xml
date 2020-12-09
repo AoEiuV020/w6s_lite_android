@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_70"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_4"
+        android:background="@drawable/shape_bing_list_select_bar_outter_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_send_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_send_item"
+                style="@style/font_size_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="2dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/from_sending"
+                android:textColor="@color/bing_tab_select_item" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_receive_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_receive_item"
+                style="@style/font_size_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="2dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/from_receiving"
+                android:textColor="@color/bing_tab_select_item" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_all_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_all_item"
+                style="@style/font_size_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="2dp"
+                android:background="@drawable/shape_bing_list_select_bar_item_bg"
+                android:gravity="center"
+                android:text="@string/all"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

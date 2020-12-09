@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 选择图片 -->
+    <string name="file_download_file">下载文件</string>
+    <string name="file_transfer_download_file">原文件：%s</string>
+    <string name="all_images">所有图片</string>
+    <string name="all_medias">图片和视频</string>
+    <string name="file_transfer_open_with_others">用其他方式打开</string>
+    <string name="preview">预览</string>
+    <string name="preview_file_in_detail_view">预览</string>
+    <string name="select_image">选择图片</string>
+    <string name="images_loading">图片加载中,请稍后...</string>
+    <string name="file_transfer_re_send_file">重新发送</string>
+    <string name="file_transfer_file_title">文件详情</string>
+    <string name="file_transfer_status_not_send">未发送</string>
+    <string name="file_transfer_status_sended">已发送</string>
+    <string name="file_transfer_status_sending">发送中</string>
+    <string name="file_transfer_status_send_fail">发送失败</string>
+    <string name="file_transfer_status_not_download">未下载</string>
+    <string name="file_transfer_status_downloading">下载中</string>
+    <string name="file_transfer_status_downloaded">已下载</string>
+    <string name="file_transfer_status_download_fail">下载失败</string>
+    <string name="file_transfer_status_download_success">下载成功</string>
+    <string name="file_not_exists">未找到文件，可能已经被删除</string>
+    <string name="not_allowed_cancel">无法取消</string>
+    <string name="download_file_fail">从服务器下载文件失败</string>
+    <string name="not_allowed_download">数据错误，无法下载</string>
+    <string name="total_page">%s张</string>
+    <string name="orig_size">原图(%s)</string>
+    <string name="original_img">原图</string>
+    <string name="select">选择</string>
+    <string name="cannot_preview_img">只有选择图片后才能预览...</string>
+    <string name="cannot_preview_media">只有选择图片或视频后才能预览...</string>
+    <string name="cannot_select_full_img">只有选择图片后才能勾选原图发送...</string>
+    <string name="full_img_size_limit">原图大小超过%s，无法发送...</string>
+    <string name="compressing">图片压缩中...</string>
+    <string name="max_select_images">最多选择%s张图片</string>
+    <string name="max_select_media">最多选择%s张图片或视频</string>
+    <string name="max_single_select_image_size">单张图片不能超过%s</string>
+    <string name="max_total_select_image_size">选择的图片总大小不能超过%s</string>
+    <string name="select_video_duration_max">无法分享超过5分钟的影片</string>
+
+</resources>

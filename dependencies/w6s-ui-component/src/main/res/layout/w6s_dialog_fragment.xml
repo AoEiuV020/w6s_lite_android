@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/transparent_70"
+    android:gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_pure_white_bg"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="left|center"
+            android:textColor="@color/common_text_color"
+            android:textSize="18sp"
+            android:text="对话框的标题"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="gone"/>
+
+        <com.foreverht.workplus.ui.component.scrollView.MaxHeightSwitchOrgScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.AppCompat.Light"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_item_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_height="300dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </com.foreverht.workplus.ui.component.scrollView.MaxHeightSwitchOrgScrollView>
+    </LinearLayout>
+
+</LinearLayout>

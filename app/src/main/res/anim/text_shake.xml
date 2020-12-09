@@ -1,0 +1,5 @@
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="600"
+    android:fromXDelta="0"
+    android:toXDelta="20"
+    android:interpolator="@anim/text_cycle"/>

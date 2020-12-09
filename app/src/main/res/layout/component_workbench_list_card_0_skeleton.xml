@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/rlSkeleton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:visibility="invisible"
+        android:paddingTop="16dp"
+        >
+
+        <include
+            android:id="@+id/v_shadow0"
+            layout="@layout/component_workbench_item_list_0_skeleton" />
+
+        <include
+            android:id="@+id/v_shadow1"
+            layout="@layout/component_workbench_item_list_0_skeleton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v_shadow0" />
+
+        <include
+            android:id="@+id/v_shadow2"
+            layout="@layout/component_workbench_item_list_0_skeleton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v_shadow1" />
+
+
+        <include
+            android:id="@+id/tvCardRefresh"
+            layout="@layout/component_workbench_card_click_refresh_btn"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_data_temp"
+        android:textColor="@color/common_text_color_999"
+        android:textSize="?attr/fontsize_12sp"
+        tools:textSize="12sp"
+        android:visibility="gone"
+        tools:visibility="visible"
+
+        />
+
+
+</RelativeLayout>

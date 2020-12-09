@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="adaptive_height_style">
+        <attr name="adaptive_height_40dp" format="dimension"/>
+        <attr name="adaptive_height_48dp" format="dimension"/>
+        <attr name="adaptive_height_50dp" format="dimension"/>
+        <attr name="adaptive_height_52dp" format="dimension"/>
+        <attr name="adaptive_height_60dp" format="dimension"/>
+        <attr name="adaptive_height_67dp" format="dimension"/>
+        <attr name="adaptive_height_70dp" format="dimension"/>
+        <attr name="adaptive_height_90dp" format="dimension"/>
+    </declare-styleable>
+
+</resources>

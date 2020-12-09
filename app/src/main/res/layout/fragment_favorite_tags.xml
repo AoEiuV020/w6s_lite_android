@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/favorite_common_page_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar_favorite_tags"
+        layout="@layout/title_bar_common" />
+
+    <com.foreveross.atwork.component.scrollView.FullHeightScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.zhy.view.flowlayout.FlowLayout
+                android:id="@+id/edit_tag_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/font_size_12sp"
+                android:textColor="@color/common_text_color_999"
+                android:text="@string/make_tag_tip"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"/>
+
+            <include
+                android:id="@+id/my_tag_layout"
+                layout="@layout/component_favorite_all_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp" />
+
+        </LinearLayout>
+
+    </com.foreveross.atwork.component.scrollView.FullHeightScrollView>
+
+</LinearLayout>

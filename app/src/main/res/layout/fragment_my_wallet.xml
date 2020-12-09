@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/my_wallet_header_background">
+
+        <RelativeLayout
+            android:id="@+id/rl_title_bar_inner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="43dp">
+
+            <ImageView
+                android:id="@+id/title_bar_common_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_icon"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/title_common_padding"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:src="@mipmap/icon_back" />
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/title_common_title_back_padding"
+                android:layout_toRightOf="@+id/title_bar_common_back"
+                android:text="@string/wallet"
+                android:textColor="@color/wallet_text_red"
+                android:textSize="?attr/fontsize_18sp"
+                tools:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_help_doc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/title_common_title_back_padding"
+                android:layout_alignParentRight="true"
+                android:text="@string/help_doc"
+                android:textColor="@color/wallet_text_red"
+                android:textSize="?attr/fontsize_13sp"
+                tools:textSize="13sp"
+                android:background="@drawable/shape_asset_doc_help_bg"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_wallet_functions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title_bar"
+        android:overScrollMode="never"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>

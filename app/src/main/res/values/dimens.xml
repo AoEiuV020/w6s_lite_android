@@ -1,0 +1,162 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Common -->
+    <dimen name="text_size_tab_bottom">11sp</dimen>
+    <dimen name="text_size_hint">12sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_important">16sp</dimen>
+    <dimen name="text_size_tab_title">16sp</dimen>
+    <dimen name="text_size_title">16sp</dimen>
+    <dimen name="contact_name_size_title">18sp</dimen>
+    <dimen name="common_contact_item_img_size">45dp</dimen>
+    <dimen name="common_contact_item_big_title_size">17sp</dimen>
+    <dimen name="common_contact_item_height">60dp</dimen>
+    <dimen name="common_contact_narrow_item_height">52dp</dimen>
+    <dimen name="chat_info_list_divider_height">10dp</dimen>
+    <dimen name="common_list_divider_height">20dp</dimen>
+    <dimen name="common_list_with_text_divider_height">24dp</dimen>
+    <dimen name="contact_avatar_size">45dp</dimen>
+    <dimen name="contact_narrow_avatar_size">36dp</dimen>
+    <dimen name="common_chat_detail_line_spacing_extra">2sp</dimen>
+
+    <!-- pull refresh -->
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="activity_base_right_icon_width">55dp</dimen>
+    <dimen name="activity_base_head_height">48dp</dimen>
+    
+    <dimen name="chat_item_photo_padding_left">10dp</dimen>
+    <dimen name="chat_item_photo_padding_right">5dp</dimen>
+    <dimen name="chat_item_photo_padding_top">5dp</dimen>
+    <dimen name="chat_item_photo_padding_bottom">5dp</dimen>
+    
+    <dimen name="tree_view_item_padding">20dp</dimen>
+    <dimen name="tree_view_item_offset_padding">6dp</dimen>
+    <dimen name="alphabet_text_size">14sp</dimen>
+    
+    <dimen name="item_message_item_height">67dp</dimen>
+    <dimen name="item_group_item_height">50dp</dimen>
+    <dimen name="chat_file_icon_size">50dp</dimen>
+    <dimen name="chat_photo_thumb_width">80dp</dimen>
+    <dimen name="chat_photo_thumb_height">80dp</dimen>
+    
+    <dimen name="group_avatar_size">25dp</dimen>
+    
+    <dimen name="setting_item_normal_height">50dp</dimen>
+    <dimen name="setting_item_padding_left">18dp</dimen>
+    <dimen name="setting_item_padding_right">12dp</dimen>
+
+    <dimen name="ActionBarHeight">44dip</dimen>
+
+    <dimen name="sp_11">11sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_24">24sp</dimen>
+    <dimen name="sp_30">30sp</dimen>
+    
+    <dimen name="dp_m_207">-207dp</dimen>
+    <dimen name="dp_m_170">-170dp</dimen>
+    <dimen name="dp_m_157">-157dp</dimen>
+    <dimen name="dp_m_153">-153dp</dimen>
+    <dimen name="dp_m_72">-72dp</dimen>
+    <dimen name="dp_m_19">-19dp</dimen>
+    <dimen name="dp_m_14">-14dp</dimen>
+    <dimen name="dp_m_10">-10dp</dimen>
+    <dimen name="dp_m_9">-9dp</dimen>
+    <dimen name="dp_m_6">-6dp</dimen>
+    <dimen name="dp_m_4">-4dp</dimen>
+    <dimen name="dp_0">0dp</dimen>
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_3">3dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_7">7dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_11">11dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_13">13dp</dimen>
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_17">17dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_28">28dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_31">31dp</dimen>
+    <dimen name="dp_33">33dp</dimen>
+    <dimen name="dp_34">34dp</dimen>
+    <dimen name="dp_35">35dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_44">44dp</dimen>
+    <dimen name="dp_45">45dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_51">51dp</dimen>
+    <dimen name="dp_52">52dp</dimen>
+    <dimen name="dp_54">54dp</dimen>
+    <dimen name="dp_55">55dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+    <dimen name="dp_70">70dp</dimen>
+    <dimen name="dp_72">72dp</dimen>
+    <dimen name="dp_73">73dp</dimen>
+    <dimen name="dp_78">78dp</dimen>
+    <dimen name="dp_75">75dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_83">83dp</dimen>
+    <dimen name="dp_87">87dp</dimen>
+    <dimen name="dp_90">90dp</dimen>
+    <dimen name="dp_98">98dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_102">102dp</dimen>
+    <dimen name="dp_122">122dp</dimen>
+    <dimen name="dp_110">110dp</dimen>
+    <dimen name="dp_111">111dp</dimen>
+    <dimen name="dp_130">130dp</dimen>
+    <dimen name="dp_134">134dp</dimen>
+    <dimen name="dp_160">160dp</dimen>
+    <dimen name="dp_175">175dp</dimen>
+    <dimen name="dp_176">176dp</dimen>
+    <dimen name="dp_184">184dp</dimen>
+    <dimen name="dp_200">200dp</dimen>
+    <dimen name="dp_222">222dp</dimen>
+    <dimen name="dp_240">240dp</dimen>
+    <dimen name="dp_270">270dp</dimen>
+    <dimen name="dp_278">278dp</dimen>
+    <dimen name="dp_300">300dp</dimen>
+    <dimen name="dp_333">333dp</dimen>
+    <dimen name="dp_465">465dp</dimen>
+    <dimen name="dp_480">480dp</dimen>
+    <dimen name="dp_490">490dp</dimen>
+    <dimen name="dp_505">505dp</dimen>
+    <dimen name="dp_515">515dp</dimen>
+    <dimen name="dp_530">530dp</dimen>
+    <dimen name="dp_555">555dp</dimen>
+    <dimen name="dp_560">560dp</dimen>
+
+    <!--voip-->
+    <dimen name="small_video_video_width">560dp</dimen>
+    <dimen name="voip_control_btn_width">37dp</dimen>
+
+    <dimen name="title_common_padding">16dp</dimen>
+    <dimen name="common_select_item_width">20dp</dimen>
+    <dimen name="title_common_title_back_padding">6dp</dimen>
+    <dimen name="title_common_title_main_size">18sp</dimen>
+
+    <dimen name="common_message_content_gap">5dp</dimen>
+    <dimen name="common_message_content_divider">20dp</dimen>
+
+    <!--list-->
+    <dimen name="list_common_padding">26dp</dimen>
+    <dimen name="list_common_text_size">14sp</dimen>
+
+    <dimen name="title_account_title_main_size">19dp</dimen>
+    <dimen name="title_account_padding">20dp</dimen>
+</resources>

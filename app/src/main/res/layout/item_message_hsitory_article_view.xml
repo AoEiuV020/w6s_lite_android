@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_toLeftOf="@+id/ivCover"
+        android:textSize="?attr/fontsize_14sp"
+        tools:textSize="14sp"
+        tools:text="11"
+        android:layout_above="@+id/tvTime"
+        android:layout_alignTop="@+id/ivCover"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:gravity="center_vertical"
+        android:textColor="@color/common_text_color"
+        />
+
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/loading_cover_size" />
+
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivCover"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/common_gray_bg"
+        android:textSize="?attr/fontsize_12sp"
+        tools:textSize="12sp"
+        tools:text="2018年4月1日"
+
+
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/ivCover"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/message_history_bottom_line_gray" />
+
+</RelativeLayout>

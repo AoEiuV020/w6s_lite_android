@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--聊天相关-->
+    <string name="unknown_message">This version does not support viewing the message type, please upgrade the version after the view</string>
+    <string name="unknown_message_session_text">Unknown Message</string>
+    <string name="file_expires">(%1$s expires）</string>
+    <string name="re_download_file">Re-download the original file</string>
+    <string name="search_contact_group_message_app_bing">Search contact group message application Must-reply message</string>
+    <string name="search_contact_group_message_app">Search contact group message application</string>
+    <string name="search_contact_group">Search contact group</string>
+    <string name="search_contact">Search contact</string>
+    <string name="search_app">Search application</string>
+    <string name="create_group_ing">Creating group</string>
+    <string name="save_to_mobile">Save to phone</string>
+    <string name="save_image_to_mobile_fail">The original image was downloaded or download failed , could not save the picture</string>
+    <string name="save_image_to_mobile_success">Save the image successfully with the path %1$s </string>
+    <string name="save_micro_video_to_mobile_fail">The original sight was downloaded or download failed , could not save the picture</string>
+    <string name="save_micro_video_to_mobile_success">Save the sight successfully with the path %1$s </string>
+    <string name="network_timeout">The server request timed out. Please try again later</string>
+    <string name="you">you</string>
+    <string name="romaing_messages_success">Roaming message is successful</string>
+    <string name="chat_info_title">Details</string>
+    <string name="chat_info_title_group_info">Group(%1$s people)</string>
+    <string name="chat_info_title_group_members">Members(%1$s people)</string>
+    <string name="chat_info_title_app">Details</string>
+    <string name="send_ok">Submit</string>
+    <string name="no_sim_card">Make sure the sim card is inserted or the sim card is not available</string>
+    <string name="call_phone">Call %1$s</string>
+    <string name="group_name_not_allow_null">Group name can not be empty</string>
+    <string name="confirm_resend_to_session">OK to forward to chat</string>
+    <string name="draft">[Draft]</string>
+    <string name="person">%1$s people</string>
+    <string name="confirm_delete_messages">Are you sure to delete the message</string>
+    <string name="voice_phone">handset</string>
+    <string name="voice_speak">speakers</string>
+    <string name="voice_translate">Audio to text</string>
+    <string name="voice_show_original">Audio Only</string>
+    <string name="at">[You were mentioned]</string>
+    <string name="emergency">[紧急呼]</string>
+    <string name="not_valid_url">No valid URL</string>
+    <string name="not_valid_intent">Can not find an application that can open the file</string>
+    <string name="chat_info_more">More</string>
+    <string name="confirm_resend_to_discussion">Forward messages to groups</string>
+    <string name="feedback_num_limit">You can enter up to 1000 characters</string>
+    <string name="network_error">Unable to access server，check network</string>
+    <string name="im_connection_error">Connecting to the server, please wait...</string>
+    <string name="refresh">Refresh</string>
+    <string name="send_app_to_contact">Sent to colleagues</string>
+    <string name="app_info">Application info</string>
+    <string name="no_more_messages">No more news</string>
+    <string name="exit_app_tip">Press again to exit the application</string>
+    <string name="close">Close</string>
+    <string name="file_transfer_re_send_cancel_file">Resend</string>
+    <string name="file_transfer_re_download_file">Resume download</string>
+    <string name="file_transfer_status_send_cancel">Cancelled</string>
+    <string name="file_transfer_status_download_cancel">Cancelled</string>
+    <string name="latest_sessions">Recent messages</string>
+    <string name="contact_read_info">Reading time:%1$s</string>
+    <string name="toast_read_info">Reading time (%1$s)</string>
+    <string name="search_user_too_much">More results, please enter more accurate keywords</string>
+    <string name="contact_title">Contacts</string>
+    <string name="contact_org_title">Org</string>
+    <string name="article_url_not_config">The graphic message is not configured with a detailed URL</string>
+    <string name="ok_with_num">OK(%1$s)</string>
+    <string name="new_message">New message</string>
+    <string name="chat_detail_tip_account_is_not_initialized">%1$s has not used the application, the message you send will be accepted after he logs in</string>
+    <string name="first_use_undo_message">You can recall the message within %1$s (this function is not supported on older versions)</string>
+    <string name="undo_message_expire_time">You can recall the message you send within %1$s</string>
+    <string name="add_new_friend">Add Contacts</string>
+    <string name="using_send_msg">I am using %1$s, join us now！%2$s</string>
+    <string name="confirm_send_to_session">OK to send to session</string>
+    <string name="confirm_send_to_discussion">Send a message to a group</string>
+    <string name="switch_earphone_mode">Has switched to handset playback mode</string>
+    <string name="switch_speaker_mode">Has switched to speaker playback mode</string>
+    <string name="now_earphone_mode">Currently playing for handset mode</string>
+    <string name="recording_slide_up_tip">Slide up to cancel</string>
+    <string name="recording_cancel_tip">Slide up to cancel</string>
+    <string name="recording_voice_too_short">Message too short </string>
+    <string name="chat_divider_tip">The above is a history</string>
+    <string name="read_detailed">View full text</string>
+    <string name="someone_notifies_me">[You were mentioned]</string>
+    <string name="file_overdue_opt_fail">The original file has expired and can not be operated.</string>
+    <string name="file_overdue_preview_fail">The original file has expired and can not be viewed.</string>
+    <string name="until_day">%s expires</string>
+    <string name="overdued">expired</string>
+    <string name="no_message">No Message</string>
+    <string name="no_discussion">No Group</string>
+    <string name="chat_input_hint">Tap to input…</string>
+
+
+    <string name="send_to">Send to</string>
+    <string name="send_from">From</string>
+    <string name="system_message">System Message</string>
+    <string name="file_expires_tips">The file has expired</string>
+    <string name="file_download_successfully_notify">%1$s He (she) has downloaded the file "%2$s"</string>
+    <string name="file_download_successfully_notify_in_where">%1$s He (she) has downloaded the file "%3$s" on the %2$s</string>
+
+    <string name="transfer_msg_select_one_chat">Select a Chat</string>
+    <string name="transfer_msg_select_multi_chat">Select Multiple Chats</string>
+    <string name="select_discussions">Select Group</string>
+    <string name="select_contacts">Select from Contacts</string>
+    <string name="transfer_msg_and_create_discussion">New Chat</string>
+    <string name="recent_contacts">Latest Chats</string>
+    <string name="search_select_contact_prefix">Send to %s</string>
+    <string name="search_select_contact_suffix">, etc. %s contacts</string>
+    <string name="select_contact_max_tip">Up to %s contacts</string>
+    <string name="select_discussion_max_tip">Up to %s Groups</string>
+
+    <string name="micro_video_play_check_tip">In the current non-WiFi environment, playing video will consume %s mobile phone traffic, whether to continue playing</string>
+    <string name="continue_to_play">Continue</string>
+
+    <string name="re_edit">Edit</string>
+    <string name="shield_session_unread_prefix_tag">[%s message(s)]</string>
+    <string name="copied">Copyed</string>
+
+    <string name="send_now">Send now</string>
+    <string name="image_comment">Image comment</string>
+
+    <string name="send_file_limit_tip">Can\'t send files larger than %s</string>
+
+    <string name="more_contacts">More contacts</string>
+    <string name="more_discussion">More groups</string>
+    <string name="more_app">More apps</string>
+    <string name="more_chat">More chat records</string>
+    <string name="more_orgs">More organizations</string>
+    <string name="more_binging_msg">More bing</string>
+    <string name="more_devices">More devices</string>
+    <string name="more_department">More departments</string>
+    <string name="image_and_video">Image and video</string>
+    <string name="contain">Contain:</string>
+    <string name="relate_message_history">%s related record</string>
+    <string name="messages_of_session">\"%s\" \'s chat history</string>
+    <string name="search_chat_content">Find chat history</string>
+    <string name="please_search">Search \"%s\"</string>
+    <string name="please_input_search_keyword">Please input search keyword</string>
+    <string name="file_has_been_save">File saved</string>
+    <string name="please_select_media_data">please_select_media_data</string>
+    <string name="search_by_calendar">Find by date</string>
+    <string name="media_download_tip">%s successful downloaded, %s failed</string>
+
+    <string name="sunday">Sun</string>
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tue</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thur</string>
+    <string name="friday">Fri</string>
+    <string name="saturday">Sat</string>
+
+    <string name="discussion_member_roles_setting">成员角色设置</string>
+    <string name="project_relation">关联项目</string>
+
+    <string name="pop_phone_content">may be an phone number, you can</string>
+    <string name="pop_call_phone">Call</string>
+    <string name="pop_copy_phone">Copy number</string>
+    <string name="pop_email_content">may be an email address, you can</string>
+    <string name="pop_write_email">write an email</string>
+    <string name="pop_copy_email">copy</string>
+    <string name="pop_cancel">Cancel</string>
+</resources>

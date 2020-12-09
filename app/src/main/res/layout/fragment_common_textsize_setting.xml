@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar_common" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:background="@color/chat_detail_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/chat_right_text_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/default_photo" />
+
+            <TextView
+                android:id="@+id/preview1"
+                style="@style/font_size_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="-5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@id/chat_right_text_avatar"
+                android:background="@mipmap/chat_bg_color_sender"
+                android:gravity="right|center"
+                android:minHeight="40dp"
+                android:text="@string/preview_text_size">
+
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/chat_left_text_avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="-5dp"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/default_photo" />
+
+            <TextView
+                android:id="@+id/preview2"
+                style="@style/font_size_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chat_left_text_username_line"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/chat_left_text_avatar"
+                android:background="@mipmap/bg_chat_left"
+                android:gravity="left|center"
+                android:minHeight="40dp"
+                android:orientation="vertical"
+                android:text="@string/preview_text_size2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/chat_left_text_avatar2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="-5dp"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/default_photo" />
+
+            <TextView
+                android:id="@+id/preview3"
+                style="@style/font_size_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chat_left_text_username_line"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/chat_left_text_avatar2"
+                android:background="@mipmap/bg_chat_left"
+                android:gravity="left|center"
+                android:minHeight="40dp"
+                android:orientation="vertical"
+                android:text="@string/preview_text_size3" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_above="@+id/rl_text_setting_bottom_area"
+        android:layout_marginBottom="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/font_size_sync_webview"
+            android:layout_marginLeft="10dp"
+            android:textSize="?attr/fontsize_14sp"
+            tools:textSize="14sp"
+            android:textColor="@color/common_text_color"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toLeftOf="@+id/v_switch_set_sync_webview_font_size"
+            android:layout_alignParentLeft="true"
+            />
+
+        <com.foreveross.atwork.component.WorkplusSwitchCompat
+            android:id="@+id/v_switch_set_sync_webview_font_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:theme="@style/workplus_switch" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_text_setting_bottom_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:id="@+id/Aa_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/font_size_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="Aa"
+                android:textColor="@color/dropbox_hint_text_color" />
+
+            <TextView
+                style="@style/font_size_24sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="Aa"
+                android:textColor="@color/dropbox_hint_text_color" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/textsize_setting_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Aa_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <com.foreveross.atwork.component.seekbar.sliding.SlidingSeekBar
+                android:id="@+id/textsize_setting_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:barColor="@color/gray"
+                app:barWeight="1.5dp"
+                app:connectingLineColor="@color/gray"
+                app:tickCount="6"
+                app:tickHeight="3dp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    style="@style/font_size_14sp"
+                    android:text="@string/standar"
+                    android:textColor="@color/dropbox_hint_text_color"
+                    />
+
+                <TextView
+                    style="@style/font_size_14sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                     />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="12sp" />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

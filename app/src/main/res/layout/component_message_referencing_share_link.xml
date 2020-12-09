@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="szw"
+        android:textSize="12sp"
+        android:textColor="@color/common_text_color_666"
+
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivCover"
+            android:layout_alignBottom="@+id/ivCover"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/ivCover"
+            android:orientation="vertical"
+
+            >
+
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:id="@+id/tvLinkTitle"
+                style="@style/font_size_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/light_black"
+                tools:text="sunzhiwei"
+                tools:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tvLinkDesc"
+                style="@style/font_size_13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+                android:textColor="@color/chat_left_main_color"
+                android:visibility="gone"
+                tools:text="填坑工程师"
+                tools:textSize="13sp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                tools:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+
+
+
+        <ImageView
+            android:id="@+id/ivCover"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/loading_icon_square"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

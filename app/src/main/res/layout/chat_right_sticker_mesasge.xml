@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/common_message_content_divider"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30dp"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/right_sticker_select_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/right_sticker_select"
+            style="@style/chat_item_select_view"
+            tools:visibility="visible"
+            />
+
+    </LinearLayout>
+
+
+    <!-- 靠最右边的头像-->
+    <ImageView
+        android:id="@+id/chat_right_image_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toLeftOf="@id/right_sticker_select_line"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo" />
+
+    <com.foreverht.workplus.ui.component.foregroundview.ForegroundFrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_toLeftOf="@id/chat_right_image_avatar">
+
+        <ImageView
+            android:id="@+id/chat_right_sticker_content"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@id/chat_right_image_avatar"
+            android:scaleType="fitXY"/>
+
+
+        <include
+            layout="@layout/layout_chat_message_item_time_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+            android:visibility="visible"
+            tools:visibility="visible"
+
+            />
+
+
+    </com.foreverht.workplus.ui.component.foregroundview.ForegroundFrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/fl_content">
+
+        <com.foreveross.atwork.modules.chat.component.ChatSendStatusView
+            android:id="@+id/chat_right_image_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.foreveross.atwork.modules.chat.component.ChatSendStatusView>
+
+    </FrameLayout>
+
+    <com.foreveross.atwork.modules.chat.component.chat.MessageSourceView
+        android:id="@+id/message_srouce_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/chat_right_image_avatar"
+        android:layout_below="@id/fl_content"
+        android:visibility="gone"
+        tools:visibility="gone"
+        />
+</RelativeLayout>
+</RelativeLayout>

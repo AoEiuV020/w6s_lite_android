@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/common_message_content_divider"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <ImageView
+        android:id="@+id/left_voice_select"
+        style="@style/chat_item_select_view"
+        tools:visibility="visible"
+        />
+
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/chat_left_voice_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo" />
+
+
+    <LinearLayout
+        android:id="@+id/chat_left_text_username_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/chat_left_voice_avatar"
+        android:orientation="horizontal"
+        >
+        <!--用户姓名 -->
+        <TextView
+            android:id="@+id/chat_left_voice_username"
+            style="@style/font_size_13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:text=""
+            android:textColor="@color/common_text_color"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_marginBottom="5dp"
+
+            />
+
+
+        <!--副标题 -->
+        <TextView
+            android:id="@+id/chat_left_voice_sub_title"
+            style="@style/font_size_13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textColor="@color/common_text_color_888"
+            android:visibility="gone"
+            tools:text="ffffda"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            tools:visibility="visible"
+            android:layout_marginBottom="5dp"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/voice_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chat_left_text_username_line"
+        android:layout_toRightOf="@id/chat_left_voice_avatar">
+        <!--语音-->
+        <RelativeLayout
+            android:id="@+id/rl_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.foreverht.workplus.ui.component.foregroundview.ForegroundFrameLayout
+                android:id="@+id/chat_left_voice_framelayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- 声音 -->
+                <ImageView
+                    android:id="@+id/chat_left_voice_voice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical|left"
+                    android:background="@drawable/shape_voice_translate_white" />
+
+                <ImageView
+                    android:id="@+id/chat_left_voice_playing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@mipmap/icon_sound_right_b"
+                    android:visibility="gone"
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_some_status_info_wrapper_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/iv_voice_handle"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@mipmap/icon_voice_chat_play_black"
+                            android:layout_marginRight="6dp"
+
+                            />
+                        <SeekBar
+                            android:id="@+id/sb_seek"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:progressDrawable="@drawable/progress_chat_voice_left"
+                            android:thumb="@drawable/sharp_seekbar_btn_chat_voice_left"
+                            android:maxHeight="2dp"
+                            android:minHeight="2dp"
+                            tools:background="@color/black"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/chat_left_voice_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:tag="select_able"
+                            android:text="3'"
+                            android:minWidth="22dp"
+                            android:gravity="center"
+                            android:textColor="@color/common_text_color"
+                            style="@style/font_size_14sp" />
+
+
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/layout_chat_message_item_time_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+
+                        />
+
+
+                </LinearLayout>
+
+            </com.foreverht.workplus.ui.component.foregroundview.ForegroundFrameLayout>
+
+
+            <ImageView
+                android:id="@+id/chat_left_voice_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/chat_left_voice_framelayout"
+                android:src="@mipmap/icon_chat_dot"
+
+                />
+
+
+        </RelativeLayout>
+        <!-- 翻译的文字 -->
+        <FrameLayout
+            android:id="@+id/chat_left_voice_translate_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_below="@id/rl_voice"
+            android:background="@drawable/shape_voice_translate_white"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/chat_left_voice_translate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="232dp"
+                android:paddingTop="11dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="11.3dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:text="hello"
+                android:textSize="16sp"
+                android:textColor="@color/common_text_color"
+                android:background="@drawable/shape_voice_translate_white"
+                android:lineSpacingExtra="3sp"
+                style="@style/font_size_14sp" />
+            <LinearLayout
+                android:id="@+id/voice_show_original_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_voice_show_original_gray"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:scaleType="center"/>
+            </LinearLayout>
+
+        </FrameLayout>
+        <!--正在转换-->
+        <LinearLayout
+            android:id="@+id/voice_tranalateing"
+            android:layout_width="86dp"
+            android:layout_height="61dp"
+            android:layout_below="@id/chat_left_voice_translate_layout"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/shape_voice_translate_white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ProgressBar
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="正在转换"
+                android:textColor="@color/common_text_color"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+
+    <com.foreveross.atwork.modules.chat.component.chat.MessageSourceView
+        android:id="@+id/message_srouce_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/chat_left_voice_avatar"
+        android:layout_below="@+id/voice_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+
+</RelativeLayout>
+</RelativeLayout>

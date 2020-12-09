@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="364dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
+
+        <EditText
+            android:id="@+id/dialpad_number_et"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="@string/tangsdk_dialpad_edittext_hint"
+            android:singleLine="true"
+            android:textColorHint="@color/tangsdk_dialpad_et_hint_color"
+            android:textSize="18sp" />
+
+        <TableLayout
+            android:id="@+id/dialpad_number_btn_area"
+            android:layout_width="match_parent"
+            android:layout_height="224dp"
+            android:layout_below="@id/dialpad_number_et">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/dialpad_one"
+                        style="@style/dialpad_button_style"
+                        android:text="1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/dialpad_two"
+                        style="@style/dialpad_button_style"
+                        android:text="2" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/dialpad_three"
+                        style="@style/dialpad_button_style"
+                        android:text="3" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/dialpad_four"
+                        style="@style/dialpad_button_style"
+                        android:text="4" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/dialpad_five"
+                        style="@style/dialpad_button_style"
+                        android:text="5" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/dialpad_six"
+                        style="@style/dialpad_button_style"
+                        android:text="6" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/dialpad_seven"
+                        style="@style/dialpad_button_style"
+                        android:text="7" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/dialpad_eight"
+                        style="@style/dialpad_button_style"
+                        android:text="8" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/dialpad_nine"
+                        style="@style/dialpad_button_style"
+                        android:text="9" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/dialpad_asterisk"
+                        style="@style/dialpad_button_style"
+                        android:text="*"
+                        android:textSize="30sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/dialpad_zero"
+                        style="@style/dialpad_button_style"
+                        android:text="0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/dialpad_sharp"
+                        style="@style/dialpad_button_style"
+                        android:text="#" />
+                </RelativeLayout>
+
+            </TableRow>
+        </TableLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/dialpad_number_btn_area">
+
+            <Button
+                android:id="@+id/hidden_dialpad_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="35dp"
+                android:background="@mipmap/tangsdk_hidden_dialpad_btn_normal"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/start_call_btn"
+                android:layout_width="140dp"
+                android:layout_height="44dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/tangsdk_dialpad_start_btn_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/tangsdk_start_call_btn_text"
+                android:textColor="@color/tangsdk_menu_dialog_text_color"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/back_space_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:background="@mipmap/tangsdk_dialpad_backspace_btn_normal"
+                android:gravity="center" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

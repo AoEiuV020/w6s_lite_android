@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/bg_menu_pop_selector"
+    android:layout_centerInParent="true">
+
+    <!-- 普通文本的TEXT VIEW -->
+
+    <TextView
+        android:id="@+id/list_view_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text=""
+        android:singleLine="true"
+        android:textColor="@color/common_text_color"
+        style="@style/font_size_16sp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

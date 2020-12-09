@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fingerprint">指紋</string>
+    <string name="fingerprint_auth">指紋認證</string>
+    <string name="client_second_authentication_setting">客戶端功能二次認證設置</string>
+    <string name="need_second_authentication_tip">需要進行二次認證：</string>
+    <string name="authentication_valid_duration_setting">認證時效設置</string>
+    <string name="please_select_protect_area">請選擇認證頁面</string>
+    <string name="do_not_need_protect">無需保護</string>
+    <string name="when_opening_client">啟動客戶端時</string>
+    <string name="please_verify_fingerprint">請驗證指紋</string>
+    <string name="please_verify_fingerprint_again">指紋驗證失敗，請再試壹次</string>
+    <string name="verify_fingerprint_too_frequently">嘗試次數太多, 請稍後重試</string>
+    <string name="force_to_set_biometric_authentication">需要開啟生物認證後才能使用客戶端功能</string>
+    <string name="notice_to_set_biometric_authentication">開啟生物認證功能才能夠使用</string>
+    <string name="notice_to_set_system_biometric_authentication">系統開啟指紋才能夠使用</string>
+    <string name="notice_cannot_close_all_biometric_authentication">開啟了強制使用生物認證，無法關閉全部</string>
+    <string name="gesture_lock_pwd_low_strength">密碼過於簡單，請重新設置</string>
+    <string name="watch_low_strength_demo">查看簡單的手勢密碼示例</string>
+    <string name="low_strength_demo_prefix">請勿設置簡單的手勢密碼&#160;</string>
+    <string name="low_strength_demo_suffix">示例</string>
+    <string name="go_to_setting">去設置</string>
+    <string name="fingerprint_and_gesture_code_bio_setting">指紋/手勢設置</string>
+</resources>

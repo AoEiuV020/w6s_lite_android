@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tangsdk_activity_bg_color">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ActionBarHeight"
+        android:background="@color/tangsdk_title_font_color">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20.5dp"
+            android:src="@drawable/tangsdk_back_btn_selector" />
+        />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="5.0dip"
+            android:text="@string/tangsdk_chat_audio_use_phone_msg"
+            android:textColor="@color/tangsdk_menu_dialog_text_color"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar">
+
+        <ListView
+            android:id="@+id/phone_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:divider="@mipmap/tangsdk_list_divider_holo_light" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="16.5dip"
+            android:layout_gravity="top"
+            android:background="@mipmap/tangsdk_title_bar_shadow" />
+    </FrameLayout>
+
+
+    <Button
+        android:id="@+id/show_dailpad_btn"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="13.0dip"
+        android:layout_marginRight="13.0dip"
+        android:background="@mipmap/tangsdk_phone_dialer_btn_pressed" />
+
+</RelativeLayout>

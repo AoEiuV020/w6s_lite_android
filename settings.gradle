@@ -1,0 +1,143 @@
+/**
+ * 主应用程序
+ */
+include ':app', ':dependencies:gif-drawable', ':dependencies:CordovaLib', ':dependencies:amap-sdk', ':dependencies:fengmap_lib',':dependencies:handyfloat_lib'
+
+
+/**
+ * UI 基础组件
+ */
+include ':dependencies:w6s-ui-component'
+
+/**
+ * workplus 基础资源
+ */
+include ':dependencies:w6s-resources'
+
+/**
+ * IM SDK模块，可独立出来给第三方APP调用
+ */
+include ':dependencies:im-sdk'
+
+/**
+ * API SDK模块，可独立出来给第三方APP调用
+ */
+include ':dependencies:api-sdk'
+
+/**
+ * 基础设施层，主要是MODEL及NET通用类
+ */
+include ':dependencies:infrastructure'
+
+/**
+ * 基础缓存模块
+ */
+include ':dependencies:cache'
+
+/**
+ * 线程池管理
+ * */
+include ':dependencies:thread-gear'
+
+/**
+ * 数据库核心模块
+ */
+include ':dependencies:db-core'
+
+/**
+ * 数据库业务模块
+ */
+include ':dependencies:db-service'
+
+include ':dependencies:webview-core'
+
+/**
+ * x5 浏览器
+ * */
+include ':dependencies:tbs-webview'
+
+/**
+ * 表情整合
+ */
+include ':dependencies:emojicon'
+
+/**
+ * 二维码相关, 使用 google zxing
+ */
+include ':dependencies:qrcode'
+
+/**
+ * 手势密码
+ */
+include ':dependencies:lock9view'
+
+/**
+ * 手势密码
+ */
+include ':dependencies:record-ffmpeg'
+
+/**
+ * 主题
+ */
+include ':dependencies:theme'
+
+/**
+ * 声网voip
+ */
+include ':dependencies:agora-sdk'
+
+/**
+ * 图片编辑
+ */
+include ':dependencies:photo-edit'
+
+/**
+ * 讯飞语音识别
+ */
+include ':dependencies:xfyun'
+
+/**
+ * 文本翻译
+ */
+include ':dependencies:translate'
+
+/**
+ * 水印
+ */
+include ':dependencies:watermark'
+
+
+/**
+ * umeeting
+ * */
+include ':dependencies:zoom-mobile-rtc'
+
+/**
+ * 指纹 sdk
+ * */
+include ':dependencies:fingerprintIdentify'
+
+
+/**
+ * 阿里云语音 sdk
+ * */
+include ':dependencies:aliyun-voice'
+
+
+/**
+ * 视频压缩
+ * */
+include ':dependencies:video-compress'
+
+/**
+ * camera kit core: https://github.com/natario1/CameraView
+ * */
+include ':dependencies:cameraView-natario1'
+
+include ':dependencies:andPermission'
+
+
+
+gradle.beforeProject { p ->
+    println("Evaluation beforeProject1"+p)
+}

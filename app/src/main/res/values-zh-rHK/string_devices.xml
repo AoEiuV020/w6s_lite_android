@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_device_manager">登錄設備管理</string>
+    <string name="new_device_auth">新設備認證</string>
+    <string name="get_sms_code">獲取驗證碼</string>
+    <string name="please_input_mobile_sms_code">請輸入手機驗證碼</string>
+    <string name="login_no_mobile_warn">可能由於系統沒有存留你的手機號碼，導致你無法完成設備認證，請聯繫管理員進行處理！</string>
+
+    <string name="login_device_intro">最近登錄設備列表，設備名稱后帶標籤的設備代表下次在該設備上登錄無需進行新設備認證。</string>
+    <string name="login_device_without_auth_meet_max_warn">當前免認證設備數量已到最大限制，請刪除或關閉無需免認證的設備后再嘗試。</string>
+    <string name="without_auth_label">已認證</string>
+    <string name="login_device_detail">設備詳情</string>
+    <string name="login_device_name">設備名稱</string>
+    <string name="set_login_device_name">設置設備名稱</string>
+    <string name="please_input_login_device_name">請輸入設置的設備名稱</string>
+    <string name="login_device_status">認證狀態</string>
+    <string name="login_device_type">設備類型</string>
+    <string name="last_login_time">最後登錄時間</string>
+    <string name="delete_login_device">刪除設備</string>
+    <string name="ask_delete_login_device">確定刪除設備嗎?</string>
+    <string name="certified_mobile_num">手機號</string>
+    <string name="title_login_device_auth">新設備認證</string>
+
+
+
+</resources>

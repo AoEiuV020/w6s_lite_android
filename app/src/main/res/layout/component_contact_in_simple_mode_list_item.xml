@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 用于在LISTView中展现个人，应用，聊天记录等列表结果页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/bg_item_common_selector">
+
+    <ImageView
+        android:id="@+id/chat_list_select"
+        android:layout_centerVertical="true"
+        style="@style/common_select_item"
+        android:src="@mipmap/icon_seclect_no_circular"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+    <!--一聊天头像 -->
+    <ImageView
+        android:id="@+id/contact_list_item_avatar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/title_common_padding"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/chat_list_select"
+        android:padding="0.2dp"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/contact_list_item_avatar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_arrow"
+            >
+
+            <LinearLayout
+                android:id="@+id/rl_title_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/contact_list_item_title"
+                    style="@style/font_size_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:singleLine="true"
+                    android:text="test"
+                    android:textColor="@color/common_text_color"
+                    android:layout_weight="1"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="20dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_label_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:visibility="gone"
+                        tools:src="@mipmap/icon_star"
+                        tools:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_label_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

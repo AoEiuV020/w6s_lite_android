@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 聊天列表布局页面 -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/chat_list_title_bar"
+            layout="@layout/title_bar_main_new" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chat_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chat_list_title_bar"
+            android:overScrollMode="never"
+            />
+
+        <include layout="@layout/layout_common_nothing"
+            android:id="@+id/layout_no_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/chat_list_view"
+            android:visibility="visible"
+            />
+    </RelativeLayout>
+
+
+
+
+
+
+</FrameLayout>

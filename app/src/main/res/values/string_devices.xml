@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_device_manager">Manage Devices</string>
+    <string name="new_device_auth">New Device Certification</string>
+    <string name="get_sms_code">Get Code</string>
+    <string name="please_input_mobile_sms_code">Please enter the verification code</string>
+    <string name="login_no_mobile_warn">The system did not find your mobile phone number, which caused you to fail to complete the device authentication. Please contact the administrator for processing!</string>
+
+    <string name="login_device_intro">The list of recently logged-in devices. The device with the tag after the device name represents the next time you log in to the device without performing new device authentication.</string>
+    <string name="login_device_without_auth_meet_max_warn">The number of devices that do not need to be authenticated has reached the maximum limit. Please delete or turn off the unneeded devices, then try again.</string>
+    <string name="without_auth_label">Certified</string>
+    <string name="login_device_detail">Device details</string>
+    <string name="login_device_name">Device Name</string>
+    <string name="set_login_device_name">Set Device Name</string>
+    <string name="please_input_login_device_name">Please enter the set device name</string>
+    <string name="login_device_status">Certification Status</string>
+    <string name="login_device_type">Device Type</string>
+    <string name="last_login_time">Last login time</string>
+    <string name="delete_login_device">Delete</string>
+    <string name="ask_delete_login_device">Are you sure you want to delete the device?</string>
+    <string name="certified_mobile_num">Mobile</string>
+    <string name="title_login_device_auth">New Device Certification</string>
+
+
+</resources>

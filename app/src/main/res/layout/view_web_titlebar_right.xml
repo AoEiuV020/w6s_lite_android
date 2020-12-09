@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+    <include
+        android:id="@+id/button_stub3"
+
+        layout="@layout/view_stub_web_right_button"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/button_stub2"
+        layout="@layout/view_stub_web_right_button"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/button_stub1"
+        layout="@layout/view_stub_web_right_button"
+        android:visibility="gone"/>
+</LinearLayout>

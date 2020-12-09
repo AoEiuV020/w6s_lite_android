@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--VPN 相关-->
+    <string name="vpn_setting">VPN Settings</string>
+    <string name="vpn_account">Account</string>
+    <string name="vpn_pwd">Password</string>
+    <string name="vpn_address">Host</string>
+    <string name="vpn_port">Port</string>
+    <string name="vpn_account_empty">Enter VPN account</string>
+    <string name="vpn_pwd_empty">Enter VPN password</string>
+    <string name="vpn_addr_empty">Enter VPN host</string>
+    <string name="vpn_port_empty">Enter VPN port</string>
+    <string name="vpn_port_invalid">Enter the correct VPN port</string>
+    <string name="vpn_settings_invalid">Please save the VPN settings</string>
+    <string name="vpn_login_success">Connected</string>
+    <string name="vpn_login_fail">VPN authentication failed, please try again!</string>
+    <string name="vpn_logout_fail">VPN logout failed, please try again!</string>
+    <string name="vpn_logout_success">Disconnected</string>
+    <string name="vpn_save_success">Edit VPN settings successfully</string>
+    <string name="vpn_init_error">VPN authentication failed, please check VPN server configuration and try again！</string>
+    <string name="vpn_auth_error_by_wrong_pwd">Wrong username or password，please re-enter. </string>
+    <string name="vpn_auth_error_by_bf">You try to fail too many times, please try again after a period of time！</string>
+    <string name="vpn_auth_error_by_others">VPN authentication failed, please check VPN server configuration and try again！</string>
+    <string name="vpn_username_or_pwd_not_valid"></string>
+
+    <!--vpn 选择-->
+    <string name="title_select_vpn">Select the VPN line</string>
+    <string name="title_edit_vpn">Edit the VPN line</string>
+    <string name="vpn_openvpn_type_label">openVpn connection service</string>
+    <string name="vpn_sxfvpn_type_label">SANGFOR VPN connection service</string>
+    <string name="vpn_route_setting">VPN line settings</string>
+    <string name="vpn_type_label">Line Type:</string>
+    <string name="vpn_route_name_label">Line Name:</string>
+    <string name="vpn_server_address_label">Server:</string>
+    <string name="vpn_port_label">Port:</string>
+    <string name="vpn_username_label">Account:</string>
+    <string name="vpn_password_label">Password:</string>
+    <string name="vpn_auth_wrong_alert">The network connection is abnormal! Please select another VPN line or contact the administrator.</string>
+    <string name="vpn_no_list">No VPN line, please contact the administrator!</string>
+    <string name="vpn_goto_settings">Go to the VPN settings</string>
+    <string name="vpn_too_frequent">The operation is too frequent, please try again in %1$s!</string>
+    <string name="vpn_disconnect_status_need_handle">VPN connection is lost, you can reconnect manually or exit the application.</string>
+</resources>

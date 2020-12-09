@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+
+    <FrameLayout
+        android:id="@+id/fl_fab_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_fab_blue">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rl_fab_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_fab_slide_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/iv_slide_finger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/icon_fab_slide_notice_finger" />
+
+        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+            android:id="@+id/tv_fab_slide_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_slide_finger"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="滑动查看更多"
+            android:textColor="@color/common_item_black"
+
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="自1955年全球第一家麦当劳餐厅在美国伊利诺伊州芝加哥创立。截至2017年底，"
+        android:layout_toLeftOf="@+id/ivArrow"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="?attr/fontsize_14sp"
+        tools:textSize="14sp"
+        android:textColor="@color/common_text_color"
+        />
+
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2018月8月8日"
+        android:layout_below="@+id/tvTitle"
+        android:textColor="@color/common_text_color_999"
+        android:layout_marginTop="8dp"
+        android:textSize="?attr/fontsize_14sp"
+        tools:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/tvSource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/tvTime"
+        android:textColor="@color/common_text_color_999"
+        android:singleLine="true"
+        android:ellipsize="end"
+        tools:text="消息来源消息来消息来源源消息来源"
+        android:textSize="?attr/fontsize_14sp"
+        tools:textSize="14sp"
+        />
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_arrow_gray"
+        android:layout_alignParentRight="true"
+        />
+
+
+</RelativeLayout>

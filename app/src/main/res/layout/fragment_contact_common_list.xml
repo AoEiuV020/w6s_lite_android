@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--已读未读界面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/v_header"
+        layout="@layout/title_bar_common" />
+
+    <com.foreveross.atwork.modules.search.component.SearchHeadView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_header" />
+
+    <LinearLayout
+        android:id="@+id/at_all_members_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_contact_item_height"
+        android:layout_below="@+id/search_bar"
+        android:background="@drawable/bg_item_common_selector"
+        android:orientation="horizontal">
+
+        <!--一聊天头像 -->
+        <ImageView
+            android:layout_width="@dimen/common_contact_item_img_size"
+            android:layout_height="@dimen/common_contact_item_img_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/default_discussion_chat" />
+
+        <TextView
+            android:id="@+id/at_all_discussion_members_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="#333"
+            android:text=""
+            style="@style/font_size_17sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_divider"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/discussion_members"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/at_all_members_layout"
+        style="@style/font_size_14sp"/>
+
+
+
+    <!-- 人员列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_select_bar"
+        android:layout_below="@+id/tv_divider"
+        android:divider="@null">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_select_bar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray" />
+
+        <Button
+            android:id="@+id/discussion_at_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg_submit_green_selector"
+            android:gravity="center|center_vertical"
+            android:minWidth="50dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="8dp"
+            android:text="@string/ok"
+            android:textColor="@color/white" />
+        <!--android:background="@mipmap/btn_submit_hover"-->
+
+        <!-- 选择的人员头像-->
+        <com.foreveross.atwork.modules.group.component.HorizontalListView
+            android:id="@+id/v_contact_select_head"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/discussion_at_ok">
+
+        </com.foreveross.atwork.modules.group.component.HorizontalListView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

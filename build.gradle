@@ -1,0 +1,116 @@
+
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    apply from: 'buildConfig/w6s-build.gradle'
+    apply from: 'buildConfig/w6s-version.gradle'
+
+
+    repositories {
+        google()
+
+        jcenter()
+
+        maven { url "https://jitpack.io" }
+
+        maven { url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2' }
+
+        maven { url 'http://developer.huawei.com/repo/' }
+
+        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+
+        maven { url "http://nexus2.tingyun.com/nexus/content/repositories/snapshots/" }
+
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+
+        maven {url 'http://developer.huawei.com/repo/'}
+    }
+
+    dependencies {
+
+        classpath 'com.android.tools.build:gradle:4.0.0'
+//        classpath 'me.tatarka:gradle-retrolambda:3.7.0'
+        classpath 'com.tencent.bugly:symtabfileuploader:2.2.1'
+
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlinVersion}"
+
+        classpath "com.tencent.bugly:tinker-support:1.1.5"
+        //cloudwise 配置
+        if (enableCloudwise){
+            classpath 'com.cloudwise.mobile.android.plugins:cloudwise-gradle-plugin:1.6.0'
+        }
+
+        //听云配置
+        if(enableTingyun) {
+            classpath 'com.networkbench.newlens.agent.android:agent-gradle-plugin:2.13.3'
+        }
+
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlinVersion}"
+
+
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7.1"
+
+        if (enableWangsuSce) {
+            classpath fileTree(dir: 'dependencies/speedUp/wangsuSce/plugin', include: ['*.jar'])
+        }
+
+        classpath 'com.huawei.agconnect:agcp:1.2.1.301'
+
+
+        if (enableDoraemonkit) {
+            classpath 'com.didichuxing.doraemonkit:doraemonkit-plugin:3.1.8'
+        }
+
+    }
+}
+
+
+
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    repositories {
+        google()
+
+        jcenter()
+
+        maven { url "https://jitpack.io" }
+
+        maven { url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2' }
+
+        maven { url 'http://developer.huawei.com/repo/' }
+
+        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+
+        maven { url "http://nexus2.tingyun.com/nexus/content/repositories/snapshots/" }
+
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+
+        maven {url 'http://developer.huawei.com/repo/'}
+
+    }
+}
+
+
+//this.project.subprojects { sub ->
+//
+//    sub.beforeEvaluate { project
+//        println "#### Evaluate before of "+project.path + "   flavor:  " + getCurrentFlavor()
+//
+//    }
+//}
+
+gradle.beforeProject { p ->
+    println("Evaluation beforeProject2"+p)
+
+}
+
+project.afterEvaluate { pro ->
+
+    assembleHuaweiAgconnectServices()
+}
+
+

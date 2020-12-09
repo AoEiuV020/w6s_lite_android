@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.camerakit.CameraKitView
+        android:id="@+id/bio_camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:keepScreenOn="true"
+        app:camera_facing="front"
+        app:camera_focus="auto"
+        app:camera_permissions="camera"/>
+
+
+    <View
+        android:id="@+id/v_fake_statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/translation_333" />
+
+    <RelativeLayout
+        android:id="@+id/bio_camera_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/v_fake_statusbar"
+        android:background="@color/translation_333">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="4dp"
+            android:padding="10dp"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/icon_close_white" />
+
+
+        <TextView
+            android:id="@+id/scan"
+            style="@style/font_size_20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/back_btn"
+            android:layout_marginBottom="14dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLength="20"
+            android:maxWidth="200dp"
+            android:text="@string/bio_face_title"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_take_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/icon_take_photo_black"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="45dp"/>
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:layout_marginBottom="45dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:textColor="#ffffff"
+        android:text="3"/>
+
+</FrameLayout>

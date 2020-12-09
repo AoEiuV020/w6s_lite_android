@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="22dp"
+        android:paddingBottom="22dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="34dp"
+        android:paddingRight="30dp">
+
+        <ImageView
+            android:id="@+id/mobile_mute_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_mute"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/mute_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/mobile_mute_img"
+            android:textColor="@color/common_text_color"
+            style="@style/font_size_14sp"
+            android:text="@string/mobile_mute"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/online_mute_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dropbox_hint_text_color"
+            style="@style/font_size_12sp"
+            android:layout_below="@+id/mute_title"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <com.foreveross.atwork.component.WorkplusSwitchCompat
+            android:id="@+id/switcher_mobile_mute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/transfer_file_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="22dp"
+        android:paddingBottom="22dp"
+        android:paddingLeft="34dp"
+        android:paddingRight="30dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/mobile_transfer_file_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_transfer_file"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/mobile_transfer_file_img"
+            android:textColor="@color/common_text_color"
+            style="@style/font_size_14sp"
+            android:layout_centerVertical="true"
+            android:text="@string/transfer_file"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_arrow_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_logout_pc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/logout_pc"
+        android:layout_marginBottom="20dp"
+        android:textSize="14sp"
+        android:textColor="@color/light_black"
+        android:background="@drawable/shape_logout_pc_gray"/>
+
+</LinearLayout>

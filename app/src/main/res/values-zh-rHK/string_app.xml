@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_apps">常用應用程式</string>
+    <string name="add_custom_sort_app_max_tip">最多添加8個常用應用程式</string>
+    <string name="edit_custom_sort_app">編輯常用應用程式</string>
+
+    <string name="only_allow_to_add_apps">最多只允許添加%s個應用</string>
+
+</resources>

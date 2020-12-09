@@ -1,0 +1,67 @@
+<!-- 导航栏 -->
+<RelativeLayout android:id="@+id/title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:tag="c1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- 左边的APP图标 -->
+    <ImageView
+        android:id="@+id/title_bar_personal_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_icon"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:scaleType="center"
+        android:src="@mipmap/icon_back" />
+
+    <!-- 名称，当天聊天界面的名称 -->
+    <TextView
+        android:id="@+id/title_bar_personal_title"
+        style="@style/font_size_18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/title_common_title_back_padding"
+        android:layout_toRightOf="@+id/title_bar_personal_icon"
+        android:singleLine="true"
+        android:text="产品研发部"
+        android:textColor="@color/common_item_black"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+
+    <ImageView
+        android:id="@+id/title_bar_personal_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/icon_more_dark"
+        android:rotation="90"
+        android:visibility="gone"
+        tools:visibility="visible" />
+    <View
+        android:id="@+id/view_white_right"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="0dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        tools:visibility="visible" />
+    <View
+        android:id="@+id/view_white_below"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/view_white_right"
+        android:layout_marginTop="0dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+
+</RelativeLayout>

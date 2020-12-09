@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/light_black">
+
+    <ImageView
+        android:id="@+id/media_item"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:scaleType="centerCrop" />
+
+    <CheckBox
+        android:id="@+id/media_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:button="@drawable/bg_checkbox_selector"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:soundEffectsEnabled="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_media_tag"
+        android:layout_width="115dp"
+        android:layout_height="20dp"
+        android:layout_gravity="bottom"
+        android:background="#99000000"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/iv_video_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_video_tag"
+            android:layout_marginLeft="5dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/tv_gif_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GIF"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_video_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="5:00"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:textSize="12sp"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"
+            android:textStyle="bold"
+
+            />
+
+    </RelativeLayout>
+
+</FrameLayout>

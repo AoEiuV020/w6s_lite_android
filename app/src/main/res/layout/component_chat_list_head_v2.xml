@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/bg_item_common_selector"
+    >
+
+    <ImageView
+        android:id="@+id/chat_item_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/title_common_padding"
+        android:contentDescription="@string/chat_item_avatar"
+        android:padding="0.2dp"
+        android:scaleType="fitXY"
+        tools:src="@mipmap/avatar_not_initialize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/iv_top_stick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/chat_item_avatar"
+        android:layout_alignTop="@id/chat_item_avatar"
+        android:src="@mipmap/icon_top_stick"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toTopOf="@+id/chat_item_avatar"
+        app:layout_constraintLeft_toLeftOf="@+id/chat_item_avatar"
+        />
+
+    <Space
+        android:id="@+id/v_new_message_count_anchor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/chat_item_avatar"
+        app:layout_constraintLeft_toRightOf="@+id/chat_item_avatar"
+        android:background="@color/yellow"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="7dp"
+        />
+
+
+    <com.foreveross.atwork.component.NewMessageTipView
+        android:id="@+id/chat_item_new_messages_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/v_new_message_count_anchor"
+        app:layout_constraintRight_toLeftOf="@+id/v_new_message_count_anchor"
+
+        />
+
+
+    <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+        android:id="@+id/chat_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="4dp"
+        android:ellipsize="end"
+        android:gravity="left|center_vertical"
+        android:maxLines="1"
+        android:tag="c15"
+        android:text=""
+        tools:text="dasunsy"
+        android:textColor="#222222"
+        style="@style/font_size_16sp"
+        tools:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/chat_item_personal_signature"
+        app:layout_constraintLeft_toRightOf="@+id/chat_item_avatar"
+        app:layout_constraintRight_toLeftOf="@+id/fl_discussion_label_in_basic_info_area"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constrainedWidth="true"
+
+        />
+
+
+    <FrameLayout
+        android:id="@+id/fl_discussion_label_in_basic_info_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/chat_item_title"
+        android:layout_centerVertical="true"
+        android:visibility="visible"
+        app:layout_constraintLeft_toRightOf="@+id/chat_item_title"
+        app:layout_constraintTop_toTopOf="@+id/chat_item_title"
+        app:layout_constraintBottom_toBottomOf="@+id/chat_item_title"
+        app:layout_constraintRight_toLeftOf="@+id/iv_session_some_status"
+        >
+
+        <TextView
+            android:id="@+id/tv_discussion_label_in_basic_info_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_pure_white_bg"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxWidth="120dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:singleLine="true"
+            android:textSize="11sp"
+            tools:text="头脑风暴" />
+
+        <ImageView
+            android:id="@+id/iv_discussion_label_in_basic_info_area"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_internal_discussion"
+            />
+
+    </FrameLayout>
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_session_some_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toLeftOf="@+id/iv_bio_auth_protected"
+        android:layout_marginRight="3dp"
+        android:src="@mipmap/icon_one_tick_blue"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintRight_toLeftOf="@+id/iv_bio_auth_protected"
+        app:layout_constraintTop_toTopOf="@+id/chat_item_time"
+        app:layout_constraintBottom_toBottomOf="@+id/chat_item_time"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/iv_bio_auth_protected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toLeftOf="@+id/chat_item_time"
+        android:layout_marginRight="3dp"
+        android:src="@mipmap/icon_app_bio_auth_protected"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintRight_toLeftOf="@+id/chat_item_time"
+        app:layout_constraintTop_toTopOf="@+id/chat_item_time"
+        app:layout_constraintBottom_toBottomOf="@+id/chat_item_time"
+        />
+
+
+
+    <TextView
+        android:id="@+id/chat_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/title_common_padding"
+
+        android:gravity="left|top"
+        android:tag="c16"
+        android:text="17:00"
+        android:textColor="@color/alarm_text"
+        style="@style/font_size_13sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chat_item_title"
+        app:layout_constraintBottom_toBottomOf="@+id/chat_item_title"
+        />
+
+
+
+    <TextView
+        android:id="@+id/chat_item_personal_signature"
+        style="@style/font_size_11sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:textColor="#888888"
+        tools:text="hello"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:textSize="11sp"
+        app:layout_constraintLeft_toRightOf="@+id/chat_item_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/chat_item_title"
+        app:layout_constraintBottom_toTopOf="@+id/chat_item_last_message"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/chat_item_status_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:gravity="left|center_vertical"
+        android:visibility="gone"
+        tools:visibility="visible"
+        tools:src="@mipmap/message_sending"
+        app:layout_constraintLeft_toRightOf="@+id/chat_item_avatar"
+        app:layout_constraintTop_toTopOf="@+id/chat_item_last_message"
+        app:layout_constraintBottom_toBottomOf="@+id/chat_item_last_message"
+        android:layout_marginLeft="10dp"
+
+        />
+
+    <TextView
+        android:id="@+id/chat_item_status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:singleLine="true"
+        android:tag="c10"
+        android:text="@string/someone_notifies_me"
+        android:textColor="@color/common_message_num_bg"
+        style="@style/font_size_14sp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintLeft_toRightOf="@+id/chat_item_status_image"
+        app:layout_constraintTop_toTopOf="@+id/chat_item_last_message"
+        app:layout_constraintBottom_toBottomOf="@+id/chat_item_last_message"
+        app:layout_goneMarginLeft="10dp"
+        />
+
+
+
+
+    <com.rockerhieu.emojicon.EmojiconTextView
+        android:id="@+id/chat_item_last_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:tag="c16"
+        android:text="hellohellohellohellohellohello"
+        android:textColor="#555555"
+        style="@style/font_size_14sp"
+        emojicon:emojiconSize="14sp"
+        android:layout_centerVertical="true"
+        app:layout_constraintLeft_toRightOf="@+id/chat_item_status_text"
+        app:layout_constraintRight_toLeftOf="@+id/iv_notify_silence"
+        app:layout_constraintTop_toBottomOf="@+id/chat_item_personal_signature"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constrainedWidth="true"
+        tools:visibility="visible"
+        android:layout_marginTop="5dp"
+        app:layout_goneMarginLeft="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_notify_silence"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginRight="@dimen/title_common_padding"
+        android:src="@mipmap/icon_notify_silence"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chat_item_last_message"
+        app:layout_constraintBottom_toBottomOf="@+id/chat_item_last_message"
+        />
+
+    <ImageView
+        android:id="@+id/iv_line_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/title_common_padding"
+        android:background="@color/common_line_color"
+        android:tag="c18"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

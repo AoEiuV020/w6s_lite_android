@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/tvDeviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:textColor="@color/common_text_color"
+        android:textSize="14sp"
+        tools:text="设备名称A" />
+
+    <TextView
+        android:id="@+id/tvWithoutAuthLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_common_blue_180radius_rectangle_item_bg"
+        android:drawableLeft="@mipmap/label_login_device_without_auth"
+        android:drawablePadding="2.8dp"
+        android:paddingLeft="7dp"
+        android:paddingTop="4dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp"
+        android:text="@string/without_auth_label"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+</LinearLayout>

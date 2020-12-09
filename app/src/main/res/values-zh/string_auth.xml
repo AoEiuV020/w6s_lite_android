@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--权限相关-->
+    <string name="tip_record_fail_no_auth">麦克风没有声音，可能是应用的录音权限被禁。请打开设置>应用管理>%1$s>权限详情>录音>设为允许。不同手机可能设置路径和名称有差异。</string>
+    <string name="tip_camera_fail_no_auth">无法打开相机，请检查是否关闭了相机权限。</string>
+    <string name="require_auth_title">权限申请</string>
+    <string name="require_auth_content">在设置-应用-%1$s-权限中开启%2$s权限，以正常使用%3$s等功能</string>
+    <string name="require_auth_content_access_fine_location"></string>
+    <string name="require_auth_basic_content">在设置-应用-%1$s-权限中开启%2$s权限，以便能正常使用</string>
+    <string name="require_auth_content_need_reload">在设置-应用-%1$s-权限中开启%2$s权限，以正常使用%3$s等功能,开启后需重新登录方可生效</string>
+    <string name="auth_camera_name">相机</string>
+    <string name="auth_camera_function">拍照、小视频、扫一扫%1$s</string>
+    <string name="auth_record_name">录音</string>
+    <string name="auth_record_function">录音、小视频%1$s</string>
+    <string name="auth_phone_name">电话</string>
+    <string name="auth_phone_function">拨打电话</string>
+    <string name="auth_contact_name">通讯录</string>
+    <string name="auth_contact_function">同步通讯录</string>
+    <string name="auth_location_name">位置信息</string>
+    <string name="auth_location_function">打卡</string>
+    <string name="auth_storage_name">存储空间</string>
+    <string name="auth_storage_function">基本功能</string>
+    <string name="auth_phone_state_name">电话</string>
+    <string name="float_windows_no_permission_alert_title">悬浮窗权限未获取</string>
+    <string name="float_windows_no_permission_voip_alert_content">你的手机没有授权%1$s获取悬浮窗权限，语音聊天最小化不能正常使用。请打开设置>应用管理>%2$s>权限详情>悬浮窗>设为允许。不同手机可能设置路径和名称有差异。</string>
+    <string name="float_windows_no_permission_common_alert_content">你的手机没有授权%1$s获取悬浮窗权限，必应消息和语音聊天不能正常使用。请打开设置>应用管理>%2$s>权限详情>悬浮窗>设为允许。不同手机可能设置路径和名称有差异。</string>
+    <string name="auth_function_vpn">VPN功能</string>
+    <string name="record_forbidden">麦克风被禁用</string>
+
+</resources>

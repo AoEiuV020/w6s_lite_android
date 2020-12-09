@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/modify_tel_title"
+        layout="@layout/title_bar_common" />
+
+    <RelativeLayout
+        android:id="@+id/rl_modify_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/modify_tel_title"
+        android:background="@color/white"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+
+        <ImageView
+            android:id="@+id/modify_tel_cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/cancel_input_selector" />
+
+        <com.foreveross.atwork.component.MaxInputEditText
+            android:id="@+id/modify_tel_edit"
+            style="@style/font_size_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/modify_tel_cancelBtn"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:hint="@string/please_input_modify_info"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/common_text_color" />
+
+    </RelativeLayout>
+</RelativeLayout>

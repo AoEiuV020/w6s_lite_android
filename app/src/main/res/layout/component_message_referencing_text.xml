@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="szw"
+        android:textSize="12sp"
+        android:textColor="@color/common_text_color_666"
+
+        />
+
+    <com.rockerhieu.emojicon.EmojiconTextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="这次的植树造林计划中，超过130人的环保公益团队xxxxxxxxxx深入科尔沁沙漠，太阳的直晒…"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:layout_marginTop="5dp"
+        />
+
+
+
+
+
+</LinearLayout>

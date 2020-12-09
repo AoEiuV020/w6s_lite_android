@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/title_bar_common"
+        layout="@layout/title_bar_common" />
+
+
+    <TextView
+        android:id="@+id/tv_tip_input_sth"
+        style="@style/font_size_18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_result_tip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/please_input_gesture_code"
+        android:textColor="@color/common_text_color" />
+
+    <TextView
+        android:id="@+id/tv_result_tip"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_wrapper"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/red_lock" />
+
+    <FrameLayout
+        android:id="@+id/fl_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ececec"
+            android:padding="15dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/et_login_input"
+                style="@style/font_size_14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/tv_login_click"
+                android:background="@null"
+                android:hint="@string/please_input_password"
+                android:inputType="textPassword"
+                android:textColor="#3b3c3d"
+                android:textColorHint="#b6b6b6" />
+
+            <TextView
+                android:id="@+id/tv_login_click"
+                style="@style/font_size_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/login_text"
+                android:textColor="@color/blue_lock"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <com.takwolf.android.lock9.Lock9View
+            android:id="@+id/lock_9_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:lock9_autoLink="true"
+            app:lock9_enableVibrate="true"
+            app:lock9_lineRightColor="@color/blue_lock"
+            app:lock9_lineWidth="1dp"
+            app:lock9_lineWrongColor="@color/red_lock"
+            app:lock9_nodeErrorSrc="@mipmap/node_small_wrong"
+            app:lock9_nodeOnSrc="@mipmap/node_small_active"
+            app:lock9_nodeSize="60dp"
+            app:lock9_nodeSrc="@mipmap/node_small_normal"
+            app:lock9_vibrateTime="20" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_login"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="@string/login_with_id_and_pw"
+        android:textColor="@color/common_text_color"
+        android:visibility="visible"
+        />
+
+</RelativeLayout>

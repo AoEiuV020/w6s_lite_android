@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvServiceTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="7dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="7dp"
+        android:background="@color/white"
+        android:text="服务号"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:background="@drawable/bg_avatar_shape">
+
+        <ImageView
+            android:id="@+id/chat_item_avatar"
+            android:layout_width="@dimen/common_contact_item_img_size"
+            android:layout_height="@dimen/common_contact_item_img_size"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:contentDescription="@string/chat_item_avatar"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tvTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/chat_item_avatar"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="高科之家高科之家高科之家高科之家高科之家高科之家高科之家高科之家高科之家高科之家高科之家高科之家高科之家高科之家"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+</LinearLayout>

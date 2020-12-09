@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 主界面TitleBar -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="#ffffff">
+
+        <com.foreveross.atwork.component.UnreadImageView
+            android:id="@+id/unread_imageview"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_icon"
+            android:padding="10dp"
+            android:src="@mipmap/icon_back"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/message_receiving"
+                style="@android:style/Widget.Holo.Light.ProgressBar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/title_bar_main_title_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_bar_main_title"
+                    style="@style/font_size_20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:maxLength="20"
+                    android:maxWidth="200dp"
+                    android:text="消息新消息 xxx 现在想发"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- 更多按钮 -->
+        <ImageView
+            android:id="@+id/titlebar_main_more_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/more"
+            android:paddingRight="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_add_chat"
+            android:visibility="visible" />
+
+
+        <!-- 更多按钮 -->
+        <ImageView
+            android:id="@+id/org_switcher"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_toLeftOf="@id/titlebar_main_more_btn"
+            android:contentDescription="@string/more"
+            android:paddingRight="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_switch_common"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/navi_left_title"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/navi_left_button"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/navi_right_title"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/navi_right_button"
+            android:visibility="gone" />
+
+
+        <!-- 名称，当天聊天界面的名称 -->
+        <TextView
+            android:id="@+id/navi_middle_title"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_network_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_main"
+        android:background="@color/alarm_network_bg"
+        android:tag="c11"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+        <ImageView
+            android:id="@+id/iv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_network_error"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26dp"
+            />
+
+        <TextView
+            android:id="@+id/main_network_error"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="30dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/iv_error"
+            android:layout_marginLeft="11dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:text="@string/network_error"
+            android:textColor="@color/alarm_network_text" />
+    </RelativeLayout>
+
+</RelativeLayout>

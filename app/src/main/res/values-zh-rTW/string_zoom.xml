@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="select_members_in_discussion">群組內選人</string>
+    <string name="select_members_in_organization">組織架構選人</string>
+
+</resources>

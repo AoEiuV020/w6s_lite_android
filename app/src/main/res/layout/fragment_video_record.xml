@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.otaliastudios.cameraview.CameraView
+        android:id="@+id/vCameraViewKit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:keepScreenOn="true"
+        app:cameraAudio="on"
+        app:cameraAutoFocusMarker="@string/cameraview_default_autofocus_marker"
+        app:cameraEngine="camera2"
+        app:cameraExperimental="true"
+        app:cameraFacing="back"
+        app:cameraFlash="auto"
+        app:cameraGestureLongTap="none"
+        app:cameraGesturePinch="zoom"
+        app:cameraGestureScrollHorizontal="filterControl1"
+        app:cameraGestureScrollVertical="exposureCorrection"
+        app:cameraGestureTap="autoFocus"
+        app:cameraGrid="off"
+        app:cameraMode="video"
+        app:cameraPlaySounds="true"
+        app:cameraPreview="glSurface">
+
+
+    </com.otaliastudios.cameraview.CameraView>
+
+    <View
+        android:id="@+id/vFakeStatusbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/translation_333" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vFakeStatusbar"
+        android:background="@color/translation_333"
+
+        >
+    <RelativeLayout
+        android:id="@+id/rlBioCameraTitlebar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/icon_close_white"
+            />
+
+
+        <TextView
+            android:id="@+id/tvRecordTip"
+            style="@style/font_size_20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="14dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxWidth="200dp"
+            android:textColor="@color/white"
+            android:text="@string/click_to_start"
+            android:textSize="14sp"
+            />
+
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/ivTakePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_take_micro_video"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="45dp"/>
+
+
+
+</FrameLayout>

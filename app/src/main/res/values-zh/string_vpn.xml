@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--VPN 相关-->
+    <string name="vpn_setting">VPN设置</string>
+    <string name="vpn_account">VPN帐号</string>
+    <string name="vpn_pwd">VPN密码</string>
+    <string name="vpn_address">服务器地址</string>
+    <string name="vpn_port">服务器端口</string>
+    <string name="vpn_account_empty">请输入你的VPN帐号</string>
+    <string name="vpn_pwd_empty">请输入你的VPN密码</string>
+    <string name="vpn_addr_empty">请输入你所连接的VPN服务器地址</string>
+    <string name="vpn_port_empty">请输入你所连接的VPN服务器端口</string>
+    <string name="vpn_port_invalid">请输入正确的VPN端口</string>
+    <string name="vpn_settings_invalid">请保存VPN设置</string>
+    <string name="vpn_login_success">VPN登录成功</string>
+    <string name="vpn_login_fail">VPN认证失败，请重试!</string>
+    <string name="vpn_logout_fail">VPN登出失败，请重试!</string>
+    <string name="vpn_logout_success">VPN登出成功</string>
+    <string name="vpn_save_success">修改VPN设置成功</string>
+    <string name="vpn_init_error">VPN验证失败，请检查VPN服务器配置后重试！</string>
+    <string name="vpn_auth_error_by_wrong_pwd">VPN帐号或密码错误，请修改后重试！</string>
+    <string name="vpn_auth_error_by_bf">你尝试失败的次数过多，请一段时间后重试！</string>
+    <string name="vpn_auth_error_by_others">VPN验证失败，请检查VPN服务器配置后重试！</string>
+    <string name="vpn_username_or_pwd_not_valid"></string>
+
+    <!--vpn 选择-->
+    <string name="title_select_vpn">选择VPN线路</string>
+    <string name="title_edit_vpn">编辑VPN线路</string>
+    <string name="vpn_openvpn_type_label">openVpn连接服务</string>
+    <string name="vpn_sxfvpn_type_label">深信服VPN连接服务</string>
+    <string name="vpn_route_setting">VPN线路设置</string>
+    <string name="vpn_type_label">线路类型:</string>
+    <string name="vpn_route_name_label">线路名称:</string>
+    <string name="vpn_server_address_label">服务器:</string>
+    <string name="vpn_port_label">端口:</string>
+    <string name="vpn_username_label">帐号:</string>
+    <string name="vpn_password_label">密码:</string>
+    <string name="vpn_auth_wrong_alert">网络连接异常！请选择其他VPN线路或者联系管理员。</string>
+    <string name="vpn_no_list">暂无VPN线路，请联系管理员在后台设置！</string>
+    <string name="vpn_goto_settings">前往VPN设置</string>
+    <string name="vpn_too_frequent">操作过于频繁，%1$s后重试！</string>
+    <string name="vpn_disconnect_status_need_handle">VPN连接中断，请手动重连或退出应用</string>
+</resources>

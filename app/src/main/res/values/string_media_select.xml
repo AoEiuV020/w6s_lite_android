@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- 选择图片 -->
+    <string name="file_download_file">Download</string>
+    <string name="file_transfer_download_file">Download(%s)</string>
+    <string name="all_medias">Images and Videos</string>
+    <string name="all_images">All pictures</string>
+    <string name="file_transfer_open_with_others">Open by apps</string>
+    <string name="preview">Preview</string>
+    <string name="preview_file_in_detail_view">Preview</string>
+    <string name="select_image">Select Image</string>
+    <string name="images_loading">Image loading...</string>
+    <string name="file_transfer_re_send_file">Resend</string>
+    <string name="file_transfer_file_title">File details</string>
+    <string name="file_transfer_status_not_send">Unsent</string>
+    <string name="file_transfer_status_sended">Delivered</string>
+    <string name="file_transfer_status_sending">Sending</string>
+    <string name="file_transfer_status_send_fail">Sent failed</string>
+    <string name="file_transfer_status_not_download">No download</string>
+    <string name="file_transfer_status_downloading">Downloading</string>
+    <string name="file_transfer_status_downloaded">downloaded</string>
+    <string name="file_transfer_status_download_fail">Download failed</string>
+    <string name="file_transfer_status_download_success">Download successful</string>
+    <string name="file_not_exists">Files no found, may have been deleted</string>
+    <string name="not_allowed_cancel">Can not be canceled</string>
+    <string name="download_file_fail">Downloading files from server failed</string>
+    <string name="not_allowed_download">Data error，unable to download</string>
+    <string name="total_page">%s pictures</string>
+    <string name="orig_size">Full Image(%s)</string>
+    <string name="original_img">Full Image</string>
+    <string name="select">Select</string>
+    <string name="cannot_preview_img">Please select the picture first</string>
+    <string name="cannot_preview_media">Please select the picture or video first</string>
+    <string name="cannot_select_full_img">只有选择图片后才能勾选原图发送...</string>
+    <string name="full_img_size_limit">The full image exceeds %s, can not send …</string>
+    <string name="compressing">Image compression...</string>
+    <string name="max_select_images">Allow up to %s images</string>
+    <string name="max_select_media">Allow up to %s images or videos</string>
+    <string name="max_single_select_image_size">Single picture can not exceed %s</string>
+    <string name="max_total_select_image_size">The total size of the selected picture can not exceed %s</string>
+    <string name="select_video_duration_max">Unable to share video with a duration longer than 5m</string>
+
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#70000000">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="6dp"
+        >
+
+
+        <com.foreveross.atwork.component.UnreadImageView
+            android:id="@+id/iv_guide_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_search"
+            android:src="@mipmap/icon_bing_white"
+            android:visibility="visible"
+             />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/title_common_padding"
+            android:src="@mipmap/icon_search_dark"
+            android:visibility="invisible"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_guide_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:layout_marginTop="-10dp"
+        >
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="1px"
+        android:layout_height="30dp"
+        android:background="@color/white"
+        android:layout_gravity="center_horizontal"
+        />
+
+        <TextView
+            android:id="@+id/tv_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bing_message"
+            android:background="@drawable/shape_guide_page_item_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginTop="5dp"
+            android:textSize="?attr/fontsize_12sp"
+            android:textColor="@color/common_text_color"
+            android:layout_gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

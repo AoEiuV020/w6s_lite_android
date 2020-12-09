@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="face_login">刷臉登錄</string>
+    <string name="change_face_negative">更換刷臉底片</string>
+    <string name="experience_face">體驗刷臉</string>
+    <string name="first_time_open_face_login_warn">你正在開啟刷臉登錄功能，系統將開啟相機進行刷臉底片獲取，獲取底片并驗證通過后，你下次登錄時將可以使用刷臉登錄功能。</string>
+    <string name="change_face_negative_failed">底片驗證失敗，請確認拍攝時是本人真人操作并沒有其他人物干擾，使用照片、非人臉都會導致驗證失敗，確認后你可以再次嘗試。</string>
+    <string name="set_face_negative_successful">底片更新成功</string>
+    <string name="update_face_negative_successful">底片更新成功</string>
+    <string name="open_camera">打開相機</string>
+    <string name="face_login_failed">刷臉驗證失敗，請重試！</string>
+    <string name="experience_face_failed">檢測失敗，請確保是你本人在操作。</string>
+    <string name="experience_face_successful">檢測通過</string>
+    <string name="guide_to_open_face_bio_setting">你還未開啟刷臉功能，你可以點擊「前往設置」去開啟，也可以點擊取消然後在「我」-「設定」-「生物認證」-「刷臉設定」中開啟。</string>
+    <string name="guide_to_other_login_way_when_face_login_failed">刷臉認證失敗，請確保是%s本人操作，若多次失敗建議使用其它登錄方式登錄，然後在「我」-「設定」-「生物認證」-「刷臉設定」中更新刷臉底片。</string>
+    <string name="other_login_way">其它登錄方式</string>
+    <string name="face_live_meg_auth_error">刷臉認證失敗，請確保%s本人操作，若多次失敗會導致認證服務無法使用。若有疑問請聯繫HR確認用戶訊息是否正確。</string>
+    <string name="face_live_meg_exit_app">刷臉認證失敗，已超過最大允許認證次數，請隔天再進行嘗試。若有疑問請聯繫HR確認用戶訊息是否正確。</string>
+    <string name="one_more_try">再試一次</string>
+    <string name="biz_protocol_agreement">人臉識別授權協議</string>
+    <string name="not_need_face_valid">你无需进行人脸识别</string>
+    <string name="face_valided">驗證通過</string>
+    <string name="bio_face_title">刷臉認證</string>
+    <string name="use_photo">使用照片</string>
+    <string name="re_take_photo">重新拍照</string>
+    <string name="cloud_auth_fail">雲認證失敗(%s)</string>
+    <string name="face_bio_password_valid_success">驗證通過</string>
+    <string name="face_bio_password_valid_failure">驗證失敗</string>
+    <string name="valid_login_password">驗證登錄密碼</string>
+    <string name="valid_login_password_hint">請輸入登錄密碼</string>
+    <string name="valid">驗證</string>
+    <string name="face_bio_login">刷臉登錄</string>
+</resources>

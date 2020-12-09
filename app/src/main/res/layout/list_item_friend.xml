@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/bg_item_common_selector">
+
+    <ImageView
+        android:id="@+id/iv_select"
+        android:layout_width="@dimen/common_select_item_width"
+        android:layout_height="@dimen/common_select_item_width"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/icon_selected"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/common_contact_item_img_size"
+        android:layout_height="@dimen/common_contact_item_img_size"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_toRightOf="@+id/iv_select"
+        android:background="@mipmap/default_photo"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@id/iv_avatar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/font_size_17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="Foss"
+            android:textColor="#333" />
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            style="@style/font_size_13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text="15918723567"
+            android:textColor="#aaa"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/common_line_color"
+
+        />
+
+
+</RelativeLayout>

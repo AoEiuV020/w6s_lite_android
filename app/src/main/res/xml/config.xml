@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.foreverht.android"
+    version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>Crosswalk23</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-eval' 'unsafe-inline' ; img-src 'self' data: *;"/>
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="webView" value="org.crosswalk.engine.XWalkWebViewEngine" />
+    <preference name="xwalkVersion" value="23+" />
+    <preference name="xwalkLiteVersion" value="xwalk_core_library_canary:17+" />
+    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
+    <preference name="xwalkMode" value="embedded" />
+    <preference name="xwalkMultipleApk" value="true" />
+    <preference name="android-minSdkVersion" value="16" />
+
+    <!-- 以下为cordova自带插件-->
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="Compass">
+        <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
+    </feature>
+
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+
+    <feature name="Globalization">
+        <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
+    </feature>
+
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
+
+    <feature name="Vibration">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+    </feature>
+
+    <feature name="Contacts">
+        <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
+    </feature>
+
+    <feature name="DeviceInfo">
+        <param name="android-package" value="com.yezhiming.cordova.appinfo.DeviceInfo" />
+    </feature>
+
+    <feature name="Accelerometer">
+        <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
+    </feature>
+
+    <feature name="Battery">
+        <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
+    </feature>
+
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+
+    <feature name="FileTransfer">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.WorkplusFileTransferPlugin" />
+    </feature>
+
+    <feature name="Media">
+        <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+    </feature>
+
+    <feature name="Capture">
+        <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
+    </feature>
+
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager"/>
+    </feature>
+
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
+
+    <!--workplus 2.1 接口 旧接口都维护到下面来-->
+    <feature name="WorkPlus_HTMember">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.HTMemberPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_Discussion">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.DiscussionPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_OrgStructure">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.OrgPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_Contact">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.ContactPlugin_New"/>
+    </feature>
+
+    <feature name="WorkPlus_Image">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.WorkPlusImagesPlugin"/>
+    </feature>
+    <feature name="WorkPlus_Auth">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.UserAuthPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_Location">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.AtworkLocationPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_WebView">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.WebViewPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_AppStore">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.AppStorePlugin_New"/>
+    </feature>
+
+    <feature name="WorkPlus_Files">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.SelectFilePlugin" />
+    </feature>
+
+    <feature name="WorkPlus_DeviceInfo">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.DeviceInfoPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_LightApp">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.WorkPlusLightAppPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_BarcodeScanner">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.WorkPlusBarcodeScannerPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_PublicClound">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.WorkPlusPublicCloudPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_Org">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.OrgPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_NetInfo">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.NetInfoPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_Umeeting">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.UmeetingPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_Bizconf">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.zoom.bizconf.BizconfCordovaPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_Zoom">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.zoom.bizconf.BizconfCordovaPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_FengMap">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.FengMapPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_DATA">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.SharePreferencePlugin"/>
+    </feature>
+
+
+    <feature name="WorkPlus_Voice">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.voice.VoiceCordovaPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_AudioAndVideo">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.audioVideo.AudioVideoPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_OCR">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.ocr.OcrCordovaPlugin"/>
+    </feature>
+
+    <feature name="WorkPlus_SMS">
+        <param name="android-package" value="com.foreveross.atwork.cordova.plugin.sms.SmsPlugin"/>
+    </feature>
+
+</widget>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_page_bg">
+
+
+    <include
+        android:id="@+id/friends_title"
+        layout="@layout/title_bar_common" />
+
+    <!--遍历文件-->
+    <ListView
+        android:id="@+id/lw_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        />
+
+    <include layout="@layout/layout_common_nothing"
+        android:id="@+id/layout_no_discussions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        />
+</LinearLayout>

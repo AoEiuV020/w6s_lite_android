@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="bottom">
+
+    <RelativeLayout
+        android:id="@+id/dp_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/cancel"
+            android:textColor="@color/common_text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/ok"
+            android:textColor="@color/common_text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_until"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/common_text_color"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+    <DatePicker
+        android:id="@+id/dpPicker"
+        android:layout_width="match_parent"
+        android:layout_height="328dp"
+        android:layout_below="@id/dp_header"
+        android:calendarViewShown="false"
+        android:background="@color/white"/>
+</RelativeLayout>

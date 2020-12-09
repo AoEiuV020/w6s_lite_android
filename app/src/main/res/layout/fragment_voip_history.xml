@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/voip_history_title"
+        layout="@layout/title_bar_common" />
+
+    <com.foreveross.atwork.modules.search.component.SearchHeadView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/voip_history_title"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_voip_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/search_bar"
+        android:paddingBottom="46dp"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_start_voip_conf"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7.5dp"
+        android:background="@drawable/shape_send_blue"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:text="@string/start_voip_conf"
+        android:textColor="#FFFFFF"
+        style="@style/font_size_18sp"/>
+
+</RelativeLayout>

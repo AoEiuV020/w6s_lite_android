@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title_intro_friends"
+        layout="@layout/title_bar_common" />
+
+    <com.foreveross.atwork.component.SquareImageView
+        android:id="@+id/iv_qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/title_intro_friends"/>
+
+    <TextView
+        android:id="@+id/tv_intro_friends_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_qrcode"
+        android:layout_centerHorizontal="true"
+        android:text="@string/intro_friends_tip"
+        android:tag="c15"
+        style="@style/font_size_18sp" />
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_page_bg"
+    android:layout_marginTop="8dp"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <include
+            android:id="@+id/favorite_select_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            layout="@layout/view_favorite_selector" />
+
+        <com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout
+
+            android:id="@+id/llAnnoFileRoot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chat_left_file_username_line"
+            android:layout_toRightOf="@id/chat_left_file_avatar"
+            android:background="@drawable/shape_pure_white_bg"
+            android:orientation="vertical"
+
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/favorite_select_toggle"
+
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvImageContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/tvComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textColor="@color/common_text_color"
+                android:textSize="16sp"
+                android:maxLines="4"
+                android:ellipsize="end"
+                tools:text="测试一下" />
+
+
+        </com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout>
+
+
+
+        <include
+            layout="@layout/view_favorite_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/llAnnoFileRoot"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

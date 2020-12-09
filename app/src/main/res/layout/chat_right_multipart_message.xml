@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/common_message_content_divider">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/right_multipart_select_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/right_multipart_select"
+            style="@style/chat_item_select_view"
+            tools:visibility="visible"
+            />
+    </LinearLayout>
+
+    <!-- 聊天头像 -->
+    <ImageView
+        android:id="@+id/chat_right_multipart_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@id/right_multipart_select_line"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo" />
+
+
+    <com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout
+        android:id="@+id/ll_chat_right_content"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_toLeftOf="@id/chat_right_multipart_avatar"
+        android:background="@drawable/shape_voice_translate_white"
+        android:padding="3dp"
+        android:gravity="center"
+        android:minHeight="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_multipart_title"
+                style="@style/font_size_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingExtra="4dp"
+                android:maxLines="2"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="你好\ntitle"
+                android:textColor="@color/common_text_color"
+                android:textStyle="bold" />
+
+            <com.rockerhieu.emojicon.EmojiconTextView
+                android:id="@+id/tv_multipart_content"
+                style="@style/font_size_13sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingExtra="4dp"
+                android:maxLines="4"
+                android:paddingBottom="6dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="测试"
+                android:textColor="@color/common_text_color_999"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#dbdbdb" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/font_size_13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="6dp"
+                    android:text="@string/session_multipart_chat"
+                    android:layout_toLeftOf="@+id/layout_chat_message_item_time_info"
+                    android:textColor="@color/common_text_color_999" />
+
+
+                <include
+                    layout="@layout/layout_chat_message_item_time_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="-45dp"
+        android:layout_toLeftOf="@id/ll_chat_right_content">
+
+        <com.foreveross.atwork.modules.chat.component.ChatSendStatusView
+            android:id="@+id/chat_right_multipart_send_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.foreveross.atwork.modules.chat.component.ChatSendStatusView>
+
+    </FrameLayout>
+
+
+</RelativeLayout>
+</RelativeLayout>

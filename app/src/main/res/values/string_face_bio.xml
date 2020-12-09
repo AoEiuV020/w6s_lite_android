@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="face_login">Face Login</string>
+    <string name="change_face_negative">Replace the Archive Picture</string>
+    <string name="experience_face">Have a try</string>
+    <string name="first_time_open_face_login_warn">You are turning on Face Login, the system will open the camera to get the face picture, after the picture is verified, you will be able to use the Face Login when you log in next time.</string>
+    <string name="change_face_negative_failed">Picture verification failed，please take selfies and make sure that no other factors interfere， Using photos and non-faces will cause the verification to fail.please try again after confirmation.</string>
+    <string name="set_face_negative_successful">Archive picture update succeeded</string>
+    <string name="update_face_negative_successful">Archive picture update succeeded</string>
+    <string name="open_camera">Start camera</string>
+    <string name="face_login_failed">Face recognition failed，please try again!</string>
+    <string name="experience_face_failed">Face recognition failed. Please ensure that the owner of the account.</string>
+    <string name="experience_face_successful">Pass</string>
+    <string name="guide_to_open_face_bio_setting">You have not turned on face recognition yet，You can click [Go to Set] to open，or click [Cancel]，then open in [Me]-[Settings]-[Biometric Identification]-[Face Recognition].</string>
+    <string name="guide_to_other_login_way_when_face_login_failed">Face recognition failed，Please ensure that the owner of %s，if multiple attempts fail，please use another way to login，then replace the archive picture in [Me]-[Settings]-[Biometric Identification]-[Face Recognition].</string>
+    <string name="other_login_way">Other Ways to Log On</string>
+    <string name="bio_face_title">Brush face authentication</string>
+    <string name="use_photo">Use photo</string>
+    <string name="re_take_photo">Retake photo</string>
+    <string name="cloud_auth_fail">Cloud authentication failed(%s)</string>
+    <string name="biz_protocol_agreement">Face Recognition Agreement</string>
+    <string name="face_bio_password_valid_success">Pass</string>
+    <string name="face_bio_password_valid_failure">Verification failed</string>
+    <string name="valid_login_password">Verify login password</string>
+    <string name="valid_login_password_hint">Please enter your password</string>
+    <string name="valid">Verification</string>
+    <string name="face_bio_login">Brush face login</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_menu_pop_win">
+
+    <com.foreveross.atwork.modules.chat.component.ListViewInPopUp
+        android:id="@+id/pop_view_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/common_line_color"
+        android:dividerHeight="0.8dp"
+         />
+
+</LinearLayout>

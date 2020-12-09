@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/app_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!--该出布局还需要在代码里动态计算边距, 请注意在: AppsAdapter 里的 getPaddingLength()-->
+        <RelativeLayout
+            android:id="@+id/icon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="14dp">
+
+
+            <RelativeLayout
+                android:id="@+id/v_icon_bg"
+                android:layout_width="59dp"
+                android:layout_height="57dp"
+                android:background="@mipmap/icon_app_shadow_bg">
+
+                <ImageView
+                    android:id="@+id/app_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/shape_item_app_pure_white_bg"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_alpha"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_bio_auth_protected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginRight="6dp"
+                    android:src="@mipmap/icon_app_bio_auth_protected"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+
+            </RelativeLayout>
+
+            <com.foreveross.atwork.component.SquareRelativeLayout
+                android:id="@+id/native_app_background"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/round_rect_black"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/native_app_progress"
+                    style="@style/font_size_11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:includeFontPadding="false"
+                    android:text="15%"
+                    android:textColor="#ffffffff" />
+
+                <TextView
+                    android:id="@+id/native_app_status"
+                    style="@style/font_size_10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/native_app_progress"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/waiting_download"
+                    android:textColor="#ffffffff" />
+            </com.foreveross.atwork.component.SquareRelativeLayout>
+
+        </RelativeLayout>
+
+        <!--ps : 该处宽度要随着图片布局的宽度而修改-->
+        <TextView
+            android:id="@+id/app_name"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_layout"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:lines="2"
+            android:maxLines="2"
+            android:maxWidth="82dp"
+            android:paddingBottom="10dp"
+            android:tag="c15"
+            android:text="Foss"
+            android:textColor="@color/common_text_color_666" />
+
+    </RelativeLayout>
+
+    <com.foreveross.atwork.modules.common.component.LightNoticeItemView
+        android:id="@+id/app_item_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/app_remove"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@mipmap/icon_cancel" />
+
+
+    <ImageView
+        android:id="@+id/iv_app_new_version_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/icon_app_new_version_notice"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+</FrameLayout>

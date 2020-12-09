@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar_img_preview" />
+
+
+    <RelativeLayout
+        android:id="@+id/priview_select_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/bg_photo_send">
+
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="@string/edit"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:visibility="visible"
+            />
+
+        <CheckBox
+            android:id="@+id/cb_send_full_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@+id/tv_edit"
+            android:button="@drawable/bg_checkbox_selector"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tv_image_org_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@id/cb_send_full_image"
+            android:text="@string/original_img"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/select_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/select"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/cb_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@id/select_text"
+            android:button="@drawable/bg_checkbox_selector"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:checked="true" />
+
+    </RelativeLayout>
+
+    <!-- 替换的Fragment -->
+    <FrameLayout
+        android:id="@+id/fragment_preview_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/priview_select_layout"
+        android:layout_below="@id/title_bar" />
+</RelativeLayout>

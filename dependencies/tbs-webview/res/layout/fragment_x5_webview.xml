@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <View
+        android:id="@+id/v_statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black" />
+
+    <include
+        android:id="@+id/webview_title_bar"
+        layout="@layout/title_bar_webview_2"
+        android:layout_below="@+id/v_statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+
+
+    <com.foreveross.atwork.component.AdjustLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/webview_title_bar">
+
+        <org.apache.cordova.x5engine.X5WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+
+
+    </com.foreveross.atwork.component.AdjustLinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/webview_loading"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dip"
+        android:layout_alignParentTop="true"
+        android:max="100"
+        android:progress="1"
+        android:progressDrawable="@drawable/progressbar_webview_loading"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/watermark_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="60dp" />
+
+
+</RelativeLayout>

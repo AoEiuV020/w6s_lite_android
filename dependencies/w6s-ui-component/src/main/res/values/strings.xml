@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_pull_to_refresh">start to refresh</string>
+    <string name="release_pull_to_refresh">release to refresh</string>
+    <string name="handling_pull_to_refresh">refreshing...</string>
+    <string name="finished_pull_to_refresh">finished refreshing</string>
+    <string name="failed_pull_to_refresh">failed to refresh</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="loading">Loading</string>
+    <string name="hint_search">Search</string>
+</resources>

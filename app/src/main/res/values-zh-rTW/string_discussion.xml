@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--群-->
+    <string name="create_discussion_fail">創建聊天室失敗</string>
+    <string name="title_group_name_modify">聊天室名稱修改</string>
+    <string name="hint_title_group_name_modify">請輸入修改的聊天室名稱</string>
+    <string name="title_group_detail_modify">聊天室簡介修改</string>
+    <string name="hint_title_group_detail_modify">請輸入修改的聊天室簡介</string>
+    <string name="modify_group_info_fail">修改聊天室信息數據庫操作失敗</string>
+    <string name="modify_group_info_success">修改聊天室信息成功</string>
+    <string name="add_group_member_network_fail">添加聊天室時網路連接失敗</string>
+    <string name="add_group_member_fail">添加聊天室時數據庫操作失敗</string>
+    <string name="remove_group_member_network_fail">刪除聊天室成員時網路操作失敗</string>
+    <string name="remove_group_member_db_fail">刪除聊天室成員時數據庫操作失敗</string>
+    <string name="remove_group_member_db_success">刪除人員成功</string>
+    <string name="not_allowed_delete_owner">不允許刪除聊天室管理員</string>
+    <string name="location_fail">獲取定位失敗，請確認定位，手機網路，WIFI三者有任意其一打開</string>
+    <string name="title_group_avatar">聊天室大頭貼</string>
+    <string name="title_discussion_name">聊天室名稱</string>
+    <string name="title_group_detail">聊天室簡介</string>
+    <string name="hint_no_content">暫時沒有內容</string>
+    <string name="discussion_members">聊天室成員</string>
+    <string name="transfer_group_owner">轉讓聊天室管理員</string>
+    <string name="only_group_owner_can_handle_members">僅聊天室管理員可添加新成員</string>
+    <string name="group_owner_transfer_successfully">已轉讓</string>
+    <string name="you_become_owner">你已被%1$s設定為該聊天室管理員</string>
+    <string name="internal_discussion_empty_owner_set_tip">該內部聊天室管理員空缺，如果你是聊天室管理員，你可以點擊確定將自己設定為該聊天室管理員</string>
+    <string name="internal_discussion_empty_owner_set_tip_again">你正在設定自己為聊天室"%1$s”的管理員，點擊確定后生效，點擊取消返回聊天資訊</string>
+    <string name="internal_discussion">內部聊天室</string>
+    <string name="internal_discussion_someone_become_owner">%1$s成為了該聊天室管理員</string>
+
+    <string name="create_discussion_three_people_at_least">至少3人才能創建聊天室</string>
+
+
+    <string name="discussion_helper">聊天室助理</string>
+    <string name="open_discussion_shiled_helper">開啟聊天室免打擾助理</string>
+    <string name="close_discussion_shiled_helper">關閉聊天室免打擾助理</string>
+    <string name="open_discussion_shiled_helper_tip">“聊天室免打擾助理”開啟后，開啟了訊息免打擾的所有聊天室會話將合併成一條新會話「聊天室助理」展現。</string>
+    <string name="discussion_helper_new_messages">%s個聊天室有新訊息</string>
+    <string name="discussion_helper_no_new_messages">你暫時未有新訊息</string>
+    <string name="discussion_helper_tip">以下是“聊天室免打擾”的訊息：</string>
+
+    <string name="news_summary_helper">服务号消息汇总</string>
+
+
+    <string name="common_template_discussion">普通聊天室</string>
+    <string name="common_discussion_create_notice">你可以邀請同事、好友、項目成員加入聊天室，最多支持%s人</string>
+
+
+    <string name="please_input_template_discussion_name">請輸入%s名稱</string>
+    <string name="discussion_manager">聊天室管理</string>
+    <string name="discussion_member_tag_manager">成員標籤管理</string>
+    <string name="discussion_app_manager">聊天室Apps管理</string>
+    <string name="discussion_app">聊天室Apps</string>
+    <string name="add_qucik_entry">添加快捷方式</string>
+    <string name="write_qucik_entry">填寫快捷方式信息</string>
+    <string name="session_quick_entry_bar_display">會話快捷欄顯示</string>
+    <string name="discussion_detail_display">聊天室詳情顯示</string>
+    <string name="entry_upload_icon_tip">Tips：支持bmp、png、jpg 格式圖片，建議上傳尺寸：88*88px，大小不超過2MB。</string>
+    <string name="add_discussion_entry">添加聊天室Apps</string>
+    <string name="select_discussion_app">選擇聊天室Apps</string>
+    <string name="edit_discussion_app">編輯聊天室Apps</string>
+    <string name="add_member_tag">添加成員標籤</string>
+    <string name="modify_member_tag">修改成員標籤</string>
+    <string name="please_input_tag_name">請輸入標籤的名稱</string>
+    <string name="cannot_remove_tag_mapping_member">不允許刪除有人挂靠的成員標籤</string>
+    <string name="mapping_organization">關聯組織</string>
+    <string name="please_select_mapping_organization">請選擇關聯的組織</string>
+    <string name="discussion_identity">聊天室標識</string>
+    <string name="show_more_discussion_apps">顯示更多</string>
+</resources>

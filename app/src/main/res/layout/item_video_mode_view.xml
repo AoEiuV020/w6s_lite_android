@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="80dp"
+    android:layout_height="140dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_name"
+        android:background="@drawable/shape_video_item_view_bg"
+        android:padding="1px">
+
+        <ImageView
+            android:id="@+id/iv_big_audio_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/big_video_mode_audio_icon" />
+
+        <FrameLayout
+            android:id="@+id/fl_surface_home"
+            android:layout_width="80dp"
+            android:layout_height="120dp">
+
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/iv_small_audio_status"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="5dp"
+            android:src="@mipmap/voip_silence_close"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:maxWidth="70dp"
+        android:text="" />
+</RelativeLayout>

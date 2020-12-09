@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_page_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/message_push_setting_title"
+        layout="@layout/title_bar_common" />
+
+    <RelativeLayout
+        android:id="@+id/activity_push_setting_notice_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:background="@drawable/bg_item_common_selector">
+
+        <TextView
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:tag="c15"
+            android:text="@string/accept_new_message"
+            android:textColor="#ff272727" />
+
+        <com.foreveross.atwork.component.WorkplusSwitchCompat
+            android:id="@+id/push_setting_notice_switch_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:theme="@style/workplus_switch"
+
+            />
+
+        <ImageView
+            android:id="@+id/line_notice"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:layout_marginRight="@dimen/dp_11"
+            android:background="@color/common_line_color"
+            android:tag="c18" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/activity_push_setting_voice_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:background="@drawable/bg_item_common_selector">
+
+        <TextView
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:tag="c15"
+            android:text="@string/voice"
+            android:textColor="#ff272727" />
+
+        <com.foreveross.atwork.component.WorkplusSwitchCompat
+            android:id="@+id/push_setting_voice_switch_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:theme="@style/workplus_switch"
+
+            />
+
+        <ImageView
+            android:id="@+id/line_voice"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:background="@color/common_line_color"
+            android:tag="c18" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/activity_push_setting_shake_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:background="@drawable/bg_item_common_selector">
+
+        <TextView
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:tag="c15"
+            android:text="@string/vibrate"
+            android:textColor="#ff272727" />
+
+        <com.foreveross.atwork.component.WorkplusSwitchCompat
+            android:id="@+id/push_setting_shake_switch_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:theme="@style/workplus_switch"
+
+            />
+
+        <ImageView
+            android:id="@+id/line_shake"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:background="@color/common_line_color"
+            android:tag="c18"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/activity_push_setting_details_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:background="@drawable/bg_item_common_selector"
+        android:visibility="gone"
+        >
+
+        <TextView
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:tag="c15"
+            android:text="@string/show_details"
+            android:textColor="#ff272727" />
+
+        <com.foreveross.atwork.component.WorkplusSwitchCompat
+            android:id="@+id/push_setting_details_switch_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:theme="@style/workplus_switch"
+
+            />
+
+        <ImageView
+            android:id="@+id/line_show_details"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:background="@color/common_line_color"
+            android:tag="c18"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

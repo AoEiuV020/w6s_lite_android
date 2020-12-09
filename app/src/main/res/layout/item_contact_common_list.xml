@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 用于在LISTView中展现个人，应用，聊天记录等列表结果页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/rl_root"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_contact_item_height"
+                android:background="@drawable/bg_item_common_selector">
+
+    <ImageView
+        android:id="@+id/iv_select"
+        android:layout_width="@dimen/common_select_item_width"
+        android:layout_height="@dimen/common_select_item_width"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/icon_selected"
+        android:visibility="gone"/>
+
+    <!--一聊天头像 -->
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/common_contact_item_img_size"
+        android:layout_height="@dimen/common_contact_item_img_size"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/iv_select"
+        android:padding="0.2dp"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_avatar">
+
+        <LinearLayout
+            android:id="@+id/rl_title_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:singleLine="true"
+                android:text="用户名称"
+                android:textColor="#333"
+                style="@style/font_size_17sp"/>
+
+            <TextView
+                android:id="@+id/tv_second_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_title"
+                android:singleLine="true"
+                android:tag="c16"
+                android:text=""
+                tools:text="ffffdajl"
+                android:textColor="#aaa"
+                style="@style/font_size_14sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_title_area"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text=""
+            tools:text="ffffdajl"
+            android:textColor="#aaa"
+            android:textSize="13sp"
+            tools:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_line_chat_search"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_11"
+        android:layout_marginRight="@dimen/dp_11"
+        android:layout_marginTop="10dp"
+        android:background="@color/common_line_color"
+        android:tag="c18"
+        />
+
+</RelativeLayout>

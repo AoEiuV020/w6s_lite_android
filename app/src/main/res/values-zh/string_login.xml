@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LOGIN -->
+    <string name="login_user_name">请输入帐号</string>
+    <string name="login_password">请输入至少6位数的密码</string>
+    <string name="login_text">登录</string>
+    <string name="login_register">新用户注册激活</string>
+    <string name="login_with_sms_code">验证码登录</string>
+    <string name="copyright_name">WorkPlus</string>
+    <string name="copyright_name_web_site">www.workplus.io</string>
+    <string name="please_input_password">请输入密码</string>
+    <string name="please_input_secure_code">请输入验证码</string>
+    <string name="account_password_invalid">用户名或密码错误，请重新输入</string>
+    <string name="switch_account">切换帐号</string>
+    <string name="login_copyright_text"></string>
+    <string name="cannot_login">无法登录?</string>
+    <string name="forget_pwd">忘记密码</string>
+    <string name="forget_username">忘记工号</string>
+
+
+    <string name="msg_sync_setting">消息同步设置</string>
+    <string name="fetch_all_msgs_since_log_out">按照系统默认策略拉取消息</string>
+    <string name="only_fetch_recent_msgs">仅拉取最近%s天内的所有消息</string>
+    <string name="set_only_fetch_recent_msgs_alert">更改消息同步设置，会影响会话消息的连贯和完整，你可以在会话详情页面里，通过消息漫游来解决相应的会话问题</string>
+    <string name="msg_sync_setting_friendly_tip">默认策略：\n新设备会拉取一定周期内的数据，具体周期可由管理人员配置，默认是7天。非新设备会拉取上一次离开到现在的所有消息数据。\n\n注意事项：\n更改消息同步设置可能会导致消息记录不完整，请谨慎操作</string>
+    <string name="select_login_method_content">系统检测到该账号可以使用刷脸登录，请手动悬着登录方式。</string>
+    <string name="login_use_password">密码登录</string>
+    <string name="login_user_face_bio">前往刷脸</string>
+
+    <string name="please_select_domain">请选择域</string>
+</resources>

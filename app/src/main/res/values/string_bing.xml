@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--必应消息-->
+    <string name="text">Text</string>
+    <string name="new_bing_text_input_tip">Please enter text or switch to voice input ...</string>
+    <string name="new_bing">New Must-reply</string>
+    <string name="start_bing">New Must-reply</string>
+    <string name="message_bing">Must-reply</string>
+    <string name="bing_message">Must-reply message</string>
+    <string name="receiver">Recipient(s)</string>
+    <string name="bing_select_contact_suffix"> etc.,total:%s</string>
+    <string name="bing_detail_unread_tip">%s人未读</string>
+    <string name="all">All</string>
+    <string name="star">Starred</string>
+    <string name="bing_new_message">New</string>
+    <string name="from_receiving">Received</string>
+    <string name="from_sending">Sent</string>
+    <string name="bing_reply_sum">A total of %s replies</string>
+    <string name="bing_new_reply">A total of %s new reply</string>
+    <string name="click_read_detail">View details</string>
+    <string name="please_input_legal_url">Please enter a valid link address</string>
+    <string name="post_warn_uploading">Attachment upload, please later</string>
+    <string name="bing_link_max_tip">URL limit 5</string>
+    <string name="bing_attachment_max_tip">attachment limit 5</string>
+    <string name="bing_click_to_reply">Click on the details page to reply</string>
+    <string name="bing_all_confirm">All Confirmed</string>
+    <string name="bing_not_confirm_sum">%s Unconfirmed</string>
+    <string name="bing_msg_receive_title">From %s Must-reply message </string>
+    <string name="bing_reply_receive_title">Reply from %s</string>
+    <string name="bing_msg_send_title">Must-reply message by %s send</string>
+    <string name="bing_attach_uploading_warning">Attachment upload, please later</string>
+    <string name="detail">Details</string>
+    <string name="no_reply_yet">No Replies</string>
+    <string name="confirm_received">Confirm</string>
+    <string name="delete_my_reply">Delete the reply</string>
+    <string name="had_confirmed">Confirmed</string>
+    <string name="had_confirmed_title">Confirmed(%s)</string>
+    <string name="not_had_confirmed">Unconfirmed</string>
+    <string name="not_had_confirmed_title">Unconfirmed(%s)</string>
+    <string name="re_upload">Re-upload</string>
+    <string name="fail_upload">Upload failed</string>
+    <string name="sender">Sender</string>
+    <string name="search_bing_with_contact_tip">A total of %s Must-reply message</string>
+    <string name="query_bing_and_reply_tip">A total of %1$s Must-reply message from “%2$s”</string>
+    <string name="bing_pop_label_attachment">[Attachment]</string>
+    <string name="bing_pop_label_img">[Photo]</string>
+    <string name="bing_pop_label_voice">[Audio]</string>
+    <string name="bing_response_label">Responded : </string>
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/rlNewSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="27.2dp"
+            android:layout_height="27.2dp"
+            android:layout_margin="16dp"
+            android:src="@mipmap/icon_message_summery_label"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:id="@+id/ivJump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_arrow"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lvNewsSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:layout_toRightOf="@id/ivIcon"
+            android:layout_toLeftOf="@id/ivJump"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/tvNullData"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="暂无数据"
+            android:visibility="gone"
+            android:gravity="center"/>
+    </RelativeLayout>
+</FrameLayout>

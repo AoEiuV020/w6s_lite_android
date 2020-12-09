@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl_root"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/common_message_content_divider"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="-45dp"
+            android:layout_toLeftOf="@+id/chat_right_share_content_org">
+
+            <com.foreveross.atwork.modules.chat.component.ChatSendStatusView
+                android:id="@+id/chat_right_share_send_status_org"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.foreveross.atwork.modules.chat.component.ChatSendStatusView>
+
+        </FrameLayout>
+
+        <!-- 聊天头像 -->
+        <ImageView
+            android:id="@+id/chat_right_share_avatar_org"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/chat_right_share_content_org"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/right_share_select_line_org"
+            android:scaleType="fitXY"
+            android:src="@mipmap/default_photo" />
+
+        <com.foreverht.workplus.ui.component.foregroundview.ForegroundFrameLayout
+            android:id="@+id/chat_right_share_content_org"
+            android:layout_width="232dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="@dimen/common_message_content_gap"
+            android:layout_toLeftOf="@+id/chat_right_share_avatar_org"
+            android:background="@color/white"
+            android:minHeight="60dp"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="232dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="13dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                    >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_share_message_orginvite" />
+
+
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/chat_right_share_title_org"
+                    style="@style/font_size_16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="5dp"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text=""
+                    android:textColor="@color/common_text_color"
+                    android:visibility="visible"
+                    tools:text="邀请你加入深圳恒拓高科信息技术有限公司邀请你加入深圳恒拓高科信息技术有限公司" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_vertical"
+                    android:gravity="fill_vertical"
+                    android:orientation="horizontal">
+
+
+                    <!-- 摘要 -->
+                    <ImageView
+                        android:id="@+id/chat_right_share_cover_org"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_org" />
+                    <!-- 封面 -->
+                    <TextView
+                        android:id="@+id/chat_right_share_digest_org"
+                        style="@style/font_size_13sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="5dp"
+                        android:maxLines="2"
+                        android:singleLine="false"
+                        android:text=""
+                        android:textColor="@color/common_text_color_666"
+                        tools:text="吴先生邀请你术有限公司加加加术有限公司加加加术有限公司加加加术有限公司" />
+                </LinearLayout>
+
+
+                <include
+                    layout="@layout/layout_chat_message_item_time_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@+id/chat_left_share_cover_card"
+                    android:layout_alignParentRight="true"
+                    android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </com.foreverht.workplus.ui.component.foregroundview.ForegroundFrameLayout>
+
+        <LinearLayout
+            android:id="@+id/right_share_select_line_org"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/chat_right_share_avatar_org"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/right_share_select_org"
+                style="@style/chat_item_select_view"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <com.foreveross.atwork.modules.chat.component.chat.MessageSourceV2View
+            android:id="@+id/message_srouce_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chat_right_share_content_org"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/chat_right_share_avatar_org"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+</RelativeLayout>

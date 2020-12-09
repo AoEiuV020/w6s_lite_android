@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/tangsdk_btn_video_switch_disabled" android:state_pressed="true" />
+    <item android:drawable="@mipmap/tangsdk_btn_video_switch_disabled" android:state_selected="true" />
+    <item android:drawable="@mipmap/tangsdk_btn_video_switch_disabled" android:state_checked="true" />
+    <item android:drawable="@mipmap/tangsdk_btn_video_switch_disabled" android:state_enabled="false" />
+    <item android:drawable="@mipmap/tangsdk_btn_video_switch_normal" />
+</selector>

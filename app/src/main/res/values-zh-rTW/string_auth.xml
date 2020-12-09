@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--权限相关-->
+    <string name="tip_record_fail_no_auth">麥克風沒有聲音，可能是應用程式的錄音權限被禁。請打開設定>應用程式管理員>%1$s>許可>麥克風>設為允許。不同手機可能設定路徑和名稱有差異。</string>
+    <string name="tip_camera_fail_no_auth">無法打開相機，請檢查是否關閉了相機權限。</string>
+    <string name="require_auth_title">權限申請</string>
+    <string name="require_auth_content">在設定>應用程式管理員>%1$s許可>%2$s>設為允許，以正常使用%3$s等功能</string>
+    <string name="require_auth_content_access_fine_location"></string>
+    <string name="require_auth_basic_content">在設定>應用程式管理員>%1$s>許可>%2$s>設為允許，以正常使用</string>
+    <string name="require_auth_content_need_reload">在設定>應用程式管理員>%1$s>許可>%2$s>設為允許，以正常使用%3$s等功能,開啟后需重新登錄才能生效</string>
+    <string name="auth_camera_name">相機</string>
+    <string name="auth_camera_function">拍攝、小視頻、掃描QR code %1$s</string>
+    <string name="auth_record_name">錄音</string>
+    <string name="auth_record_function">录音、小視頻%1$s</string>
+    <string name="auth_phone_name">電話</string>
+    <string name="auth_phone_function">撥打電話</string>
+    <string name="auth_contact_name">通訊錄</string>
+    <string name="auth_contact_function">同步通訊錄</string>
+    <string name="auth_location_name">位置信息</string>
+    <string name="auth_location_function">簽到</string>
+    <string name="auth_storage_name">存儲空間</string>
+    <string name="auth_storage_function">基礎功能</string>
+    <string name="auth_phone_state_name">電話</string>
+    <string name="float_windows_no_permission_alert_title">懸浮窗權限未獲取</string>
+    <string name="float_windows_no_permission_voip_alert_content">你的手機沒有授權%1$s獲取懸浮窗權限，語音聊天最小化不能正常使用。請打開設定>應用程式管理員>%2$s>許可>懸浮窗權限>設為允許。不同手機可能設定路徑和名稱有差異。</string>
+    <string name="float_windows_no_permission_common_alert_content">你的手機沒有授權%1$s獲取懸浮窗權限，必應消息和語音聊天不能正常使用。請打開設定>應用程式管理員>%2$s>許可>懸浮窗權限>設為允許。不同手機可能設定路徑和名稱有差異。</string>
+    <string name="auth_function_vpn">VPN功能</string>
+    <string name="record_forbidden">咪高風被禁用</string>
+
+</resources>

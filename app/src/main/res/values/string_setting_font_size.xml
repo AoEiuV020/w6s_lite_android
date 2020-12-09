@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--修改字体大小-->
+    <string name="text_size">Font Size</string>
+    <string name="set_text_size">Set the font size</string>
+    <string name="preview_text_size">Preview font size</string>
+    <string name="preview_text_size2">Drag the slider below to set the font size</string>
+    <string name="preview_text_size3">After setting, will change the chat, menu font size. If there are problems or comments in the process, feedback to the administrator.</string>
+    <string name="standar">Standard</string>
+    <string name="Aa">Aa</string>
+
+    <string name="font_size_sync_webview">Sync settings web page font size</string>
+    <string name="open_font_size_sync_webview_successfully">Turn on the sync setting successfully.</string>
+    <string name="close_font_size_sync_webview_successfully">Turn off the sync setting successfully.</string>
+    <string name="webview_text_size_modify_warn_tip">The web font size has been read synchronously to the system font size and is not allowed to be modified separately. You can adjust the system font size or turn off the sync setting in [Me]-[Settings]-[General]-[Font Size].</string>
+
+</resources>

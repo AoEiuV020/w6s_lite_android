@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- 字母表自定义控件 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="20dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/letter_1"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:tag="letter_1"
+        android:text="↑" />
+
+    <TextView
+        android:id="@+id/letter_A"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_A"
+        android:text="A" />
+
+    <TextView
+        android:id="@+id/letter_B"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_B"
+        android:text="B" />
+
+    <TextView
+        android:id="@+id/letter_C"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_C"
+        android:text="C" />
+
+    <TextView
+        android:id="@+id/letter_D"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_D"
+        android:text="D" />
+
+    <TextView
+        android:id="@+id/letter_E"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_E"
+        android:text="E" />
+
+    <TextView
+        android:id="@+id/letter_F"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_F"
+        android:text="F" />
+
+    <TextView
+        android:id="@+id/letter_G"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_G"
+        android:text="G" />
+
+    <TextView
+        android:id="@+id/letter_H"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_H"
+        android:text="H" />
+
+    <TextView
+        android:id="@+id/letter_I"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_I"
+        android:text="I" />
+
+    <TextView
+        android:id="@+id/letter_J"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_J"
+        android:text="J" />
+
+    <TextView
+        android:id="@+id/letter_K"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_K"
+        android:text="K" />
+
+    <TextView
+        android:id="@+id/letter_L"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_L"
+        android:text="L" />
+
+    <TextView
+        android:id="@+id/letter_M"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_M"
+        android:text="M" />
+
+    <TextView
+        android:id="@+id/letter_N"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_N"
+        android:text="N" />
+
+    <TextView
+        android:id="@+id/letter_O"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_O"
+        android:text="O" />
+
+    <TextView
+        android:id="@+id/letter_P"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_P"
+        android:text="P" />
+
+    <TextView
+        android:id="@+id/letter_Q"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_Q"
+        android:text="Q" />
+
+    <TextView
+        android:id="@+id/letter_R"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_R"
+        android:text="R" />
+
+    <TextView
+        android:id="@+id/letter_S"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_S"
+        android:text="S" />
+
+    <TextView
+        android:id="@+id/letter_T"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_T"
+        android:text="T" />
+
+    <TextView
+        android:id="@+id/letter_U"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_U"
+        android:text="U" />
+
+    <TextView
+        android:id="@+id/letter_V"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:tag="letter_V"
+        android:text="V" />
+
+    <TextView
+        android:id="@+id/letter_W"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_W"
+        android:text="W" />
+
+    <TextView
+        android:id="@+id/letter_X"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_X"
+        android:text="X" />
+
+    <TextView
+        android:id="@+id/letter_Y"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_Y"
+        android:text="Y" />
+
+
+    <TextView
+        android:id="@+id/letter_Z"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_Z"
+        android:text="Z" />
+
+    <TextView
+        android:id="@+id/letter_Z1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:tag="letter_Z1"
+        android:text="#" />
+
+
+</LinearLayout>

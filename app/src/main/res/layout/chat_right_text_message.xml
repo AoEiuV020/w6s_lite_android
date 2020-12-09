@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:id="@+id/rl_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/common_message_content_divider"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/right_text_select_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/right_text_select"
+            style="@style/chat_item_select_view"
+            tools:visibility="visible"
+            />
+    </LinearLayout>
+
+    <!-- 聊天头像 -->
+    <ImageView
+        android:id="@+id/chat_right_text_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/right_text_select_line"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo" />
+
+
+    <com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout
+        android:id="@+id/ll_chat_right_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_toLeftOf="@id/chat_right_text_avatar"
+        android:background="@drawable/shape_voice_translate_blue"
+        android:gravity="center"
+        android:minHeight="40dp"
+        android:orientation="vertical"
+        android:padding="8dp">
+        <!-- 文本聊天内容 -->
+
+        <LinearLayout
+            android:id="@+id/ll_some_status_info_wrapper_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.rockerhieu.emojicon.EmojiconTextView
+                android:id="@+id/chat_right_text_content"
+                style="@style/font_size_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+                android:maxWidth="250dp"
+                android:minWidth="14dp"
+                android:text="123"
+                android:textColor="@color/white"
+                emojicon:emojiconSize="15sp" />
+
+
+            <include
+                layout="@layout/layout_chat_message_item_time_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+
+                />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.rockerhieu.emojicon.EmojiconTextView
+            android:id="@+id/chat_right_text_translate"
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="33"
+            android:minWidth="23dp"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            emojicon:emojiconSize="15sp"
+            android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+            android:maxWidth="250dp"
+
+            tools:visibility="visible" />
+    </com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_chat_right_text_send_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/ll_chat_right_content">
+
+        <com.foreveross.atwork.modules.chat.component.ChatSendStatusView
+            android:id="@+id/chat_right_text_send_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.foreveross.atwork.modules.chat.component.ChatSendStatusView>
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_translate_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_chat_right_content"
+        android:layout_toLeftOf="@id/chat_right_text_avatar"
+        android:background="@drawable/shape_text_translate"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text="谷歌翻译"
+        android:textColor="#999999"
+        style="@style/font_size_12sp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_marginTop="5dp"
+        />
+
+    <com.foreveross.atwork.modules.chat.component.chat.MessageSourceView
+        android:id="@+id/message_srouce_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_translate_source"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_toLeftOf="@id/chat_right_text_avatar"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_marginTop="5dp"
+        />
+</RelativeLayout>
+</RelativeLayout>

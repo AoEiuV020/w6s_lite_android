@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LOGIN -->
+    <string name="login_user_name">請輸入帳號</string>
+    <string name="login_password">請輸入至少6位數的密碼</string>
+    <string name="login_text">登錄</string>
+    <string name="login_register">新用戶註冊激活</string>
+    <string name="login_with_sms_code">驗證碼登錄</string>
+    <string name="copyright_name">WorkPlus</string>
+    <string name="copyright_name_web_site">www.workplus.io</string>
+    <string name="please_input_password">請輸入密碼</string>
+    <string name="please_input_secure_code">請輸入驗證碼</string>
+    <string name="account_password_invalid">用戶名或密碼錯誤，請重新輸入</string>
+    <string name="switch_account">切換帳號</string>
+    <string name="login_copyright_text"></string>
+    <string name="cannot_login">無法登錄？</string>
+    <string name="forget_pwd">忘記密碼</string>
+    <string name="forget_username">忘記工號</string>
+
+
+    <string name="msg_sync_setting">訊息同步設定</string>
+    <string name="fetch_all_msgs_since_log_out">按照系統默認策略拉取訊息</string>
+    <string name="only_fetch_recent_msgs">僅拉取最近%s天內的所有訊息</string>
+    <string name="set_only_fetch_recent_msgs_alert">會影響會話訊息的連貫和完整，你可以在會話詳情頁面中，通過訊息漫遊來解決相應的會話問題。</string>
+    <string name="msg_sync_setting_friendly_tip">默認策略：\n新設備會拉取一定週期內的數據，具體週期可由管理人員配置，默認是7天。非新設備會拉取上一次離開到現在的所有訊息數據。\n\n注意事項：\n更改訊息同步設定可能會導致消息記錄不完整，請謹慎操作！</string>
+
+    <string name="select_login_method_content">系統檢測到該賬號可以使用刷登錄，請手動選擇登錄方式。</string>
+    <string name="login_use_password">密碼登錄</string>
+    <string name="login_user_face_bio">前往刷臉</string>
+
+    <string name="please_select_domain">請選擇域</string>
+
+</resources>

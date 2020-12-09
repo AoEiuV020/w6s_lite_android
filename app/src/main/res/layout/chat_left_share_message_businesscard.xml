@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <ImageView
+        android:id="@+id/left_share_select_card"
+        style="@style/chat_item_select_view"
+        tools:visibility="visible" />
+
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/chat_left_share_avatar_card"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo"
+        tools:ignore="ContentDescription" />
+
+
+    <LinearLayout
+        android:id="@+id/chat_left_share_username_line_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/chat_left_share_avatar_card"
+        android:paddingTop="3dp">
+
+        <!--用户姓名 -->
+        <TextView
+            android:id="@+id/chat_left_share_username_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:paddingTop="5dp"
+            android:textColor="@color/common_text_color"
+            style="@style/font_size_13sp"
+            android:visibility="gone" />
+
+        <!--副标题 -->
+        <TextView
+            android:id="@+id/chat_left_share_sub_title"
+            style="@style/font_size_13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textColor="@color/common_text_color_888"
+            android:visibility="gone"
+            tools:text="ffffda"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            tools:visibility="visible" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chat_left_share_content_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_left_share_username_line_card"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/chat_left_share_avatar_card"
+        android:background="@drawable/shape_voice_translate_white"
+        android:gravity="left|center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/common_text_color">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/personal_card"
+            android:textColor="@color/alarm_text"
+            style="@style/font_size_13sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@mipmap/imageinar_line" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- 封面 -->
+            <ImageView
+                android:id="@+id/chat_left_share_cover_card"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/default_photo" />
+
+            <!-- 标题 -->
+            <TextView
+                android:id="@+id/chat_left_share_name_card"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lineSpacingExtra="10dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/common_text_color_share_title"
+                style="@style/font_size_18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/chat_left_share_content_card"></LinearLayout>
+
+    <com.foreveross.atwork.modules.chat.component.chat.MessageSourceView
+        android:id="@+id/message_srouce_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_left_share_content_card"
+        android:layout_toRightOf="@id/chat_left_share_avatar_card" />
+
+</RelativeLayout>

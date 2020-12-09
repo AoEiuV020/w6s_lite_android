@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="fingerprint_auth">Fingerprint Identification</string>
+    <string name="client_second_authentication_setting">Client function secondary authentication setting</string>
+    <string name="need_second_authentication_tip">Need secondary certification：</string>
+    <string name="authentication_valid_duration_setting">Authentication time setting</string>
+    <string name="please_select_protect_area">Please select the certification page</string>
+    <string name="do_not_need_protect">None</string>
+    <string name="when_opening_client">Open the app</string>
+    <string name="please_verify_fingerprint">Please verify your fingerprint</string>
+    <string name="please_verify_fingerprint_again">Fingerprint authentication failed, please try again</string>
+    <string name="verify_fingerprint_too_frequently">authentication failed multiple times, please try later</string>
+    <string name="force_to_set_biometric_authentication">You need to enable biometric authentication before you can use the client function</string>
+    <string name="notice_to_set_biometric_authentication">Enable biometric authentication before you can use it</string>
+    <string name="notice_to_set_system_biometric_authentication">Enable finger print in your system settings before you can use it</string>
+    <string name="notice_cannot_close_all_biometric_authentication">Unable to close all due to mandatory biometric authentication enabled</string>
+    <string name="gesture_lock_pwd_low_strength">The password is too simple, please reset it</string>
+    <string name="watch_low_strength_demo">View a simple pattern example</string>
+    <string name="low_strength_demo_prefix">Please don’t enter simple gesture.&#160;</string>
+    <string name="low_strength_demo_suffix">Example</string>
+    <string name="go_to_setting">Setting</string>
+    <string name="fingerprint_and_gesture_code_bio_setting">Fingerprint/Gesture Password</string>
+
+</resources>

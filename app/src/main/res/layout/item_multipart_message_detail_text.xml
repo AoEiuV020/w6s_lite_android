@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_text_message"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/tvTranslateSource"
+        style="@style/font_size_12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTextTranslation"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_text_translate"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:text="谷歌翻译"
+        android:textColor="#999999"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/vTranslationLine"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/tvTextMessage"
+        android:layout_marginTop="5dp"
+        android:background="#dbdbdb"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <com.rockerhieu.emojicon.EmojiconTextView
+        android:id="@+id/tvTextTranslation"
+        style="@style/font_size_16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vTranslationLine"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:text="这是一段译文"
+        android:textColor="#999999"
+        android:visibility="gone"
+        emojicon:emojiconSize="15sp"
+        tools:visibility="visible" />
+
+    <com.rockerhieu.emojicon.EmojiconTextView
+        android:id="@+id/tvTextMessage"
+        style="@style/font_size_16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="curry on the three~~~"
+        android:textColor="#46484a"
+        emojicon:emojiconSize="15sp"
+        tools:text="测试之这是一段文本"
+        tools:visibility="visible" />
+
+</RelativeLayout>

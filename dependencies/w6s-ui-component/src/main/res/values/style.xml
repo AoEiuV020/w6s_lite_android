@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <style name="blueProgressBar" parent="Base.Widget.AppCompat.ProgressBar">-->
+<!--        <item name="android:indeterminateTint">#1a98ff</item>-->
+<!--        <item name="android:indeterminateTintMode">src_atop</item>-->
+<!--    </style>-->
+<!--    <style name="whiteProgressBar" parent="Base.Widget.AppCompat.ProgressBar">-->
+<!--        <item name="android:indeterminateTint">#ffffff</item>-->
+<!--        <item name="android:indeterminateTintMode">src_atop</item>-->
+<!--    </style>-->
+
+    <style name="app_alert_dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <!--<item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>-->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+
+    <declare-styleable name="AutoAlignTextView">
+        <attr name="maxTextSize" format="dimension"/>
+        <attr name="minTextSize" format="dimension"/>
+    </declare-styleable>
+
+
+    <style name="font_size_8sp">
+        <item name="android:textSize">?attr/fontsize_8sp</item>
+    </style>
+
+    <style name="font_size_9sp">
+        <item name="android:textSize">?attr/fontsize_9sp</item>
+    </style>
+
+    <style name="font_size_10sp">
+        <item name="android:textSize">?attr/fontsize_10sp</item>
+    </style>
+
+    <style name="font_size_11sp">
+        <item name="android:textSize">?attr/fontsize_11sp</item>
+    </style>
+
+    <style name="font_size_tiny_12sp">
+        <item name="android:textSize">?attr/fontsize_tiny_12sp</item>
+    </style>
+
+    <style name="font_size_12sp">
+        <item name="android:textSize">?attr/fontsize_12sp</item>
+    </style>
+
+    <style name="font_size_13sp">
+        <item name="android:textSize">?attr/fontsize_13sp</item>
+    </style>
+
+    <style name="font_size_14sp">
+        <item name="android:textSize">?attr/fontsize_14sp</item>
+    </style>
+
+    <style name="font_size_15sp">
+        <item name="android:textSize">?attr/fontsize_15sp</item>
+    </style>
+
+    <style name="font_size_16sp">
+        <item name="android:textSize">?attr/fontsize_16sp</item>
+    </style>
+
+    <style name="font_size_17sp">
+        <item name="android:textSize">?attr/fontsize_17sp</item>
+    </style>
+
+    <style name="font_size_18sp">
+        <item name="android:textSize">?attr/fontsize_18sp</item>
+    </style>
+
+    <style name="font_size_19sp">
+        <item name="android:textSize">?attr/fontsize_19sp</item>
+    </style>
+
+    <style name="font_size_20sp">
+        <item name="android:textSize">?attr/fontsize_20sp</item>
+    </style>
+
+    <style name="font_size_21sp">
+        <item name="android:textSize">?attr/fontsize_21sp</item>
+    </style>
+
+    <style name="font_size_22sp">
+        <item name="android:textSize">?attr/fontsize_22sp</item>
+    </style>
+
+    <style name="font_size_23sp">
+        <item name="android:textSize">?attr/fontsize_23sp</item>
+    </style>
+
+    <style name="font_size_24sp">
+        <item name="android:textSize">?attr/fontsize_24sp</item>
+    </style>
+</resources>

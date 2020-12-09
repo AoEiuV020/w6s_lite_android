@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="VoiceWaveView">
+        <attr name="waveLineSpace" format="dimension"/>
+        <attr name="waveLineWidth" format="dimension"/>
+        <attr name="duration" format="integer"/>
+
+        <attr name="waveMode" format="enum">
+            <enum name="up_down" value="0"/>
+            <enum name="left_right" value="1"/>
+        </attr>
+
+        <attr name="waveLineType" format="enum">
+            <enum name="bar_chart" value="0"/>
+            <enum name="line_graph" value="1"/>
+        </attr>
+
+        <attr name="waveLineColor" format="color"/>
+        <attr name="android:gravity"/>
+    </declare-styleable>
+
+    <declare-styleable name="AlphaMaskLayout">
+        <!--透明度0~255-->
+        <attr name="aml_alpha_from" format="integer"/>
+        <!--透明度0~255-->
+        <attr name="aml_alpha_to" format="integer"/>
+        <!--透明度动画时间长度-->
+        <attr name="aml_duration" format="integer"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="ItemHomeTabFragment">
+        <attr name="textImage" format="integer" />
+        <attr name="titles" format="string" />
+        <attr name="index" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="PopViewItemView">
+        <attr name="popIcon" format="integer"/>
+        <attr name="popTitle" format="integer"/>
+    </declare-styleable>
+
+
+    <string-array name="self_define_functions_name_array">
+        <item>@string/college_circle</item>
+        <item>@string/employee_benefits</item>
+    </string-array>
+
+    <integer-array name="self_define_functions_img_array">
+        <!--<item>@mipmap/icon_activity_promote</item>-->
+        <item>@mipmap/icon_x_dark_moments</item>
+        <item>@mipmap/icon_staff_welfare</item>
+    </integer-array>
+
+    <string-array name="popup_view_name_array">
+        <item>@string/session</item>
+        <item>@string/college_circle</item>
+        <item>@string/browser</item>
+        <item>@string/copy_url</item>
+        <item>@string/wx</item>
+        <item>@string/wx_friends</item>
+        <item>@string/qq</item>
+        <item>@string/qzone</item>
+    </string-array>
+
+    <integer-array name="popup_view_img_array">
+        <item>@mipmap/icon_send_to</item>
+        <item>@mipmap/icon_college_circle</item>
+        <item>@mipmap/icon_browser</item>
+        <item>@mipmap/icon_copy</item>
+        <item>@mipmap/icon_wx_session</item>
+        <item>@mipmap/icon_wx_timeline</item>
+        <item>@mipmap/icon_qq_session</item>
+        <item>@mipmap/icon_qq_qzone</item>
+    </integer-array>
+
+    <string-array name="popup_dialog_personal_array">
+        <item>@string/add_to_friend</item>
+        <item>@string/invite_join_my_org</item>
+        <item>@string/send_my_card</item>
+        <item>@string/sync_contact_to_mobile</item>
+    </string-array>
+
+    <string-array name="popup_dialog_personal_qrcode_array">
+        <item>@string/save_qrcode_img</item>
+        <item>@string/sweep_qrcode</item>
+    </string-array>
+
+    <string-array name="popup_dialog_organization_array">
+        <item>@string/exit_organization</item>
+        <item>@string/sync_contact_to_mobile</item>
+    </string-array>
+
+
+
+
+    <!-- Defines the custom XML attributes supported for a HorizontalListView -->
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_width" format="dimension"/>
+        <attr name="ci_height" format="dimension"/>
+        <attr name="ci_margin" format="dimension"/>
+        <attr name="ci_animator" format="reference"/>
+        <attr name="ci_animator_reverse" format="reference"/>
+        <attr name="ci_drawable" format="reference"/>
+        <attr name="ci_drawable_unselected" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="gridPasswordView">
+
+        <attr name="textColor" format="color|reference" />
+        <attr name="textSize" format="dimension" />
+
+        <attr name="lineColor" format="color" />
+        <attr name="gridColor" format="color" />
+        <attr name="lineWidth" format="dimension" />
+
+        <attr name="passwordLength" format="integer" />
+        <attr name="passwordTransformation" format="string" />
+
+        <attr name="passwordType" format="enum">
+            <enum name="numberPassword" value="0" />
+            <enum name="textPassword" value="1" />
+            <enum name="textVisiblePassword" value="2" />
+            <enum name="textWebPassword" value="3" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="RoundedImageView">
+        <attr name="riv_corner_radius" format="dimension" />
+        <attr name="riv_corner_radius_top_left" format="dimension" />
+        <attr name="riv_corner_radius_top_right" format="dimension" />
+        <attr name="riv_corner_radius_bottom_left" format="dimension" />
+        <attr name="riv_corner_radius_bottom_right" format="dimension" />
+        <attr name="riv_border_width" format="dimension" />
+        <attr name="riv_border_color" format="color" />
+        <attr name="riv_mutate_background" format="boolean" />
+        <attr name="riv_oval" format="boolean" />
+        <attr name="android:scaleType" />
+        <attr name="riv_tile_mode">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_x">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_y">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgress">
+        <attr name="circle_progress" format="integer"/>
+        <attr name="circle_max" format="integer"/>
+
+        <attr name="circle_unfinished_color" format="color"/>
+        <attr name="circle_finished_color" format="color"/>
+
+        <attr name="circle_text_size" format="dimension"/>
+        <attr name="circle_text_color" format="color"/>
+
+        <attr name="circle_prefix_text" format="string"/>
+        <attr name="circle_suffix_text" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="DonutProgress">
+        <attr name="donut_progress" format="float"/>
+        <attr name="donut_max" format="integer"/>
+
+        <attr name="donut_unfinished_color" format="color"/>
+        <attr name="donut_finished_color" format="color"/>
+
+        <attr name="donut_finished_stroke_width" format="dimension"/>
+        <attr name="donut_unfinished_stroke_width" format="dimension"/>
+
+        <attr name="donut_text_size" format="dimension"/>
+        <attr name="donut_text_color" format="color"/>
+
+        <attr name="donut_prefix_text" format="string"/>
+        <attr name="donut_suffix_text" format="string"/>
+        <attr name="donut_text" format="string"/>
+
+        <attr name="donut_background_color" format="color"/>
+
+        <attr name="donut_inner_bottom_text" format="string"/>
+        <attr name="donut_inner_bottom_text_size" format="dimension"/>
+        <attr name="donut_inner_bottom_text_color" format="color"/>
+
+        <attr name="donut_circle_starting_degree" format="integer" />
+        <attr name="donut_show_text" format="boolean"/>
+        <attr name="donut_inner_drawable" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ArcProgress">
+        <attr name="arc_progress" format="integer"/>
+        <attr name="arc_angle" format="float"/>
+        <attr name="arc_stroke_width" format="dimension"/>
+        <attr name="arc_max" format="integer"/>
+
+        <attr name="arc_unfinished_color" format="color"/>
+        <attr name="arc_finished_color" format="color"/>
+
+        <attr name="arc_text_size" format="dimension"/>
+        <attr name="arc_text_color" format="color"/>
+
+        <attr name="arc_suffix_text" format="string"/>
+        <attr name="arc_suffix_text_size" format="dimension"/>
+        <attr name="arc_suffix_text_padding" format="dimension"/>
+
+        <attr name="arc_bottom_text" format="string"/>
+        <attr name="arc_bottom_text_size" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="circleProgressStyle" format="reference"/>
+        <attr name="donutProgressStyle" format="reference"/>
+        <attr name="arcProgressStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="SeekBar">
+        <attr name="tickCount" format="integer" />
+        <attr name="tickHeight" format="dimension" />
+        <attr name="barWeight" format="dimension" />
+        <attr name="barColor" format="reference|color" />
+        <attr name="connectingLineWeight" format="dimension" />
+        <attr name="connectingLineColor" format="reference|color" />
+        <attr name="thumbRadius" format="dimension" />
+        <attr name="thumbImageNormal" format="reference" />
+        <attr name="thumbImagePressed" format="reference" />
+        <attr name="thumbColorNormal" format="reference|color"/>
+        <attr name="thumbColorPressed" format="reference|color"/>
+    </declare-styleable>
+
+    <declare-styleable name="PayPsdInputView">
+
+        <attr name="maxCount" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="divideLineWidth" format="dimension" />
+        <attr name="divideLineColor" format="color" />
+        <attr name="rectAngle" format="dimension" />
+        <attr name="focusedColor" format="color"/>
+        <attr name="psdType" format="enum">
+            <enum name="weChat" value="0" />
+            <enum name="bottomLine" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="InputInfoEditText">
+
+        <attr name="hint" format="integer|string" />
+        <attr name="inputType" format="integer" />
+        <attr name="normalInputType" format="integer" />
+
+    </declare-styleable>
+
+
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/v_dagger_up"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_common_selector"
+        android:layout_below="@+id/v_dagger_up"
+        android:paddingTop="8.3dp"
+        android:paddingBottom="8.3dp"
+        >
+
+        <ImageView
+            android:id="@+id/arrow_right"
+            style="@style/icon_arrow_dark" />
+
+
+        <ImageView
+            android:id="@+id/about_me_function_icon"
+            android:layout_width="21.5dp"
+            android:layout_height="21.5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/list_common_padding"
+            android:scaleType="fitXY"
+            tools:src="@mipmap/icon_fail" />
+
+        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+            android:id="@+id/me_function_name"
+            style="@style/font_size_14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/fl_rightest"
+            android:layout_toRightOf="@+id/about_me_function_icon"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:tag="c15"
+            android:text="消息漫消"
+            android:textColor="@color/common_item_black" />
+
+
+        <FrameLayout
+            android:id="@+id/fl_rightest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/list_common_padding">
+
+            <TextView
+                android:id="@+id/tv_name_rightest"
+                style="@style/font_size_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:maxWidth="160dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/common_text_color_999" />
+
+            <com.foreveross.atwork.modules.common.component.LightNoticeItemView
+                android:id="@+id/me_notice_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right" />
+
+            <com.foreveross.atwork.component.WorkplusSwitchCompat
+                android:id="@+id/me_switcher_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:theme="@style/workplus_switch"
+                android:visibility="gone"
+                tools:visibility="visible"
+
+                />
+
+            <ProgressBar
+                android:id="@+id/me_progressbar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:indeterminate="true"
+                android:visibility="gone"
+                tools:visibility="gone" />
+
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/v_dagger_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        tools:visibility="visible"
+        android:layout_below="@+id/rl_main"
+        />
+
+
+
+
+
+</RelativeLayout>

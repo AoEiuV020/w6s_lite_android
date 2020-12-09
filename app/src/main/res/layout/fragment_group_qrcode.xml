@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3B3C3D"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_intro_friends"
+        layout="@layout/title_bar_common" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_avatar_shape"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/ll_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_discussion_avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/loading_icon_size" />
+
+            <TextView
+                android:id="@+id/tv_group_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/iv_discussion_avatar"
+                android:text=""
+                android:textColor="@color/common_text_color"
+                style="@style/font_size_18sp" />
+        </RelativeLayout>
+
+        <com.foreveross.atwork.component.SquareImageView
+            android:id="@+id/iv_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_top"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_transparent_shape"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_valid_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_qrcode"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="13dp"
+            android:textColor="@color/tab_text"
+            style="@style/font_size_11sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

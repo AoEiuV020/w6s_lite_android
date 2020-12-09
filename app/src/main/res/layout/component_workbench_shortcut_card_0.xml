@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="12dp"
+    android:paddingTop="8dp">
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.foreveross.atwork.modules.workbench.component.WorkbenchShortcutCardItemView
+            android:id="@+id/vWorkbenchShortcutCardItemView0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:visibility="gone" />
+
+        <com.foreveross.atwork.modules.workbench.component.WorkbenchShortcutCardItemView
+            android:id="@+id/vWorkbenchShortcutCardItemView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:visibility="gone" />
+
+        <com.foreveross.atwork.modules.workbench.component.WorkbenchShortcutCardItemView
+            android:id="@+id/vWorkbenchShortcutCardItemView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+
+            />
+
+        <com.foreveross.atwork.modules.workbench.component.WorkbenchShortcutCardItemView
+            android:id="@+id/vWorkbenchShortcutCardItemView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/rlWorkbenchShortcutCardItemViewMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="#cbcbcb" />
+
+            <com.foreveross.atwork.modules.workbench.component.WorkbenchShortcutCardItemView
+                android:id="@+id/vWorkbenchShortcutCardItemViewMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

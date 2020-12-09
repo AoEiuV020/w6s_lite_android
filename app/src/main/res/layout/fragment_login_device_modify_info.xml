@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/vTitleBar"
+        layout="@layout/title_bar_common" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlModifyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="visible"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/ivModifyCancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/cancel_input_selector" />
+
+        <EditText
+            android:id="@+id/etModify"
+            style="@style/font_size_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ivModifyCancelBtn"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:hint="@string/please_input_login_device_name"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/common_text_color" />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

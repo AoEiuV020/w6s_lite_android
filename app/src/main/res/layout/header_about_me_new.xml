@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/me_header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="30dp">
+
+    <ImageView
+        android:id="@+id/me_header_avatar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo" />
+
+
+    <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+        android:id="@+id/me_name"
+        style="@style/font_size_17sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:textColor="@color/common_item_black"
+        tools:text="title" />
+
+
+    <RelativeLayout
+        android:id="@+id/ll_job_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+
+        <ImageView
+            android:id="@+id/iv_org_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/list_common_padding"
+            android:src="@mipmap/icon_org_dark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="@dimen/list_common_padding"
+            android:layout_toLeftOf="@+id/iv_org_switcher"
+            android:layout_toRightOf="@+id/iv_org_dark"
+            android:orientation="vertical">
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:id="@+id/tv_org_name"
+                style="@style/font_size_14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingMultiplier="1.3"
+                android:textColor="@color/common_item_black" />
+
+            <TextView
+                android:id="@+id/me_org_job"
+                style="@style/font_size_13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:lineSpacingMultiplier="1.3"
+                android:textColor="@color/common_text_color_999"
+                tools:text="content" />
+
+        </LinearLayout>
+        <!-- 更多按钮 -->
+        <ImageView
+            android:id="@+id/iv_org_switcher"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_switch_common"
+            android:visibility="gone"
+            tools:visibility="visible"
+
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

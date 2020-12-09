@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- 聊天中的系统消息布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingBottom="@dimen/common_message_content_divider"
+    >
+
+    <TextView
+        android:id="@+id/chat_system_message"
+        style="@style/font_size_13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:textColor="@color/alarm_text"
+        tools:text="undo" />
+
+
+    <TextView
+        android:id="@+id/tv_edit"
+        style="@style/font_size_13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:text="@string/re_edit"
+        android:textColor="@color/common_blue_bg"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+</LinearLayout>

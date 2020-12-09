@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="webview_float_action_helper">AssistiveTouch</string>
+    <string name="bottom_left_float">Floating in the lower left</string>
+    <string name="bottom_right_float">Floating in the lower right</string>
+    <string name="close_webview_float_action_helper">Turn off AssistiveTouch</string>
+    <string name="webview_float_action_helper_tip1">“AssistiveTouch” allows you to easily perform page return and close operations without relying on gestures or physical buttons when you are accessing a web page or a light application.</string>
+    <string name="webview_float_action_helper_tip2">Tips:\nClick the floating window to trigger the return operation. Press and hold for 1-2 seconds to trigger the close page operation.</string>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/transparent"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:minHeight="100dp"
+        android:minWidth="120dp"
+        android:background="@drawable/w6s_dialog_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/iv_gif"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@mipmap/icon_loading_white"/>
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:lineSpacingExtra="3dp"
+            android:textSize="14sp"
+            android:maxWidth="160dp"
+            tools:text="正在转成文字"
+
+            />
+
+    </LinearLayout>
+</LinearLayout>

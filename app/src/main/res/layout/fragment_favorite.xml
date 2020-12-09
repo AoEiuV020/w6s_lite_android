@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/favorite_common_page_bg">
+
+    <include
+        android:id="@+id/title_bar_favorite"
+        layout="@layout/title_bar_common" />
+
+    <ListView
+        android:id="@+id/lv_favorite_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar_favorite"
+        android:divider="@null"/>
+
+    <LinearLayout
+        android:id="@+id/batch_opt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:clickable="false"
+        android:longClickable="false"
+        android:focusable="false"
+        android:visibility="gone"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="false">
+        <ImageButton
+            android:id="@+id/share_favorites"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:focusable="true"
+            android:background="@null"
+            android:src="@mipmap/icon_send_hover"/>
+
+
+        <ImageButton
+            android:id="@+id/delete_favorites"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:focusable="true"
+            android:background="@null"
+            android:src="@mipmap/icon_del_hover"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_common_nothing"
+        android:id="@+id/layout_no_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar_favorite"
+        android:visibility="gone"/>
+</RelativeLayout>

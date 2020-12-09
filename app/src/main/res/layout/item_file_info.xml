@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--  表示文件选择中的一个文件信息 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/adaptive_height_50dp"
+    android:background="@drawable/bg_item_common_selector"
+    android:minHeight="50dp"
+    tools:layout_height="50dp">
+
+    <CheckBox
+        android:id="@+id/item_file_select_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:button="@drawable/bg_checkbox_file_selector"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:paddingRight="7dp"
+        android:soundEffectsEnabled="true" />
+
+    <ImageView
+        android:id="@+id/item_file_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/item_file_select_checkbox" />
+    <!--android:background="@mipmap/icon_unknow"-->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/item_file_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/item_file_name"
+                style="@style/font_size_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="file"
+                android:textColor="#333"
+                android:layout_toLeftOf="@+id/send_date"
+                android:layout_marginRight="10dp"
+                />
+
+            <TextView
+                android:id="@+id/send_date"
+                style="@style/font_size_10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="09:00"
+                android:textColor="#aaa" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_file_size"
+            style="@style/font_size_10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="222k"
+            android:textColor="#aaa" />
+
+    </LinearLayout>
+</RelativeLayout>

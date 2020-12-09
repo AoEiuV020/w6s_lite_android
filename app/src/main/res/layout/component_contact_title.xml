@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="bottom"
+    android:paddingTop="25dp"
+    >
+
+    <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+        android:id="@+id/contact_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="11113"
+        style="@style/font_size_14sp"
+        android:textColor="@color/common_item_black"
+        android:layout_marginLeft="@dimen/title_common_padding"
+        android:layout_marginBottom="8dp"
+        android:maxLines="1"
+        />
+
+</LinearLayout>

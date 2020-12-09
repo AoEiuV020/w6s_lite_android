@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 聊天界面TitleBar -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/v_fake_statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/transparent"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/v_fake_statusbar"
+        android:background="@color/transparent">
+
+
+        <!-- 右边显示字，如取消，保存等 -->
+        <TextView
+            android:id="@+id/title_bar_common_right_text"
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:gravity="center|center_vertical"
+            android:minWidth="30dp"
+            android:text="@string/cancel"
+            android:textColor="@color/common_item_black"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/title_bar_common_right_img"
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:gravity="center|center_vertical"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/right_compat_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_compat_right_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"/>
+
+            <ImageView
+                android:id="@+id/view_red_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="2dp"
+                android:background="@mipmap/icon_red_dot"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"/>
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/fl_leftest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/title_bar_common_left_title"
+                style="@style/font_size_16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text=""
+                android:textColor="@color/common_item_black"
+                android:visibility="gone"
+                android:minWidth="30dp"
+                android:gravity="center|center_vertical"
+                tools:visibility="visible" />
+
+
+            <!-- 左边的APP图标 -->
+            <ImageView
+                android:id="@+id/title_bar_common_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:src="@mipmap/icon_back"
+                tools:visibility="visible" />
+        </FrameLayout>
+
+
+        <!-- 名称，当天聊天界面的名称 -->
+        <TextView
+            android:id="@+id/title_bar_common_title"
+            style="@style/font_size_18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/title_bar_common_right_text"
+            android:layout_toRightOf="@+id/fl_leftest"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="123456"
+            android:textColor="@color/common_item_black" />
+
+        <View
+            android:id="@+id/v_line_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_line_gray" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

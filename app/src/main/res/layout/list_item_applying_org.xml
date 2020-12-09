@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 聊天消息列表每一列 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/adaptive_height_70dp"
+    tools:layout_height="70dp"
+    android:background="@drawable/bg_item_common_selector"
+    android:orientation="vertical">
+
+    <!-- 聊天头像 -->
+    <ImageView
+        android:id="@+id/chat_item_avatar"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="11dp"
+        android:contentDescription="@string/chat_item_avatar"
+        android:padding="0.2dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/loading_icon_size" />
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/chat_item_avatar"
+        android:layout_alignTop="@id/chat_item_avatar"
+        android:layout_marginRight="-10dp"
+        android:layout_marginTop="-7dp">
+
+        <com.foreveross.atwork.component.NewMessageTipView
+            android:id="@+id/chat_item_new_messages_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+
+    <!-- 聊天时间 -->
+    <TextView
+        android:id="@+id/chat_item_time"
+        style="@style/font_size_13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="16dp"
+        android:gravity="left|top"
+        android:tag="c16"
+        android:text="17:00"
+        android:textColor="@color/alarm_text" />
+
+    <!-- 聊天标题-->
+    <TextView
+        android:id="@+id/chat_item_title"
+        style="@style/font_size_16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_toLeftOf="@id/chat_item_time"
+        android:layout_toRightOf="@id/chat_item_avatar"
+        android:gravity="left|top"
+        android:singleLine="true"
+        android:tag="c15"
+        android:text="123"
+        android:textColor="@color/common_text_color" />
+
+    <!-- 本次聊天最后聊天信息 -->
+    <TextView
+        android:id="@+id/chat_item_last_message"
+        style="@style/font_size_14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/chat_item_title"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/chat_item_avatar"
+        android:gravity="left|bottom"
+        android:singleLine="true"
+        android:tag="c16"
+        android:text="hello"
+        android:textColor="@color/common_text_color_chat_list" />
+
+
+    <ImageView
+        android:id="@+id/line_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_75"
+        android:layout_marginRight="@dimen/dp_11"
+        android:layout_marginTop="10dp"
+        android:background="@color/common_line_color"
+        android:tag="c20" />
+
+
+</RelativeLayout>

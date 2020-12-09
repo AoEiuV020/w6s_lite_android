@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_pull_to_refresh">下拉開始刷新</string>
+    <string name="release_pull_to_refresh">釋放立即刷新</string>
+    <string name="handling_pull_to_refresh">正在刷新中...</string>
+    <string name="finished_pull_to_refresh">刷新完成</string>
+    <string name="failed_pull_to_refresh">刷新失敗</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="loading">加载中...</string>
+    <string name="hint_search">搜索</string>
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <View
+        android:id="@+id/vFakeStatusbar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/titleBiometricAuthentication"
+        layout="@layout/title_bar_common"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vFakeStatusbar" />
+
+
+    <ImageView
+        android:id="@+id/ivFingerPrintAuth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBiometricAuthentication"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:src="@mipmap/fingerprint_red" />
+
+    <TextView
+        android:id="@+id/tvFingerPrintAuth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivFingerPrintAuth"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/fingerprint_auth"
+        android:textColor="@color/common_text_color"
+        android:textSize="18sp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="@string/login_with_id_and_pw"
+        android:textColor="@color/common_text_color"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

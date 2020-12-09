@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="common">網路好像不太穩定，請稍後重試</string>
+
+    <string name="do_not_operate_frequently">請不要頻繁操作</string>
+
+
+    <!-- 登录的异常情况 -->
+    <string name="Login_common">登錄異常</string>
+    <string name="Login_NETWORK">伺服器請求超時，請稍後重試</string>
+    <string name="Login_201004">用戶名或密碼錯誤，請重新輸入</string>
+    <string name="Login_201002">帳號不存在</string>
+    <string name="Login_201007">帳號不存在</string>
+    <string name="Login_20251">圖形驗證碼輸入有誤，請重新輸入</string>
+    <string name="Login_202511">圖形驗證碼輸入有誤，請重新輸入</string>
+    <string name="Login_202512">圖形驗證碼已失效，請重新輸入</string>
+    <string name="Login_202513">圖形驗證碼輸入有誤，請重新輸入</string>
+    <string name="Login_202514">圖形驗證碼輸入有誤，請重新輸入</string>
+
+    <!-- 关于我异常 -->
+    <string name="AboutMe_common">網路好像不太穩定，請稍後重試</string>
+
+    <string name="AboutMe_202312">沒有對應的發佈版本</string>
+
+    <!--星标联系人-->
+    <string name="FavorContact_common">星標聯繫人操作失敗</string>
+    <string name="FavorContact_23103">沒有對應的用戶</string>
+
+    <!--群功能 -->
+    <string name="Group_common">網路好像不太穩定，請稍後重試</string>
+    <string name="Group_202110">請不要頻繁操作(202110)</string>
+
+    <!-- 联系人异常 -->
+    <string name="Contact_common">聯絡人操作失敗</string>
+
+    <!-- 离线消息 -->
+    <string name="Offline_common">獲取離線訊息失敗</string>
+
+
+
+    <string name="ChangePwd_common">修改密碼失敗</string>
+
+    <string name="ChangePwd_201004">舊密碼輸入不正確，請重新輸入</string>
+
+    <string name="click_error_msg">當前賬戶已在其它設備上登錄。若非本人操作，您的登錄密碼可能已經洩密，請聯繫管理員處理！</string>
+
+    <string name="reset_credentials_error_msg">當前賬戶已發生變更，請重新登錄！若無法登錄，請聯繫管理員處理！</string>
+
+    <string name="account_is_locked">帳號被鎖定，請聯繫管理員！</string>
+
+    <string name="license_overdue">應用程式正在維護，請聯繫管理員!</string>
+
+    <string name="device_forbidden">當前設備被禁止</string>
+
+    <string name="device_binding">應用程式正在維護，請聯繫管理員</string>
+
+    <string name="network_not_avaluable">網路好像不太穩定，請稍後重試</string>
+
+    <string name="Qrcode_common">二維碼獲取失敗</string>
+
+    <string name="Qrcode_23607">該聊天室二維碼已失效，無法通過掃碼加入聊天室</string>
+
+    <string name="Qrcode_23605">該聊天室二維碼已失效，無法通過掃碼加入聊天室</string>
+
+    <string name="Qrcode_202531">二維碼已失效</string>
+
+    <string name="Qrcode_202532">二維碼已失效</string>
+
+    <string name="Qrcode_202533">二維碼已失效</string>
+
+    <string name="ModifyEmployee_common">修改%1$s失敗</string>
+
+    <string name="Voip_common">網路好像不太穩定，請稍後重試</string>
+
+    <string name="Voip_202211">會議資源不足，請聯系管理員</string>
+
+    <string name="Voip_206611">請不要頻繁操作(206611)</string>
+
+    <string name="Translate_common">翻译失败，请稍后重试</string>
+
+    <string name="WalletModifyPwd_common">網路好像不太穩定，請稍後重試</string>
+
+    <string name="WalletModifyPwd_207006">舊密碼輸入不正確，請重新輸入</string>
+
+    <string name="WalletModifyPwd_202521">驗證碼錯誤或已失效，請重新輸入</string>
+
+
+    <string name="WalletSetInfo_common">網路好像不太穩定，請稍後重試</string>
+
+    <string name="WalletSetInfo_207006">輸入支付密碼錯誤，請重新輸入</string>
+
+    <string name="WalletSetInfo_202521">驗證碼錯誤或已失效，請重新輸入</string>
+
+    <string name="WalletSetInfo_202501">设置失败</string>
+
+    <string name="WalletPay_common">網路好像不太穩定，請稍後重試</string>
+
+    <string name="WalletPay_207006">支付密碼錯誤</string>
+
+    <string name="WalletPay_207005">帐号余额不足</string>
+
+    <string name="QsyCalendar_201511">沒有找到對應的帳號信息，請聯系管理員！</string>
+
+    <!--微信同步相关-->
+    <!--<string name="WechatSync_205007">网络好像不太稳定，请稍后重试</string>-->
+
+
+
+
+    <!--cordova 错误-->
+    <string name="user_not_find">找不到用戶</string>
+
+    <string name="error_happened">发生异常错误</string>
+
+    <string name="Dropbox_204000">你無權對只讀權限的目錄執行此操作！</string>
+    <string name="Dropbox_204004">已存在同名檔案（資料夾）</string>
+    <string name="Dropbox_400">檔案（資料夾）名稱不能包含表情、空格和以下英文特殊字符：\\ / : * ? \" &#060; &#062; |</string>
+    <string name="Dropbox_10001">未知錯誤，請稍後重試</string>
+
+
+    <!--必应消息频繁创建错误码-->
+    <string name="BingPost_201127">請不要頻繁操作</string>
+</resources>

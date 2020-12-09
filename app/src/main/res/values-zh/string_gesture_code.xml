@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--手势密码相关-->
+    <string name="gesture_code">手势密码</string>
+    <string name="valid_password">密码验证</string>
+    <string name="open_gesture_code">开启手势密码</string>
+    <string name="close_gesture_code">关闭手势密码</string>
+    <string name="edit_gesture_code">修改手势密码</string>
+    <string name="please_input_gesture_code">请输入手势密码</string>
+    <string name="please_input_new_gesture_code">请输入新的手势密码</string>
+    <string name="please_input_old_gesture_code">请输入旧的手势密码</string>
+    <string name="please_input_id_and_pw">请输入帐号密码</string>
+    <string name="please_input_gesture_code_again">请再次输入密码</string>
+    <string name="please_input_gesture_code_right">两次输入不一致，请重新输入</string>
+    <string name="input_gesture_code_success">设置手势密码成功</string>
+    <string name="login_with_id_and_pw">使用帐号密码登录</string>
+    <string name="login_with_gesture_lock">使用手势密码登录</string>
+    <string name="input_gesture_coed_wrong">手势输入错误</string>
+    <string name="input_login_pw_wrong">密码不正确，请重新输入</string>
+    <string name="at_least_4_points_wrong">请重新输入，至少需要4个节点</string>
+</resources>

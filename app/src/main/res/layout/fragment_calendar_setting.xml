@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/title_bar_common" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:background="@drawable/bg_item_common_selector">
+
+        <TextView
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:tag="c15"
+            android:text="@string/cal_sync_setting_on"
+            android:textColor="#ff272727" />
+
+        <com.foreveross.atwork.component.WorkplusSwitchCompat
+            android:id="@+id/calendar_sync_setting_switch_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:theme="@style/workplus_switch" />
+
+        <ImageView
+            android:id="@+id/line_notice"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:layout_marginRight="@dimen/dp_11"
+            android:background="@color/common_line_color"
+            android:tag="c18" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/clear_local_calendar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:background="@drawable/bg_item_common_selector">
+        <TextView
+            style="@style/font_size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:tag="c15"
+            android:text="@string/clear_local_cal_data"
+            android:textColor="#ff272727" />
+
+        <TextView
+            android:id="@+id/clear_cal_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_rect_bg_template_message"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:text="@string/clear"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_70"
+    android:fitsSystemWindows="true"
+    >
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlContentRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <RelativeLayout
+            android:id="@+id/rlTitleArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:paddingBottom="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/white"
+            >
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textSize="16sp"
+                android:textColor="@color/common_blue_bg"
+                />
+
+            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvCancel"
+                android:layout_toLeftOf="@+id/tvSure"
+                android:text="@string/admin_add_workbench"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/common_text_color"
+                />
+
+            <TextView
+                android:id="@+id/tvSure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ok"
+                android:textSize="16sp"
+                android:textColor="@color/common_blue_bg"
+                android:layout_alignParentRight="true"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/swMainContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlTitleArea"
+            android:background="@color/white"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_bg_gray"
+                    android:orientation="vertical"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/flContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp"
+                        android:background="@color/white"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/llWorkbenchNameLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            >
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvInputWorkbenchNameLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/workbench_name"
+                                android:textColor="@color/common_text_color"
+                                android:textSize="14sp" />
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="@color/red_lock"
+                                android:textSize="14sp"
+                                android:layout_marginLeft="4dp"
+                                />
+
+
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlWorkbenchName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llWorkbenchNameLabel"
+                            android:layout_marginTop="20dp"
+
+                            >
+
+                            <com.foreveross.atwork.component.editText.InputInfoEditText
+                                android:id="@+id/etWorkbenchName"
+                                style="@style/font_size_16sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                app:hint="@string/workbench_name_input_hint"
+                                android:inputType="text"
+                                android:singleLine="true"
+                                android:textColor="@color/common_text_gray_color"
+                                android:textColorHint="@color/common_text_hint_gray"
+                                android:textCursorDrawable="@drawable/shape_common_edittext_cursor"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                />
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvMustInputNameRedStarTip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="*"
+                                android:textColor="@color/red_lock"
+                                android:textSize="14sp"
+                                android:layout_toRightOf="@+id/etWorkbenchName"
+                                android:layout_marginLeft="-15dp"
+
+                                />
+
+                        </RelativeLayout>
+
+
+
+                        <com.foreveross.atwork.component.editText.InputInfoEditText
+                            android:id="@+id/etWorkbenchEnName"
+                            style="@style/font_size_16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical"
+                            app:hint="@string/workbench_en_name_input_hint"
+                            android:inputType="text"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/common_text_gray_color"
+                            android:textColorHint="@color/common_text_hint_gray"
+                            android:textCursorDrawable="@drawable/shape_common_edittext_cursor"
+                            android:layout_below="@+id/rlWorkbenchName"
+                            android:layout_marginTop="20dp"
+                            />
+
+
+
+                        <com.foreveross.atwork.component.editText.InputInfoEditText
+                            android:id="@+id/etWorkbenchTwName"
+                            style="@style/font_size_16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical"
+                            app:hint="@string/workbench_tw_name_input_hint"
+                            android:inputType="text"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/common_text_gray_color"
+                            android:textColorHint="@color/common_text_hint_gray"
+                            android:textCursorDrawable="@drawable/shape_common_edittext_cursor"
+                            android:layout_below="@+id/etWorkbenchEnName"
+                            android:layout_marginTop="20dp"
+                            />
+
+
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        >
+
+                        <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                            android:id="@+id/tvInputWorkbenchRemarkLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/common_remark"
+                            android:textColor="@color/common_text_color"
+                            android:textSize="14sp" />
+
+
+                        <com.foreveross.atwork.component.editText.InputInfoEditText
+                            android:id="@+id/etWorkbenchRemark"
+                            style="@style/font_size_16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical"
+                            app:hint="@string/workbench_remark_input_hint"
+                            android:inputType="text"
+                            android:paddingRight="2dp"
+                            android:singleLine="true"
+                            android:textColor="@color/common_text_gray_color"
+                            android:textColorHint="@color/common_text_hint_gray"
+                            android:textCursorDrawable="@drawable/shape_common_edittext_cursor"
+                            android:layout_below="@+id/tvInputWorkbenchRemarkLabel"
+                            android:layout_marginTop="20dp"
+                            />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/rlWorkbenchRangeLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvInputWorkbenchRangeLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/admin_set_scope_title"
+                                android:textColor="@color/common_text_color"
+                                android:textSize="14sp" />
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvMustInputRangeRedStarTip"
+                                android:layout_toRightOf="@+id/tvInputWorkbenchRangeLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="*"
+                                android:textColor="@color/red_lock"
+                                android:textSize="14sp"
+                                android:layout_marginLeft="4dp"
+                                />
+
+                            <ImageView
+                                android:id="@+id/ivRangeAdd"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@mipmap/icon_workbench_add"
+                                android:layout_alignParentRight="true"
+                                />
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvWorkbenchRangeTip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/range_of_application_input_hint"
+                            android:layout_below="@+id/rlWorkbenchRangeLabel"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/common_text_hint_gray"
+                            />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvRangeSelect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvWorkbenchRangeTip"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/shape_pure_white_bg"
+                            android:minHeight="100dp"
+                            android:padding="15dp"
+                            />
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:layout_marginBottom="50dp"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/rlWorkbenchPutawayLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+
+                            <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                                android:id="@+id/tvPutawayLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/putaway_or_not"
+                                android:textColor="@color/common_text_color"
+                                android:textSize="14sp" />
+
+
+                            <com.foreveross.atwork.component.WorkplusSwitchCompat
+                                android:id="@+id/swPutaway"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:theme="@style/workplus_switch"
+                                />
+
+
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>

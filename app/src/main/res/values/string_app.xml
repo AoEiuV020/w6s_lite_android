@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_apps">Commonly used</string>
+    <string name="add_custom_sort_app_max_tip">Add up to eight commonly used applications</string>
+    <string name="edit_custom_sort_app">Edit</string>
+
+    <string name="announce_app">内宣号</string>
+
+    <string name="only_allow_to_add_apps">Only allow to add %s apps</string>
+
+</resources>

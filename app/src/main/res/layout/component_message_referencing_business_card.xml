@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="szw"
+        android:textSize="12sp"
+        android:textColor="@color/common_text_color_666"
+
+        />
+
+
+    <RelativeLayout
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivCover"
+            android:layout_alignBottom="@+id/ivCover"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/ivCover"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/ll_name_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+                    android:id="@+id/tvName"
+                    style="@style/font_size_16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/common_text_color"
+                    tools:text="sunzhiwei"
+                    tools:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivGender"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_toRightOf="@+id/tvName"
+                    tools:src="@mipmap/icon_gender_female"
+                    android:layout_marginLeft="2dp"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvJobTitle"
+                style="@style/font_size_13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_name_area"
+                android:layout_marginTop="3dp"
+                android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+                android:textColor="@color/common_text_color_666"
+                android:visibility="gone"
+                tools:text="填坑工程师"
+                tools:textSize="13sp"
+                tools:visibility="visible" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+        <ImageView
+            android:id="@+id/ivCover"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/loading_icon_square"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

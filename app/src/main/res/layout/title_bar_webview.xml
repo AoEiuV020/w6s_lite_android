@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/white"
+    android:tag="c1">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true">
+        <!-- 左边的APP图标 -->
+        <LinearLayout
+            android:id="@+id/button_group_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/webview_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/button_group_left"
+                android:layout_alignTop="@+id/button_group_left"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_icon"
+                android:src="@mipmap/icon_back" />
+
+            <com.foreveross.atwork.modules.app.component.WebTitleBarRightButtonView
+                android:id="@+id/web_title_left_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/webview_back_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/font_size_18sp"
+                android:text="@string/back_action"
+                android:textColor="@color/common_item_black"
+                tools:visibility="visible"
+                android:layout_gravity="center_vertical"/>
+
+
+            <ImageView
+                android:id="@+id/iv_webview_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:src="@mipmap/icon_close_webivew"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/tv_webview_close"
+                style="@style/font_size_18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/close"
+                android:textColor="@color/common_item_black"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+
+        <!-- 聊天详情按扭 -->
+        <RelativeLayout
+            android:id="@+id/rl_rightest"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/webview_more"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:contentDescription="@string/more"
+                android:scaleType="center"
+                android:src="@mipmap/icon_more_dark"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.foreveross.atwork.modules.app.component.WebTitleBarRightButtonView
+                android:id="@+id/web_title_right_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/title_common_padding"
+                android:scaleType="center"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </RelativeLayout>
+
+        <!-- 名称，当天聊天界面的名称 -->
+        <TextView
+            android:id="@+id/webview_title"
+            style="@style/font_size_18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:maxWidth="125dp"
+            android:singleLine="true"
+            android:textColor="@color/common_item_black"
+            tools:text="qqqqqqqq" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider_line_gray" />
+
+</RelativeLayout>

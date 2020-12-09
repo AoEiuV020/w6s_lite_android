@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--聊天对话框 文本 -左边 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/common_message_content_divider">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/left_text_select"
+        style="@style/chat_item_select_view"
+        tools:visibility="visible"
+        />
+
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/chat_left_text_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/common_message_content_gap"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/default_photo"
+        tools:ignore="ContentDescription"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/chat_left_text_username_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/chat_left_text_avatar"
+        >
+
+        <!--用户姓名 -->
+        <TextView
+            android:id="@+id/chat_left_text_username"
+            style="@style/font_size_13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:paddingTop="0dp"
+            android:text=""
+            android:textColor="@color/common_text_color"
+            android:visibility="gone"
+            tools:text="ffffda"
+            tools:visibility="visible"
+            android:layout_marginBottom="5dp"
+
+            />
+
+
+        <!--副标题 -->
+        <TextView
+            android:id="@+id/chat_left_text_sub_title"
+            style="@style/font_size_13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textColor="@color/common_text_color_888"
+            android:visibility="gone"
+            tools:text="ffffda"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            tools:visibility="visible"
+            android:layout_marginBottom="5dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout
+        android:id="@+id/ll_chat_left_content"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_left_text_username_line"
+        android:layout_toRightOf="@id/chat_left_text_avatar"
+        android:background="@drawable/shape_voice_translate_white"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/v_divider"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@color/common_blue_bg"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/chat_left_second_color"
+                    android:textSize="12sp"
+                    tools:text="看看我是谁" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+
+
+
+                    <ImageView
+                        android:id="@+id/iv_cover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvTitle"
+                        android:layout_marginTop="5dp"
+                        android:src="@mipmap/icon_favorite_location"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/tv_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="hellowo"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:textColor="@color/chat_left_main_color"
+                        android:layout_marginLeft="8dp"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_some_status_info_wrapper_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            >
+
+            <FrameLayout
+                android:id="@+id/fl_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+                <com.rockerhieu.emojicon.EmojiconTextView
+                    android:id="@+id/tv_reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/common_text_color"
+                    android:textSize="16sp"
+                    tools:text="dasunsy" />
+            </FrameLayout>
+
+            <include
+                layout="@layout/layout_chat_message_item_time_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/common_chat_detail_line_spacing_extra"
+                android:visibility="visible"
+                tools:visibility="visible"
+
+                />
+
+        </LinearLayout>
+    </com.foreverht.workplus.ui.component.foregroundview.ForegroundLinearLayout>
+
+
+
+
+
+</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <!-- name 用于UI上的一些显示名称-->
+    <string name="download_sticker">下载</string>
+    <string name="downloading_sticker">表情包下载中...</string>
+    <string name="cannot_connet_to_network">无法连接到网络，请检查您的网络配置</string>
+</resources>

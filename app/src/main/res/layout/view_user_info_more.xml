@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="bottom">
+
+    <com.foreveross.atwork.component.scrollView.MaxHeightScrollView
+        android:id="@+id/sl_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/round_rect_white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_rect_white"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:id="@+id/tv_pop_dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                style="@style/font_size_15sp"
+                android:textColor="@color/common_gray_bg"
+                tools:text="请选择模式"
+                android:gravity="center"
+                android:visibility="gone"
+
+                />
+
+            <View
+                android:id="@+id/tv_pop_dialog_title_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/common_line_color"
+                android:visibility="gone"
+                />
+
+
+
+            <LinearLayout
+                android:id="@+id/pop_dialog_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.foreveross.atwork.component.scrollView.MaxHeightScrollView>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sl_root"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_rect_white"
+        android:gravity="center"
+        android:minHeight="@dimen/dp_55"
+        android:padding="10dp"
+        android:text="@string/cancel"
+        android:textColor="@color/common_text_color"
+        style="@style/font_size_18sp" />
+
+</RelativeLayout>

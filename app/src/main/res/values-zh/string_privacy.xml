@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_agreement_and_privacy_policy_title">用户使用协议及隐私权政策</string>
+    <string name="user_agreement_and_privacy_policy_children_content">如不同意，将无法登录Workplus Lite</string>
+    <string name="user_agreement_and_privacy_policy_content"><Data><![CDATA[感谢您信任并使用Workplus Lite的产品和服务。<br/><br/>  我们依据最新的法律要求，更新了用户协议隐私政策。请你仔细阅读并充分理解相关条款。<br/> <br/>  你点击“同意”，即表示您已阅读并同意相关条款内容，Workplus Lite将尽全力保障您的合法权益并为您提供更优质的产品和服务。]]></Data> </string>
+    <string name="left_btn_content">不同意</string>
+    <string name="right_btn_content">同意</string>
+    <string name="policy_service">《服务协议》</string>
+    <string name="policy_protocol">《隐私政策》</string>
+</resources>

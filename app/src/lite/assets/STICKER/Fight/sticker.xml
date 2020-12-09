@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Stickers Order = "2">
+    <Catalog Title="Fight">
+        <Emoticon ID="1" Tag="" File="01" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="2" Tag="" File="02" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="3" Tag="" File="03" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="4" Tag="" File="04" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="5" Tag="" File="05" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="6" Tag="" File="06" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="7" Tag="" File="07" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="8" Tag="" File="08" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="9" Tag="" File="09" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="10" Tag="" File="10" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="11" Tag="" File="11" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="12" Tag="" File="12" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="13" Tag="" File="13" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="14" Tag="" File="14" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="15" Tag="" File="15" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="16" Tag="" File="16" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="17" Tag="" File="17" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="18" Tag="" File="18" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="19" Tag="" File="19" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="20" Tag="" File="20" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="21" Tag="" File="21" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="22" Tag="" File="22" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="23" Tag="" File="23" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="24" Tag="" File="24" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="25" Tag="" File="25" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="26" Tag="" File="26" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="27" Tag="" File="27" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="28" Tag="" File="28" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="29" Tag="" File="29" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="30" Tag="" File="30" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="31" Tag="" File="31" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="32" Tag="" File="32" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="33" Tag="" File="33" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="34" Tag="" File="34" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="35" Tag="" File="35" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="36" Tag="" File="36" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="37" Tag="" File="37" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="38" Tag="" File="38" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="39" Tag="" File="39" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="40" Tag="" File="40" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="41" Tag="" File="41" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="42" Tag="" File="42" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="43" Tag="" File="43" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="44" Tag="" File="44" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="45" Tag="" File="45" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="46" Tag="" File="46" Width="140" Height="140" EndFixed=".png"/>
+        <Emoticon ID="47" Tag="" File="47" Width="140" Height="140" EndFixed=".png"/>
+
+    </Catalog>
+</Stickers>
+
+

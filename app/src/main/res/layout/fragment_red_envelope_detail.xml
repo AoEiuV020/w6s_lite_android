@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rv_grabbed_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_title_bar_common"
+        android:overScrollMode="never"
+        android:clipToPadding="false"
+        />
+
+    <include
+        android:id="@+id/v_title_bar_common"
+        layout="@layout/title_bar_common" />
+
+    <FrameLayout
+        android:id="@+id/fl_notify_red_envelope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f2ffffff"
+        android:visibility="gone"
+        tools:visibility="gone"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_notify_red_envelope"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_give_red_envelope"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/continues_to_give_red_envelope"
+            android:textColor="@color/white"
+            android:textSize="?attr/fontsize_18sp"
+            tools:textSize="18sp" />
+    </FrameLayout>
+
+</RelativeLayout>

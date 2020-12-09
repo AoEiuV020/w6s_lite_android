@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.otaliastudios.cameraview.CameraView
+        android:id="@+id/vCameraKit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:keepScreenOn="true"
+        app:cameraAudio="on"
+        app:cameraAutoFocusMarker="@string/cameraview_default_autofocus_marker"
+        app:cameraFacing="back"
+        app:cameraFlash="auto"
+        app:cameraGestureLongTap="none"
+        app:cameraGesturePinch="zoom"
+        app:cameraGestureScrollHorizontal="filterControl1"
+        app:cameraGestureScrollVertical="exposureCorrection"
+        app:cameraGestureTap="autoFocus"
+        app:cameraGrid="off"
+        app:cameraMode="picture"
+        app:cameraPlaySounds="true"
+        app:cameraPreview="glSurface"
+        app:cameraUseDeviceOrientation="false"
+
+         />
+
+    <com.foreveross.atwork.modules.ocr.component.OcrViewfinderView
+        android:id="@+id/vViewfinder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+
+
+    <View
+        android:id="@+id/vFakeStatusbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/translation_333" />
+
+    <RelativeLayout
+        android:id="@+id/rlBioCameraTitlebar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/vFakeStatusbar"
+        >
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="4dp"
+            android:padding="10dp"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/icon_close_white" />
+
+
+        <TextView
+            android:id="@+id/scan"
+            style="@style/font_size_20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/ivBack"
+            android:layout_marginBottom="14dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLength="20"
+            android:maxWidth="200dp"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/ivTakePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/icon_take_photo_black"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="30dp"/>
+
+
+
+</FrameLayout>

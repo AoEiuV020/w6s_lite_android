@@ -1,0 +1,198 @@
+{
+  "_id": "570500ccce7d8f779c102997",
+  "tabs": [
+    {
+      "_id": "56fcc0e15755bb9e5000fbb5",
+      "iconSelected": "",
+      "iconUnSelected": "",
+      "type": "system",
+      "name": "",
+      "tabId": "IM"
+    },
+    {
+      "_id": "56fcc0e15755bb9e5000fbb4",
+      "iconSelected": "",
+      "iconUnSelected": "",
+      "type": "system",
+      "name": "",
+      "tabId": "Contact"
+    },
+    {
+      "_id": "56fcc0e15755bb9e500044b4",
+      "iconSelected": "",
+      "iconUnSelected": "",
+      "type": "system",
+      "name": "",
+      "tabId": "App"
+    },
+    {
+      "_id": "56fcc0e15755bb9e5000fbb2",
+      "iconSelected": "",
+      "iconUnSelected": "",
+      "type": "system",
+      "name": "",
+      "tabId": "Me"
+    }
+  ],
+
+  "settingPage": {
+    "invisible": [
+
+      {
+        "category": "W6sGeneralSetting",
+        "names": ["EMP_INCOMING_ASSISTANT"]
+
+      }
+    ]
+  },
+
+  "loginPage": {
+    "registerUrl": "",
+    "defaultRegisterUrl": false,
+    "backgroupImage": "",
+    "backgroupColor": "",
+    "multi_domain": true
+
+  },
+
+
+  "config": {
+
+    "moreInfo": {
+      "employeeBenefitsUrl": "http://112.124.103.109:8888/active.html",
+      "shakeUrl": "http://112.124.65.3:8102/public/",
+      "colleagueCircleUrl": "https://moment.workplus.io:451/",
+      "scheduleUrl": "https://test.workplus.io:9443/rcgl/"
+    },
+
+    "xfyun": {
+      "enabled": true,
+      "android": {
+        "appId": "593a3c51"
+      }
+    },
+
+    "voice": {
+      "enabled": true,
+      "sdk": "aliyun",
+      "aliyun": {
+        "keyId": "LTAIFFwPYSnveEjt",
+        "keySecret": "ieJpFE94lWOXuvLPeuJixEcOHigw4k",
+        "appKey": "FHbKLIDJbiSnpT1c"
+      }
+    },
+    "zoom" : {
+      "sdk": "ZOOM",
+      "url": "https://meeting.workplus.io/mobile.html#/video-meeting-reservation",
+      "inviteUrl": "https://meeting.workplus.io/mobile.html#/video-invite",
+      "detailUrl": "https://meeting.workplus.io/mobile.html#/video-meeting-detail",
+      "enabled": true
+    },
+
+    "translation": {
+      "enabled": true,
+      "type": "YOUDAO",
+      "youdao": {
+        "appId": "11a6f2058d63ba47",
+        "appSecret": ""
+      }
+    },
+    "share": {
+      "qq": {
+        "android": {
+          "enabled": false,
+          "appId": "1105486764"
+        }
+      },
+      "weixin": {
+        "enabled": false,
+        "appId": "wx490c9704da285fec"
+      },
+
+      "weibo": {
+        "enabled": false,
+        "appId": "wx289cff4ba3c33e61",
+        "redirectURI": "www.baidu.com"
+      }
+    },
+
+    "amap": {
+      "ios": {
+        "appKey": "4e0d304e8c9638f32f4e004273c226f9"
+      },
+      "android" : {
+        "appKey": "247f5f9f9526497d4dc93c966e3091fe"
+      }
+    },
+    "bugly": {
+      "enabled": true,
+      "appId": "9de5499ba4"
+    },
+
+    "copyright": {
+      "companyAboutIcon": "",
+      "companyLoginIcon": "",
+      "companyUrl": "www.workplus.io",
+      "companyCopyright": "深圳恒拓高科信息技术有限公司",
+      "companyCopyright_en": "Forever High Tech Information Technology Co., Ltd",
+      "companyCopyright_hant": "深圳恒拓高科信息技術有限公司",
+      "companyName": "WorkPlus"
+    },
+
+    "setting": {
+      "faceBio": {
+        "enable": "false",
+        "faceBioAuth": "false",
+        "faceBioUpdateFilm": "false"
+      },
+      "httpDns": {
+        "enable": "false",
+        "account_id": "196022",
+        "secret": "ef049f9286b0c669f8e4b7936921821a"
+      }
+    },
+    "domainId": "khwjpn-app",
+    "scheme": "workplus",
+    "profile" : "default",
+    "appModel": "Public",
+    "apiUrl": "https://lite.workplus.io/v1/",
+    "protocol": true
+
+  },
+  "appBase": {
+    "icon": "Z3JvdXAxL00wMC8wMC8wMS9DZ29LTFZiODZtcUFVOU1xQUFCV0ZWYmJhSGs1NTUuanBn",
+    "date": {
+      "lastModify": "2016-03-31T06:17:05.666Z",
+      "create": "2016-03-31T06:17:05.666Z"
+    },
+    "buildNo": 11,
+    "bundleId": "com.foreverht.workplus.v4",
+    "packageName": "com.foreverht.workplus.v4",
+    "appName": "Workplus"
+  },
+  "androidPush" :{
+
+    "xiaomiInfo" : {
+      "appId" : "2882303761517978329",
+      "appKey" : "5481797855329"
+    },
+
+    "huaweiInfo": {
+      "appId": "100715375"
+    },
+
+    "meizuInfo" : {
+      "appId" : "119546",
+      "appKey" : "529865beb5a049fd9f9dba1161931dde"
+    },
+    "oppoInfo" : {
+      "appId" : "43ec502ed7b84cc988442bf08b485415",
+      "appKey" : "a037d18ebeca4cc0999af65f62634168"
+    },
+
+    "vivoInfo": {
+      "appId": "20326",
+      "appKey": "b43a7cdd-37a1-471d-8f83-4a203241aa8c"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="webview_float_action_helper">辅助触控</string>
+    <string name="bottom_left_float">左下方悬浮</string>
+    <string name="bottom_right_float">右下方悬浮</string>
+    <string name="close_webview_float_action_helper">关闭辅助触控</string>
+    <string name="webview_float_action_helper_tip1">“辅助触控”可让你在访问网页或者轻应用的情况下，单手单指不依靠手势或者物理按键就可以轻松操作页面的返回和关闭等操作。</string>
+    <string name="webview_float_action_helper_tip2">小贴士：\n单击悬浮窗即可触发返回操作，长按1-2秒即可触发关闭页面操作。</string>
+</resources>

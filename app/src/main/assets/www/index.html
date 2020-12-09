@@ -1,0 +1,439 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <script src="applocal://www/cordova.min.js"></script>
+    <script>
+
+
+        console.log(navigator.userAgent);
+
+
+        var destinationType; //选择返回数据的格式
+
+        document.addEventListener("deviceready",onDeviceReady,false);
+
+
+        // Cordova准备好了可以使用了
+        function onDeviceReady() {
+            cordova.exec(null, null, "CoreAndroid", "overrideBackbutton", [true]);
+
+            cordova.exec(function(){
+
+            }, null, "CoreAndroid", "messageChannel", []);
+
+        }
+
+        function getUserInfo() {
+        cordova.exec(function(winParam) {
+        alert(winParam);
+        },
+        function(error) {
+        alert("调用失败");
+        },
+        "atwork",
+        "getUserInfo", []);
+        }
+
+        function getLocation(){
+        cordova.exec(function(winParam) {
+        alert(winParam);
+        },
+        function(error) {
+        alert("调用失败");
+        },
+        "location",
+        "getLocation", []);
+        }
+
+        function photo(){
+        navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+        destinationType: destinationType.DATA_URL });
+        }
+
+
+        function onSuccess(imageURI) {
+        alert('PHOTO SUCCESS: ' + imageURI);
+        }
+
+        function onFail(message) {
+        alert('Failed because: ' + message);
+        }
+
+        function getContactList(){
+        cordova.exec(function(winParam) {
+        alert(winParam);
+        },
+        function(error) {
+        alert("调用失败");
+        },
+        "contact",
+        "getContactList", []);
+        }
+
+
+        function showContact(){
+
+        cordova.exec(function(winParam) {
+        alert(winParam);
+        },
+        function(error) {
+        alert("调用失败");
+        },
+        "contact",
+        "showUserInfoByUsername", [{
+        "username": "test100000"
+        }]);
+
+        }
+
+        function exit(){
+        cordova.exec(function (result) {
+        },
+        function (error) {
+        alert("调用失败:" + error);
+        },
+        "appStore",
+        "exit", []);
+        }
+
+        function getConfig(){
+        cordova.exec(function (result) {
+        alert(result);
+        },
+        function (error) {
+        alert("调用失败:" + error);
+        },
+        "atwork",
+        "getConfig", []);
+        }
+
+
+        function getUserToken(){
+        cordova.exec(function (result) {
+        alert(result);
+        },
+        function (error) {
+        alert("调用失败:" + error);
+        },
+        "atwork",
+        "getUserToken", []);
+        }
+
+
+        function getAccessToken(){
+        cordova.exec(function (result) {
+        alert(result);
+        },
+        function (error) {
+        alert("调用失败:" + error);
+        },
+        "atwork",
+        "getAccessToken", []);
+        }
+
+        function accessTokenFail(){
+        cordova.exec(function (result) {
+        },
+        function (error) {
+        alert("调用失败:" + error);
+        },
+        "atwork",
+        "accessTokenFail", []);
+        }
+
+        function userAvatarByPhotograph(){
+        cordova.exec(function(result){
+        },
+        function (error) {
+        alert("调用失败:" + error);
+        },
+        "userAvatar",
+        "changeAvatarByTakePhoto",
+        []);
+        }
+
+        function userAvatarByLibrary(){
+        cordova.exec(function(result){
+        },
+        function (error) {
+        alert("调用失败:" + error);
+        },
+        "userAvatar",
+        "changeAvatarByPhotoAlbum",
+        []);
+        }
+
+        function imageCompress(){
+        cordova.exec(function(winParam){
+        alert(winParam);
+        },
+        function (error) {
+        alert("调用失败:" + error);
+        },
+        "Images",
+        "getImages",
+        []);
+        }
+
+
+        function getUrl(){
+        cordova.exec(function(result){
+        alert(result);
+        },
+        function (error) {
+        alert("调用失败:" + error);
+        },
+        "environment",
+        "getMarketUrl",
+        []);
+        }
+
+        function getBarcodeScanner(){
+        cordova.exec(function(result){
+        alert(result);
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "WorkPlus_BarcodeScanner",
+        "scanner",
+        []);
+        }
+
+        function getMobileContacts() {
+        cordova.exec(function(result) {
+        alert(JSON.parse(result));
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "WorkPlus_Contact",
+        "getMobileContacts",
+        []
+        );
+        }
+
+        function changeWebTitle() {
+        cordova.exec(function(result) {
+        console.log(result);
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "WorkPlus_WebView",
+        "title",
+        ["NEW Title"]
+        );
+        }
+
+        function lockWebTitle() {
+        cordova.exec(function(result) {
+        console.log(result);
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "WorkPlus_WebView",
+        "navigation",
+        ["lock"]
+        );
+        }
+
+        function unlockWebTitle() {
+        cordova.exec(function(result) {
+        console.log(result);
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "WorkPlus_WebView",
+        "navigation",
+        ["unlock"]
+        );
+        }
+
+        function changeWebLeftButton() {
+        cordova.exec(function(result) {
+        console.log(result);
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "WorkPlus_WebView",
+        "leftButton",
+        ["goback()"]
+        );
+        }
+
+        function goback() {
+        alert('cannot go back...')
+        }
+
+        function clearLeftButton() {
+        cordova.exec(function(result) {
+        console.log(result);
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "WorkPlus_WebView",
+        "clearLeftButton",
+        []
+        );
+        }
+
+        function toActivity() {
+        cordova.exec(function(result) {
+        console.log(result);
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "WorkPlus_WebView",
+        "toActivity",
+        [{
+        "activity":"toMain",
+        "next_url":"www.baidu.com",
+        "access_token":"123456789",
+        "username":"xxxxxxxxx"
+
+        }]
+        );
+        }
+
+        function getLoginUserInfo() {
+        cordova.exec(function(result) {
+        console.log(result);
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "WorkPlus_Auth",
+        "getLoginUserInfo",
+        []
+        );
+        }
+
+
+        function shared() {
+        cordova.exec(function(result) {
+        console.log(result);
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "WorkPlus_WebView",
+        "share",
+        ["shareData"]
+        );
+        }
+
+        function installApp() {
+        cordova.exec(function(result) {
+        console.log(result);
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "AppStorePlugin_New",
+        "installApp",
+        [{
+        "domain_id":"xxxx",
+        "org_code":"xxx",
+        "app_id":"xxxx"
+        }]
+        );
+        }
+
+        function getDeviceInfo() {
+        cordova.exec(function(result) {
+        console.log(result);
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "WorkPlus_DeviceInfo",
+        "getDeviceInfo",
+        []
+        );
+        }
+
+        function changeRightButton() {
+        cordova.exec(function(result) {
+        console.log(result);
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "WorkPlus_WebView",
+        "rightButtons",
+        [[{"icon":"1","title":"更多","action":"list","value":""},{"icon":"2","title":"aaa","action":"js","value":"photo"},{"icon":"3","title":"bbb","action":"js","value":"takePhoto"}],
+        [{"icon":"4","title":" ","action":"list","value":""},
+        {"icon":"5","title":"aaa","action":"js","value":"photo"}],
+        [{"icon":"6","title":" ","action":"js","value":"goback()"}]
+        ]
+        );
+        }
+
+        function getAppInfo() {
+        cordova.exec(function(result) {
+        console.log(result);
+        },
+        function (error) {
+        alert("发生错误:" + error);
+        },
+        "WorkPlus_PublicClound",
+        "getAppInfo",
+        []
+        );
+        }
+
+        function chooseImages() {
+        cordova.exec(function(result) {
+                    alert(result)
+                },
+                function(error) {
+                    alert(error)
+                },
+                "WorkPlus_Image",
+                "chooseImages", [{"multiple":false,"selected":[],
+             "editable":false}]
+             );
+        }
+    </script>
+</head>
+<body>
+<a onclick="getBarcodeScanner()">BarcodeScanner</a><br><br>
+<a onclick="getConfig()">获取atwork配置</a><br><br>
+<a onclick="getLocation()">获取地理位置信息</a><br><br>
+<a onclick="getUserInfo()">获取当前登录用户</a><br><br>
+<a onclick="getUserToken()">获取UserToken</a><br><br>
+<a onclick="getAccessToken()">获取AccessToken</a><br><br>
+<a onclick="accessTokenFail()">accessToken失效通知</a><br><br>
+<a onclick="photo()">拍照返回</a><br><br>
+<a onclick="getContactList()">获取联系人</a><br><br>
+<a onclick="showContact()">显示联系人详情信息(test100000)</a><br><br>
+<a onclick="exit()">退出轻应用</a><br><br>
+<a onclick="userAvatarByPhotograph()">更改用户头像(拍照方式)</a><br><br>
+<a onclick="userAvatarByLibrary()">更改用户头像(选取图片方式)</a><br><br>
+<a onclick="imageCompress()">图片选择压缩返回</a><br><br>
+<a onclick="getUrl()">获取配置cordova url</a><br><br>
+<a href="http://www.baidu.com">百度</a><br><br>
+<a onclick="getMobileContacts()">获取手机通讯录联系人</a><br><br>
+<a onclick="changeWebTitle()">更改webview的title</a><br><br>
+<a onclick="lockWebTitle()">锁定webview的title栏</a><br><br>
+<a onclick="unlockWebTitle()">解锁webview的title栏</a><br><br>
+<a onclick="changeWebLeftButton()">更换左侧按钮动作</a><br><br>
+<a onclick="clearLeftButton()">重置返回按钮</a><br><br>
+<a onclick="toActivity()">进入主页面</a><br><br>
+<a onclick="changeRightButton()">更换右侧按钮</a><br><br>
+<a onclick="getLoginUserInfo()">获取登录用户信息</a><br><br>
+<a onclick="shared()">社会化分享</a><br><br>
+<a onclick="installApp()">安装应用</a><br><br>
+<a onclick="getAppInfo()">获取workplus应用信息</a><br><br>
+<a onclick="chooseImages()">选择图片</a>
+
+</body>
+</html>

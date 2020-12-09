@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+<com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+    android:id="@+id/app_category_name"
+    style="@style/font_size_16sp"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp"
+    android:background="@color/white"
+    android:gravity="left|bottom"
+    android:paddingLeft="@dimen/title_common_padding"
+    android:maxLines="1"
+    android:ellipsize="end"
+    android:layout_marginEnd="10dp"
+    android:text=""
+    tools:text="123"
+    android:textColor="@color/common_item_black" />
+
+<com.foreverht.workplus.ui.component.textview.MediumBoldTextView
+    android:id="@+id/tv_edit"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp"
+    android:text="@string/edit"
+    style="@style/font_size_16sp"
+    android:layout_gravity="right"
+    android:layout_alignParentRight="true"
+    android:paddingRight="@dimen/title_common_padding"
+    android:layout_centerVertical="true"
+    android:textColor="@color/common_blue_bg"
+    android:visibility="gone"
+    tools:visibility="visible"
+    android:gravity="bottom"
+    />
+
+
+</RelativeLayout>

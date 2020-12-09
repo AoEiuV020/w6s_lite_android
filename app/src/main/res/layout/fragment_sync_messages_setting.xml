@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg_gray"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/v_layout_message_history"
+        layout="@layout/title_bar_common" />
+
+    <LinearLayout
+        android:id="@+id/ll_fetch_all_msgs_since_log_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="13dp">
+
+        <ImageView
+            android:id="@+id/iv_fetch_all_msgs_since_log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_sync_msgs_setting_unselect" />
+
+        <TextView
+            android:id="@+id/tv_fetch_all_msgs_since_log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/fetch_all_msgs_since_log_out"
+            android:textColor="@color/common_text_color"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_only_fetch_recent_msgs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="13dp">
+
+        <ImageView
+            android:id="@+id/iv_only_fetch_recent_msgs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_sync_msgs_setting_unselect" />
+
+        <TextView
+            android:id="@+id/tv_only_fetch_recent_msgs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/only_fetch_recent_msgs"
+            android:textColor="@color/common_text_color"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_sync_setting_friendly_tip"
+        android:textSize="12sp"
+        android:lineSpacingExtra="2dp"
+        android:textColor="#A6A6A6"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        />
+
+
+</LinearLayout>

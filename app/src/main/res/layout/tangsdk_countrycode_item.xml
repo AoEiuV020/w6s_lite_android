@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60.0dip"
+    android:background="@color/tangsdk_title_font_color"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/settings_country_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="60.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="left|center"
+        android:paddingLeft="27dp"
+        android:text="中国"
+        android:textColor="@color/tangsdk_call_bg_color"
+        android:textSize="16sp" />
+
+
+    <ImageView
+        android:id="@+id/settings_country_check_btn"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="40dp"
+        android:clickable="false"
+        android:gravity="center"
+        android:src="@mipmap/tangsdk_check_item_selected"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/settings_country_code_tv"
+        android:layout_width="55dp"
+        android:layout_height="60.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@id/settings_country_check_btn"
+        android:gravity="left|center"
+        android:textColor="@color/tangsdk_text_color_grey"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="27dip"
+        android:background="@color/tangsdk_divider_bg_grey"></View>
+</RelativeLayout>

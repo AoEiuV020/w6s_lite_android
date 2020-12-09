@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_70"
+    android:id="@+id/view_layout">
+
+    <GridView
+        android:id="@+id/file_type_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="4"
+        android:listSelector="@android:color/transparent"
+        android:background="@android:color/white"/>
+
+</RelativeLayout>
