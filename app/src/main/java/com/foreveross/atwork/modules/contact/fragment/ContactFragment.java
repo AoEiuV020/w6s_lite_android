@@ -163,7 +163,6 @@ public class ContactFragment extends NoticeTabAndBackHandledFragment implements 
     private ContactHeadView mServiceAppHeadView;
     private ContactHeadView mMyFriendsView;
     private ContactHeadView mNewFriendsApplyView;
-    private ContactHeadView mContactsInviteView;
 
     private View mFileTransferTitleView;
     private View mStartUserTitleView;
@@ -429,7 +428,6 @@ public class ContactFragment extends NoticeTabAndBackHandledFragment implements 
         mFileTransferHeadView = ContactHeadView.getInstance(this.getActivity(), R.mipmap.icon_file_transfer, getResources().getString(R.string.file_transfer));
         mDiscussionHeadView = ContactHeadView.getInstance(this.getActivity(), R.mipmap.icon_group_chat, getResources().getString(R.string.title_discussion));
         mServiceAppHeadView = ContactHeadView.getInstance(this.getActivity(), R.mipmap.icon_service_app, getResources().getString(R.string.my_service_app));
-        mContactsInviteView = ContactHeadView.getInstance(getContext(), R.mipmap.icon_contact_invite, getString(R.string.contacts_invite));
         mMyFriendsView = ContactHeadView.getInstance(getContext(), R.mipmap.icon_my_friend, getString(R.string.workplus_friends));
         mNewFriendsApplyView = ContactHeadView.getInstance(getContext(), R.mipmap.icon_my_friend, getString(R.string.new_friend_in_btn));
 
@@ -450,6 +448,7 @@ public class ContactFragment extends NoticeTabAndBackHandledFragment implements 
         }
 
         mContactListView.setDivider(null);
+
     }
 
     private void checkInitFileTransferStatus() {
@@ -473,7 +472,6 @@ public class ContactFragment extends NoticeTabAndBackHandledFragment implements 
         mApplyHeadViewList.clear();
         mContactListView.removeHeaderView(mMyFriendsView);
         mContactListView.removeHeaderView(mNewFriendsApplyView);
-        mContactListView.removeHeaderView(mContactsInviteView);
         loadLocalOrgData();
     }
 
@@ -818,7 +816,6 @@ public class ContactFragment extends NoticeTabAndBackHandledFragment implements 
         }
 
 
-        mContactListView.removeHeaderView(mContactsInviteView);
 
 
         mContactListView.removeHeaderView(mMyFriendsView);
@@ -931,7 +928,6 @@ public class ContactFragment extends NoticeTabAndBackHandledFragment implements 
             ViewUtil.setSize(mNewFriendsApplyView.getContactListHeadAvatar(), pxFrom36dp, pxFrom36dp);
             ViewUtil.setSize(mFileTransferHeadView.getContactListHeadAvatar(), pxFrom36dp, pxFrom36dp);
             ViewUtil.setSize(mMyFriendsView.getContactListHeadAvatar(), pxFrom36dp, pxFrom36dp);
-            ViewUtil.setSize(mContactsInviteView.getContactListHeadAvatar(), pxFrom36dp, pxFrom36dp);
 
             for (ContactHeadView orgHeaderView : mOrgContactViewList) {
                 ViewUtil.setSize(orgHeaderView.getContactListHeadAvatar(), pxFrom36dp, pxFrom36dp);
@@ -946,7 +942,6 @@ public class ContactFragment extends NoticeTabAndBackHandledFragment implements 
             ViewUtil.setSize(mNewFriendsApplyView.getContactListHeadAvatar(), pxFromCommonSize, pxFromCommonSize);
             ViewUtil.setSize(mFileTransferHeadView.getContactListHeadAvatar(), pxFromCommonSize, pxFromCommonSize);
             ViewUtil.setSize(mMyFriendsView.getContactListHeadAvatar(), pxFromCommonSize, pxFromCommonSize);
-            ViewUtil.setSize(mContactsInviteView.getContactListHeadAvatar(), pxFromCommonSize, pxFromCommonSize);
 
 
             for (ContactHeadView orgHeaderView : mOrgContactViewList) {
@@ -1055,17 +1050,6 @@ public class ContactFragment extends NoticeTabAndBackHandledFragment implements 
                 hasFuncHeader = true;
             }
 
-
-
-
-
-            //普通模式且公有云版本才显示这两个选项
-            boolean shouldAddInvitesView = UserSelectActivity.SelectMode.NO_SELECT.equals(mSelectMode) && DomainSettingsManager.getInstance().handleMobileContactInviteFeature();
-            if (shouldAddInvitesView) {
-                mContactListView.addHeaderView(mContactsInviteView);
-                hasFuncHeader = true;
-            }
-
             if (!hasFuncHeader) {
                 mContactListView.removeHeaderView(mFuncTitleView);
             }
@@ -1099,15 +1083,6 @@ public class ContactFragment extends NoticeTabAndBackHandledFragment implements 
             hasFuncHeader = true;
 
         }
-
-
-        //普通模式且公有云版本才显示这两个选项
-        boolean shouldAddInvitesView = UserSelectActivity.SelectMode.NO_SELECT.equals(mSelectMode) && DomainSettingsManager.getInstance().handleMobileContactInviteFeature();
-        if (shouldAddInvitesView) {
-            mContactListView.addHeaderView(mContactsInviteView);
-            hasFuncHeader = true;
-        }
-
         if (!hasFuncHeader) {
             mContactListView.removeHeaderView(mFuncTitleView);
         }
@@ -1424,16 +1399,6 @@ public class ContactFragment extends NoticeTabAndBackHandledFragment implements 
         absListViewScrollDetector.setListView(mContactListView);
         absListViewScrollDetector.setScrollThreshold(20);
         mContactListView.setOnScrollListener(absListViewScrollDetector);
-
-
-        if (mContactsInviteView != null) {
-            mContactsInviteView.setOnClickListener(v -> {
-                String url = UrlConstantManager.getInstance().getContactInviteUrl();
-                WebViewControlAction webViewControlAction = WebViewControlAction.newAction().setUrl(url).setNeedShare(false);
-                Intent intent = WebViewActivity.getIntent(mActivity, webViewControlAction);
-                startActivity(intent);
-            });
-        }
 
         mContactListView.setOnTouchListener((v, event) -> {
             AtworkUtil.hideInput(getActivity());
