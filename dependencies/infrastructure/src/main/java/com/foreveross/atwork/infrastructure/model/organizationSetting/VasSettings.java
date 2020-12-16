@@ -13,7 +13,7 @@ public class VasSettings implements Parcelable {
     /**
      * 声网APP ID
      */
-    public static String AGORA_APP_ID = "agora.access_id";
+    public static String AGORA_APP_ID = "agora.access-id";
 
     public static String ZOOM_APP_KEY = "zoom.app-key";
 
