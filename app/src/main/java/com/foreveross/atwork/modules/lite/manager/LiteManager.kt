@@ -14,6 +14,8 @@ object LiteManager : ILiteManager {
 
     private val DEFAULT_CONFIG = LiteBindConfig(domainId = "khwjpn-app",domainName = "WorkPlus Lite",baseUrl = "http://lite.workplus.io:9000",apiUrl = "https://lite.workplus.io/v1/",data = "")
 
+    private val TRY_LITE_CONFIG = LiteBindConfig(domainId = "app-emmdk8",domainName = "Lite体验服",baseUrl = "http://lite.workplus.io:9000",apiUrl = "http://trylite.workplus.io:9001/v1/",data = "")
+
     override fun getBindConfigs(): Set<LiteBindConfig>? {
         val configs = LiteCommonShareInfo.getDataLiteBindConfigs(AtworkApplicationLike.baseContext)
                 ?:HashSet()
@@ -30,6 +32,7 @@ object LiteManager : ILiteManager {
     private fun addDefaultConfig(sets: Set<LiteBindConfig>): Set<LiteBindConfig> {
         val multiSets = sets.toMutableSet()
         multiSets.add(DEFAULT_CONFIG)
+        multiSets.add(TRY_LITE_CONFIG)
         return multiSets.toSet()
     }
 
