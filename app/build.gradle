@@ -168,8 +168,8 @@ android {
         //WorkPlus Lite
         lite {
             applicationId "com.foreverht.workplus.lite"
-            versionCode 6
-            versionName "1.0.3"
+            versionCode 9
+            versionName "1.0.4"
             dimension 'product'
         }
     }
