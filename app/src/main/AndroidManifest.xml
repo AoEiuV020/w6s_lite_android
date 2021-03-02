@@ -17,9 +17,9 @@
         android:requestLegacyExternalStorage="true"
         tools:replace="android:label,android:icon,android:allowBackup">
 
-<!--        <meta-data-->
-<!--            android:name="com.huawei.hms.client.appid"-->
-<!--            android:value="appid=${HUAWEI_ID}" />-->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=${HUAWEI_ID}" />
 
         <meta-data
             android:name="push_kit_auto_init_enabled"

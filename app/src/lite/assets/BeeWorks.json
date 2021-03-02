@@ -173,26 +173,17 @@
   "androidPush" :{
 
     "xiaomiInfo" : {
-      "appId" : "2882303761517978329",
-      "appKey" : "5481797855329"
+      "appId" : "2882303761519207304",
+      "appKey" : "5421920756304"
     },
 
     "huaweiInfo": {
-      "appId": "100715375"
+      "appId": "103915473"
     },
 
     "meizuInfo" : {
-      "appId" : "119546",
-      "appKey" : "529865beb5a049fd9f9dba1161931dde"
-    },
-    "oppoInfo" : {
-      "appId" : "43ec502ed7b84cc988442bf08b485415",
-      "appKey" : "a037d18ebeca4cc0999af65f62634168"
-    },
-
-    "vivoInfo": {
-      "appId": "20326",
-      "appKey": "b43a7cdd-37a1-471d-8f83-4a203241aa8c"
+      "appId" : "139376",
+      "appKey" : "0884cf8243e64cdca5105e82180352ee"
     }
   }
 }
